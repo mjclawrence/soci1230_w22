@@ -1,4 +1,10 @@
+#library(data.table)
 library(tidyverse)
+library(googlesheets4)
+
+library(haven)
+css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
+
 #NOTES
 #obs survey response
 #1440 columns
@@ -30,9 +36,12 @@ library(tidyverse)
 #READ DATA
 
 #mobility data
-college_mobility <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/college_mobility.csv")
+#college_mobility <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/college_mobility.csv")
+college_mobility <- read.csv("/Users/lawrence/OneDrive - Middlebury College/college_mobility/data/college_mobility.csv")
+
 #css questions and usability
-css_names.labeled <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/css_questions - Sheet1.csv")
+#css_names.labeled <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/css_questions - Sheet1.csv")
+css_names.labeled <- read_sheet("https://docs.google.com/spreadsheets/d/1nhfJ0bDN26kIhkwvsoH_nvzR3tfliJJNXfKSdBAFrYE/edit#gid=0")
 
 #filter for usable
 css_names.labeled <- css_names.labeled %>% 
@@ -52,16 +61,16 @@ intersection <- Reduce(intersect,list(usable_questions,all_colnames))
 mobility_cols <- colnames(college_mobility)[1]
 all_filter_cols<- c(intersection,mobility_cols)
 #filter for desired columns
-college_mobility.filtered <- college_mobility[, all_filter_cols]
+#college_mobility.filtered <- college_mobility[, all_filter_cols]
+
+college_mobility.filtered <- college_mobility |> 
+  select(all_of(all_filter_cols))
 
 table(college_mobility.filtered$YEAR)
 
 #check NAs
-col_NA <- data.frame(colSums(is.na(college_mobility.filtered))/323514)
-names(col_NA)[1] <- 'Percent_Missing_Values'
+colSums(is.na(college_mobility.filtered))
 
-over_half_missing <- col_NA %>% 
-  filter(Percent_Missing_Values >.50)
 
 #COLLEGES WITH MORE THAN 100 RESPONSES
 x <- college_mobility.filtered %>% 
@@ -79,10 +88,10 @@ college_proportion_answered <- list()
 test <- list()
 
 #loop through every campusid
-for(i in unique(college_mobility.filtered[,"campus_id"])){
+for(i in unique(college_mobility.filtered$campus_id)){
   #get the 
   cm<-college_mobility.filtered %>% 
-    filter(campus_id ==i) 
+    filter(campus_id == i) 
   
   na<-colSums(is.na(cm))
   not.na<-colSums(!is.na(cm))
@@ -109,8 +118,8 @@ big_data <- cbind.data.frame(campus_id, big_data)
 test <- college_mobility.filtered %>%
   group_by(campus_id) %>%
   summarise(across(starts_with("POLIVIEW"),
-                  ~ mean(.x >= 4, na.rm = TRUE),
-                  .names = "{.col}_liberal_mean"),
+                   ~ mean(.x >= 4, na.rm = TRUE),
+                   .names = "{.col}_liberal_mean"),
             across(starts_with("ACT"),
                    ~ mean(.x==2, na.rm = TRUE), .names = "{.col}_Occasionally_mean"),
             across(starts_with("COLACT02"),
@@ -159,52 +168,117 @@ test <- college_mobility.filtered %>%
                    ~ mean(.x==3, na.rm = TRUE), .names = "{.col}_frequently_mean"),
             across(starts_with("GOAL"),
                    ~ mean(.x>=3, na.rm = TRUE), .names = "{.col}_important_mean"),
-            )
+  )
 #            across(starts_with("COLACT"),
 # ~ mean(.x==2, na.rm = TRUE), .names = "{.col}_mean")
 
-#TODO
-#FIX COLACT
-#REPLACE TEST NANS with 0
-#JOIN TEST AND T2 on campus id
-#GRADMAJOR pullout the ones over 10%
-#DEGASP, 123 less than BA, 4 BA, 5 Masters, 6+ professional
+test2 <- mutate(test, RACE5_mean = ifelse(RACE5_mean=="NaN", 0, RACE5_mean))
 
-test <- test[,order(colnames(test))]
+# Why isn't group_by working to get prop na?
 
-
-college_mobility.filtered <- college_mobility.filtered[,order(colnames(college_mobility.filtered))]
-
-
-#EXAMPLE
-# across(ends_with("b"),
-#        ~ mean(.x, na.rm = TRUE),
-#        .names = "{.col}_liberal_mean"))
-
-t<- college_mobility.filtered %>%
+test_na <- college_mobility.filtered %>%
   group_by(campus_id) %>%
-  summarise(across(starts_with("GRAD"),
-                   ~ mean(.x, na.rm = TRUE), .names = "{.col}_frequently_mean"))
+  summarise(across(starts_with("GOAL"),
+                   ~ sum(is.na(.x))/n(), # add () after n
+                   .names = "{.col}_frequently_mean"))
 
 
-t2<- college_mobility.filtered %>%
-  group_by(campus_id) %>%
-  summarise(across(,
-                   ~ sum(is.na(.x))/n(), .names = "{.col}_percent_NA"))
-#loop through each campus id and filter for each campus id colSum is.na for each question
+library(haven)
 
 
-prop.table(table(college_mobility$career))
+# CLEANUP TFS
 
-#calculate on school my school basis 
-num_schools_missing <- data.frame(colSums(is.na(t))/318)
-            
-#Weird ones
-#CAREERA_9416
-#FRDMAJOR 81%missing
-#CMPSAT 70% school missing the satisfaction values DROP
-#FACULTYPRV 75% MISSING
+# heri_choice = 14235467
+# restrict years = 4213528
+# restrict css college = 1937983
+
+## Demographics
+heri_demographics <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/1 DEMOGRAPHICS.SAV")
+heri_demographics <- heri_demographics |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+## High school
+heri_hs <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/2 HIGH SCHOOL.SAV")
+heri_hs <- heri_hs |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Choice
+heri_choice <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/3 CHOICE.SAV")
+heri_choice <- heri_choice |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Plans
+heri_plans <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/4 PLANS.SAV")
+heri_plans <- heri_plans |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## View
+heri_view <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/5 VIEW.SAV")
+heri_view <- heri_view |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Funds
+heri_funds <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/6 FUNDS.SAV")
+heri_funds <- heri_funds |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Disagg
+heri_disagg <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/7 DISAGG.SAV")
+heri_disagg <- heri_disagg |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
 
 
 
-test2 <- mutate(test, RACE5 = ifelse(RACE5=="NaN", 0, RACE5))
+fwrite(heri_choice, "/users/lawrence/desktop/heri/tfs/choice.csv",
+       row.names = FALSE)
+
+fwrite(heri_demographics, "/users/lawrence/desktop/heri/tfs/demographics.csv",
+       row.names = FALSE)
+
+fwrite(heri_hs, "/users/lawrence/desktop/heri/tfs/hs.csv",
+       row.names = FALSE)
+
+fwrite(heri_plans, "/users/lawrence/desktop/heri/tfs/plans.csv",
+       row.names = FALSE)
+
+fwrite(heri_view, "/users/lawrence/desktop/heri/tfs/view.csv",
+       row.names = FALSE)
+
+fwrite(heri_funds, "/users/lawrence/desktop/heri/tfs/funds.csv",
+       row.names = FALSE)
+
+fwrite(heri_disagg, "/users/lawrence/desktop/heri/tfs/disagg.csv",
+       row.names = FALSE)
+
+
+## Constructs
+FAC_INTERACTION
+ACADEMIC_SELFCONCEPT
+SOCIAL_SELFCONCEPT
+SOCIAL_AGENCY
