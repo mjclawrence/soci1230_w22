@@ -1,0 +1,569 @@
+"Name","Description","n_asked","classification","usable_a","usable_m","usable_comp"
+"YEAR","CSS Year",11,0,1,1,1
+"ACE","College I.D.",11,0,1,1,1
+"SUBJID","Subject I.D.",11,0,1,1,1
+"INSTTYPE","Institutional Type",11,0,1,1,1
+"INSTCONT","INSTITUTIONAL CONTROL",11,0,1,1,1
+"REL","Religious Affiliation",11,0,1,1,1
+"HBCU","Historically Black College or University",11,0,1,1,1
+"HBCU2","Historically Black College or University 2",11,0,1,1,1
+"STRAT","CIRP Stratification Cell",11,0,0,0,1
+"COMPGROUP1","Comparison Group 1",11,0,0,0,1
+"COMPGROUP2","Comparison Group 2",11,0,0,0,1
+"COMPGROUP3","Comparison Group 3",11,0,0,0,1
+"OBEREG","OBE region code",11,0,1,0,0
+"HERIREG","HERI Region",11,0,1,1,1
+"INSTSEX","Institution's sex",11,0,1,1,1
+"NORMSTAT","CSS Graduating Senior Status",11,0,1,1,1
+"SEX","Your sex:",11,0,1,1,1
+"NATENGSP","Is English your native language?",11,0,1,1,1
+"SRELIGION","Your current religious preference",11,0,1,1,1
+"RACE1","White/Caucasian",11,0,1,1,1
+"RACE2","African American/Black",11,0,1,1,1
+"RACE3","American Indian/Alaska Native",11,0,1,1,1
+"RACE4","Asian",11,0,1,1,1
+"RACE5","Native Hawaiian/Pacific Islander",11,0,1,1,1
+"RACE6","Mexican American/Chicana/o/x",11,0,1,1,1
+"RACE7","Puerto Rican",11,0,1,1,1
+"RACE8","Other Latina/o/x",11,0,1,1,1
+"RACE9","Other",11,0,1,1,1
+"RRACE","Responded to Race Question",11,0,1,1,1
+"RACEGROUP","Race/Ethnicity Group",11,0,1,1,1
+"MAJOR1A_9415","Primary undergraduate major 1 aggregated (1994-2015)",11,0,1,1,1
+"GRADMAJORA_9415","Planned graduate major aggregated (1994-2015)",11,0,1,1,1
+"CAREERA_9416","Aggregated Career_9416 (1994-2016)",11,0,1,1,1
+"ENTER1ST","What year did you first enter your first college?",11,0,1,0,0
+"ENTERCUR","What year did you first enter this college?",11,0,1,0,0
+"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?",11,0,1,1,1
+"POLIVIEW","How would you characterize your political views?",11,3,1,1,1
+"COLLGPA_9406","Undergraduate GPA",11,1,1,1,1
+"DEGEARN","Please indicate the highest degree you will have earned as of June",11,0,0,0,1
+"DEGASP","Please indicate the highest degree you plan to complete",11,0,1,1,1
+"PERMIT","Do you give the higher education research institute (HERI) permission to include your id number should your college request the data for additional research analyses?",11,0,0,0,1
+"ACT14","Act: Discussed course content with students outside of class",11,1,1,1,1
+"ACT16","Act: Failed to complete homework on time",11,1,0,1,0
+"ACT31","Act: Have been a guest in professor's home",11,1,1,1,1
+"ACT32","Act: Felt bored in class",11,1,2,0,0
+"ACT46","Act: Participated in intramural sports",11,2,2,0,0
+"ACT55","Act: Studied with other students",11,1,1,1,1
+"ACT58","Act: Took interdisciplinary courses",11,1,1,1,1
+"ACT75","Act: Worked on independent study projects",11,1,1,1,1
+"CSSFLAG","TFS YFCY CSS Flag",11,0,0,0,1
+"GENACT03","Act in Part Year: Attended a religious service",11,3,0,0,1
+"GENACT13","Act in Past Year: Consumed beer",11,2,2,0,0
+"GENACT14","Act in Past Year: Consumed wine or liquor",11,2,2,0,0
+"GENACT15","Act in Part Year: Felt depressed",11,2,2,1,0
+"GENACT19","Act in Part Year: Felt overwhelmed by all I had to do",11,2,2,1,0
+"GENACT22","Act in Part Year: Participated in organized demonstrations",11,2,1,1,1
+"GENACT26","Act in Part Year: Performed volunteer work",11,2,1,1,1
+"GENACT29","Act in Part Year: Smoked cigarettes",11,2,2,0,0
+"GENACT30","Act in Part Year: Socialized with someone of another racial/ethnic group",11,2,1,1,1
+"GOAL03","Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",11,3,2,1,0
+"GOAL04","Goal: Becoming an authority in my field",11,3,2,1,0
+"GOAL05","Goal: Becoming involved in programs to clean up the environment",11,3,2,1,0
+"GOAL06","Goal: Becoming successful in a business of my own",11,3,2,1,0
+"GOAL07","Goal: Being very well off financially",11,3,2,1,0
+"GOAL08","Goal: Creating artistic work (paintings, sculpture, etc.)",11,3,2,1,0
+"GOAL09","Goal: Developing a meaningful philosophy of life",11,3,2,1,0
+"GOAL10","Goal: Having administrative responsibility for the work of others",11,3,2,1,0
+"GOAL11","Goal: Helping others who are in difficulty",11,3,2,1,0
+"GOAL12","Goal: Helping to promote racial understanding",11,3,2,1,0
+"GOAL15","Goal: Influencing social values",11,3,2,1,0
+"GOAL16","Goal: Influencing the political structure",11,3,2,1,0
+"GOAL19","Goal: Making a theoretical contribution to science",11,3,2,1,0
+"GOAL20","Goal: Obtaining recognition from my colleagues for contributions to my special field",11,3,2,1,0
+"GOAL21","Goal: Participating in a community action program",11,3,2,1,0
+"GOAL22","Goal: Raising a family",11,3,2,1,0
+"GOAL24","Goal: Writing original works (poems, novels, etc.)",11,3,2,1,0
+"HPW05","Hours per Week: Commuting",11,2,1,1,1
+"HPW06","Hours per Week: Exercising/sports",11,2,1,0,0
+"HPW10","Hours per Week: Partying",11,2,1,1,1
+"HPW13","Hours per Week: Reading for pleasure",11,2,1,1,1
+"HPW15","Hours per Week: Socializing with friends in person",11,2,1,1,1
+"HPW17","Hours per Week: Studying/homework",11,2,1,1,1
+"HPW24","Hours per Week: Watching TV/online video content (e.g., Amazon, Hulu, Netflix, YouTube)",11,2,1,0,0
+"PLANS01","Plans: Attending a vocational training program",11,3,2,0,0
+"PLANS02","Plans: Attending graduate or professional school",11,3,2,1,0
+"PLANS03","Plans: Attending undergraduate college full-time",11,3,2,0,0
+"PLANS04","Plans: Attending undergraduate college part-time",11,3,2,0,0
+"PLANS05","Plans: Doing volunteer work",11,3,2,0,0
+"PLANS11","Plans: Serving in the Armed Forces",11,3,2,0,0
+"PLANS12","Plans: Staying at home to be with (or start) my family",11,3,2,0,0
+"PLANS13","Plans: Traveling, hostelling, or backpacking",11,3,2,0,0
+"PLANS16","Plans: Working full-time",11,3,2,0,0
+"PLANS20","Plans: Working part-time",11,3,2,0,0
+"RATE01","Self Rating: Academic ability",11,3,1,1,1
+"RATE02","Self Rating: Artistic ability",11,3,1,1,1
+"RATE04","Self Rating: Competitiveness",11,3,1,1,1
+"RATE09","Self Rating: Drive to achieve",11,3,1,1,1
+"RATE10","Self Rating: Emotional health",11,3,1,1,1
+"RATE12","Self Rating: Leadership ability",11,3,1,1,1
+"RATE13","Self Rating: Mathematical ability",11,3,1,0,0
+"RATE15","Self Rating: Physical health",11,3,1,0,0
+"RATE18","Self Rating: Public speaking ability",11,3,1,0,0
+"RATE22","Self Rating: Self-confidence (intellectual)",11,3,1,1,1
+"RATE23","Self Rating: Self-confidence (social)",11,3,1,1,1
+"RATE27","Self Rating: Understanding of others",11,3,1,1,1
+"RATE28","Self Rating: Writing ability",11,3,1,1,1
+"SAMEACE","CSS and TFS data from same institution",11,0,0,0,1
+"SLFCHG01","Change: Ability to get along with people of different races/cultures",11,3,1,1,1
+"SLFCHG04","Change: Ability to think critically",11,1,1,1,1
+"SLFCHG08","Change: Analytical and problem-solving skills",11,1,1,1,1
+"SLFCHG16","Change: Foreign language ability",11,1,1,1,1
+"SLFCHG17","Change: General knowledge",11,1,1,1,1
+"SLFCHG18","Change: Interpersonal skills",11,1,1,1,1
+"SLFCHG19","Change: Knowledge of a particular field or discipline",11,1,1,1,1
+"SLFCHG20","Change: knowledge of people from different races/cultures",11,3,1,1,1
+"SLFCHG21","Change: Leadership abilities",11,1,1,1,1
+"SLFCHG22","Change: Mathematical skills",11,1,1,1,1
+"SLFCHG28","Change: Public speaking ability",11,1,1,1,1
+"SLFCHG34","Change: Understanding of social problems facing our nation",11,3,1,1,1
+"SLFCHG35","Change: Understanding of the problems facing your community",11,3,1,1,1
+"SLFCHG36","Change: Writing skills",11,1,1,1,1
+"VIEW02","View: Abortion should be legal",11,3,2,0,0
+"VIEW09","View: Colleges should prohibit racist/sexist speech on campus",11,3,2,0,0
+"VIEW17","View: It is important to have laws prohibiting homosexual relationships",11,3,2,0,0
+"VIEW19","View: Marijuana should be legalized",11,3,2,0,0
+"VIEW24","View: Racial discrimination is no longer a major problem in America",11,3,2,0,0
+"VIEW25","View: Realistically, an individual can do little to bring about changes in our society",11,3,2,1,0
+"VIEW29","View: The activities of married women are best confined to the home and family",11,3,2,0,0
+"VIEW32","View: The death penalty should be abolished",11,3,2,0,0
+"COLACT02_9406","Act in College: Attended racial/cultural awareness workshop",11,2,1,1,1
+"COLACT14_9406","Act in College: Joined a fraternity or sorority",11,2,1,1,1
+"COLACT17_9406","Act in College: Participated in an ethnic/racial student organization",11,2,1,1,1
+"COLACT23_9406","Act in College: Participated in student government",11,2,1,1,1
+"COLACT37_9406","Act in College: Withdrew from school",11,2,0,0,1
+"COLACT40_9406","Act in College: Worked full-time while attending school",11,2,0,1,0
+"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor",11,1,1,1,1
+"SATIS02_9406","Satisfaction: Academic advising",11,1,1,1,1
+"SATIS05_9406","Satisfaction: Campus health services",11,2,1,1,1
+"SATIS06_9406","Satisfaction: Career counseling and advising",11,2,1,1,1
+"SATIS08_9406","Satisfaction: Computer facilities",11,2,1,1,1
+"SATIS13_9406","Satisfaction: Financial aid services",11,2,1,1,1
+"SATIS15_9406","Satisfaction: Humanities courses",11,2,1,1,1
+"SATIS18_9406","Satisfaction: Job placement services for students",11,2,1,1,1
+"SATIS19_9406","Satisfaction: Laboratory facilities and equipment",11,2,1,1,1
+"SATIS20_9406","Satisfaction: Leadership opportunities",11,2,1,1,1
+"SATIS21_9406","Satisfaction: Library facilities",11,2,1,1,1
+"SATIS22_9406","Satisfaction: Opportunities for community service",11,2,1,1,1
+"SATIS32_9406","Satisfaction: Science and mathematics courses",11,1,1,1,1
+"SATIS34_9406","Satisfaction: Social science courses",11,1,1,1,1
+"SATIS35_9406","Satisfaction: Student housing",11,2,1,1,1
+"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance",11,1,1,1,1
+"HABITS_OF_MIND_GRP","CSS Habits of Mind Group",11,0,0,0,1
+"ACADEMIC_SELFCONCEPT_GRP","CSS Academic Self-Concept Group",11,0,0,0,1
+"SOCIAL_SELFCONCEPT_GRP","CSS Social Self-Concept Group",11,0,0,0,1
+"RACE10","East Asian (e.g., Chinese, Japanese, Korean, Taiwanese)",10,0,1,1,1
+"RACE11","Filipina/o/x",10,0,1,1,1
+"RACE12","Southeast Asian (e.g., Cambodian, Vietnamese, Hmong)",10,0,1,1,1
+"RACE13","South Asian (e.g., Indian, Pakistani, Nepalese, Sri Lankan)",10,0,1,1,1
+"RACE14","Other Asian",10,0,1,1,1
+"RACE15","South American",10,0,1,1,1
+"ACT70","Act: Voted in a student election",10,2,1,1,1
+"GENACT07","Act in Past Year: Discussed politics",10,2,1,1,1
+"GOAL02","Goal: Becoming a community leader",10,3,2,1,0
+"GOAL18","Goal: Keeping up to date with political affairs",10,3,2,1,0
+"HPW23","Hours per Week: Volunteer work",10,2,1,1,1
+"HPW25","Hours per Week: Working (for pay)",10,2,1,1,1
+"RATE06","Self Rating: Cooperativeness",10,3,1,1,1
+"SLFCHG30","Change: Religious beliefs and convictions",10,3,2,1,0
+"VIEW16","View: If two people really like each other, it's all right for them to have sex even if they've known each other for only a very short time",10,3,2,0,0
+"VIEW35","View: The federal government should do more to control the sale of handguns",10,3,2,0,0
+"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now",10,3,2,1,0
+"COLACT07_9406","Act in College: Enrolled in honors or advanced courses",10,1,1,1,1
+"COLACT11_9406","Act in College: Had a part-time job off-campus",10,2,1,1,1
+"COLACT12_9406","Act in College: Had a part-time job on campus",10,2,1,1,1
+"COLACT26_9406","Act in College: Taken a leave of absence",10,2,2,0,0
+"SATIS03_9406","Satisfaction: Amount of contact with faculty",10,1,1,1,1
+"SATIS07_9406","Satisfaction: Class size",10,1,1,1,1
+"SATIS10_9406","Satisfaction: Courses in your major field",10,1,1,1,1
+"SATIS17_9406","Satisfaction: Interaction with other students",10,2,1,1,1
+"SATIS27_9406","Satisfaction: Overall college experience",10,2,1,1,1
+"SATIS28_9406","Satisfaction: Overall quality of instruction",10,1,1,1,1
+"SATIS30_9406","Satisfaction: Recreational facilities",10,2,1,1,1
+"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life",10,1,1,1,1
+"SATIS33_9406","Satisfaction: Sense of community on campus",10,2,1,1,1
+"SOCIAL_AGENCY_GRP","CSS Social Agency Group",10,0,0,0,1
+"ACT74","Act: Worked on group projects in class",9,1,1,1,1
+"FACPRV01","Faculty Provide: A letter of recommendation",9,1,1,1,1
+"FACPRV02","Faculty Provide: Advice and guidance about your educational program",9,1,1,1,1
+"FACPRV04","Faculty Provide: Encouragement to discuss coursework outside of class",9,1,1,1,1
+"FACPRV05","Faculty Provide: An opportunity to publish",9,1,1,1,1
+"FACPRV06","Faculty Provide: An opportunity to work on a research project",9,1,1,1,1
+"FACPRV07","Faculty Provide: Assistance to improve your study skills",9,1,1,1,1
+"FACPRV08","Faculty Provide: Emotional support and encouragement",9,1,1,1,1
+"FACPRV16","Faculty Provide: Intellectual challenge and stimulation",9,1,1,1,1
+"FACPRV19","Faculty Provide: Respect (treated you like a colleague/peer)",9,1,1,1,1
+"HPW03","Hours per Week: Classes/labs",9,1,1,1,1
+"RATE07","Self Rating: Creativity",9,3,1,1,1
+"VIEW39","View: There is too much concern in the courts for the right of criminals",9,3,2,0,0
+"COLACT18_9406","Act in College: Participated In an internship program",9,2,1,1,1
+"COLACT20_9406","Act in College: Participated in intercollegiate football or basketball",9,2,1,0,0
+"COLACT21_9406","Act in College: Participated in leadership training",9,2,1,1,1
+"COLACT22_9406","Act in College: Participated in other intercollegiate sport",9,2,1,0,0
+"COLACT27_9406","Act in College: Taken a remedial course",9,1,1,1,1
+"COLACT28_9406","Act in College: Taken a women's studies course",9,1,1,0,0
+"COLACT29_9406","Act in College: Taken an ethnic studies course",9,1,1,0,0
+"ACT05","Act: Challenged a professors ideas in class",8,1,1,1,1
+"GENACT21","Act in Past Year: Overslept and missed class or appointment",8,1,0,0,1
+"HPW08","Hours per Week: Performing household/childcare duties",8,2,0,1,0
+"HPW16","Hours per Week: Working with classmates on group projects",8,1,1,1,1
+"HPW22","Hours per Week: Using a personal computer",8,2,1,0,0
+"PLANS07","Plans: Participating in a community service organization",8,2,2,1,0
+"RATE16","Self Rating: Popularity",8,3,0,0,1
+"SLFCHG05","Change: Ability to work cooperatively",8,1,1,1,1
+"SLFCHG29","Change: Reading speed and comprehension",8,1,1,1,1
+"COLACT13_9406","Act in College: Had a roommate of different race/ethnicity",8,2,1,1,1
+"ACT52","Act: Received course assignments through the internet",7,1,1,0,0
+"ACT59","Act: Turned in course assignments electronically",7,1,1,0,0
+"FACPRV10","Faculty Provide: Encouragement to pursue graduate/professional study",7,1,1,1,1
+"SLFCHG11","Change: Computer skills",7,1,1,0,0
+"VIEW01","View: A national health care plan is needed to cover everybody's medical costs",7,3,0,0,1
+"VIEW04","View: Affirmative action in college admissions should be abolished",7,3,0,1,0
+"COLACT04_9406","Act in College: Been elected to student office",7,2,0,0,1
+"COLACT10_9406","Act in College: Gotten married",7,2,0,0,1
+"COLACT34_9406","Act in College: Transferred from another college",7,2,1,1,1
+"SATIS04_9406","Satisfaction: Availability of internet access",7,2,1,0,0
+"SATIS14_9406","Satisfaction: General education or core curriculum courses",7,1,1,1,1
+"SATIS29_9406","Satisfaction: Quality of computer training/assistance",7,2,1,0,0
+"ENROLL_0006","Enrollment status",6,0,NA,0,1
+"ACT11","Act: Did extra (unassigned) work for a course",6,1,NA,1,0
+"ACT40","Act: Missed Class Due to employment",6,2,NA,1,0
+"FACPRV13","Faculty Provide: Help in achieving your professional goals",6,1,NA,1,0
+"FACPRV18","Faculty Provide: Negative Feedback about your Academic Work",6,1,NA,1,0
+"GENACT18","Act in Past Year: Felt lonely or homesick",6,2,NA,1,0
+"GENACT31","Act in Past Year: Sought personal counseling",6,2,NA,1,0
+"HPW11","Hours per Week: Arcade/video games",6,2,NA,0,1
+"HPW12","Hours per Week: Meditated/Participated in mindfulness activity",6,2,NA,0,1
+"HPW20","Hours per Week: Talking with faculty outside class",6,1,NA,1,0
+"PLANS06","Plans: No Current Plans",6,3,NA,0,1
+"RATE24","Self Rating: Self-understanding",6,3,NA,0,1
+"RATE25","Self Rating: Spirituality",6,3,NA,0,1
+"VIEW13","View: Federal military spending should be increased",6,3,NA,0,1
+"VIEW18","View: Just because a man feels a woman has 'led him on' does not entitle him to have sex with her",6,3,NA,0,1
+"VIEW33","View: The Federal government is not doing enough to control environment pollution",6,3,NA,0,1
+"COLACT08_9406","Act in College: Failed One or More Courses",6,1,NA,0,1
+"COLACT35_9406","Act in College: Tutored another student",6,1,NA,0,1
+"FAC_INTERACTION_GRP","CSS Student-Faculty Interaction Group",6,0,NA,0,1
+"ENROLL_9499","Enrollment status",5,0,NA,0,1
+"COMPUTER","Do you own a personal computer",5,2,NA,0,1
+"GENACT04","Act in Part Year: Been lonely or homesick",5,2,NA,1,0
+"GENACT35","Act in Past Year: Visited a museum or art gallery",5,2,NA,1,0
+"GENACT37","Act in Past Year: Worked on a local, state, or national political campaign",5,2,NA,1,0
+"PLANS14","Plans: Working for a government agency",5,3,NA,1,0
+"PLANS15","Plans: Working for a non-profit organization",5,3,NA,1,0
+"VIEW26","View: Same sex couples should have the right to legal marital status",5,3,NA,0,1
+"VIEW38","View: The federal government should raise taxes to reduce the deficit",5,3,NA,1,0
+"ACT27","Act: Felt your comments were not taken seriously by faculty",4,1,NA,1,0
+"ACT60","Act: Tutored Another College Student",4,1,NA,0,1
+"COMPUSE01","Computer: Communicate via e-mail with faculty at this college",4,1,NA,0,1
+"COMPUSE02","Computer: Communicate via e-mail with students at this college",4,1,NA,0,1
+"COMPUSE03","Computer: Communicate via e-mail with faculty at other colleges",4,1,NA,0,1
+"COMPUSE04","Computer: Communicate via e-mail with other friends or acquaintances",4,2,NA,0,1
+"COMPUSE07","Computer: Use the internet for research or homework",4,1,NA,0,1
+"CSVCOURSE","Since entering college, how many of your courses have included community service/service learning",4,1,NA,1,0
+"CSVHOW1","CSV Performed: As part of a class or course",4,NA,NA,1,0
+"CSVHOW2","CSV Performed: As part of a collegiate-sponsored activity (sorority, campus, org, etc.)",4,NA,NA,1,0
+"CSVHOW3","CSV Performed: Independently through a non-collegiate group (church, family, etc.)",4,NA,NA,1,0
+"CSVREQ","In this most recent course, community service was:",4,NA,NA,0,1
+"GENACT11","Act in Past Year: Discussed religion",4,1,NA,0,1
+"RATE19","Self Rating: Religiousness/religiosity",4,3,NA,0,1
+"VIEW12","View: Employers should be allowed to require drug testing of employees or job applicants",4,NA,NA,0,1
+"COLACT16_9406","Act in College: Participated in study abroad program",4,2,NA,1,0
+"COLACT32_9406","Act in College: Transferred from a Community College",4,NA,NA,1,0
+"COLACT33_9406","Act in College: Transferred from a Four-year College",4,NA,NA,1,0
+"COLACT36_9406","Act in College: Voted in a state/national election",4,NA,NA,1,0
+"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students",4,NA,NA,1,0
+"ACT12","Act: Did not have time to study due to family responsibilities",3,NA,NA,1,0
+"ACT13","Act: Did not have time to study due to job responsibilities",3,NA,NA,1,0
+"COMPUSE05","Computer: Communicate via e-mail with your family",3,NA,NA,0,1
+"COMPUSE06","Computer: Participate in class discussions via email/internet",3,NA,NA,0,1
+"COMPUSE08","Computer: Use the internet for nonacademic reasons",3,NA,NA,0,1
+"FACPRV09","Faculty Provide: Encouragement to pursue graduate/professional school",3,NA,NA,1,0
+"FACPRV15","Faculty Provide: Honest feedback about your skills and abilities",3,NA,NA,1,0
+"GENACT36","Act in Past Year: Voted in state/national election",3,NA,NA,1,0
+"GOAL17","Goal: Integrating Spirituality into My Life",3,NA,NA,0,1
+"HPW04","Hours per Week: Participating in student clubs/groups",3,NA,NA,1,0
+"HPW07","Hours per Week: Hobbies",3,NA,NA,0,1
+"HPW14","Hours per Week: Religious services/meetings",3,NA,NA,0,1
+"PLANS08","Plans: Participating in a community service organization (e.g., AmeriCorps, Peace Corps. etc.)",3,NA,NA,1,0
+"PLANS19","Plans: Working in private industry",3,NA,NA,1,0
+"SLFCHG32","Change: Understanding of global issues",3,NA,NA,1,0
+"SUCCSES1","Success: Adjusting to academic demands of college",3,NA,NA,1,0
+"SUCCSES2","Success: Developing close friendships with other students",3,NA,NA,1,0
+"SUCCSES3","Success: Developing effective study skills",3,NA,NA,1,0
+"SUCCSES4","Success: Getting to know faculty",3,NA,NA,1,0
+"SUCCSES5","Success: Managing your time effectively",3,NA,NA,1,0
+"SUCCSES6","Success: Understanding what your professors expect of you academically",3,NA,NA,1,0
+"SUCCSES7","Success: Utilizing campus services available to students",3,NA,NA,1,0
+"VIEW20","View: Material on the internet should be regulated by the government",3,NA,NA,0,1
+"VIEW31","View: The chief benefit of a college education is that it increases one's earning power",3,NA,NA,1,0
+"VIEW34","View: The Federal government is not doing enough to protect the consumer from faulty goods and services",3,NA,NA,0,1
+"COLACT19_9406","Act in College: Participated in campus protests",3,NA,NA,1,0
+"CIVIC_AWARENESS_GRP","CSS Civic Awareness Group",3,NA,NA,0,1
+"BORNAGAIN","Do you consider yourself a born-again Christian?",2,NA,NA,0,1
+"ACT37","Act: Met with Faculty During Office Hours",2,NA,NA,1,0
+"ACT38","Act: Met with Faculty Outside Class or Office Hours",2,NA,NA,1,0
+"ACT62","Act: Used the Internet for research or homework",2,NA,NA,0,1
+"CSVPART1","CSV Part: First-year Seminar",2,NA,NA,0,1
+"CSVPART2","CSV Part: General Education/Core Curriculum",2,NA,NA,0,1
+"CSVPART3","CSV Part: Required Course in Major",2,NA,NA,0,1
+"CSVPART4","CSV Part: Optional Course in Major",2,NA,NA,0,1
+"CSVPART5","CSV Part: Senior Project (capstone, thesis)",2,NA,NA,0,1
+"CSVREC1","CSV Records: Kept a journal",2,NA,NA,0,1
+"CSVREC2","CSV Records: Discussed service experience with other students",2,NA,NA,0,1
+"CSVREC3","CSV Records: Discussed service experience with professor",2,NA,NA,0,1
+"ETHACT1","Ethnic Act: Dated someone from a different racial/ethnic background",2,NA,NA,0,1
+"ETHACT2","Ethnic Act: Dined with someone from a different racial/ethnic group",2,NA,NA,0,1
+"ETHACT4","Ethnic Act: Felt pressure not to socialize with students from other racial/ethnic groups",2,NA,NA,0,1
+"ETHACT7","Ethnic Act: Studied with someone from a different racial/ethnic group",2,NA,NA,0,1
+"FACPRV03","Faculty Provide: An opportunity to apply classroom learning to 'real-life' issues",2,NA,NA,0,1
+"FACPRV17","Faculty Provide: Negative feedback about your abilities and skills",2,NA,NA,1,0
+"GENACT27","Act in Past Year: Read the editorial page in the daily paper",2,NA,NA,0,1
+"GENACT33","Act in Past Year: Took a prescribed anti-depressant",2,NA,NA,0,1
+"HPW01","Hours per Week: Attending Classes/Labs",2,NA,NA,1,0
+"RATE05","Self Rating: Computer Skills",2,NA,NA,0,1
+"RATE11","Self Rating: Initiative",2,NA,NA,0,1
+"VIEW05","View: All federal and state documents should be printed in English only",2,NA,NA,0,1
+"VIEW15","View: Grading in college has become too easy",2,NA,NA,0,1
+"VIEW22","View: People should not obey laws which violate their personal values",2,NA,NA,0,1
+"VIEW23","View: Race/ethnicity should be used as a factor in college admissions",2,NA,NA,0,1
+"VIEW27","View: Student publications should be cleared by college officials",2,NA,NA,0,1
+"VIEW30","View: The best way to control AIDS is through widespread, mandatory testing",2,NA,NA,0,1
+"VIEW36","View: The federal government should do more to discourage energy consumption",2,NA,NA,0,1
+"COLACT01_9406","Act in College: Attended a drug/alcohol awareness workshop",2,NA,NA,0,1
+"COLACT03_9406","Act in College: Attended a rape awareness workshop",2,NA,NA,0,1
+"COLACT05_9406","Act in College: Enrolled in a women's studies course",2,NA,NA,0,1
+"COLACT06_9406","Act in College: Enrolled in an ethnic studies course",2,NA,NA,0,1
+"COLACT24_9406","Act in College: Played varsity/intercollegiate athletics",2,NA,NA,0,1
+"COLACT30_9406","Act in College: Taken remedial or developmental classes",2,NA,NA,0,1
+"CSVACT1_0102","CSV Act: How often did the professor encourage class discussions",2,NA,NA,0,1
+"CSVACT2_0102","CSV Act: How often did the professor deliver lectures",2,NA,NA,0,1
+"CSVACT3_0102","CSV Act: How often did the professor connect the service experience to the course material",2,NA,NA,0,1
+"CSVACT4_0102","CSV Act: How often did the professor require written reflections of your service experience",2,NA,NA,0,1
+"CSVACT5_0102","CSV Act: How often did you apply the course material to your service work",2,NA,NA,0,1
+"CSVACT6_0102","CSV Act: How often did you feel that the service experience increased your understanding of the academic course material",2,NA,NA,0,1
+"CSVACT7_0102","CSV Act: How often did you feel that your service made a difference",2,NA,NA,0,1
+"SATIS11_9406","Satisfaction: Ethnic/racial diversity of faculty",2,NA,NA,0,1
+"FRACE1","Father: White",1,NA,NA,0,1
+"FRACE2","Father: Black",1,NA,NA,0,1
+"FRACE3","Father: American Indian",1,NA,NA,0,1
+"FRACE4","Father: Asian",1,NA,NA,0,1
+"FRACE5","Father: Native Hawaiian/Pacific Islander",1,NA,NA,0,1
+"FRACE6","Father: Mexican American/Chicano",1,NA,NA,0,1
+"FRACE7","Father: Puerto Rican",1,NA,NA,0,1
+"FRACE8","Father: Other Latino",1,NA,NA,0,1
+"FRACE9","Father: Other",1,NA,NA,0,1
+"MRACE1","Mother: White",1,NA,NA,0,1
+"MRACE2","Mother: Black",1,NA,NA,0,1
+"MRACE3","Mother: American Indian",1,NA,NA,0,1
+"MRACE4","Mother: Asian",1,NA,NA,0,1
+"MRACE5","Mother: Native Hawaiian/Pacific Islander",1,NA,NA,0,1
+"MRACE6","Mother: Mexican American/Chicano",1,NA,NA,0,1
+"MRACE7","Mother: Puerto Rican",1,NA,NA,0,1
+"MRACE8","Mother: Other Latino",1,NA,NA,0,1
+"MRACE9","Mother: Other",1,NA,NA,0,1
+"ACT04","Act: Came late to class",1,NA,NA,0,1
+"ACT15","Act: Discussed the 9/11 terrorist attacks in class",1,NA,NA,0,1
+"ACT17","Act: Fell asleep in class",1,NA,NA,0,1
+"ACT18","Act: Felt discriminated against by faculty",1,NA,NA,1,0
+"ACT19","Act: Felt discriminated against by students",1,NA,NA,1,0
+"ACT20","Act: Felt faculty took a personal interest in your progress",1,NA,NA,1,0
+"ACT26","Act: Felt Supported by My Family",1,NA,NA,1,0
+"ACT28","Act: Had difficulty getting the courses you needed",1,NA,NA,1,0
+"ACT36","Act: Met with an advisor/counselor about your career plans",1,NA,NA,1,0
+"ACT43","Act: Overslept and missed a class or appointment",1,NA,NA,0,1
+"ACT44","Act: Overslept and missed class or appointment",1,NA,NA,0,1
+"ACT45","Act: Participated in a campus activity commemorating the victims of 9/11",1,NA,NA,0,1
+"ACT47","Act: Participated in protests against the war",1,NA,NA,0,1
+"ACT48","Act: Performed community service as part of a class",1,NA,NA,1,0
+"ACT54","Act: Studied in the library",1,NA,NA,0,1
+"ACT61","Act: Tutored another student",1,NA,NA,0,1
+"ACT66","Act: Used the library for research or homework",1,NA,NA,0,1
+"ACT69","Act: Voted in a state/national election",1,NA,NA,0,1
+"ACT72","Act: Worked on a local, state, or national campaign",1,NA,NA,0,1
+"COMPUSE09","Computer: Communicate via e-mail with students at other colleges",1,NA,NA,0,1
+"COMPUSE10","Computer: Communicate via e-mail with family",1,NA,NA,0,1
+"COMPUSE11","Computer: Participate in an academic listserv",1,NA,NA,0,1
+"COMPUSE12","Computer: Participate in electronic chat rooms",1,NA,NA,0,1
+"COMPUSE13","Computer: Other Internet use",1,NA,NA,0,1
+"CSV","Since entering college, have you performed any community/volunteer service?",1,NA,NA,1,0
+"CSVACT1","Community Service: Tutoring/teaching",1,NA,NA,0,1
+"CSVACT2","Community Service: Educational counseling/mentoring",1,NA,NA,0,1
+"CSVACT3","Community Service: Personal counseling/mentoring",1,NA,NA,0,1
+"CSVACT4","Community Service: Providing childcare",1,NA,NA,0,1
+"CSVACT5","Community Service: Providing homeless/shelter support",1,NA,NA,0,1
+"CSVACT6","Community Service: Public safety (e.g., crime prevention)",1,NA,NA,0,1
+"CSVACT7","Community Service: Community cleanup/rebuilding",1,NA,NA,0,1
+"CSVACT8","Community Service: Conservation activities (e.g., recycling)",1,NA,NA,0,1
+"CSVACT9","Community Service: Other community service",1,NA,NA,0,1
+"CVLOC01","CSV Location: A church or other religious organization",1,NA,NA,0,1
+"CVLOC02","CSV Location: An elementary or secondary school",1,NA,NA,0,1
+"CVLOC03","CSV Location: A sport or recreational organization",1,NA,NA,0,1
+"CVLOC04","CSV Location: A hospital or other health organization",1,NA,NA,0,1
+"CVLOC05","CSV Location: A social or welfare organization",1,NA,NA,0,1
+"CVLOC06","CSV Location: A park or other outdoor area",1,NA,NA,0,1
+"CVLOC07","CSV Location: A college or university",1,NA,NA,0,1
+"CVLOC08","CSV Location: A community center",1,NA,NA,0,1
+"CVLOC09","CSV Location: A local service center",1,NA,NA,0,1
+"CVLOC10","CSV Location: A political organization",1,NA,NA,0,1
+"CVLOC11","CSV Location: Other private organization",1,NA,NA,0,1
+"CVLOC12","CSV Location: Other public organization",1,NA,NA,0,1
+"CVREAS1","CSV Reason: To help other people",1,NA,NA,0,1
+"CVREAS2","CSV Reason: To work with different people from me",1,NA,NA,0,1
+"CVREAS3","CSV Reason: To improve society as a whole",1,NA,NA,0,1
+"CVREAS4","CSV Reason: To improve my community",1,NA,NA,0,1
+"CVREAS5","CSV Reason: To enhance academic learning",1,NA,NA,0,1
+"CVREAS6","CSV Reason: To develop new skills",1,NA,NA,0,1
+"CVREAS7","CSV Reason: To fulfill civic/social responsibility",1,NA,NA,0,1
+"CVREAS8","CSV Reason: To enhance my resume",1,NA,NA,0,1
+"CVREAS9","CSV Reason: To feel personal satisfaction",1,NA,NA,0,1
+"CVSDUR","What was the total duration of all your community/volunteer service activity?",1,NA,NA,0,1
+"DISCRIM1","Discrimination: I have been singled out in class because of my gender",1,NA,NA,0,1
+"DISCRIM10","Discrimination: I have observed discrimination toward students who are people with disabilities",1,NA,NA,0,1
+"DISCRIM2","Discrimination: I have been singled out in class because of my race/ethnicity",1,NA,NA,0,1
+"DISCRIM3","Discrimination: Many students on campus are prejudiced against women",1,NA,NA,0,1
+"DISCRIM4","Discrimination: Many students on campus are prejudiced against racial/ethnic minorities",1,NA,NA,0,1
+"DISCRIM5","Discrimination: Instructors treat students the same regardless of the student's gender",1,NA,NA,0,1
+"DISCRIM6","Discrimination: Instructors treat students the same regardless of the student's race/ethnicity",1,NA,NA,0,1
+"DISCRIM7","Discrimination: I have observed discrimination toward students who are women",1,NA,NA,0,1
+"DISCRIM8","Discrimination: I have observed discrimination toward students who are racial/ethnic minorities",1,NA,NA,0,1
+"DISCRIM9","Discrimination: I have observed discrimination toward students who are gay or lesbian",1,NA,NA,0,1
+"ETHACT3","Ethnic Act: Felt excluded from school activities because of your racial/ethnic background",1,NA,NA,0,1
+"ETHACT5","Ethnic Act: Had a roommate from a different racial/ethnic group",1,NA,NA,0,1
+"ETHACT6","Ethnic Act: Heard faculty make inappropriate remarks about minorities",1,NA,NA,0,1
+"FACPRV12","Faculty Provide: Help cutting through the red tape",1,NA,NA,0,1
+"FACULTYPRV02","Faculty Provide: An opportunity to work on a research project",1,NA,NA,1,0
+"FACULTYPRV03","Faculty Provide: Advice and guidance about your educational program",1,NA,NA,1,0
+"FACULTYPRV04","Faculty Provide: Respect (treated you like a colleague/peer)",1,NA,NA,1,0
+"FACULTYPRV05","Faculty Provide: An opportunity to publish",1,NA,NA,1,0
+"FACULTYPRV06","Faculty Provide: Emotional support and encouragement",1,NA,NA,1,0
+"FACULTYPRV07","Faculty Provide: A letter of recommendation",1,NA,NA,1,0
+"FACULTYPRV08","Faculty Provide: Assistance to improve your study skills",1,NA,NA,1,0
+"FACULTYPRV09","Faculty Provide: Honest feedback about your skills and abilities",1,NA,NA,1,0
+"FACULTYPRV10","Faculty Provide: Intellectual challenge and stimulation",1,NA,NA,1,0
+"FACULTYPRV11","Faculty Provide: Help in achieving your professional goals",1,NA,NA,1,0
+"FACULTYPRV12","Faculty Provide: An opportunity to discuss coursework outside of class",1,NA,NA,1,0
+"FRDGENDER","Friends: How many of your close friends are of your same gender",1,NA,NA,0,1
+"FRDMAJOR","Friends: How many of your close friends are of your same major or field of interest",1,NA,NA,1,0
+"FRDRACE","Friends: How many of your close friends are of your same ethnicity or race",1,NA,NA,0,1
+"FRIEND01","Friends: Your same sex",1,NA,NA,0,1
+"FRIEND02","Friends: Your Race or Ethnicity",1,NA,NA,0,1
+"FRIEND03","Friends: Your Major",1,NA,NA,0,1
+"FRIEND04","Friends: Social fraternities and sororities",1,NA,NA,0,1
+"FRIEND05","Friends: Religious organizations",1,NA,NA,0,1
+"FRIEND06","Friends: Residence Halls/dorms",1,NA,NA,0,1
+"FRIEND07","Friends: Your off-campus Job",1,NA,NA,0,1
+"FRIEND08","Friends: Your on-campus Job",1,NA,NA,0,1
+"FRIEND09","Friends: Intercollegiate athletics",1,NA,NA,0,1
+"FRIEND10","Friends: Student government",1,NA,NA,0,1
+"FRIEND11","Friends: Other Student organizations",1,NA,NA,0,1
+"FRIEND12","Friends: Other on-campus friends",1,NA,NA,0,1
+"FRIEND13","Friends: High School",1,NA,NA,0,1
+"FRIEND14","Friends: Other off-campus friends",1,NA,NA,0,1
+"GENACT02","Act in Past Year: Attended a recital or concert",1,NA,NA,0,1
+"GENACT12","Act in Past Year: Discussed safe sex",1,NA,NA,0,1
+"GENACT20","Act in Past Year: Lost my temper",1,NA,NA,0,1
+"GENACT28","Act in Part Year: Received career/vocational counseling",1,NA,NA,1,0
+"GENACT32","Act in Part Year: Stayed up all night",1,NA,NA,0,1
+"GENACT34","Act in Part Year: Used a personal computer",1,NA,NA,0,1
+"HPW19","Hours per Week: Talking with faculty during office hours",1,NA,NA,1,0
+"HPW21","Hours per Week: Talking with faculty outside of class or office hours",1,NA,NA,1,0
+"HPW26","Hours per Week: Working (for pay) off campus",1,NA,NA,1,0
+"HPW27","Hours per Week: Working (for pay) on campus",1,NA,NA,1,0
+"MENTORPRV01","Mentor Provide: Encouragement to pursue graduate/professional study",1,NA,NA,0,1
+"MENTORPRV02","Mentor Provide: An opportunity to work on a research project",1,NA,NA,0,1
+"MENTORPRV03","Mentor Provide: Advice and guidance about your educational program",1,NA,NA,0,1
+"MENTORPRV04","Mentor Provide: Respect (treated you like a colleague/peer)",1,NA,NA,0,1
+"MENTORPRV05","Mentor Provide: An opportunity to publish",1,NA,NA,0,1
+"MENTORPRV06","Mentor Provide: Emotional support and encouragement",1,NA,NA,0,1
+"MENTORPRV07","Mentor Provide: A letter of recommendation",1,NA,NA,0,1
+"MENTORPRV08","Mentor Provide: Assistance to improve your study skills",1,NA,NA,0,1
+"MENTORPRV09","Mentor Provide: Honest feedback about your skills and abilities",1,NA,NA,0,1
+"MENTORPRV10","Mentor Provide: Intellectual challenge and stimulation",1,NA,NA,0,1
+"MENTORPRV11","Mentor Provide: Help in achieving your professional goals",1,NA,NA,0,1
+"MENTORPRV12","Mentor Provide: An opportunity to discuss coursework outside of class",1,NA,NA,0,1
+"RATE03","Self Rating: Athletic ability",1,NA,NA,0,1
+"RATE08","Self Rating: Cynicism",1,NA,NA,1,0
+"RATE17","Self Rating: Popularity with opposite sex",1,NA,NA,0,1
+"RATE26","Self Rating: Stubbornness",1,NA,NA,0,1
+"SLFCHG09","Change: Commitment to serving your community",1,NA,NA,1,0
+"SLFCHG13","Change: Conflict resolution skills",1,NA,NA,0,1
+"SLFCHG23","Change: Preparation for future career",1,NA,NA,1,0
+"SLFCHG24","Change: Preparation for graduate or professional school",1,NA,NA,1,0
+"STAFFPRV01","Staff Provide: Encouragement to pursue graduate/professional study",1,NA,NA,0,1
+"STAFFPRV02","Staff Provide: An opportunity to work on a research project",1,NA,NA,0,1
+"STAFFPRV03","Staff Provide: Advice and guidance about your educational program",1,NA,NA,0,1
+"STAFFPRV04","Staff Provide: Respect (treated you like a colleague/peer)",1,NA,NA,0,1
+"STAFFPRV05","Staff Provide: An opportunity to publish",1,NA,NA,0,1
+"STAFFPRV06","Staff Provide: Emotional support and encouragement",1,NA,NA,0,1
+"STAFFPRV07","Staff Provide: A letter of recommendation",1,NA,NA,0,1
+"STAFFPRV08","Staff Provide: Assistance to improve your study skills",1,NA,NA,0,1
+"STAFFPRV09","Staff Provide: Honest feedback about your skills and abilities",1,NA,NA,0,1
+"STAFFPRV10","Staff Provide: Intellectual challenge and stimulation",1,NA,NA,0,1
+"STAFFPRV11","Staff Provide: Help in achieving your professional goals",1,NA,NA,0,1
+"STAFFPRV12","Staff Provide: An opportunity to discuss coursework outside of class",1,NA,NA,0,1
+"STDGENDER","Study: If you are in school, how many of the people you study with are of your same gender",1,NA,NA,0,1
+"STDMAJOR","Study: If you are in school, how many of the people you study with are of your same major or field of interest",1,NA,NA,0,1
+"STDRACE","Study: If you are in school, how many of the people you study with are of your same ethnicity or race",1,NA,NA,0,1
+"VIEW06","View: Busing is OK if it helps to achieve racial balance in the schools",1,NA,NA,0,1
+"VIEW07","View: Classes are more interesting if they include students from different racial/ethnic backgrounds",1,NA,NA,0,1
+"VIEW10","View: Colleges would be improved if organized sports were de-emphasized",1,NA,NA,0,1
+"VIEW14","View: Gender should be used as a factor in college admissions",1,NA,NA,0,1
+"VIEW21","View: People have the right to know about the personal lives of public figures",1,NA,NA,0,1
+"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions",1,NA,NA,1,0
+"VIEW43","View: Western civilization and culture should be the foundation of the undergraduate curriculum",1,NA,NA,0,1
+"WRKGENDER","Work: If you are employed, how many of the people you work with are of your same gender",1,NA,NA,0,1
+"WRKMAJOR","Work: If you are employed, how many of the people you work with are of your same major or field of interest",1,NA,NA,0,1
+"WRKRACE","Work: If you are employed, how many of the people you work with are of your same ethnicity or race",1,NA,NA,0,1
+"CMPSAT01_0506","Campus Satisfaction: Amount of contact with faculty",1,NA,NA,1,0
+"CMPSAT02_0506","Campus Satisfaction: Availability of campus social activities",1,NA,NA,1,0
+"CMPSAT03_0506","Campus Satisfaction: Class size",1,NA,NA,1,0
+"CMPSAT04_0506","Campus Satisfaction: Courses in your major field",1,NA,NA,1,0
+"CMPSAT05_0506","Campus Satisfaction: Interaction with other students",1,NA,NA,1,0
+"CMPSAT06_0506","Campus Satisfaction: Overall college experience",1,NA,NA,1,0
+"CMPSAT07_0506","Campus Satisfaction: Overall quality of instruction",1,NA,NA,1,0
+"CMPSAT08_0506","Campus Satisfaction: Overall sense of community among students",1,NA,NA,1,0
+"CMPSAT09_0506","Campus Satisfaction: Relevance of coursework to everyday life",1,NA,NA,1,0
+"CMPSAT10_0506","Campus Satisfaction: Relevance of coursework to future career plans",1,NA,NA,1,0
+"COLACT09_9406","Act in College: Felt fearful about your safety because of world events",1,NA,NA,0,1
+"COLACT15_9406","Act in College: Participated in college internship program",1,NA,NA,1,0
+"COLACT31_9406","Act in College: Took a leave of absence",1,NA,NA,0,1
+"COLACT41_9406","Act in College: Worked on prof's research project",1,NA,NA,1,0
+"CSVACT01_95","CSV Act: Tutoring/teaching",1,NA,NA,0,1
+"CSVACT02_95","CSV Act: Planning curriculum or policy",1,NA,NA,0,1
+"CSVACT03_95","CSV Act: Educational counseling/mentoring",1,NA,NA,0,1
+"CSVACT04_95","CSV Act: Other education",1,NA,NA,0,1
+"CSVACT05_95","CSV Act: Providing health education",1,NA,NA,0,1
+"CSVACT06_95","CSV Act: Providing medical/health services",1,NA,NA,0,1
+"CSVACT07_95","CSV Act: Personal counseling/mentoring",1,NA,NA,0,1
+"CSVACT08_95","CSV Act: Providing childcare",1,NA,NA,0,1
+"CSVACT09_95","CSV Act: Providing homeless/shelter support",1,NA,NA,0,1
+"CSVACT1_98","CSV Act: Tutoring/teaching",1,NA,NA,0,1
+"CSVACT10_95","CSV Act: Crime prevention",1,NA,NA,0,1
+"CSVACT11_95","CSV Act: Conflict mediation training",1,NA,NA,0,1
+"CSVACT12_95","CSV Act: Substance abuse awareness/counseling",1,NA,NA,0,1
+"CSVACT13_95","CSV Act: Teaching environmental awareness",1,NA,NA,0,1
+"CSVACT14_95","CSV Act: Community cleanup/rebuilding",1,NA,NA,0,1
+"CSVACT15_95","CSV Act: Conservation activities",1,NA,NA,0,1
+"CSVACT16_95","CSV Act: Other",1,NA,NA,0,1
+"CSVACT2_98","CSV Act: Educational counseling/mentoring",1,NA,NA,0,1
+"CSVACT3_98","CSV Act: Personal counseling/mentoring",1,NA,NA,0,1
+"CSVACT4_98","CSV Act: Providing childcare",1,NA,NA,0,1
+"CSVACT5_98","CSV Act: Providing homeless/shelter support",1,NA,NA,0,1
+"CSVACT6_98","CSV Act: Public safety (e.g., crime prevention)",1,NA,NA,0,1
+"CSVACT7_98","CSV Act: Community cleanup/rebuilding",1,NA,NA,0,1
+"CSVACT8_98","CSV Act: Conservation activities (e.g., recycling)",1,NA,NA,0,1
+"CSVACT9_98","CSV Act: Other community service",1,NA,NA,0,1
+"CSVLOC1_97","Service Location: As part of a class or course",1,NA,NA,0,1
+"CSVLOC2_97","Service Location: As part of a collegiate-sponsored activity (sorority, campus org., etc.)",1,NA,NA,0,1
+"CSVLOC3_97","Service Location: Independently through a non-collegiate group (church, family, etc.)",1,NA,NA,0,1
+"SATIS09_9406","Satisfaction: Connection with your peers",1,NA,NA,1,0
+"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences",1,NA,NA,1,0
+"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors",1,NA,NA,1,0
+"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities",1,NA,NA,1,0
+"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses",1,NA,NA,1,0
+"FAC_INTERACTION","Scale: Faculty Interaction",NA,NA,NA,1,NA
+"SOCIAL_AGENCY","Scale: Social Agency",NA,NA,NA,1,NA
+"SOCIAL_SELFCONCEPT","Scale: Social Self Concept",NA,NA,NA,1,NA
+"ACADEMIC_SELFCONCEPT","Scale: Academic Self Concept",NA,NA,NA,1,NA

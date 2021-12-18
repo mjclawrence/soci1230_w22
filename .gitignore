@@ -4,3 +4,10 @@
 .Ruserdata
 data/college_mobility.csv
 data/college_mobility.csv.zip
+data/tfs/choice.csv
+data/tfs/demographics.csv
+data/tfs/disagg.csv
+data/tfs/funds.csv
+data/tfs/hs.csv
+data/tfs/plans.csv
+data/tfs/view.csv

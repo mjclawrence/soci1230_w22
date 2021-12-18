@@ -1,9 +1,5 @@
 #library(data.table)
 library(tidyverse)
-library(googlesheets4)
-
-library(haven)
-css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
 
 #NOTES
 #obs survey response
@@ -37,11 +33,11 @@ css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHI
 
 #mobility data
 #college_mobility <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/college_mobility.csv")
-college_mobility <- read.csv("/Users/lawrence/OneDrive - Middlebury College/college_mobility/data/college_mobility.csv")
+college_mobility <- read_csv("data/college_mobility.csv")
 
 #css questions and usability
 #css_names.labeled <- read.csv("/Users/alderik/Documents/College/Senior/Fall21/Independent Study/data/css_questions - Sheet1.csv")
-css_names.labeled <- read_sheet("https://docs.google.com/spreadsheets/d/1nhfJ0bDN26kIhkwvsoH_nvzR3tfliJJNXfKSdBAFrYE/edit#gid=0")
+css_names.labeled <- read_csv("data/css_questions_usable.csv")
 
 #filter for usable
 css_names.labeled <- css_names.labeled %>% 
@@ -168,6 +164,10 @@ test <- college_mobility.filtered %>%
                    ~ mean(.x==3, na.rm = TRUE), .names = "{.col}_frequently_mean"),
             across(starts_with("GOAL"),
                    ~ mean(.x>=3, na.rm = TRUE), .names = "{.col}_important_mean"),
+            ACADEMIC_SELFCONCEPT_mean = mean(ACADEMIC_SELFCONCEPT, na.rm = TRUE),
+            SOCIAL_SELFCONCEPT_mean = mean(ACADEMIC_SELFCONCEPT, na.rm = TRUE),
+            SOCIAL_AGENCY_mean = mean(ACADEMIC_SELFCONCEPT, na.rm = TRUE),
+            FAC_INTERACTION_mean = mean(ACADEMIC_SELFCONCEPT, na.rm = TRUE),
   )
 #            across(starts_with("COLACT"),
 # ~ mean(.x==2, na.rm = TRUE), .names = "{.col}_mean")
@@ -183,10 +183,13 @@ test_na <- college_mobility.filtered %>%
                    .names = "{.col}_frequently_mean"))
 
 
-library(haven)
 
 
 # CLEANUP TFS
+
+#library(haven)
+#css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
+
 
 # heri_choice = 14235467
 # restrict years = 4213528
