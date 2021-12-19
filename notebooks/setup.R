@@ -117,7 +117,7 @@ test <- college_mobility.filtered %>%
                    ~ mean(.x >= 4, na.rm = TRUE),
                    .names = "{.col}_liberal_mean"),
             across(starts_with("ACT"),
-                   ~ mean(.x==2, na.rm = TRUE), .names = "{.col}_Occasionally_mean"),
+                   ~ mean(.x==3, na.rm = TRUE), .names = "{.col}_frequently_mean"),
             across(starts_with("COLACT02"),
                    ~ mean(.x==2, na.rm = TRUE), .names = "{.col}_race/culture_workshop_mean"),
             across(starts_with("COLACT07"),
