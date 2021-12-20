@@ -1,0 +1,246 @@
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 80px solid #00009a;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em;
+}
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.inverse {
+  background-color: #00009a;
+  text-shadow: none;
+}
+
+.remark-slide-content > h1 {
+  font-family: 'Fira Sans';
+  font-weight: normal;
+  font-size: 45px;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: #FAFAFA;
+}
+
+.remark-slide-content > inverse {
+width: 112px;
+height: 47px;
+border-bottom: 1px solid black;
+position: absolute;
+}
+
+/* Removes colored bar from top of the slide resulting in a clear slide */
+.clear{
+  border-top: 0px solid #FAFAFA;
+}
+
+.remark-slide-content > h2, h3, h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 00px;
+  margin-bottom: -10px;
+}
+
+.remark-slide-content > h2, .pull-left > h2, .pull-right > h2 {
+  font-size: 35px;
+}
+
+.remark-slide-content > h3, .remark-slide-content > h4,
+.pull-left > h3, .pull-left > h4, .pull-right > h3, .pull-right > h4 {
+  font-size: 30px;
+}
+
+.title-slide {
+  background-color: #FAFAFA;
+  border-top: 80px solid #FAFAFA;
+}
+
+.title-slide > h1  {
+/*color: 1A292C;*/
+  color: #003399;
+  font-size: 40px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+.title-slide > h2  {
+/*color: 1A292C;*/
+  color: #003399;
+  margin-top: -25px;
+  padding-bottom: -20px;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.title-slide > h3  {
+/*color: 1A292C;*/
+  color: #003399;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+.remark-slide-number {
+  display: none;
+}
+
+.inverse .remark-slide-number {
+ /* font-size: 13pt;
+  font-family: 'Fira Sans';
+  color: #FAFAFA;
+  opacity: 1;
+*/
+  display: none;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298
+.title-slide .remark-slide-number {
+  display: none;
+}
+*/
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.code10 .remark-code {
+  font-size: 10%;
+}
+
+.code20 .remark-code {
+  font-size: 20%;
+}
+
+.code30 .remark-code {
+  font-size: 30%;
+}
+
+.code40 .remark-code {
+  font-size: 40%;
+}
+
+.code50 .remark-code {
+  font-size: 50%;
+}
+
+.code60 .remark-code {
+  font-size: 60%;
+}
+
+.code70 .remark-code {
+  font-size: 70%;
+}
+
+.code80 .remark-code {
+  font-size: 80%;
+}
+
+.code90 .remark-code {
+  font-size: 90%;
+}
+
+.code100 .remark-code {
+  font-size: 100%;
+}
+
+.font10 {
+  font-size: 10%;
+}
+
+.font20 {
+  font-size: 20%;
+}
+
+.font30 {
+  font-size: 30%;
+}
+
+.font40 {
+  font-size: 40%;
+}
+
+.font50 {
+  font-size: 50%;
+}
+
+.font60 {
+  font-size: 60%;
+}
+
+.font70 {
+  font-size: 70%;
+}
+
+.font80 {
+  font-size: 80%;
+}
+
+.font90 {
+  font-size: 90%;
+}
+
+.font100 {
+  font-size: 100%;
+}
+
+.font110 {
+  font-size: 110%;
+}
+
+.font120 {
+  font-size: 120%;
+}
+
+.font130 {
+  font-size: 130%;
+}
+
+.font140 {
+  font-size: 140%;
+}
+
+.font150 {
+  font-size: 150%;
+}
+
+.font160 {
+  font-size: 160%;
+}
+.font170 {
+  font-size: 170%;
+}
+.font180 {
+  font-size: 180%;
+}
+.font190 {
+  font-size: 190%;
+}
+.font200 {
+  font-size: 200%;
+}
+
+/*
+.table-striped tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}
+.table-dark.table-striped tbody tr:nth-of-type(odd){background-color:rgba(255,255,255,.05)}
+*/
+
+.table-hover tbody tr:hover{background-color:rgba(0,0,0,.075)}
+
+.table-hover tbody tr:hover{background-color:rgba(0,0,0,.075)}.table-primary,.table-primary>td,.table-primary>th{background-color:#b8daff}.table-hover .table-primary:hover{background-color:#9fcdff}.table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#9fcdff}.table-secondary,.table-secondary>td,.table-secondary>th{background-color:#d6d8db}.table-hover .table-secondary:hover{background-color:#c8cbcf}.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#c8cbcf}.table-success,.table-success>td,.table-success>th{background-color:#c3e6cb}.table-hover .table-success:hover{background-color:#b1dfbb}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#b1dfbb}.table-info,.table-info>td,.table-info>th{background-color:#bee5eb}.table-hover .table-info:hover{background-color:#abdde5}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#abdde5}.table-warning,.table-warning>td,.table-warning>th{background-color:#ffeeba}.table-hover .table-warning:hover{background-color:#ffe8a1}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#ffe8a1}.table-danger,.table-danger>td,.table-danger>th{background-color:#f5c6cb}.table-hover .table-danger:hover{background-color:#f1b0b7}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#f1b0b7}.table-light,.table-light>td,.table-light>th{background-color:#fdfdfe}.table-hover .table-light:hover{background-color:#ececf6}.table-hover .table-light:hover>td,.table-hover .table-light:hover>th{background-color:#ececf6}.table-dark,.table-dark>td,.table-dark>th{background-color:#c6c8ca}.table-hover .table-dark:hover{background-color:#b9bbbe}.table-hover .table-dark:hover>td,.table-hover .table-dark:hover>th{background-color:#b9bbbe}.table-active,.table-active>td,.table-active>th{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:rgba(0,0,0,.075)}.table .thead-dark th{color:#fff;background-color:#212529;border-color:#32383e}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.table-dark{color:#fff;background-color:#212529}.table-dark td,.table-dark th,.table-dark thead th{border-color:#32383e}.table-dark.table-bordered{border:0}.table-dark.table-hover tbody tr:hover{background-color:rgba(255,255,255,.075)}@media (max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-sm>.table-bordered{border:0}}@media (max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-md>.table-bordered{border:0}}@media (max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-lg>.table-bordered{border:0}}@media (max-width:1199.98px){.table-responsive-xl{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-xl>.table-bordered{border:0}}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}

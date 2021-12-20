@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700,400italic);
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Mono';
+  font-size: 90%;
+}
+
+ul li{
+ font-size:30px;
+}
+
+ol li{
+ font-size:30px;
+}
+
