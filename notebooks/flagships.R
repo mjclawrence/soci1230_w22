@@ -4,6 +4,10 @@ library(DT)
 chetty <- read_csv("data/chetty_table2.csv")
 chetty2 <- read.csv("data/chetty_table10.csv")
 
+datatable(chetty |> 
+            select(name, state),
+          filter = "top")
+
 datatable(chetty2 |> 
           select(name, state, flagship),
           filter = "top")
@@ -45,8 +49,22 @@ flagships <- chetty3 |>
   select(super_opeid, name, state, fips)
 
 mobility_rate <- chetty |> 
-  select(super_opeid, name, state, mr_kq5_pq1)
+  select(super_opeid,  mr_kq5_pq1)
 
 flagships <- left_join(flagships, mobility_rate)
 
 write_csv(flagships, "data/flagships.csv")
+
+library(tigris)
+states <- states(year = 2020) |> 
+  rename(fips = STATEFP)
+
+flagships <- flagships |> 
+  mutate(fips = as.character(fips))
+
+flagship_map <- left_join(states, flagships)
+
+plot(states)
+ggplot(flagship_map) + 
+  geom_sf() + 
+  theme_void()

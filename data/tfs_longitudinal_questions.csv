@@ -1,0 +1,780 @@
+﻿name,description,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,1993,1992,1991,1990,1989,1988,1987
+ACE_TFS,College I.D.,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+SUBJID_TFS,Subject I.D.,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+MATCHLEVEL_TFS,Type of Match,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STUDSTAT_TFS,Student status,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+PERMIT_TFS,Do you give HERI permission to include your id number should your college request the data for additional research analyses?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+SEX_TFS,Your sex:,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+ACCPT1ST_TFS,Were you accepted by your first choice college?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+ACT01_TFS,Act in Past Year: Asked a teacher for advice after class,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1
+ACT02_TFS,Act in Past Year: Attended a public recital or concert,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+ACT03_TFS,Act in Past Year: Attended a religious service,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1
+ACT04_TFS,Act in Past Year: Came late to class,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,0,1,1,0,1,1
+ACT05_TFS,Act in Past Year: Checked out a book or journal from the school library,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,1
+ACT06_TFS,Act in Past Year: Communicated via e-mail,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+ACT07_TFS,Act in Past Year: Demonstrated for/against a cause,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+ACT08_TFS,Act in Past Year: Discussed politics,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,1,0,0
+ACT09_TFS,Act in Past Year: Discussed religion,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+ACT10_TFS,Act in Past Year: Drank beer,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+ACT11_TFS,Act in Past Year: Drank wine or liquor,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,1,0,0
+ACT12_TFS,Act in Past Year: Failed to complete a homework assignment on time,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+ACT13_TFS,Act in Past Year: Fell asleep in class,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+ACT14_TFS,Act in Past Year: Felt depressed,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+ACT15_TFS,Act in Past Year: Felt overwhelmed by all I had to do,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+ACT16_TFS,Act in Past Year: Helped raise money for a cause,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0
+ACT17_TFS,Act in Past Year: Overslept and missed a class or appointment,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,0,0
+ACT19_TFS,Act in Past Year: Performed community service as part of a class,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+ACT20_TFS,Act in Past Year: Performed volunteer work,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+ACT21_TFS,Act in Past Year: Played a musical instrument,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+ACT22_TFS,Act in Past Year: Publicly communicated my opinion about a cause,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT23_TFS,Act in Past Year: Skipped school/class,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+ACT24_TFS,Act in Past Year: Smoked cigarettes,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1
+ACT25_TFS,Act in Past Year: Socialized with someone of another racial/ethnic group,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+ACT26_TFS,Act in Past Year: Studied with other students,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+ACT27_TFS,Act in Past Year: Tutored another student,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1
+ACT28_TFS,Act in Past Year: Used a personal computer,0,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+ACT29_TFS,Act in Past Year: Used the Internet for research or homework,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,0,0,0
+ACT30_TFS,Act in Past Year: Visited an art gallery or museum,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0
+ACT31_TFS,Act in Past year: Voted in a student election,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0
+ACT32_TFS,Act in Past Year: Was a guest in a teacher's home,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+ACT33_TFS,Act in Past Year: Was bored in class,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+ACT34_TFS,"Act in Past Year: Worked in a local, state, or national political campaign",0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT35_TFS,"Act in Past Year: Used an online instructional website (e.g. Khan Academy, Coursera) as assigned for a class",0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT36_TFS,"Act in Past Year: Used an online instructional website (e.g. Khan Academy, Coursera) to learn something on your own",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT37_TFS,Act in Past Year: Felt Anxious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AGE_TFS,How old will you be on December 31 of this year?,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+AGE1_TFS,How old will you be on December 31 of this year?,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AGE2_TFS,How old will you be on December 31 of this year?,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID01_TFS,"Aid: Parents, other relatives or friends",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID02_TFS,Aid: Spouse,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID03_TFS,Aid: Savings from summer work,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID04_TFS,Aid: Other savings,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID05_TFS,Aid: Part-time job on campus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID06_TFS,Aid: Part-time job off campus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID07_TFS,Aid: Full-time job while in college,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID08_TFS,Aid: Pell Grant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID09_TFS,Aid: Supplemental Educational Opportunity Grant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID1_TFS,"Aid: Family resources (parents, relatives, spouse, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+AID2_TFS,"Aid: My own resources (savings from work, work-study, other income)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+AID3_TFS,"Aid: Aid which need not be repaid (grants, scholarships, military funding, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+AID4_TFS,"Aid: Aid which must be repaid (loans, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+AID5_TFS,Aid: Other than above,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+AID10_TFS,Aid: State scholarship or grant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID11_TFS,Aid: College work-study grant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID12_TFS,Aid: College grants/scholarship (other than above),0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,1,0,1,1,0,0,0
+AID13_TFS,Aid: Vocational Rehabilitation funds,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID14_TFS,Aid: Other private grant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID15_TFS,"Aid: Other government aid (ROTC, BIA, GI/military benefits, etc.)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID16_TFS,Aid: Stafford loan (GSL),0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID17_TFS,Aid: Perkins loan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID18_TFS,Aid: Other college loan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID19_TFS,Aid: Other loan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+AID20_TFS,Aid: Other than above,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+AIDTYPE1_TFS,Military grants,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+AIDTYPE2_TFS,Work-study,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+AIDTYPE3_TFS,Pell Grant,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+AIDTYPE4_TFS,Need-based grants or scholarships,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+AIDTYPE5_TFS,Merit-based grants or scholarships,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+APCOURSE_T2_TFS,AP Courses,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+APCOURSE_TFS,How many Advanced Placement courses did you take in high school?,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+APEXAM_T2_TFS,AP Exams,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+APEXAM_TFS,How many Advanced Placement exams did you take in high school?,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+BORNAGAIN_TFS,Do you consider yourself a born-again Christian?,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CHOICE_TFS,Choice: Is this college your:,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+CHOOSE01_TFS,Choose to Attend: A college rep. recruited me,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+CHOOSE02_TFS,Choose to Attend: A friend suggested attending,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,,,
+CHOOSE03_TFS,Choose to Attend: A visit to campus,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CHOOSE04_TFS,Choose to Attend: Ability to take online courses,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CHOOSE05_TFS,Choose to Attend: Could not afford first choice,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1
+CHOOSE06_TFS,Choose to Attend: High school counselor advised me,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE07_TFS,Choose to Attend: I wanted to go to a school about the size of this college,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE09_TFS,Choose to Attend: I wanted to live near home,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,,,
+CHOOSE10_TFS,Choose to Attend: I was admitted through an Early Action or Early Decision program,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE11_TFS,Choose to Attend: I was attracted by the religious affiliation/orientation of the college,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE12_TFS,Choose to Attend: I was offered financial assistance,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,,,
+CHOOSE13_TFS,Choose to Attend: Information from a website,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1
+CHOOSE14_TFS,Choose to Attend: My guidance counselor advised me,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+CHOOSE15_TFS,Choose to Attend: My parents/relatives wanted me to come here,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+CHOOSE16_TFS,Choose to Attend: My relatives wanted me to come here,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+CHOOSE17_TFS,Choose to Attend: My teacher advised me,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+CHOOSE18_TFS,Choose to Attend: Not accepted anywhere else,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,,,
+CHOOSE19_TFS,Choose to Attend: Not offered aid by first choice,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1
+CHOOSE20_TFS,Choose to Attend: Private college counselor advised me,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0
+CHOOSE21_TFS,Choose to Attend: Rankings in national magazines,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE22_TFS,Choose to Attend: The athletic department recruited me,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CHOOSE23_TFS,Choose to Attend: The cost of attending this college,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE24_TFS,Choose to Attend: This college has a good reputation for its social activities,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+CHOOSE25_TFS,Choose to Attend: This college has a very good academic reputation,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+CHOOSE26_TFS,Choose to Attend: This college has low tuition,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+CHOOSE27_TFS,Choose to Attend: This college offers special educational programs,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+CHOOSE28_TFS,Choose to Attend: This college's graduates gain admission to top graduate/professional schools,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+CHOOSE29_TFS,Choose to Attend: This college's graduates get good jobs,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CHOOSE30_TFS,Choose to Attend: The percentage of students that graduate from this college,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+CHOOSE31_TFS,Choose to Attend: My parents/relatives wanted me to come here,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+CHOOSE32_TFS,Choose to Attend: This college has a good reputation for its social and extracurricular activities,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+CHOOSE33_TFS,Choose to Attend: This college's graduates make a difference in the world,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+CITIZEN_TFS,Citizenship status:,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,0,0,1,1,1
+CITIZEN2_TFS,Citizenship status,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,1,1,1,1,1,0,0,0
+CRED1_TFS,For credit at any other institution,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1
+CRED2_TFS,For credit at junior college or community college,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0
+CRED3_TFS,For credit at a four-year college or university,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,0
+CRED4_TFS,For credit at some other postsecondary,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CSVREQ_TFS,Did your high school require community service for graduation?,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DEGASP_TFS,Highest academic degree planned,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+DESCRIBE1_T2_TFS,Describe: Searching for mission/purpose in life,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+DESCRIBE2_T2_TFS,Describe: Engaging in self-reflection,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+DESCRIBE3_T2_TFS,Describe: Appreciating interconnectedness of everything,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+DESCRIBE4_T2_TFS,Describe: Believing in sacredness of life,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+DESCRIBE5_T2_TFS,Describe: Being honest in my relationships with others,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+DISAB01_TFS,Disability: Learning disability,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+DISAB02_TFS,Disability: ADHD,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+DISAB03_TFS,Disability: Autism spectrum/Asperger's syndrome,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+DISAB04_TFS,Disability: Physical disability,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DISAB05_TFS,Disability: Chronic illness,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DISAB06_TFS,Disability: Psychological disorder,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DISAB07_TFS,Disability: Other disability,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,0,0,1,1,0,1,0,0,0,0
+DISAB08_TFS,Autism spectrum/Asperger's syndrome,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+DISAB1_TFS,Disability: None,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1
+DISAB2_TFS,Disability: Hearing,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,0,0
+DISAB3_TFS,Disability: Speech,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1
+DISAB4_TFS,Disability: Orthopedic,0,0,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1
+DISAB5_TFS,Disability: Learning disability,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1
+DISAB6_TFS,Disability: Health-related,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1
+DISAB7_TFS,Disability: Partially sighted or blind,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1
+DISAB8_TFS,Disability: Other,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+DISTHOME_TFS,How many miles is this college from your permanent home?,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DIVRATE1_TFS,Diversity Rating: Ability to see the world from someone else's perspective,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+DIVRATE2_TFS,Diversity Rating: Tolerance of others with different beliefs,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DIVRATE3_TFS,Diversity Rating: Openness to having my own views challenged,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DIVRATE4_TFS,Diversity Rating: Ability to discuss and negotiate controversial issues,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+DIVRATE5_TFS,Diversity Rating: Ability to work cooperatively with diverse people,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DIVRATE6_TFS,Critical thinking skills,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DIVRATE7_TFS,Ability to manage your time effectively,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ECONOMIC_TFS,The current economic situation significantly affected my college choice:,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EVANGEL_TFS,Do you consider yourself Evangelical?,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,1,1,0,1,0,0,0,0
+EXPGRAD_TFS,How many years do you expect it will take you to graduate from this college?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FATHEDUC_TFS,Father's education,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FCAREER_TFS,Father's career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+FCAREERA_TFS,Mother's aggregated career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+FEMPLOY_TFS,Father's Employment Status,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FINCON_TFS,Do you have any concern about your ability to finance your college education?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+FIRSTGEN_TFS,First generation status based on parent(s) with less than 'some college',1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FOSTERCARE_TFS,"At any time since you turned 13, were you in foster care or were you a dependent of the court?",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1
+FRELIGION_TFS,Father's religion,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FRELIGIONA_TFS,Your father's religious preference,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+FULLSTAT_TFS,Are you enrolled (or enrolling) as a:,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1
+FUTACT01_TFS,Future Act: Be elected to an academic honor society,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+FUTACT02_TFS,Future Act: Be elected to student office,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT03_TFS,Future Act: Be satisfied with your college,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+FUTACT04_TFS,Future Act: Change career choice,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+FUTACT05_TFS,Future Act: Change major field,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+FUTACT06_TFS,Future Act: Communicate regularly with your professors,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT07_TFS,Future Act: Discuss course content with students outside of class,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT08_TFS,Future Act: Drop out of this college temporarily (exclude transferring),0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT09_TFS,Future Act: Drop out permanently (exclude transferring),0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT10_TFS,Future Act: Fail one or more courses,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT11_TFS,"Future Act: Get a bachelor's degree (B.A., B.S., etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+FUTACT12_TFS,Future Act: Get a job to help pay for college expenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT13_TFS,Future Act: Get married while in college,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0
+FUTACT14_TFS,Future Act: Get tutoring help in specific courses,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+FUTACT15_TFS,Future Act: Graduate with honors,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT16_TFS,Future Act: Have a roommate of different race/ethnicity,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+FUTACT17_TFS,Future Act: Join a social fraternity or sorority,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT18_TFS,"Future Act: Join a social fraternity, sorority, or club",0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT19_TFS,Future Act: Make at least a 'B' average,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT20_TFS,Future Act: Need extra time to complete your degree requirements,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT21_TFS,Future Act: Participate in a study abroad program,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+FUTACT22_TFS,Future Act: Participate in student clubs/groups,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+FUTACT23_TFS,Future Act: Participate in student government,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT24_TFS,Future Act: Participate in student protests or demonstrations,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT25_TFS,Future Act: Participate in volunteer or community service work,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT26_TFS,"Future Act: Play club, intramural, or recreational sports",0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT27_TFS,Future Act: Play intercollegiate athletics (e.g. NCAA or NAIA-sponsored),0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT28_TFS,Future Act: Play varsity/intercollegiate athletics,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,0,0,0
+FUTACT29_TFS,Future Act: Seek personal counseling,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+FUTACT30_TFS,Future Act: Socialize with someone of another racial/ethnic group,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT31_TFS,Future Act: Take courses from more than one college simultaneously,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT32_TFS,Future Act: Transfer to another college before graduating,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+FUTACT33_TFS,Future Act: Work full-time while attending college,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT34_TFS,Future Act: Work on a professor's research project,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT35_TFS,Future Act: Take a leave of absence from this college temporarily,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT36_TFS,Future Act: Take a course exclusively online at this institution,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT37_TFS,Future Act: Take a course exclusively online at a different institution,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT38_TFS,"Future Act: Vote in a local, state, or national election",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT39_TFS,Future Act: Take a course exclusively online,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+GOAL01_TFS,Goal: Adopting 'green' practices to protect the environment,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL02_TFS,Goal: Becoming a community leader,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL03_TFS,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL04_T2_TFS,Goal: Never being obligated to people,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+GOAL04_TFS,Goal: Becoming an authority in my field,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+GOAL05_T2_TFS,Goal: Raising a family,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL05_TFS,Goal: Becoming an expert in finance and commerce,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL06_TFS,Goal: Becoming involved in programs to clean up the environment,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL07_TFS,Goal: Becoming successful in a business of my own,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL08_TFS,Goal: Being very well off financially,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL09_TFS,"Goal: Creating artistic work (painting, sculpture, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL10_TFS,Goal: Developing a meaningful philosophy of life,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL11_TFS,Goal: Having administrative responsibility for the work of others,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL12_TFS,Goal: Helping others who are in difficulty,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL13_TFS,Goal: Helping to promote racial understanding,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1
+GOAL14_TFS,Goal: Improving my understanding of other countries and cultures,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL15_TFS,Goal: Influencing social values,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL16_TFS,Goal: Influencing the political structure,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+GOAL17_TFS,Goal: Integrating spirituality into my life,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL18_TFS,Goal: Keeping up to date with political affairs,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL19_TFS,Goal: Making a theoretical contribution to science,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL20_TFS,Goal: Obtaining recognition from my colleagues for contributions to my special field,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+GOAL21_TFS,Goal: Participating in a community action program,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL22_TFS,Goal: Participating in an organization like the Peace Corps or Vista,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL23_TFS,Goal: Raising a family,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+GOAL24_TFS,"Goal: Writing original works (poems, novels, etc.)",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+HADREM1_TFS,English: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HADREM2_TFS,Reading: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HADREM3_TFS,Mathematics: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HADREM4_TFS,Social Studies: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HADREM5_TFS,Science: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HADREM6_TFS,Foreign Language: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+HADREM7_TFS,Writing: Have had special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+HIDEGREE_TFS,Highest academic degree planned at this college,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0
+HOMESTATE_TFS,Student's home state,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+HOMEZIP_TFS,Student's home zip,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+HPW01_T2_TFS,Hours per Week: Hobbies,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HPW01_TFS,Hours per Week: Studying/homework,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0
+HPW02_TFS,Hours per Week: Socializing with friends,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+HPW03_TFS,Hours per Week: Talking with teachers outside of class,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+HPW04_TFS,Hours per Week: Exercise or sports,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+HPW05_TFS,Hours per Week: Partying,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+HPW06_TFS,Hours per Week: Working (for pay),0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+HPW07_TFS,Hours per Week: Volunteer work,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+HPW08_TFS,Hours per Week: Student clubs/groups,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+HPW09_TFS,Hours per Week: Watching TV,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1
+HPW10_TFS,Hours per Week: Household/childcare duties,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1
+HPW11_TFS,Hours per Week: Prayer/meditation,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,0,1,1,1
+HPW12_TFS,Hours per Week: Reading for pleasure,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1
+HPW13_TFS,Hours per Week: Played video games,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+HPW14_TFS,Hours per Week: Playing video/computer games,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HPW15_TFS,"Hours per Week: Online social networks (MySpace, Facebook, etc.)",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSGPA_TFS,What was your average grade in high school?,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSTYPE_TFS,From what kind of high school did you graduate?,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSTYPE1_TFS,From what kind of secondary school did you graduate?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+HSTYPE2_TFS,From what kind of high school did you graduate?,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,1
+IMPCAFEER01_T2_TFS,Important to Career: Job openings generally available,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER02_T2_TFS,Important to Career: Rapid career advancement possible,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER03_T2_TFS,Important to Career: High anticipated earnings,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER04_T2_TFS,Important to Career: Well-respected/prestigious occupation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER05_T2_TFS,Important to Career: Great deal of independence,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER06_T2_TFS,Important to Career: Chance for steady progress,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER07_T2_TFS,Important to Career: Can make important contribution to society,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER08_T2_TFS,Important to Career: Can avoid pressure,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER09_T2_TFS,Important to Career: Can work with ideas,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER10_T2_TFS,Important to Career: Can be helpful to others,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER11_T2_TFS,Important to Career: Able to work with people,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER12_T2_TFS,Important to Career: Intrinsic interest in field,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+IMPCAFEER13_T2_TFS,Important to Career: The work would be challenging,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+INCOME_TFS,Parental Income,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+LEGACY_T2_TFS,Did either of your parents or legal guardians attend the institution that you are now attending?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+LGBTQIDEN_TFS,What is your sexual orientation?,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MAJOR_TFS,Student's probable field of study/major,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+MAJORA_TFS,Student's aggregated major,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+MARITAL_TFS,Are you presently married?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+MATCHLEVEL_TFS,Type of Match,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+MATH1_TFS,Math Courses Completed: Algebra II,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MATH2_TFS,Math Courses Completed: Pre-calculus/Trigonometry,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MATH3_TFS,Math Courses Completed: Probability and Statistics,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MATH4_TFS,Math Courses Completed: Calculus,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MATH5_TFS,Math Courses Completed: AP Probability and Statistics,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MATH6_TFS,Math Courses Completed: AP Calculus,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MCAREER_TFS,Mother's career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+MCAREERA_TFS,Father's aggregated career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+MEMPLOY_TFS,Mother's Employment Status,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MILITARY_TFS,Military Status:,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB01_TFS,Habits of Mind: Ask questions in class,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB02_TFS,Habits of Mind: Support your opinions with a logical argument,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB03_TFS,Habits of Mind: Seek solutions to problems and explain them to others,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB04_TFS,Habits of Mind: Revise your papers to improve your writing,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB05_TFS,Habits of Mind: Evaluate the quality or reliability of information you received,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB06_TFS,Habits of Mind: Take a risk because you felt you had more to gain,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB07_TFS,Habits of Mind: Seek alternative solutions to a problem,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB08_TFS,Habits of Mind: Look up scientific research articles and resources,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB09_TFS,"Habits of Mind: Explore topics on your own, even though it was not required for a class",1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB10_TFS,Habits of Mind: Accept mistakes as part of the learning process,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB11_TFS,Habits of Mind: Seek feedback on your academic work,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB12_TFS,Habits of Mind: Take notes during class,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MNDHAB13_TFS,Habits of Mind: Work with other students on group projects,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+MNDHAB14_TFS,Habits of Mind: Integrate skills and knowledge from different sources and experiences,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+MNDHAB15_TFS,Habits of Mind: Analyze multiple sources of information before coming to a conclusion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MNDHAB16_TFS,Habits of Mind: Take on a challenge that scares you,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+MOTHEDUC_TFS,Mother's education,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+MRELIGION_TFS,Mother's religion,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+MRELIGIONA_TFS,Your mother's religious preference,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,1,1,0,1,1,0,0,1,1,1,1
+NATENGSP_TFS,Is English your native language?,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+NDEPCOL_TFS,How many of these dependents other than yourself are currently attending college?,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+NDEPPAR_TFS,How many persons are currently dependent on your parents for support?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
+NEEDREM1_TFS,English: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+NEEDREM2_TFS,Reading: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+NEEDREM3_TFS,Mathematics: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+NEEDREM4_TFS,Social Studies: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+NEEDREM5_TFS,Science: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0
+NEEDREM6_TFS,Foreign Language: Will need special tutoring or remedial work,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,0,0
+NEEDREM7_TFS,Writing: Will need special tutoring or remedial work,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+NOCRED1_TFS,Not for credit at any other institution,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0
+NOCRED2_TFS,Not for credit at junior college or community college,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0
+NOCRED3_TFS,Not for credit at a four-year college or university,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0
+NOCRED4_TFS,Not for credit at some other postsecondary,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NUMACCPT_TFS,How many other acceptances did you receive this year?,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,0,1,1,0,0,0
+NUMAPPLY_TFS,To how many colleges other than this one did you apply for admission this year?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+OTHRCOLL_TFS,"Since leaving high school, have you ever taken courses, whether for credit or not for credit, at any other institution (university, 4- or 2-year college, technical, vocational, or business school)?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PARBORN_TFS,Which of your parents were born in the U.S.?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+PAREDUC1_TFS,Parent/Guardian 1 Education,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PAREDUC2_TFS,Parent/Guardian 2 Education,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PARSEX1_TFS,Parent/Guardian 1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PARSEX2_TFS,Parent/Guardian 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PARSTAT_TFS,Are your parents alive? divorced?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+PCAREER1_TFS,Parent/Guardian 1 Career,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PCAREER2_TFS,Parent/Guardian 2 Career,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PEMPLOY1_TFS,Current employment status: Parent/Guardian 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PEMPLOY2_TFS,Current employment status: Parent/Guardian 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+PLACEENG_TFS,English,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PLACEMATH_TFS,Mathematics,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PLACEREAD_TFS,Reading,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PLACEWRIT_TFS,Writing,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PLANCOL1_T2_TFS,Planning for College: Seek high school counselor's advice,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+PLANCOL2_T2_TFS,Planning for College: Hired a private college counselor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,1,1,0,0,0
+PLANCOL3_T2_TFS,Planning for College: Take a SAT/ACT preparation course,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+PLANLIVE_TFS,Where do you plan to live during the fall term?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+POLIVIEW_TFS,How would you characterize your political views?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+PREFLIVE_TFS,"If you had a choice, where would you have preferred to live?",1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRELAW_TFS,Do you consider yourself Pre-Law?,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRELIG1_TFS,Parent/Guardian 1 religion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRELIG2_TFS,Parent/Guardian 2 Religion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PREMED_TFS,Do you consider yourself Pre-Med?,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+PREVCRED_TFS,"Prior to this term, have you ever taken courses at any other institution?",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RACE1_TFS,American Indian,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE10_TFS,"East Asian (e.g., Chinese, Japanese, Korean, Taiwanese)",1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE11_TFS,Filipino,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACE12_TFS,"Southeast Asian (e.g., Cambodian, Vietnamese, Hmong)",1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACE13_TFS,"South Asian (e.g., Indian, Pakistani, Nepalese, Sri Lankan)",1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACE14_TFS,Other Asian,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACE2_TFS,Asian,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,1,1,1
+RACE3_TFS,Native Hawaiian/Pacific Islander,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE4_TFS,Black,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE5_TFS,Mexican/Chicano,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RACE6_TFS,Puerto Rican,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE7_TFS,Other Latino,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE8_TFS,White,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+RACE9_TFS,Other race/ethnicity,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACEGROUP_TFS,Race/Ethnicity Group,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RACEHS_TFS,How would you describe the racial composition of the high school you last attended?,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+RACENEIB_TFS,How would you describe the racial composition of the neighborhood where you grew up?,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1
+RATE01_TFS,Self Rating: Academic ability,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE02_TFS,Self Rating: Artistic ability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+RATE03_TFS,Self Rating: Athletic ability,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE04_TFS,Self Rating: Competitiveness,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+RATE05_TFS,Self Rating: Computer skills,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE06_TFS,Self Rating: Cooperativeness,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,0,0,0
+RATE07_TFS,Self Rating: Creativity,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE08_TFS,Self Rating: Drive to achieve,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE09_TFS,Self Rating: Emotional health,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE10_TFS,Self Rating: Leadership ability,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE11_TFS,Self Rating: Mathematical ability,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE12_TFS,Self Rating: Physical health,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE13_TFS,Self Rating: Popularity,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE14_TFS,Self Rating: Public speaking ability,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE15_TFS,Self Rating: Self-confidence (intellectual),1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RATE16_TFS,Self Rating: Self-confidence (social),0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1
+RATE17_TFS,Self Rating: Self-understanding,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1
+RATE18_TFS,Self Rating: Spirituality,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+RATE19_TFS,Self Rating: Understanding of others,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+RATE20_TFS,Self Rating: Writing ability,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+RATE21_TFS,Self Rating: Risk-taking,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+RATE23_TFS,Self Raing: Risk-taking,0,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,0,0,1
+REASON01_TFS,Reason Attend: A mentor/role model encouraged me to go,0,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON02_TFS,Reason Attend: I could not find a job,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON03_TFS,Reason Attend: My parents wanted me to go,0,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON04_TFS,Reason Attend: There was nothing better to do,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON05_TFS,Reason Attend: To be able to get a better job,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON06_TFS,Reason Attend: To be able to make more money,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,1
+REASON07_TFS,Reason Attend: To get training for a specific career,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON08_TFS,Reason Attend: To gain a general education and appreciation of ideas,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1
+REASON09_TFS,Reason Attend: To improve my reading and study skills,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+REASON10_TFS,Reason Attend: To learn more about things that interest me,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+REASON11_TFS,Reason Attend: To make me a more cultured person,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0
+REASON12_TFS,Reason Attend: To prepare myself for graduate or professional school,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+REASON13_TFS,Reason Attend: Wanted to get away from home,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+REASON14_TFS,Reason Attend: To please my family,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RRACE_TFS,Responded to race,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,1,1
+SCAREER_TFS,Student's probable career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+SCAREERA_TFS,Student's aggregated career,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+SCIASSOC01_TFS,I have a strong sense of belonging to a community of scientists,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SCIASSOC02_TFS,I derive great personal satisfaction from working on a team that is doing important research,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SCIASSOC03_TFS,I think of myself as a scientist,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SCIASSOC04_TFS,I feel like I belong in the field of science,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SCICAREER_TFS,Will you pursue a science-related research career?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SCISKILLS01_TFS,"Science Skill: Use technical science skills (use of tools, instruments, and/or techniques)",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SCISKILLS02_TFS,Science Skill: Generate a research question,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+SCISKILLS03_TFS,Science Skill: Determine how to collect appropriate data,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+SCISKILLS04_TFS,Science Skill: Explain the results of a study,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+SCISKILLS05_TFS,Science Skill: Use scientific literature to guide research,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+SCISKILLS06_TFS,Science Skill: Integrate results from multiple studies,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+SCISKILLS07_TFS,Science Skill: Ask relevant questions,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SCISKILLS08_TFS,Science Skill: Identify what is known and not known about a problem,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SCISKILLS09_TFS,Science Skill: Understand scientific concepts,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SCISKILLS10_TFS,Science Skill: See connections between different areas of science and mathematics,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SEXIMP_TFS,Sex imputed,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SIBLIVE1_T2_TFS,Number of older brothers,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+SIBLIVE2_T2_TFS,Number of older sisters,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+SIBLIVE3_T2_TFS,Number of younger brothers,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+SIBLIVE4_T2_TFS,Number of younger sisters,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL01_TFS,General knowledge,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SLFABL02_TFS,Knowledge of a particular field or discipline,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL03_TFS,Knowledge of people from different races/cultures,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL04_TFS,Understanding of the problems facing your community,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL05_TFS,Understanding of national issues,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+SLFABL06_TFS,Understanding of global issues,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SLFABL07_TFS,Critical thinking skills,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL08_TFS,Problem-solving skills,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+SLFABL09_TFS,Ability to manage your time effectively,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SLFABL10_TFS,Foreign language ability,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SLFABL11_TFS,Interpersonal skills,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+SRELIGION_TFS,Student's religion,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+SRELIGIONA_TFS,Your religious preference,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+STUDBORN_TFS,Birthplace: Which of the following statements applies to you?,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+SUMBRIDGE_TFS,How many weeks this summer did you participate in a bridge program at this institution?,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SURVTYPE_TFS,Survey Type,1,1,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+TRANSGENDER_TFS,Are you transgender?,0,0,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1
+TWINSTAT_TFS,Are you a twin?,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VETERAN_TFS,Are you a veteran?,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,1
+VIEW01_TFS,View: A national health care plan is needed to cover everybody's medical costs,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW01_TFS,View: A national health care plan is needed to cover everybody's medical costs,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW02_TFS,View: Abortion should be legal,1,0,1,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW02_TFS,View: Abortion should be legal,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW03_TFS,View: Addressing global warming should be a federal priority,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1
+VIEW03_TFS,View: Addressing global warming should be a federal priority,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW04_TFS,View: Affirmative action in college admissions should be abolished,0,1,0,0,0,0,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW04_TFS,View: Affirmative action in college admissions should be abolished,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW05_TFS,View: Colleges have the right to ban extreme speakers from campus,0,1,0,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,0,0,0
+VIEW05_TFS,View: Colleges have the right to ban extreme speakers from campus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW06_TFS,View: Colleges should prohibit racist/sexist speech on campus,0,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW06_TFS,View: Colleges should prohibit racist/sexist speech on campus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW07_TFS,View: Dissent is a critical component of the political process,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW07_TFS,View: Dissent is a critical component of the political process,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW08_TFS,View: Employers should be allowed to require drug testing of employees or job applicants,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1
+VIEW08_TFS,View: Employers should be allowed to require drug testing of employees or job applicants,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW09_TFS,View: Federal military spending should be increased,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+VIEW09_TFS,View: Federal military spending should be increased,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW11_TFS,View: Grading in the high schools has become too easy,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW11_TFS,View: Grading in the high schools has become too easy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW12_TFS,"View: If two people really like each other, it's all right for them to have sex even if they've known each other for only a very short time",0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW12_TFS,"View: If two people really like each other, it's all right for them to have sex even if they've known each other for only a very short time",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW13_TFS,View: It is important to have laws prohibiting homosexual relationships,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1
+VIEW13_TFS,View: It is important to have laws prohibiting homosexual relationships,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW14_TFS,View: Just because a man thinks that a woman has 'led him on' does not entitle him to have sex with her,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW14_TFS,View: Just because a man thinks that a woman has 'led him on' does not entitle him to have sex with her,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW15_TFS,View: Marijuana should be legalized,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,,,
+VIEW15_TFS,View: Marijuana should be legalized,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW16_TFS,View: Only volunteers should serve in the armed forces,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,0,0,0,0
+VIEW16_TFS,View: Only volunteers should serve in the armed forces,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW17_TFS,View: People should not obey laws which violate their personal values,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW17_TFS,View: People should not obey laws which violate their personal values,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW18_TFS,View: Racial discrimination is no longer a major problem in America,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW18_TFS,View: Racial discrimination is no longer a major problem in America,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW19_TFS,"View: Realistically, an individual can do little to bring about changes in our society",1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0
+VIEW19_TFS,"View: Realistically, an individual can do little to bring about changes in our society",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW20_TFS,View: Same-sex couples should have the right to legal marital status,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW20_TFS,View: Same-sex couples should have the right to legal marital status,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW21_TFS,View: The activities of married women are best confined to the home and family,0,0,1,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0
+VIEW21_TFS,View: The activities of married women are best confined to the home and family,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW22_TFS,View: The chief benefit of a college education is that it increases one's earning power,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW22_TFS,View: The chief benefit of a college education is that it increases one's earning power,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW23_TFS,View: The death penalty should be abolished,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW23_TFS,View: The death penalty should be abolished,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW24_TFS,View: The federal government is not doing enough to control environmental pollution,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW24_TFS,View: The federal government is not doing enough to control environmental pollution,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW25_TFS,View: The federal government should have stricter gun control laws,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,0,0,1,1,1,1,1,0,0,0
+VIEW25_TFS,View: The federal government should have stricter gun control laws,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW26_TFS,View: The federal government should do more to discourage energy consumption,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW26_TFS,View: The federal government should do more to discourage energy consumption,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW27_TFS,View: The federal government should raise taxes to help reduce the deficit,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+VIEW27_TFS,View: The federal government should raise taxes to help reduce the deficit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW28_TFS,View: There is too much concern in the courts for the rights of criminals,0,0,1,0,1,0,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW28_TFS,View: There is too much concern in the courts for the rights of criminals,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW29_TFS,"View: Through hard work, everybody can succeed in American society",0,0,1,0,1,1,1,1,1,1,1,1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,1,1,1
+VIEW29_TFS,"View: Through hard work, everybody can succeed in American society",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW30_TFS,View: Undocumented immigrants should be denied access to public education,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+VIEW30_TFS,View: Undocumented immigrants should be denied access to public education,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW31_TFS,View: Wealthy people should pay a larger share of taxes than they do now,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW31_TFS,View: Wealthy people should pay a larger share of taxes than they do now,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW32_TFS,View: Gays and lesbians should have the legal right to adopt a child,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW32_TFS,View: Gays and lesbians should have the legal right to adopt a child,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW33_TFS,View: The United States should intervene in the wars of other countries,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW33_TFS,View: The United States should intervene in the wars of other countries,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW34_TFS,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW34_TFS,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW35_TFS,"View: Sexual activity that occurs without the presence of explicit, affirmative consent (i.e., ""yes means yes"") is considered sexual assault",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW36_TFS,"View: There is little that a person can do to be better at math - you are either ""good"" or ""bad"" at math",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+VIEW37_TFS,View: Intelligence is something that can be improved by studying or working harder,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+YRGRADHS_TFS,In what year did you graduate from high school?,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1
+YRSTUDY1_TFS,Years Study: English,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1
+YRSTUDY2_TFS,Years Study: Mathematics,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0
+YRSTUDY3_TFS,Years Study: Foreign Language,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0
+YRSTUDY4_TFS,Years Study: Physical Science,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0
+YRSTUDY5_TFS,Years Study: Biological Science,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0
+YRSTUDY6_TFS,Years Study: History/Am Govt,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,0,0
+YRSTUDY7_TFS,Years Study: Computer Science,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,0,0
+YRSTUDY8_TFS,Years Study: Art and/or Music,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0,0
+ACT10_N_TFS,Act in Past Year: Discussed personal problems with a friend,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+ACT11_N_TFS,Act in Past Year: Worried about choosing a career,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,0,0
+ACT12_N_TFS,"Act in Past Year: Utilized nontraditional medicine (acupuncture, homeopathy, etc.)",0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+ACT13_N_TFS,Act in Past Year: Discussed religion/spirituality: In class,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+ACT14_N_TFS,Act in Past Year: Discussed religion/spirituality: With friends,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+ACT15_N_TFS,Act in Past Year: Discussed religion/spirituality: With family,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+ACT16_N_TFS,Act in Past Year: Maintained a healthy diet,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+ACT17_N_TFS,Act in Past Year: Discussed politics: In class,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+ACT18_N_TFS,Act in Past Year: Discussed politics: With friends,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT19_N_TFS,Act in Past Year: Discussed politics: With family,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ACT20_N_TFS,Act in Past Year: Read a newspaper for: National and global news,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ACT21_N_TFS,Act in Past Year: Read a newspaper for: Local news and information,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ACT22_N_TFS,Act in Past Year: Read a newspaper for: Schoolwork,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+ACT23_N_TFS,Act in Past Year: Demonstrated for/against a cause,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9501_N_TFS,Admission Consider: Low income students,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9502_N_TFS,Admission Consider: Athletes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9503_N_TFS,Admission Consider: High-achieving students,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9504_N_TFS,Admission Consider: Foreign students,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9505_N_TFS,Admission Consider: Children of alumni,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9506_N_TFS,Admission Consider: African Americans,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9507_N_TFS,Admission Consider: American Indians,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9508_N_TFS,Admission Consider: Asian Americans,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9509_N_TFS,Admission Consider: Hispanics/Latinos,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,0
+ADMITCOL9510_N_TFS,Admission Consider: Whites/Caucasians,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9901_N_TFS,Admission Consider: Application essay,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9902_N_TFS,Admission Consider: Athletic talent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9903_N_TFS,Admission Consider: Extracurricular activities,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9904_N_TFS,Admission Consider: High school grades,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9905_N_TFS,Admission Consider: Letters of recommendation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9906_N_TFS,Admission Consider: Musical/artistic talent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9907_N_TFS,Admission Consider: Race/ethnicity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9908_N_TFS,Admission Consider: Standardized test scores,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,1,0
+ADMITCOL9909_N_TFS,Admission Consider: Volunteer work,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1,0,0
+ADOPT98_N_TFS,Were you adopted by your family?,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+BORNAGAIN07_N_TFS,Do you consider yourself a born-again Christian?,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+CHOOSE02_N_TFS,Choose to Attend: This college's graduates get good jobs,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+CHOOSE0201_N_TFS,Choose to Attend: Not offered aid by first choice,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+CHOOSE0202_N_TFS,Choose to Attend: Reputation for campus safety,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0
+CHOOSE91_N_TFS,Choose to Attend: I was attracted by the racial/ethnic make up of the student body at this college,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0
+CHOOSE93_N_TFS,Choose to Attend: Local college; no other options,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8701_N_TFS,Competency: Type 40 words or more per minute,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8702_N_TFS,Competency: Speak a second language fluently,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8703_N_TFS,Competency: Identify major constellations,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8704_N_TFS,Competency: Sight-read piano music,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8705_N_TFS,Competency: Read music (singing),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8706_N_TFS,Competency: Use a sewing machine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+COMPET8707_N_TFS,Competency: Identify many classical music compositions by title and composer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
+COMPET8708_N_TFS,Competency: Swim a mile without stopping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+COMPET8709_N_TFS,Competency: Name the animal phyla,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
+COMPET8710_N_TFS,Competency: Describe difference between stocks and bonds,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,,,
+COMPET8711_N_TFS,Competency: Perform CPR,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+COMPET8712_N_TFS,Competency: Describe the personal freedoms guaranteed by the Bill of Rights,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+COMPET8713_N_TFS,Competency: Do at least 15 push-ups,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+COMPET8714_N_TFS,Competency: Play bridge,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+COMPET8715_N_TFS,Competency: Play chess,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+CSVACT0401_N_TFS,Community Service: None,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0402_N_TFS,Community Service: Tutoring/teaching,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CSVACT0403_N_TFS,Community Service: Counseling/mentoring,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0404_N_TFS,Community Service: Environmental activities,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0405_N_TFS,Community Service: Child care,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+CSVACT0406_N_TFS,Community Service: Elder care,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0407_N_TFS,Community Service: Hospital work,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+CSVACT0408_N_TFS,Community Service: Substance abuse education,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CSVACT0409_N_TFS,Community Service: Other health education,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+CSVACT0410_N_TFS,Community Service: Services to the homeless,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CSVACT0411_N_TFS,Community Service: Community improvement/construction,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CSVACT0412_N_TFS,Community Service: Conflict mediation,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0413_N_TFS,Community Service: Service to my religious community,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+CSVACT0414_N_TFS,Community Service: Other community service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+DEGASP00_N_TFS,Highest academic degree planned,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+DISAB98_N_TFS,Disability: Other,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1
+FIRSTVISIT03_N_TFS,When did you first visit this college?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1,0,0
+FOSTER98_N_TFS,Were you ever in foster care?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+FUTACT89_N_TFS,Future Act: Buy a personal computer sometime in the next 12 months?,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+GOAL04_N_TFS,Goal: Working to find a cure to a health problem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
+GOAL06_N_TFS,Goal: Getting married,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0801_N_TFS,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0802_N_TFS,Goal: Becoming a community leader,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0803_N_TFS,Goal: Obtaining recognition from my colleagues for contributions to my special field,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL0804_N_TFS,Goal: Influencing the political structure,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL0805_N_TFS,Goal: Influencing social values,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL0806_N_TFS,Goal: Raising a family,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0807_N_TFS,Goal: Becoming an expert in finance and commerce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0808_N_TFS,Goal: Having administrative responsibility for the work of others,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0809_N_TFS,Goal: Being very well off financially,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1
+GOAL0810_N_TFS,Goal: Helping others who are in difficulty,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0811_N_TFS,Goal: Participating in an organization like the Peace Corps or Vista,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0812_N_TFS,Goal: Making a theoretical contribution to science,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0813_N_TFS,"Goal: Writing original works (poems, novels, etc.)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1
+GOAL0814_N_TFS,"Goal: Creating artistic work (painting, sculpture, etc.)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0
+GOAL0815_N_TFS,Goal: Becoming successful in a business of my own,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL0816_N_TFS,Goal: Becoming involved in programs to clean up the environment,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+GOAL0817_N_TFS,Goal: Developing a meaningful philosophy of life,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0818_N_TFS,Goal: Participating in a community action program,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0819_N_TFS,Goal: Helping to promote racial understanding,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+GOAL0820_N_TFS,Goal: Getting married,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HIDEGREE00_N_TFS,Highest academic degree planned at this college,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+HSACT9001_N_TFS,High School Act: Was elected president of one or more student organizations,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9002_N_TFS,High School Act: Received a high rating in a state or regional music contest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9003_N_TFS,High School Act: Competed in a state or regional speech or debate contest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9004_N_TFS,High School Act: Had a major part in a play,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9005_N_TFS,High School Act: Won an award in an art competition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9006_N_TFS,High School Act: Edited a school publication,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9007_N_TFS,High School Act: Had original writing or poetry published,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9008_N_TFS,High School Act: Won an award in a state or regional science contest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+HSACT9009_N_TFS,High School Act: Was a member of a scholastic honor society,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9101_N_TFS,High School Act: Was elected president of one or more student organizations,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9102_N_TFS,High School Act: Received a high rating in a state or regional music contest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9103_N_TFS,High School Act: Had a major part in a play,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9104_N_TFS,High School Act: Won an award in an art competition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9105_N_TFS,High School Act: Took a SAT/ACT preparation course,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9106_N_TFS,High School Act: Edited a school publication,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9107_N_TFS,High School Act: Participated in course-related community service projects,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9108_N_TFS,High School Act: Won an award in a state or regional science contest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+HSACT9109_N_TFS,High School Act: Was a member of a scholastic honor society,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSGPA07_N_TFS,What was your average grade in high school?,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSTYPE04_N_TFS,From what kind of secondary school did you graduate?,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HSURES04_N_TFS,Have you participated in a health science research program sponsored by a university?,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH041_N_TFS,Proportion of Time Living: Mother,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+LIVWITH042_N_TFS,Proportion of Time Living: Father,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH043_N_TFS,Proportion of Time Living: Stepmother,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH044_N_TFS,Proportion of Time Living: Stepfather,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH045_N_TFS,Proportion of Time Living: Grandparent,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH046_N_TFS,Proportion of Time Living: Legal guardian,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LIVWITH047_N_TFS,Proportion of Time Living: Other adult(s),0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MNDHAB07_N_TFS,Habits of Mind: Accept failure as part of the learning process,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+MNDHAB09_N_TFS,Habits of Mind: Work with other students on class assignments,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0701_N_TFS,Parent Involvement: Decision to go to college,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0702_N_TFS,Parent Involvement: Application(s) to college,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0703_N_TFS,Parent Involvement: Decision to go to this college,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0704_N_TFS,Parent Involvement: Dealings with officials at your college,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0705_N_TFS,Parent Involvement: Choosing college courses,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+PARINV0706_N_TFS,Parent Involvement: Choosing college activities,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RACE9701_N_TFS,White,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,1,1
+RACE9702_N_TFS,Black,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,1,1
+RACE9703_N_TFS,American Indian,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9704_N_TFS,Mexican/Chicano,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9705_N_TFS,Puerto Rican,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9706_N_TFS,Other Latino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9707_N_TFS,Chinese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9708_N_TFS,Filipino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9709_N_TFS,Japanese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9710_N_TFS,Korean,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9711_N_TFS,"Southeast Asian (Vietnamese, Laotian, Cambodian, etc.)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9712_N_TFS,Other Asian,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0
+RACE9713_N_TFS,Other race/ethnicity,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+RACE9714_N_TFS,"South Asian (e.g., Indian, Pakistani, Nepalese, Sri Lankan)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RACE9715_N_TFS,"East Asian (e.g., Chinese, Japanese, Korean, Taiwanese)",0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0401_N_TFS,Self Rating: Academic ability,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0402_N_TFS,Self Rating: Artistic ability,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0403_N_TFS,Self Rating: Compassion,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0404_N_TFS,Self Rating: Computer skills,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0405_N_TFS,Self Rating: Cooperativeness,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0406_N_TFS,Self Rating: Courage,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0407_N_TFS,Self Rating: Creativity,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0408_N_TFS,Self Rating: Drive to achieve,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0409_N_TFS,Self Rating: Emotional health,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0410_N_TFS,Self Rating: Forgiveness,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0411_N_TFS,Self Rating: Generosity,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0412_N_TFS,Self Rating: Kindness,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0413_N_TFS,Self Rating: Leadership ability,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0414_N_TFS,Self Rating: Mathematical ability,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0415_N_TFS,Self Rating: Physical health,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0416_N_TFS,Self Rating: Public speaking ability,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0417_N_TFS,Self Rating: Religiousness,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+RATE0418_N_TFS,Self Rating: Self-confidence (intellectual),0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0419_N_TFS,Self Rating: Self-confidence (social),0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0420_N_TFS,Self Rating: Self-understanding,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0421_N_TFS,Self Rating: Spirituality,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0422_N_TFS,Self Rating: Time management,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0423_N_TFS,Self Rating: Understanding of others,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE0424_N_TFS,Self Rating: Writing ability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0
+RATE95_N_TFS,Self Rating: Physical appearance,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+REASON02_N_TFS,Reason Attend: To prepare myself for graduate or professional school,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+REASON03_N_TFS,Reason Attend: Because my friends were going,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+RELWOMEQ02_N_TFS,My religion treats men and women as equals,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SUMRES04_N_TFS,Have you participated in a summer research program?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+TOOKAP_N_TFS,How many AP courses did you take in high school?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+TOOKHON_N_TFS,How many honors courses did you take in high school?,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0
+VEIW9502_N_TFS,View: Children of undocumented immigrants should be denied access to public education,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VIEW04_N_TFS,View: Colleges have the right to ban extreme speakers,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+VIEW90_N_TFS,View: Scientists should publish their findings regardless of the possible consequences,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0
+VIEW9501_N_TFS,View: Better education and more job opportunities would substantially reduce crime,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0
+VIEW96_N_TFS,View: All official federal and state documents should be printed in English only,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS891_N_TFS,Parents: Interested in intellectual pursuits,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS892_N_TFS,Parents: Interested in cultural pursuits,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS893_N_TFS,Parents: Deeply religious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS894_N_TFS,Parents: Interested in politics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS895_N_TFS,Parents: Deeply concerned about their children,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS896_N_TFS,Parents: Financially comfortable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS897_N_TFS,Parents: Having high aspirations about me,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+VIEWPARENTS898_N_TFS,Parents: Difficult to talk with,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+YRTODEGREE93_N_TFS,How many years do you think it will take you to earn your first undergraduate degree?,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+ACT01_T_TFS,Act in Past Year: Argued with a teacher in class,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+ACT02_T_TFS,Act in Past Year: Cheated on a test in school,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+ACT03_T_TFS,Act in Past Year: Copied homework from another student,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1
+ACT04_T_TFS,Act in Past Year: Demonstrated for a change in some military policy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+ACT05_T_TFS,Act in Past Year: Did extra (unassigned) work/reading for a course,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+ACT06_T_TFS,Act in Past Year: Discussed 'safe sex',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0
+ACT07_T_TFS,Act in Past Year: Discussed sex,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+ACT08_T_TFS,Act in Past Year: Discussed sports,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+ACT10_T_TFS,Act in Past Year: Elected president of one or more student organizations,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,0
+ACT11_T_TFS,Act in Past Year: Found it difficult to study at home,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,0
+ACT14_T_TFS,Act in Past Year: Lost my temper,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,1,0,0,1,1,0,1,1,1,1,1
+ACT15_T_TFS,Act in Past Year: Missed school because of illness,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,0
+ACT16_T_TFS,Act in Past Year: Missed school due to employment,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+ACT17_T_TFS,Act in Past Year: Other Internet use,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+ACT19_T_TFS,Act in Past Year: Participated in a science contest,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+ACT21_T_TFS,Act in Past Year: Participated in Internet chat rooms,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+ACT22_T_TFS,Act in Past Year: Participated in political demonstrations,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+ACT23_T_TFS,Act in Past Year: Played chess,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+ACT24_T_TFS,Act in Past Year: Played computer games,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+ACT26_T_TFS,Act in Past Year: Read the editorial page in the newspaper,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,1,1,1
+ACT27_T_TFS,Act in Past Year: Spoke a language other than English at home,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1
+ACT28_T_TFS,Act in Past Year: Stayed up all night,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1
+ACT29_T_TFS,Act in Past Year: Studied in library,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,1,1,0,0,0,1,1,1
+ACT32_T_TFS,Act in Past Year: Took a prescribed anti-depressant,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+ACT33_T_TFS,Act in Past Year: Took a tranquilizing pill,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+ACT34_T_TFS,Act in Past Year: Took sleeping pills,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+ACT35_T_TFS,Act in Past Year: Took vitamins,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1
+ACT36_T_TFS,Act in Past Year: Typed a homework assignment,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+ACT37_T_TFS,Act in Past Year: Used the Internet: to blog,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+ACT38_T_TFS,Act in Past Year: Used the Internet: for research or homework,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+ACT39_T_TFS,Act in Past Year: Used the Internet: to read blogs,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+ACT40_T_TFS,Act in Past Year: Used the Internet: to read news sites,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1
+ACT42_T_TFS,Act in Past Year: Won a varsity letter for sports,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1
+ACT43_T_TFS,Act in Past Year: Wore glasses or contact lenses,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+CHOOSE02_T_TFS,Choose to Attend: I was offered: a merit-based scholarship,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+CHOOSE03_T_TFS,Choose to Attend: I was offered: a need-based scholarship,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+CHOOSE04_T_TFS,Choose to Attend: I was offered: an athletic scholarship,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+CHOOSE05_T_TFS,Choose to Attend: Info in multicollege guidebook,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+CHOOSE07_T_TFS,Choose to Attend: My friends are attending,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+FUTACT02_T_TFS,Future Act: Develop close friendships with other students,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT03_T_TFS,Future Act: Drop out of college,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,0,0,0
+FUTACT06_T_TFS,Future Act: Find a job after college in the field for which you were trained,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+FUTACT07_T_TFS,Future Act: Get married within a year after college,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+FUTACT08_T_TFS,Future Act: Have to work at an outside job,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0
+FUTACT10_T_TFS,Future Act: Seek vocational counseling,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+FUTACT11_T_TFS,Future Act: Strengthen your religious beliefs/convictions,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+RATE01_T_TFS,Self Rating: Ability to learn a foreign language,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1
+RATE04_T_TFS,Self Rating: Initiative,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1
+RATE05_T_TFS,Self Rating: Mechanical ability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0
+RATE06_T_TFS,Self Rating: Originality,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+RATE07_T_TFS,Self Rating: Persistence,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1
+RATE11_T_TFS,Self Rating: Popularity with the opposite sex,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+RATE12_T_TFS,Self Rating: Reading speed/comprehension,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+RATE13_T_TFS,Self Rating: Religiousness,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+RATE14_T_TFS,Self Rating: Risk-taking,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,0,0,0
+RATE15_T_TFS,Self Rating: Sensitivity to criticism,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,1,0,1,1,1
+RATE16_T_TFS,Self Rating: Stubbornness,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1
+REASON02_T_TFS,Reason Attend: I could not find a job,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+REASON03_T_TFS,Reason Attend: My parents wanted me to go,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+REASON04_T_TFS,Reason Attend: To be able to get a better job,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+REASON05_T_TFS,Reason Attend: Wanted to get away from home,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,1,1,0,0,0,1,0,0
+REASON06_T_TFS,Reason Attend: To prove to others I could succeed,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+REASON07_T_TFS,Reason Attend: To find my purpose in life,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0

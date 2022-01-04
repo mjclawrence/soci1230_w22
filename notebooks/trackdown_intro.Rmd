@@ -1,0 +1,45 @@
+---
+title: "Untitled"
+author: "ML"
+date: "12/20/2021"
+output: pdf_document
+---
+
+See [here](https://bookdown.org/yihui/rmarkdown-cookbook/yihui-xie.html) for info on the `trackdown` package.
+
+```{r}
+library(tidyverse)
+library(trackdown)
+```
+
+```{r}
+update_file("trackdown_intro.Rmd")
+```
+
+It will update.
+
+Now go to Google Drive and make some changes.
+
+Ok, in Google Drive I added this sentence and saved the file.
+
+```{r}
+update_file("trackdown_intro.Rmd")
+```
+
+Now I need to download the file in R.
+
+```{r}
+download_file("trackdown_intro.Rmd")
+```
+
+Then I'll make some more changes here.
+
+Changes...changes...changes...
+
+And I'll update the file so those changes are available in Google Drive.
+
+```{r}
+update_file("trackdown_intro.Rmd")
+```
+
+There was a weird thing that just happened when I updated the file before saving it in R. Save it before you update it!

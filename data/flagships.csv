@@ -4,7 +4,7 @@ super_opeid,name,state,fips,mr_kq5_pq1
 95,Indiana University System,IN,18,0.009217469
 40,Louisiana State University System,LA,22,0.02137957
 3090,Ohio State University ,OH,39,NA
-3329,Pennsylvania State University ,PA,42,NA
+3329,Pennsylvania State University ,PA,42,0.017627658
 2629,"Rutgers, The State University Of New Jersey",NJ,34,0.037468784
 2837,State University Of New York At Buffalo,NY,36,0.034704667
 1051,University Of Alabama,AL,1,0.016160509
@@ -29,7 +29,7 @@ super_opeid,name,state,fips,mr_kq5_pq1
 81,University Of Minnesota System,MN,27,0.011697055
 2440,University Of Mississippi,MS,28,0.016521731
 79,University Of Missouri System And Missouri University Of Science And Technology,MO,29,0.011646654
-2536,University Of Montana ,MT,30,NA
+2536,University Of Montana ,MT,30,0.013028888
 71,University Of Nebraska System,NE,31,0.012720068
 2568,"University Of Nevada , Reno",NV,32,0.011658425
 2589,University Of New Hampshire,NH,33,0.011960809
