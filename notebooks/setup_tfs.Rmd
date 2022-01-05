@@ -1,0 +1,545 @@
+---
+title: "setup_tfs"
+author: "ML"
+date: "1/4/2022"
+output: html_document
+---
+
+# Load packages
+```{r}
+library(tidyverse)
+library(weights)
+```
+
+# Load data
+
+The `collnames` file links campus_id, ACERECODE, and super_opeid.
+
+```{r}
+collnames <- read_csv("../data/collnames.csv")
+```
+
+The `college_mobility` file has chetty variables and css variables and tfs matched variables
+
+```{r}
+college_mobility <- read_csv("../data/college_mobility.csv")
+```
+
+The `chetty_table2.csv` file has all the mobility variables
+
+```{r}
+chetty <- read_csv("../data/chetty_table2.csv")
+chetty_vars <- chetty |> 
+  select(super_opeid, mr_kq5_pq1,
+         mr_ktop1_pq1,
+                 k_rank, k_q5, k_top10pc,
+                 k_top5pc, k_top1pc,
+                 starts_with("k_rank_cond_parq"),
+                 starts_with("kq5_cond_parq"),
+                 par_q1, par_q5)
+
+chetty_vars <- left_join(collnames, chetty_vars)
+
+chetty_vars <- chetty_vars |> 
+  select(-c(ACERECODE, name, super_opeid))
+```
+
+The `tfs_question_index` file has the question names and descriptions for every survey year.
+
+```{r}
+tfs_longitudinal <- read_csv("../codebooks/tfs_question_index.csv")
+```
+
+We only need questions asked at least once in TFS survey years between 1995:2001.
+
+```{r}
+tfs_longitudinal2 <- tfs_longitudinal |>
+  pivot_longer(names_to = "year", values_to = "asked", "2020":"1990") |>
+  filter(year %in% 1995:2001) |>
+  group_by(Name) |>
+  mutate(n_asked = sum(asked)) |>
+  ungroup() |>
+  select(Name, Description, n_asked) |>
+  distinct() |>
+  filter(n_asked>0)
+
+#write.csv(tfs_longitudinal2, "../data/tfs_usable.csv", row.names = FALSE)
+```
+
+Keep the questions we are using
+
+```{r}
+tfs_names.labeled <- read_csv("../data/tfs_usable.csv")
+tfs_names.labeled <- tfs_names.labeled |> 
+  filter(usable_m == 1)
+
+usable_tfs_names <- tfs_names.labeled$Name
+```
+
+Read in the files for each tfs group. Keep only the 1995:2001 survey years and only the variable names we are using. Then join with `collnames` to replace ACERECODE with campus_id.
+
+## TFS - Choice
+
+```{r}
+choice_tfs <- read_csv("../data/tfs/choice.csv")
+choice_tfs_subset <- choice_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+choice_tfs_subset <- left_join(collnames, choice_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE"))
+
+rm(choice_tfs)
+```
+
+## TFS - Demographics
+
+```{r}
+demographics_tfs <- read_csv("../data/tfs/demographics.csv")
+demographics_tfs_subset <- demographics_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+demographics_tfs_subset <- left_join(collnames, demographics_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(demographics_tfs)
+```
+
+## TFS - Disaggregated
+
+```{r}
+disagg_tfs <- read_csv("../data/tfs/disagg.csv")
+disagg_tfs_subset <- disagg_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+disagg_tfs_subset <- left_join(collnames, disagg_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(disagg_tfs)
+```
+
+## TFS - Funds
+
+```{r}
+funds_tfs <- read_csv("../data/tfs/funds.csv")
+funds_tfs_subset <- funds_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+funds_tfs_subset <- left_join(collnames, funds_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(funds_tfs)
+```
+
+## TFS - HS
+
+```{r}
+hs_tfs <- read_csv("../data/tfs/hs.csv")
+hs_tfs_subset <- hs_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+hs_tfs_subset <- left_join(collnames, hs_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(hs_tfs)
+```
+
+## TFS - Plans
+
+```{r}
+plans_tfs <- read_csv("../data/tfs/plans.csv")
+plans_tfs_subset <- plans_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, any_of(usable_tfs_names))
+
+plans_tfs_subset <- left_join(collnames, plans_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(plans_tfs)
+```
+
+## TFS - Views
+
+```{r}
+view_tfs <- read_csv("../data/tfs/view.csv")
+view_tfs_subset <- view_tfs |> 
+  filter(YEAR %in% 1995:2001) |> 
+  select(ACERECODE, YEAR, any_of(usable_tfs_names))
+
+view_tfs_subset <- left_join(collnames, view_tfs_subset) |> 
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+
+rm(view_tfs)
+```
+
+## Create TFS master by binding all the category data frames
+
+```{r}
+tfs_subset_master <- bind_cols(choice_tfs_subset,
+                               demographics_tfs_subset,
+                               disagg_tfs_subset,
+                               funds_tfs_subset,
+                               hs_tfs_subset,
+                               plans_tfs_subset,
+                               view_tfs_subset) |> 
+  mutate(campus_id = campus_id...1,
+         SELECTIVITY = SELECTIVITY...35) |> 
+  select(-starts_with(c("campus_id...", "SELECTIVITY..."))) |> 
+  relocate(campus_id) |> 
+  mutate(SELECTIVITY = na_if(SELECTIVITY, 0))
+```
+
+
+## Prepare data for analyses
+
+Arrange the variable names and descriptions alphabetically
+
+```{r}
+keep <- tfs_names.labeled |> 
+  dplyr::select(1:3) |> 
+  arrange("Name") 
+```
+
+Check the NAs
+
+```{r}
+colSums(is.na(tfs_subset_master))
+```
+
+Only keep colleges with more than 100 responses
+
+```{r}
+tfs_subset_master <- tfs_subset_master |> 
+  group_by(campus_id) |> 
+  mutate(n_responses = n()) |> 
+  filter(n_responses > 100) |> 
+  ungroup() |> 
+  select(-YEAR)
+```
+
+
+Get a vector of campus_id values for colleges we are using
+
+```{r}
+campus_id <- c(unique(tfs_subset_master[,"campus_id"]))
+```
+
+## Find proportion missing for each question by school
+
+```{r}
+set.seed(1)
+
+college_proportion_answered <- list()
+test <- list()
+
+#loop through every campusid
+for(i in unique(tfs_subset_master$campus_id)){
+  #get the 
+  cm<-tfs_subset_master %>% 
+    filter(campus_id == i) 
+  
+  na<-colSums(is.na(cm))
+  not.na<-colSums(!is.na(cm))
+  prop<- na/(na+not.na)
+  test[[i]]<- prop
+  
+}
+
+# Bind rows from each iteration
+big_data = do.call(rbind, test)
+
+# Make matrix a data frame
+big_data <- as.data.frame(big_data)
+
+# Drop prop missing campus_id
+big_data <- dplyr::select(big_data, -c("campus_id"))
+
+# Bind vector and data frame
+big_data <- cbind.data.frame(campus_id, big_data)
+```
+
+## Calculate means of all variables by college
+
+```{r}
+tfs_means <- tfs_subset_master |> 
+  group_by(campus_id) |> 
+  summarise(across(starts_with("CHOICE"),
+                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.firstchoice_{.fn}"),
+            across(starts_with("CHOOSE"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.veryimportant_{.fn}"),
+            across(starts_with("DISTHOME"),
+                   list(mean = ~mean(.x>=3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.51milesplus_{.fn}"),
+            across(starts_with("FINCON"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.major_{.fn}"),
+            across(starts_with("FIRSTGEN"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.yes_{.fn}"),
+            across(starts_with("FUTACT"),
+                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.verygoodchance_{.fn}"),
+            across(starts_with("GOAL"),
+                   list(mean = ~mean(.x>=3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.veryimportant_essential_{.fn}"),
+            across(starts_with("HSGPA"),
+                   list(mean = ~mean(.x>=7, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.a_{.fn}"),
+            across(starts_with("INCOME"),
+                   list(mean = ~mean(.x>=11, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.75kplus_{.fn}"),
+            across(starts_with("MAJORA"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.business_{.fn}"),
+            across(starts_with("PLANLIVE"),
+                   list(mean = ~mean(.x %in% 3:5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.oncampus_{.fn}"),
+            across(starts_with("POLIVIEW"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.liberal_or_farleft_{.fn}"),
+            across(starts_with("RACEGROUP"),
+                   list(amindian_mean = ~mean(.x==1, na.rm = TRUE),
+                        asian_mean = ~mean(.x==2, na.rm = TRUE),
+                        black_mean = ~mean(.x==3, na.rm = TRUE),
+                        hispanic_mean = ~mean(.x==4, na.rm = TRUE),
+                        white_mean = ~mean(.x==5, na.rm = TRUE),
+                        other_mean = ~mean(.x==6, na.rm = TRUE),
+                        multiracial_mean = ~mean(.x==7, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}_{.fn}"),
+            across(starts_with("RATE"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.aboveavg_exceptional_{.fn}"),
+            across(starts_with("REASON"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.veryimportant_{.fn}"),
+            across(starts_with("SCAREERA"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.business_{.fn}"),
+            across(starts_with("SELECTIVITY"),
+                   list(mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}_{.fn}"),
+            across(starts_with("SEX"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.female_{.fn}"),
+            across(starts_with("SRELIGION"),
+                   list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
+                        catholic_mean = ~mean(.x==12, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}_{.fn}"),
+            across(starts_with("VIEW"),
+                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.stronglyagree_{.fn}"),
+            n_responses = n()
+  ) |> 
+  relocate(campus_id, n_responses) |> 
+  mutate(across(everything(), ~na_if(.,"NaN")))
+```
+
+Keep only the variable names in a vector
+
+```{r}
+varnames_original <- gsub("(.+?)(\\..*)", "\\1", names(tfs_means))
+varnames_summarize <- names(tfs_means)
+varnames <- bind_cols(varnames_original, varnames_summarize)
+colnames(varnames) <- c("Name", "Summarized")
+varnames <- left_join(varnames, tfs_names.labeled)
+varnames <- varnames |> 
+  filter(!str_detect(Summarized, "propna"))
+```
+
+
+## Correlations
+
+Merge the variable means by college with the mobility variables
+
+```{r}
+tfs_means_mobility <- left_join(tfs_means, chetty_vars)
+```
+
+Calculate correlations between all college means and all mobility variables
+
+```{r}
+tfs_correlations <- tfs_means_mobility |> 
+  select(-c(campus_id, ends_with("propna"))) |> 
+  summarise_at(vars(-n_responses), 
+                   list(cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
+                                                  weight = n_responses)[1],
+                        cor_mr_ktop1_pq1 = ~wtd.cor(.x, mr_ktop1_pq1, 
+                                                    weight = n_responses)[1],
+                        cor_k_rank = ~wtd.cor(.x, k_rank, 
+                                              weight = n_responses)[1],
+                        cor_k_q5 = ~wtd.cor(.x, k_q5, 
+                                            weight = n_responses)[1],
+                        cor_k_top10pc = ~wtd.cor(.x, k_top10pc, 
+                                                 weight = n_responses)[1],
+                        cor_k_top5pc = ~wtd.cor(.x, k_top5pc, 
+                                                weight = n_responses)[1],
+                        cor_k_top1pc = ~wtd.cor(.x, k_top1pc, 
+                                                weight = n_responses)[1],
+                        cor_k_rank_cond_parq1 = ~wtd.cor(.x, k_rank_cond_parq1, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq2 = ~wtd.cor(.x, k_rank_cond_parq2, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq3 = ~wtd.cor(.x, k_rank_cond_parq3, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq4 = ~wtd.cor(.x, k_rank_cond_parq4, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq5 = ~wtd.cor(.x, k_rank_cond_parq5, 
+                                                         weight = n_responses)[1],
+                        cor_kq5_cond_parq1 = ~wtd.cor(.x, kq5_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq5_cond_parq5 = ~wtd.cor(.x, kq5_cond_parq5, 
+                                                      weight = n_responses)[1],
+                        cor_par_q1 = ~wtd.cor(.x, par_q1, 
+                                              weight = n_responses)[1],
+                        cor_par_q5 = ~wtd.cor(.x, par_q5, 
+                                              weight = n_responses)[1]),
+                   .names = "{.col}_{.fn}") |>
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:1824) |>
+  filter(str_detect(Variable, "mean")) |> 
+  separate(Variable, c("Name", "Mobility"), sep = "_mean") |> 
+  separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
+  select(-Drop) |> 
+  pivot_wider(names_from = "Mobility", values_from = "Correlation")
+
+tfs_correlations$Name <- gsub("(.+?)(\\..*)", "\\1", tfs_correlations$Name)
+
+tfs_correlations <- left_join(varnames[,-3], tfs_correlations)
+
+tfs_correlations <- tfs_correlations |> 
+  select(-c("n_asked", "usable_m")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses")
+```
+
+
+```{r}
+write.csv(tfs_correlations, "../data/tfs_correlations.csv", row.names = FALSE)
+```
+
+
+# CLEANUP TFS
+
+library(haven)
+#css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
+
+
+# heri_choice = 14235467
+# restrict years = 4213528
+# restrict css college = 1937983
+
+## Demographics
+heri_demographics <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/1 DEMOGRAPHICS.SAV")
+heri_demographics <- heri_demographics |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+## High school
+heri_hs <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/2 HIGH SCHOOL.SAV")
+heri_hs <- heri_hs |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Choice
+heri_choice <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/3 CHOICE.SAV")
+heri_choice <- heri_choice |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Plans
+heri_plans <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/4 PLANS.SAV")
+heri_plans <- heri_plans |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## View
+heri_view <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/5 VIEW.SAV")
+heri_view <- heri_view |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Funds
+heri_funds <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/6 FUNDS.SAV")
+heri_funds <- heri_funds |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Disagg
+heri_disagg <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/7 DISAGG.SAV")
+heri_disagg <- heri_disagg |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+
+fwrite(heri_choice, "/users/lawrence/desktop/heri/tfs/choice.csv",
+       row.names = FALSE)
+
+fwrite(heri_demographics, "/users/lawrence/desktop/heri/tfs/demographics.csv",
+       row.names = FALSE)
+
+fwrite(heri_hs, "/users/lawrence/desktop/heri/tfs/hs.csv",
+       row.names = FALSE)
+
+fwrite(heri_plans, "/users/lawrence/desktop/heri/tfs/plans.csv",
+       row.names = FALSE)
+
+fwrite(heri_view, "/users/lawrence/desktop/heri/tfs/view.csv",
+       row.names = FALSE)
+
+fwrite(heri_funds, "/users/lawrence/desktop/heri/tfs/funds.csv",
+       row.names = FALSE)
+
+fwrite(heri_disagg, "/users/lawrence/desktop/heri/tfs/disagg.csv",
+       row.names = FALSE)
+
+
+## Constructs
+FAC_INTERACTION
+ACADEMIC_SELFCONCEPT
+SOCIAL_SELFCONCEPT
+SOCIAL_AGENCY

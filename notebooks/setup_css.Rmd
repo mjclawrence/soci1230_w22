@@ -1,0 +1,508 @@
+---
+title: "setup_css"
+author: "ML"
+date: "1/4/2022"
+output: html_document
+---
+
+# Load packages and set wd
+```{r}
+library(tidyverse)
+library(weights)
+```
+
+# Load data
+
+The `collnames` file links campus_id, ACERECODE, and super_opeid.
+
+```{r}
+collnames <- read_csv("../data/collnames.csv")
+```
+
+The `college_mobility` file has chetty variables and css variables and tfs matched variables
+
+```{r}
+college_mobility <- read_csv("../data/college_mobility.csv")
+```
+
+The `chetty_table2.csv` file has all the mobility variables
+
+```{r}
+chetty <- read_csv("../data/chetty_table2.csv")
+chetty_vars <- chetty |> 
+  select(super_opeid, mr_kq5_pq1,
+         mr_ktop1_pq1,
+                 k_rank, k_q5, k_top10pc,
+                 k_top5pc, k_top1pc,
+                 starts_with("k_rank_cond_parq"),
+                 starts_with("kq5_cond_parq"),
+                 par_q1, par_q5)
+
+chetty_vars <- left_join(collnames, chetty_vars)
+
+chetty_vars <- chetty_vars |> 
+  select(-c(ACERECODE, name, super_opeid))
+```
+
+The `css_questions_usable` file notes which questions are used in later analyses. It also has the question descriptions.
+
+```{r}
+css_names.labeled <- read_csv("../data/css_questions_usable.csv")
+```
+
+Keep the questions we are using.
+
+```{r}
+css_names.labeled <- css_names.labeled %>% 
+  filter(usable_m == 1) |> 
+  select(Name, Description, n_asked, usable_m)
+```
+
+## Prepare data for analyses
+
+Arrange the variable names and descriptions alphabetically
+
+```{r}
+keep <- css_names.labeled %>% 
+  dplyr::select(1:3) %>%
+  arrange("Name")
+```
+
+Filter mobility data for column names we care about 
+
+```{r}
+usable_questions <- css_names.labeled$Name
+all_colnames <- colnames(college_mobility)
+intersection <- Reduce(intersect,list(usable_questions,all_colnames))
+#mobility columns here
+#mobility_cols <- colnames(college_mobility)[0:65]
+#add campus_id
+mobility_cols <- colnames(college_mobility)[1]
+all_filter_cols<- c(intersection,mobility_cols)
+#filter for desired columns
+#college_mobility.filtered <- college_mobility[, all_filter_cols]
+
+college_mobility.filtered <- college_mobility |> 
+  select(all_of(all_filter_cols))
+```
+
+Check the NAs
+
+```{r}
+colSums(is.na(college_mobility.filtered))
+```
+
+Only keep colleges with more than 100 responses
+
+```{r}
+x <- college_mobility.filtered %>% 
+  count(campus_id)
+
+x <- x  %>% filter(n>100)
+college_mobility.filtered <- left_join(x, college_mobility.filtered, by = "campus_id")
+```
+
+Get a vector of campus_id values for colleges we are using
+
+```{r}
+campus_id <- c(unique(college_mobility.filtered[,"campus_id"]))
+```
+
+## Find proportion missing for each question by school
+
+```{r}
+set.seed(1)
+
+college_proportion_answered <- list()
+test <- list()
+
+#loop through every campusid
+for(i in unique(college_mobility.filtered$campus_id)){
+  #get the 
+  cm<-college_mobility.filtered %>% 
+    filter(campus_id == i) 
+  
+  na<-colSums(is.na(cm))
+  not.na<-colSums(!is.na(cm))
+  prop<- na/(na+not.na)
+  test[[i]]<- prop
+  
+}
+
+# Bind rows from each iteration
+big_data = do.call(rbind, test)
+
+# Make matrix a data frame
+big_data <- as.data.frame(big_data)
+
+# Drop prop missing campus_id
+big_data <- dplyr::select(big_data, -c("campus_id"))
+
+# Bind vector and data frame
+big_data <- cbind.data.frame(campus_id, big_data)
+```
+
+## Calculate means of all variables by college
+
+```{r}
+css_means <- college_mobility.filtered |> 
+  group_by(campus_id) |> 
+  summarise(
+            across(starts_with("ACT"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()), 
+                   .names = "{.col}.frequently_{.fn}"),
+            across(starts_with("COLACT02"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.race/culture_workshop_{.fn}"),
+            across(starts_with("COLACT07"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.honors_classes_{.fn}"),
+            across(starts_with("COLACT11"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.pt_job_off_{.fn}"),
+            across(starts_with("COLACT12"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.pt_job_on_{.fn}"),
+            across(starts_with("COLACT13"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.roommate_dif_eth/race_{.fn}"),
+            across(starts_with("COLACT14"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.greeklife_member_{.fn}"),
+            across(starts_with("COLACT16"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.study_abroad_{.fn}"),
+            across(starts_with("COLACT17"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.in_eth/race_org_{.fn}"),
+            across(starts_with("COLACT18"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.internship_{.fn}"),
+            across(starts_with("COLACT19"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.campus_protest_{.fn}"),
+            across(starts_with("COLACT21"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.leadership_training_{.fn}"),
+            across(starts_with("COLACT23"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.student_gov_{.fn}"),
+            across(starts_with("COLACT27"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.took_remedial_course_{.fn}"),
+            across(starts_with("COLACT32"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.community_col_transfer_{.fn}"),
+            across(starts_with("COLACT33"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.4y_col_transfer_{.fn}"),
+            across(starts_with("COLACT34"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.college_transfer_{.fn}"),
+            across(starts_with("COLACT36"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.voted_state/nat_election_{.fn}"),
+            across(starts_with("COLACT40"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.ft_job_{.fn}"),
+            across(starts_with("COLACT41"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.research_w/_prof_{.fn}"),
+            across(starts_with("CSV"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("FACPRV"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.frequently_{.fn}"),
+            across(starts_with("GENACT"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.frequently_{.fn}"),
+            across(starts_with("GOAL"),
+                   list(mean = ~mean(.x>=3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.important_{.fn}"),
+            across(starts_with("HPW"),
+                   list(mean = ~mean(.x>=6, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.11hrs_plus_{.fn}"),
+            across(starts_with("MAJOR"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.business_major_{.fn}"),
+            across(starts_with("NATENG"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("PLANS"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.yes_{.fn}"),
+            across(starts_with("POLIVIEW"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.liberal/farleft_{.fn}"),
+            across(starts_with("RACE"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RATE"),
+                   list(mean = ~mean(.x>=5, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.abv_avg_{.fn}"),
+            across(starts_with("REENROLL"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.def_yes_{.fn}"),
+            across(starts_with("SREL"),
+                   list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
+                        catholic_mean = ~mean(.x==12, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SATIS"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.satisfied_or_very_satisfied_{.fn}"),
+            across(starts_with("SEX"),
+                   list(mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.female_{.fn}"),
+            across(starts_with("SLFCH"),
+                   list(mean = ~mean(.x>=4, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.stronger_or_much_stronger_{.fn}"),
+            across(starts_with("SUCC"),
+                   list(mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("VIEW"),
+                   list(mean = ~mean(.x>=3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.agree_somewhat_or_strongly_{.fn}"),
+            across(starts_with("ACADEMIC_SELFCONCEPT"),
+                   list(mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.scale_{.fn}"),
+            across(starts_with("SOCIAL_SELFCONCEPT"),
+                   list(mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.scale_{.fn}"),
+            across(starts_with("SOCIAL_AGENCY"),
+                   list(mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.scale_{.fn}"),
+            across(starts_with("FAC_INTERACTION"),
+                   list(mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.scale_{.fn}"),
+            n_responses = n()
+  ) %>%
+  select(sort(names(.))) %>%
+  relocate(campus_id, n_responses) %>%
+  mutate(across(everything(), ~na_if(.,"NaN")))
+```
+
+Keep only the variable names in a vector
+
+```{r}
+varnames_original <- gsub("(.+?)(\\..*)", "\\1", names(css_means))
+varnames_summarize <- names(css_means)
+varnames <- bind_cols(varnames_original, varnames_summarize)
+colnames(varnames) <- c("Name", "Summarized")
+varnames <- left_join(varnames, css_names.labeled)
+varnames <- varnames |> 
+  filter(!str_detect(Summarized, "propna"))
+```
+
+
+## Correlations
+
+Merge the variable means by college with the mobility variables
+
+```{r}
+css_means_mobility <- left_join(css_means, chetty_vars)
+```
+
+Calculate correlations between all college means and all mobility variables
+
+```{r}
+css_correlations <- css_means_mobility |> 
+  select(-c(campus_id, ends_with("propna"))) |> 
+  summarise_at(vars(-n_responses), 
+                   list(cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
+                                                  weight = n_responses)[1],
+                        cor_mr_ktop1_pq1 = ~wtd.cor(.x, mr_ktop1_pq1, 
+                                                    weight = n_responses)[1],
+                        cor_k_rank = ~wtd.cor(.x, k_rank, 
+                                              weight = n_responses)[1],
+                        cor_k_q5 = ~wtd.cor(.x, k_q5, 
+                                            weight = n_responses)[1],
+                        cor_k_top10pc = ~wtd.cor(.x, k_top10pc, 
+                                                 weight = n_responses)[1],
+                        cor_k_top5pc = ~wtd.cor(.x, k_top5pc, 
+                                                weight = n_responses)[1],
+                        cor_k_top1pc = ~wtd.cor(.x, k_top1pc, 
+                                                weight = n_responses)[1],
+                        cor_k_rank_cond_parq1 = ~wtd.cor(.x, k_rank_cond_parq1, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq2 = ~wtd.cor(.x, k_rank_cond_parq2, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq3 = ~wtd.cor(.x, k_rank_cond_parq3, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq4 = ~wtd.cor(.x, k_rank_cond_parq4, 
+                                                         weight = n_responses)[1],
+                        cor_k_rank_cond_parq5 = ~wtd.cor(.x, k_rank_cond_parq5, 
+                                                         weight = n_responses)[1],
+                        cor_kq5_cond_parq1 = ~wtd.cor(.x, kq5_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq5_cond_parq5 = ~wtd.cor(.x, kq5_cond_parq5, 
+                                                      weight = n_responses)[1],
+                        cor_par_q1 = ~wtd.cor(.x, par_q1, 
+                                              weight = n_responses)[1],
+                        cor_par_q5 = ~wtd.cor(.x, par_q5, 
+                                              weight = n_responses)[1]),
+                   .names = "{.col}_{.fn}") |>
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:3776) |>
+  filter(str_detect(Variable, "mean")) |> 
+  separate(Variable, c("Name", "Mobility"), sep = "_mean") |> 
+  separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
+  select(-Drop) |> 
+  pivot_wider(names_from = "Mobility", values_from = "Correlation") |> 
+  select(-3)
+
+css_correlations$Name <- gsub("(.+?)(\\..*)", "\\1", css_correlations$Name)
+
+css_correlations <- left_join(varnames, css_correlations)
+
+css_correlations <- css_correlations |> 
+  select(-c("n_asked", "usable_m")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses")
+```
+
+```{r}
+write.csv(css_correlations, "../data/css_correlations.csv", row.names = FALSE)
+```
+
+# CLEANUP TFS
+
+library(haven)
+#css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
+
+
+# heri_choice = 14235467
+# restrict years = 4213528
+# restrict css college = 1937983
+
+## Demographics
+heri_demographics <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/1 DEMOGRAPHICS.SAV")
+heri_demographics <- heri_demographics |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+## High school
+heri_hs <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/2 HIGH SCHOOL.SAV")
+heri_hs <- heri_hs |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Choice
+heri_choice <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/3 CHOICE.SAV")
+heri_choice <- heri_choice |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Plans
+heri_plans <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/4 PLANS.SAV")
+heri_plans <- heri_plans |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## View
+heri_view <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/5 VIEW.SAV")
+heri_view <- heri_view |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Funds
+heri_funds <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/6 FUNDS.SAV")
+heri_funds <- heri_funds |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+## Disagg
+heri_disagg <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/7 DISAGG.SAV")
+heri_disagg <- heri_disagg |> 
+  filter(YEAR %in% 1995:2005) |> 
+  filter(ACERECODE %in% acerecodes)
+
+gc()
+
+
+
+fwrite(heri_choice, "/users/lawrence/desktop/heri/tfs/choice.csv",
+       row.names = FALSE)
+
+fwrite(heri_demographics, "/users/lawrence/desktop/heri/tfs/demographics.csv",
+       row.names = FALSE)
+
+fwrite(heri_hs, "/users/lawrence/desktop/heri/tfs/hs.csv",
+       row.names = FALSE)
+
+fwrite(heri_plans, "/users/lawrence/desktop/heri/tfs/plans.csv",
+       row.names = FALSE)
+
+fwrite(heri_view, "/users/lawrence/desktop/heri/tfs/view.csv",
+       row.names = FALSE)
+
+fwrite(heri_funds, "/users/lawrence/desktop/heri/tfs/funds.csv",
+       row.names = FALSE)
+
+fwrite(heri_disagg, "/users/lawrence/desktop/heri/tfs/disagg.csv",
+       row.names = FALSE)
+
+
+## Constructs
+FAC_INTERACTION
+ACADEMIC_SELFCONCEPT
+SOCIAL_SELFCONCEPT
+SOCIAL_AGENCY

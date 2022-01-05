@@ -1,104 +1,6 @@
 Name,Description,n_asked,usable_m
-YEAR,Survey year,7,1
+ACADEMIC_SELFCONCEPT,TFS Academic Self-Concept Score,2,0
 ACE,College I.D.,7,0
-SUBJID,Subject I.D.,7,0
-STRAT,CIRP Stratification Cell,7,0
-OBEREGION,OBE Region,7,0
-SELECTIVITY,Institutional Selectivity,7,1
-STUDSTAT,Student status,14,0
-NORMSTAT,Norms status,14,0
-STUDWGT,Student weight,7,1
-STUID,Student School I.D. (only if permitted),7,0
-HBCU,HBCU Flag,7,1
-INSTTYPE,Institution Type,7,1
-INSTCONT,Institution Control,7,1
-PERMIT,Do you give HERI permission to include your id number should your college request the data for additional research analyses?,7,0
-DOBMM,DOB Month,7,0
-DOBYY,DOB Year,7,0
-HOMEZIP,Student's home zip,7,0
-SEX,Your sex:,7,1
-AGE1,How old will you be on December 31 of this year?,7,0
-AGE2,How old will you be on December 31 of this year?,7,0
-RACE1,American Indian/Alaska Native,7,1
-RACE7,Native Hawaiian/Pacific Islander,1,0
-RACE8,African American/Black,7,1
-RACE9,Mexican American/Chicano/o/x,7,1
-RACE10,Puerto Rican,7,1
-RACE11,Other Latino/o/x,7,1
-RACE12,White/Caucasian,7,1
-RACE13,Other,7,1
-RACEGROUP,Race/Ethnicity Group,7,0
-RRACE,Responded to race,7,0
-RACE7102_N,Asian,7,0
-RACE9701_N,White,1,0
-RACE9702_N,Black,1,0
-RACE9703_N,American Indian,1,0
-RACE9704_N,Mexican/Chicano,1,0
-RACE9705_N,Puerto Rican,1,0
-RACE9706_N,Other Latino,1,0
-RACE9707_N,Chinese,1,0
-RACE9708_N,Filipino,1,0
-RACE9709_N,Japanese,1,0
-RACE9710_N,Korean,1,0
-RACE9711_N,"Southeast Asian (Vietnamese, Laotian, Cambodian, etc.)",1,0
-RACE9712_N,Other Asian,1,0
-RACE9713_N,Other race/ethnicity,1,0
-NATENGSP8715,Is English your native language?,7,1
-MARITAL,Are you presently married?,2,0
-CITIZEN,Citizenship status:,7,0
-DISAB1,Disability: None,3,0
-DISAB2,Disability: Hearing,2,0
-DISAB3,Disability: Speech,3,0
-DISAB4,Disability: Orthopedic,3,0
-DISAB5,Disability: Learning disability,3,0
-DISAB6,Disability: Health-related,3,0
-DISAB7,Disability: Partially sighted or blind,3,0
-DISAB8,Disability: Other,2,0
-DISAB98_N,Disability: Other,1,0
-SRELIGIONA,Your religious preference,7,1
-FRELIGIONA,Your father's religious preference,7,0
-MRELIGIONA,Your mother's religious preference,7,0
-BORNAGAIN,Do you consider yourself a born-again Christian?,4,0
-INCOME,Parental Income,7,1
-PARSTAT,Are your parents alive? divorced?,7,0
-FATHEDUC,Father's education,7,0
-MOTHEDUC,Mother's education,7,0
-FIRSTGEN,First generation status based on parent(s) with less than 'some college',7,1
-NDEPPAR7806,How many persons are currently dependent on your parents for support?,2,0
-FULLSTAT,Are you enrolled (or enrolling) as a:,7,0
-PLANCOL1_T2,Planning for College: Seek high school counselor's advice,1,0
-PLANCOL2_T2,Planning for College: Hired a private college counselor,1,0
-PLANCOL3_T2,Planning for College: Take a SAT/ACT preparation course,1,0
-ADOPT98_N,Were you adopted by your family?,1,0
-FOSTER98_N,Were you ever in foster care?,1,0
-HSTYPE1,From what kind of secondary school did you graduate?,2,0
-YRGRADHS,In what year did you graduate from high school?,7,0
-YRSTUDY1,Years Study: English,3,0
-YRSTUDY2,Years Study: Mathematics,3,0
-YRSTUDY3,Years Study: Foreign Language,3,0
-YRSTUDY4,Years Study: Physical Science,3,0
-YRSTUDY5,Years Study: Biological Science,3,0
-YRSTUDY6,Years Study: History/Am Govt,3,0
-YRSTUDY7,Years Study: Computer Science,3,0
-YRSTUDY8,Years Study: Art and/or Music,3,0
-HADREM1,English: Have had special tutoring or remedial work,5,0
-HADREM2,Reading: Have had special tutoring or remedial work,5,0
-HADREM3,Mathematics: Have had special tutoring or remedial work,5,0
-HADREM4,Social Studies: Have had special tutoring or remedial work,5,0
-HADREM5,Science: Have had special tutoring or remedial work,5,0
-HADREM6,Foreign Language: Have had special tutoring or remedial work,5,0
-HADREM7,Writing: Have had special tutoring or remedial work,2,0
-NEEDREM1,English: Will need special tutoring or remedial work,5,0
-NEEDREM2,Reading: Will need special tutoring or remedial work,5,0
-NEEDREM3,Mathematics: Will need special tutoring or remedial work,5,0
-NEEDREM4,Social Studies: Will need special tutoring or remedial work,5,0
-NEEDREM5,Science: Will need special tutoring or remedial work,5,0
-NEEDREM6,Foreign Language: Will need special tutoring or remedial work,5,0
-NEEDREM7,Writing: Will need special tutoring or remedial work,2,0
-HSGPA,What was your average grade in high school?,7,1
-APCOURSE_T2,AP Courses,2,0
-APEXAM_T2,AP Exams,2,0
-CSVREQ,Did your high school require community service for graduation?,4,0
 ACT01,Act in Past Year: Asked a teacher for advice after class,7,0
 ACT02,Act in Past Year: Attended a public recital or concert,4,0
 ACT03,Act in Past Year: Attended a religious service,7,0
@@ -109,95 +11,96 @@ ACT08,Act in Past Year: Discussed politics,7,0
 ACT09,Act in Past Year: Discussed religion,4,0
 ACT10,Act in Past Year: Consumed beer,7,0
 ACT11,Act in Past Year: Consumed wine or liquor,7,0
+ACT11_T,Act in Past Year: Found it difficult to study at home,2,0
 ACT12,Act in Past Year: Failed to complete homework on time,1,0
+ACT12_N,"Act in Past Year: Utilized nontraditional medicine (acupuncture, homeopathy, etc.)",1,0
 ACT14,Act in Past Year: Felt depressed,7,0
+ACT14_T,Act in Past Year: Lost my temper,2,0
 ACT15,Act in Past Year: Felt overwhelmed by all I had to do,7,0
+ACT16_T,Act in Past Year: Missed school due to employment,2,0
 ACT17,Act in Past Year: Overslept and missed a class or appointment,7,0
+ACT17_T,Act in Past Year: Other Internet use,4,0
 ACT18,Act in Past Year: Participated in organized demonstrations,7,0
 ACT19,Act in Past Year: Performed community service as part of a class,3,0
 ACT20,Act in Past Year: Performed volunteer work,7,0
 ACT21,Act in Past Year: Played a musical instrument,7,0
+ACT21_T,Act in Past Year: Participated in Internet chat rooms,4,0
+ACT23_T,Act in Past Year: Played chess,1,0
 ACT24,Act in Past Year: Smoked cigarettes,7,0
+ACT24_T,Act in Past Year: Played computer games,2,0
 ACT25,Act in Past Year: Socialized with someone of another racial/ethnic group,7,0
 ACT26,Act in Past Year: Studied with other students,7,0
+ACT26_T,Act in Past Year: Read the editorial page in the newspaper,2,0
 ACT27,Act in Past Year: Tutored another student,7,0
+ACT27_T,Act in Past Year: Spoke a language other than English at home,1,0
 ACT28,Act in Past Year: Used a personal computer,5,0
 ACT29,Act in Past Year: Used the Internet: for research or homework,4,0
 ACT30,Act in Past Year: Visited an art gallery or museum,4,0
 ACT31,Act in Past Year: Voted in a student election,7,0
 ACT32,Act in Past Year: Was a guest in a teacher's home,7,0
+ACT32_T,Act in Past Year: Took a prescribed anti-depressant,3,0
 ACT33,Act in Past Year: Been bored in class,7,0
 ACT34,"Act in Past Year: Worked in a local, state, or national political campaign",3,0
-ACT11_T,Act in Past Year: Found it difficult to study at home,2,0
-ACT14_T,Act in Past Year: Lost my temper,2,0
-ACT16_T,Act in Past Year: Missed school due to employment,2,0
-ACT17_T,Act in Past Year: Other Internet use,4,0
-ACT21_T,Act in Past Year: Participated in Internet chat rooms,4,0
-ACT23_T,Act in Past Year: Played chess,1,0
-ACT24_T,Act in Past Year: Played computer games,2,0
-ACT26_T,Act in Past Year: Read the editorial page in the newspaper,2,0
-ACT27_T,Act in Past Year: Spoke a language other than English at home,1,0
-ACT32_T,Act in Past Year: Took a prescribed anti-depressant,3,0
-ACT12_N,"Act in Past Year: Utilized nontraditional medicine (acupuncture, homeopathy, etc.)",1,0
-HPW01,Hours per Week: Studying/homework,7,0
-HPW02,Hours per Week: Socializing with friends in person,7,0
-HPW03,Hours per Week: Talking with teachers outside of class,7,0
-HPW04,Hours per Week: Exercising/sports,7,0
-HPW05,Hours per Week: Partying,7,0
-HPW06,Hours per Week: Working (for pay),7,0
-HPW07,Hours per Week: Volunteer work,7,0
-HPW08,Hours per Week: Participating in student clubs/groups,7,0
-HPW09,"Hours per Week: Watching TV/online video content (e.g., Amazon, Hulu, Netflix, YouTube)",7,0
-HPW10,Hours per Week: Performing household/childcare duties,7,0
-HPW11,Hours per Week: Prayer/meditation,6,0
-HPW12,Hours per Week: Reading for pleasure,7,0
-HPW13,Hours per Week: Playing video games,5,0
-HPW14,Hours per Week: Playing video/computer games,2,0
-RATE01,Self Rating: Academic ability,7,1
-RATE02,Self Rating: Artistic ability,7,0
-RATE03,Self Rating: Athletic ability,1,0
-RATE04,Self Rating: Competitiveness,7,1
-RATE05,Self Rating: Computer skills,3,0
-RATE06,Self Rating: Cooperativeness,7,1
-RATE07,Self Rating: Creativity,7,1
-RATE08,Self Rating: Drive to achieve,7,1
-RATE09,Self Rating: Emotional health,7,1
-RATE10,Self Rating: Leadership ability,7,1
-RATE11,Self Rating: Mathematical ability,7,1
-RATE12,Self Rating: Physical health,7,0
-RATE13,Self Rating: Popularity,7,1
-RATE14,Self Rating: Public speaking ability,7,1
-RATE15,Self Rating: Self-confidence (intellectual),7,1
-RATE16,Self Rating: Self-confidence (social),7,1
-RATE17,Self Rating: Self-understanding,6,1
-RATE18,Self Rating: Spirituality,6,0
-RATE19,Self Rating: Understanding of others,7,1
-RATE20,Self Rating: Writing ability,7,1
-RATE04_T,Self Rating: Initiative,2,0
-RATE07_T,Self Rating: Persistence,1,0
-RATE13_T,Self Rating: Religiousness,1,0
-RATE16_T,Self Rating: Stubbornness,1,0
-RATE95_N,Self Rating: Physical appearance,1,0
-REASON01,Reason Attend: A mentor/role model encouraged me to go,7,1
-REASON02,Reason Attend: I could not find a job,7,1
-REASON03,Reason Attend: My parents wanted me to go,7,1
-REASON04,Reason Attend: There was nothing better to do,6,1
-REASON05,Reason Attend: To be able to get a better job,7,1
-REASON06,Reason Attend: To be able to make more money,7,1
-REASON08,Reason Attend: To gain a general education and appreciation of ideas,7,1
-REASON07,Reason Attend: To get training for a specific career,3,0
-REASON09,Reason Attend: To improve my reading and study skills,7,1
-REASON10,Reason Attend: To learn more about things that interest me,6,1
-REASON11,Reason Attend: To make me a more cultured person,6,1
-REASON12,Reason Attend: To prepare myself for graduate or professional school,3,1
-REASON13,Reason Attend: Wanted to get away from home,7,1
-REASON06_T,Reason Attend: To prove to others I could succeed,3,0
-REASON02_N,Reason Attend: To prepare myself for graduate or professional school,1,0
-REASON03_N,Reason Attend: Because my friends were going,1,0
+ADMITCOL9501_N,Admission Consider: Low income students,1,0
+ADMITCOL9502_N,Admission Consider: Athletes,1,0
+ADMITCOL9503_N,Admission Consider: High-achieving students,1,0
+ADMITCOL9504_N,Admission Consider: Foreign students,1,0
+ADMITCOL9505_N,Admission Consider: Children of alumni,1,0
+ADMITCOL9506_N,Admission Consider: African Americans,1,0
+ADMITCOL9507_N,Admission Consider: American Indians,1,0
+ADMITCOL9508_N,Admission Consider: Asian Americans,1,0
+ADMITCOL9509_N,Admission Consider: Hispanics/Latinos,1,0
+ADMITCOL9510_N,Admission Consider: Whites/Caucasians,1,0
+ADMITCOL9901_N,Admission Consider: Application essay,1,0
+ADMITCOL9902_N,Admission Consider: Athletic talent,1,0
+ADMITCOL9903_N,Admission Consider: Extracurricular activities,1,0
+ADMITCOL9904_N,Admission Consider: High school grades,1,0
+ADMITCOL9905_N,Admission Consider: Letters of recommendation,1,0
+ADMITCOL9906_N,Admission Consider: Musical/artistic talent,1,0
+ADMITCOL9907_N,Admission Consider: Race/ethnicity,1,0
+ADMITCOL9908_N,Admission Consider: Standardized test scores,1,0
+ADMITCOL9909_N,Admission Consider: Volunteer work,1,0
+ADOPT98_N,Were you adopted by your family?,1,0
+AGE1,How old will you be on December 31 of this year?,7,0
+AGE2,How old will you be on December 31 of this year?,7,0
+AID01,"Aid: Parents, other relatives or friends",6,0
+AID02,Aid: Spouse,6,0
+AID03,Aid: Savings from summer work,6,0
+AID04,Aid: Other savings,6,0
+AID05,Aid: Part-time job on campus,6,0
+AID06,Aid: Part-time job off campus,6,0
+AID07,Aid: Full-time job while in college,6,0
+AID08,Aid: Pell Grant,6,0
+AID09,Aid: Supplemental Educational Opportunity Grant,6,0
+AID1,"Aid: Family resources (parents, relatives, spouse, etc.)",1,0
+AID10,Aid: State scholarship or grant,6,0
+AID11,Aid: College work-study grant,6,0
+AID12,Aid: College grants/scholarship (other than above),6,0
+AID13,Aid: Vocational Rehabilitation funds,6,0
+AID14,Aid: Other private grant,6,0
+AID15,"Aid: Other government aid (ROTC, BIA, GI/military benefits, etc.)",6,0
+AID16,Aid: Stafford loan (GSL),6,0
+AID17,Aid: Perkins loan,6,0
+AID18,Aid: Other college loan,6,0
+AID19,Aid: Other loan,6,0
+AID2,"Aid: My own resources (savings from work, work-study, other income)",1,0
+AID20,Aid: Other than above,6,0
+AID3,"Aid: Aid which need not be repaid (grants, scholarships, military funding, etc.)",1,0
+AID4,"Aid: Aid which must be repaid (loans, etc.)",1,0
+AID5,Aid: Other than above,1,0
+APCOURSE_T2,AP Courses,2,0
+APEXAM_T2,AP Exams,2,0
+BORNAGAIN,Do you consider yourself a born-again Christian?,4,0
+CHOICE,Choice: Is this college your:,7,1
 CHOOSE01,Choose to Attend: A college rep. recruited me,3,0
 CHOOSE02,Choose to Attend: A friend suggested attending,3,0
+CHOOSE02_T,Choose to Attend: I was offered: a merit-based scholarship,2,0
+CHOOSE03_T,Choose to Attend: I was offered: a need-based scholarship,2,0
+CHOOSE04_T,Choose to Attend: I was offered: an athletic scholarship,2,0
+CHOOSE05_T,Choose to Attend: Info in multicollege guidebook,2,0
 CHOOSE06,Choose to Attend: High school counselor advised me,7,1
 CHOOSE07,Choose to Attend: I wanted to go to a school about the size of this college,7,0
+CHOOSE07_T,Choose to Attend: My friends are attending,2,0
 CHOOSE09,Choose to Attend: I wanted to live near home,7,0
 CHOOSE10,Choose to Attend: I was admitted through an Early Action or Early Decision program,3,0
 CHOOSE11,Choose to Attend: I was attracted by the religious affiliation/orientation of this college,7,0
@@ -216,33 +119,44 @@ CHOOSE26,Choose to Attend: This college has low tuition,7,1
 CHOOSE27,Choose to Attend: This college offers special educational programs,7,0
 CHOOSE28,Choose to Attend: This college's graduates gain admission to top graduate/professional schools,7,1
 CHOOSE29,Choose to Attend: This college's graduates get good jobs,7,1
-CHOOSE02_T,Choose to Attend: I was offered: a merit-based scholarship,2,0
-CHOOSE03_T,Choose to Attend: I was offered: a need-based scholarship,2,0
-CHOOSE04_T,Choose to Attend: I was offered: an athletic scholarship,2,0
-CHOOSE05_T,Choose to Attend: Info in multicollege guidebook,2,0
-CHOOSE07_T,Choose to Attend: My friends are attending,2,0
-CHOICE,Choice: Is this college your:,7,1
-DISTHOME,How many miles is this college from your permanent home?,7,1
-NUMAPPLY,To how many colleges other than this one did you apply for admission this year?,7,1
-NUMACCPT,How many other acceptances did you receive this year?,4,0
-PREVCRED,"Prior to this term, have you ever taken courses at this institution?",7,0
+CITIZEN,Citizenship status:,7,0
+COLLEGE_INVOLVEMENT,TFS Likelihood of College Involvement Score,2,0
+COLLEGE_REPUTATION,TFS College Reputation Orientation Score,2,0
 CRED2,For credit at junior college or community college,7,0
 CRED3,For credit at a four-year college or university,7,0
 CRED4,For credit at some other postsecondary,7,0
-NOCRED2,Not for credit at junior college or community college,7,0
-NOCRED3,Not for credit at a four-year college or university,7,0
-NOCRED4,Not for credit at some other postsecondary,7,0
+CSVREQ,Did your high school require community service for graduation?,4,0
 DEGASP,Highest academic degree planned,6,0
 DEGASP00_N,Highest academic degree planned,1,0
-HIDEGREE,Highest academic degree planned at this college,6,0
-HIDEGREE00_N,Highest academic degree planned at this college,1,0
-PLANLIVE,Where do you plan to live during the fall term?,7,1
+DISAB1,Disability: None,3,0
+DISAB2,Disability: Hearing,2,0
+DISAB3,Disability: Speech,3,0
+DISAB4,Disability: Orthopedic,3,0
+DISAB5,Disability: Learning disability,3,0
+DISAB6,Disability: Health-related,3,0
+DISAB7,Disability: Partially sighted or blind,3,0
+DISAB8,Disability: Other,2,0
+DISAB98_N,Disability: Other,1,0
+DISTHOME,How many miles is this college from your permanent home?,7,1
+DOBMM,DOB Month,7,0
+DOBYY,DOB Year,7,0
+FATHEDUC,Father's education,7,0
+FCAREER,Father's Career,7,0
+FCAREERA,Father's career (aggregated),7,0
+FINCON,Do you have any concern about your ability to finance your college education?,7,1
+FIRSTGEN,First generation status based on parent(s) with less than 'some college',7,1
+FOSTER98_N,Were you ever in foster care?,1,0
+FRELIGION,Father's religion,7,0
+FRELIGIONA,Your father's religious preference,7,0
+FULLSTAT,Are you enrolled (or enrolling) as a:,7,0
 FUTACT01,Future Act: Be elected to an academic honor society,5,1
 FUTACT02,Future Act: Be elected to student office,5,1
+FUTACT02_T,Future Act: Develop close friendships with other students,2,0
 FUTACT03,Future Act: Be satisfied with your college,7,1
 FUTACT04,Future Act: Change career choice,7,1
 FUTACT05,Future Act: Change major field,7,1
 FUTACT06,Future Act: Communicate regularly with your professors,2,0
+FUTACT06_T,Future Act: Find a job after college in the field for which you were trained,1,0
 FUTACT08,Future Act: Drop out of this college temporarily (exclude transferring),7,0
 FUTACT09,Future Act: Drop out permanently (exclude transferring),7,0
 FUTACT10,Future Act: Fail one or more courses,5,0
@@ -254,17 +168,15 @@ FUTACT17,Future Act: Join a fraternity or sorority,2,0
 FUTACT18,"Future Act: Join a social fraternity, sorority, or club",5,1
 FUTACT19,Future Act: Make at least a 'B' average,7,1
 FUTACT20,Future Act: Need extra time to complete your degree requirements,7,1
-FUTACT22,Future Act: Participate in student clubs/groups,2,9
-FUTACT23,Future Act: Participate in student government,2,9
+FUTACT22,Future Act: Participate in student clubs/groups,2,0
+FUTACT23,Future Act: Participate in student government,2,0
 FUTACT24,Future Act: Participate in student protests or demonstrations,7,1
 FUTACT25,Future Act: Participate in volunteer or community service work,7,1
 FUTACT28,Future Act: Play varsity/intercollegiate athletics,7,1
 FUTACT29,Future Act: Seek personal counseling,6,1
-FUTACT30,Future Act: Socialize with someone of another racial/ethnic group,2,9
-FUTACT32,Future Act: Transfer to another college before graduating,7,9
+FUTACT30,Future Act: Socialize with someone of another racial/ethnic group,2,0
+FUTACT32,Future Act: Transfer to another college before graduating,7,0
 FUTACT33,Future Act: Work full-time while attending college,7,1
-FUTACT02_T,Future Act: Develop close friendships with other students,2,9
-FUTACT06_T,Future Act: Find a job after college in the field for which you were trained,1,9
 GOAL02,Goal: Becoming a community leader,7,1
 GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",7,1
 GOAL04,Goal: Becoming an authority in my field,7,1
@@ -285,7 +197,149 @@ GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my sp
 GOAL21,Goal: Participating in a community action program,7,1
 GOAL23,Goal: Raising a family,7,1
 GOAL24,"Goal: Writing original works (poems, novels, etc.)",7,1
+HADREM1,English: Have had special tutoring or remedial work,5,0
+HADREM2,Reading: Have had special tutoring or remedial work,5,0
+HADREM3,Mathematics: Have had special tutoring or remedial work,5,0
+HADREM4,Social Studies: Have had special tutoring or remedial work,5,0
+HADREM5,Science: Have had special tutoring or remedial work,5,0
+HADREM6,Foreign Language: Have had special tutoring or remedial work,5,0
+HADREM7,Writing: Have had special tutoring or remedial work,2,0
+HBCU,HBCU Flag,7,1
+HIDEGREE,Highest academic degree planned at this college,6,0
+HIDEGREE00_N,Highest academic degree planned at this college,1,0
+HOMEZIP,Student's home zip,7,0
+HPW01,Hours per Week: Studying/homework,7,0
+HPW02,Hours per Week: Socializing with friends in person,7,0
+HPW03,Hours per Week: Talking with teachers outside of class,7,0
+HPW04,Hours per Week: Exercising/sports,7,0
+HPW05,Hours per Week: Partying,7,0
+HPW06,Hours per Week: Working (for pay),7,0
+HPW07,Hours per Week: Volunteer work,7,0
+HPW08,Hours per Week: Participating in student clubs/groups,7,0
+HPW09,"Hours per Week: Watching TV/online video content (e.g., Amazon, Hulu, Netflix, YouTube)",7,0
+HPW10,Hours per Week: Performing household/childcare duties,7,0
+HPW11,Hours per Week: Prayer/meditation,6,0
+HPW12,Hours per Week: Reading for pleasure,7,0
+HPW13,Hours per Week: Playing video games,5,0
+HPW14,Hours per Week: Playing video/computer games,2,0
+HSGPA,What was your average grade in high school?,7,1
+HSTYPE1,From what kind of secondary school did you graduate?,2,0
+INCOME,Parental Income,7,1
+INSTCONT,Institution Control,7,1
+INSTTYPE,Institution Type,7,1
+MAJOR,Student's probable field of study/major,7,0
+MAJOR7111,Student's probable field of study/major,7,0
+MAJORA,Student's major aggregated,7,1
+MAJORA7111,Student's major aggregated,7,1
+MARITAL,Are you presently married?,2,0
+MCAREER,Mother's Career,7,0
+MCAREERA,Mother's career (aggregated),7,0
+MOTHEDUC,Mother's education,7,0
+MRELIGION,Mother's religion,7,0
+MRELIGIONA,Your mother's religious preference,7,0
+NATENGSP8715,Is English your native language?,7,1
+NDEPPAR7806,How many persons are currently dependent on your parents for support?,2,0
+NEEDREM1,English: Will need special tutoring or remedial work,5,0
+NEEDREM2,Reading: Will need special tutoring or remedial work,5,0
+NEEDREM3,Mathematics: Will need special tutoring or remedial work,5,0
+NEEDREM4,Social Studies: Will need special tutoring or remedial work,5,0
+NEEDREM5,Science: Will need special tutoring or remedial work,5,0
+NEEDREM6,Foreign Language: Will need special tutoring or remedial work,5,0
+NEEDREM7,Writing: Will need special tutoring or remedial work,2,0
+NOCRED2,Not for credit at junior college or community college,7,0
+NOCRED3,Not for credit at a four-year college or university,7,0
+NOCRED4,Not for credit at some other postsecondary,7,0
+NORMSTAT,Norms status,14,0
+NUMACCPT,How many other acceptances did you receive this year?,4,0
+NUMAPPLY,To how many colleges other than this one did you apply for admission this year?,7,1
+OBEREGION,OBE Region,7,0
+PARSTAT,Are your parents alive? divorced?,7,0
+PERMIT,Do you give HERI permission to include your id number should your college request the data for additional research analyses?,7,0
+PLANCOL1_T2,Planning for College: Seek high school counselor's advice,1,0
+PLANCOL2_T2,Planning for College: Hired a private college counselor,1,0
+PLANCOL3_T2,Planning for College: Take a SAT/ACT preparation course,1,0
+PLANLIVE,Where do you plan to live during the fall term?,7,1
 POLIVIEW,How would you characterize your political views?,7,1
+PREVCRED,"Prior to this term, have you ever taken courses at this institution?",7,0
+RACE1,American Indian/Alaska Native,7,0
+RACE10,Puerto Rican,7,0
+RACE11,Other Latino/o/x,7,0
+RACE12,White/Caucasian,7,0
+RACE13,Other,7,0
+RACE7,Native Hawaiian/Pacific Islander,1,0
+RACE7102_N,Asian,7,0
+RACE8,African American/Black,7,0
+RACE9,Mexican American/Chicano/o/x,7,0
+RACE9701_N,White,1,0
+RACE9702_N,Black,1,0
+RACE9703_N,American Indian,1,0
+RACE9704_N,Mexican/Chicano,1,0
+RACE9705_N,Puerto Rican,1,0
+RACE9706_N,Other Latino,1,0
+RACE9707_N,Chinese,1,0
+RACE9708_N,Filipino,1,0
+RACE9709_N,Japanese,1,0
+RACE9710_N,Korean,1,0
+RACE9711_N,"Southeast Asian (Vietnamese, Laotian, Cambodian, etc.)",1,0
+RACE9712_N,Other Asian,1,0
+RACE9713_N,Other race/ethnicity,1,0
+RACEGROUP,Race/Ethnicity Group,7,1
+RATE01,Self Rating: Academic ability,7,1
+RATE02,Self Rating: Artistic ability,7,0
+RATE03,Self Rating: Athletic ability,1,0
+RATE04,Self Rating: Competitiveness,7,1
+RATE04_T,Self Rating: Initiative,2,0
+RATE05,Self Rating: Computer skills,3,0
+RATE06,Self Rating: Cooperativeness,7,1
+RATE07,Self Rating: Creativity,7,1
+RATE07_T,Self Rating: Persistence,1,0
+RATE08,Self Rating: Drive to achieve,7,1
+RATE09,Self Rating: Emotional health,7,1
+RATE10,Self Rating: Leadership ability,7,1
+RATE11,Self Rating: Mathematical ability,7,1
+RATE12,Self Rating: Physical health,7,0
+RATE13,Self Rating: Popularity,7,1
+RATE13_T,Self Rating: Religiousness,1,0
+RATE14,Self Rating: Public speaking ability,7,1
+RATE15,Self Rating: Self-confidence (intellectual),7,1
+RATE16,Self Rating: Self-confidence (social),7,1
+RATE16_T,Self Rating: Stubbornness,1,0
+RATE17,Self Rating: Self-understanding,6,1
+RATE18,Self Rating: Spirituality,6,0
+RATE19,Self Rating: Understanding of others,7,1
+RATE20,Self Rating: Writing ability,7,1
+RATE95_N,Self Rating: Physical appearance,1,0
+REASON01,Reason Attend: A mentor/role model encouraged me to go,7,1
+REASON02,Reason Attend: I could not find a job,7,1
+REASON02_N,Reason Attend: To prepare myself for graduate or professional school,1,0
+REASON03,Reason Attend: My parents wanted me to go,7,1
+REASON03_N,Reason Attend: Because my friends were going,1,0
+REASON04,Reason Attend: There was nothing better to do,6,1
+REASON05,Reason Attend: To be able to get a better job,7,1
+REASON06,Reason Attend: To be able to make more money,7,1
+REASON06_T,Reason Attend: To prove to others I could succeed,3,0
+REASON07,Reason Attend: To get training for a specific career,3,0
+REASON08,Reason Attend: To gain a general education and appreciation of ideas,7,1
+REASON09,Reason Attend: To improve my reading and study skills,7,1
+REASON10,Reason Attend: To learn more about things that interest me,6,1
+REASON11,Reason Attend: To make me a more cultured person,6,1
+REASON12,Reason Attend: To prepare myself for graduate or professional school,3,1
+REASON13,Reason Attend: Wanted to get away from home,7,1
+RRACE,Responded to race,7,0
+SCAREER,Your intended Career,7,0
+SCAREERA,Student's probable career aggregated,7,1
+SELECTIVITY,Institutional Selectivity,7,1
+SEX,Your sex:,7,1
+SOCIAL_AGENCY,TFS Social Agency Score,2,0
+SOCIAL_SELFCONCEPT,TFS Social Self-Concept Score,2,0
+SRELIGION,Student's religion,7,1
+SRELIGIONA,Your religious preference,7,0
+STRAT,CIRP Stratification Cell,7,0
+STUDSTAT,Student status,14,0
+STUDWGT,Student weight,7,1
+STUID,Student School I.D. (only if permitted),7,0
+SUBJID,Subject I.D.,7,0
+VEIW9502_N,View: Children of undocumented immigrants should be denied access to public education,1,0
 VIEW01,View: A national health care plan is needed to cover everybody's medical costs,3,0
 VIEW02,View: Abortion should be legal,7,0
 VIEW04,View: Affirmative action in college admissions should be abolished,6,0
@@ -307,71 +361,17 @@ VIEW27,View: The federal government should raise taxes to reduce the deficit,3,0
 VIEW28,View: There is too much concern in the courts for the rights of criminals,7,0
 VIEW30,View: Undocumented immigrants should be denied access to public education,1,0
 VIEW31,View: Wealthy people should pay a larger share of taxes than they do now,7,1
+VIEW9501_N,View: Better education and more job opportunities would substantially reduce crime,1,0
+VIEW96_N,View: All official federal and state documents should be printed in English only,1,0
 VIEWS14_T,View: Material on the internet should be regulated by the government,2,0
 VIEWS19_T,View: People have a right to know about the personal lives of public figures,2,0
-VIEW9501_N,View: Better education and more job opportunities would substantially reduce crime,1,0
-VEIW9502_N,View: Children of undocumented immigrants should be denied access to public education,1,0
-VIEW96_N,View: All official federal and state documents should be printed in English only,1,0
-ADMITCOL9501_N,Admission Consider: Low income students,1,0
-ADMITCOL9502_N,Admission Consider: Athletes,1,0
-ADMITCOL9503_N,Admission Consider: High-achieving students,1,0
-ADMITCOL9504_N,Admission Consider: Foreign students,1,0
-ADMITCOL9505_N,Admission Consider: Children of alumni,1,0
-ADMITCOL9506_N,Admission Consider: African Americans,1,0
-ADMITCOL9507_N,Admission Consider: American Indians,1,0
-ADMITCOL9508_N,Admission Consider: Asian Americans,1,0
-ADMITCOL9509_N,Admission Consider: Hispanics/Latinos,1,0
-ADMITCOL9510_N,Admission Consider: Whites/Caucasians,1,0
-ADMITCOL9901_N,Admission Consider: Application essay,1,0
-ADMITCOL9902_N,Admission Consider: Athletic talent,1,0
-ADMITCOL9903_N,Admission Consider: Extracurricular activities,1,0
-ADMITCOL9904_N,Admission Consider: High school grades,1,0
-ADMITCOL9905_N,Admission Consider: Letters of recommendation,1,0
-ADMITCOL9906_N,Admission Consider: Musical/artistic talent,1,0
-ADMITCOL9907_N,Admission Consider: Race/ethnicity,1,0
-ADMITCOL9908_N,Admission Consider: Standardized test scores,1,0
-ADMITCOL9909_N,Admission Consider: Volunteer work,1,0
-MAJOR,Student's probable field of study/major,7,0
-MAJOR7111,Student's probable field of study/major,7,0
-MAJORA,Student's major aggregated,7,1
-MAJORA7111,Student's major aggregated,7,1
-FINCON,Do you have any concern about your ability to finance your college education?,7,1
-AID1,"Aid: Family resources (parents, relatives, spouse, etc.)",1,0
-AID2,"Aid: My own resources (savings from work, work-study, other income)",1,0
-AID3,"Aid: Aid which need not be repaid (grants, scholarships, military funding, etc.)",1,0
-AID4,"Aid: Aid which must be repaid (loans, etc.)",1,0
-AID5,Aid: Other than above,1,0
-AID01,"Aid: Parents, other relatives or friends",6,0
-AID02,Aid: Spouse,6,0
-AID03,Aid: Savings from summer work,6,0
-AID04,Aid: Other savings,6,0
-AID05,Aid: Part-time job on campus,6,0
-AID06,Aid: Part-time job off campus,6,0
-AID07,Aid: Full-time job while in college,6,0
-AID08,Aid: Pell Grant,6,0
-AID09,Aid: Supplemental Educational Opportunity Grant,6,0
-AID10,Aid: State scholarship or grant,6,0
-AID11,Aid: College work-study grant,6,0
-AID12,Aid: College grants/scholarship (other than above),6,0
-AID13,Aid: Vocational Rehabilitation funds,6,0
-AID14,Aid: Other private grant,6,0
-AID15,"Aid: Other government aid (ROTC, BIA, GI/military benefits, etc.)",6,0
-AID16,Aid: Stafford loan (GSL),6,0
-AID17,Aid: Perkins loan,6,0
-AID18,Aid: Other college loan,6,0
-AID19,Aid: Other loan,6,0
-AID20,Aid: Other than above,6,0
-SCAREER,Your intended Career,7,0
-SCAREERA,Student's probable career aggregated,7,1
-FCAREER,Father's Career,7,0
-MCAREER,Mother's Career,7,0
-FCAREERA,Father's career (aggregated),7,0
-MCAREERA,Mother's career (aggregated),7,0
-SRELIGION,Student's religion,7,1
-FRELIGION,Father's religion,7,0
-MRELIGION,Mother's religion,7,0
-ACADEMIC_SELFCONCEPT,TFS Academic Self-Concept Score,2,0
-SOCIAL_SELFCONCEPT,TFS Social Self-Concept Score,2,0
-SOCIAL_AGENCY,TFS Social Agency Score,2,0
-COLLEGE_REPUTATION,TFS College Reputation Orientation Score,2,0
-COLLEGE_INVOLVEMENT,TFS Likelihood of College Involvement Score,2,0
+YEAR,Survey year,7,1
+YRGRADHS,In what year did you graduate from high school?,7,0
+YRSTUDY1,Years Study: English,3,0
+YRSTUDY2,Years Study: Mathematics,3,0
+YRSTUDY3,Years Study: Foreign Language,3,0
+YRSTUDY4,Years Study: Physical Science,3,0
+YRSTUDY5,Years Study: Biological Science,3,0
+YRSTUDY6,Years Study: History/Am Govt,3,0
+YRSTUDY7,Years Study: Computer Science,3,0
+YRSTUDY8,Years Study: Art and/or Music,3,0
