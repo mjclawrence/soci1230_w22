@@ -429,7 +429,7 @@ tfs_correlations <- tfs_means_mobility |>
 
 tfs_correlations$Name <- gsub("(.+?)(\\..*)", "\\1", tfs_correlations$Name)
 
-tfs_correlations <- left_join(varnames[,-3], tfs_correlations)
+tfs_correlations <- left_join(varnames, tfs_correlations)
 
 tfs_correlations <- tfs_correlations |> 
   select(-c("n_asked", "usable_m")) |> 
