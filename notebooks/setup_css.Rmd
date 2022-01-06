@@ -231,7 +231,7 @@ css_means <- college_mobility.filtered |>
             across(starts_with("CSV"),
                    list(mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.{.fn}"),
+                   .names = "{.col}.yes_{.fn}"),
             across(starts_with("FACPRV"),
                    list(mean = ~mean(.x==3, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
@@ -255,7 +255,7 @@ css_means <- college_mobility.filtered |>
             across(starts_with("NATENG"),
                    list(mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.{.fn}"),
+                   .names = "{.col}.yes_{.fn}"),
             across(starts_with("PLANS"),
                    list(mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
@@ -267,7 +267,7 @@ css_means <- college_mobility.filtered |>
             across(starts_with("RACE"),
                    list(mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.{.fn}"),
+                   .names = "{.col}.yes_{.fn}"),
             across(starts_with("RATE"),
                    list(mean = ~mean(.x>=5, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
@@ -280,7 +280,7 @@ css_means <- college_mobility.filtered |>
                    list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
                         catholic_mean = ~mean(.x==12, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.{.fn}"),
+                   .names = "{.col}.yes_{.fn}"),
             across(starts_with("SATIS"),
                    list(mean = ~mean(.x>=4, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
@@ -296,7 +296,7 @@ css_means <- college_mobility.filtered |>
             across(starts_with("SUCC"),
                    list(mean = ~mean(.x==3, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.{.fn}"),
+                   .names = "{.col}.yes_{.fn}"),
             across(starts_with("VIEW"),
                    list(mean = ~mean(.x>=3, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
@@ -350,7 +350,7 @@ Calculate correlations between all college means and all mobility variables
 ```{r}
 css_correlations <- css_means_mobility |> 
   select(-c(campus_id, ends_with("propna"))) |> 
-  summarise_at(vars(-n_responses), 
+  dplyr::summarise_at(vars(-n_responses), 
                    list(cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
                                                   weight = n_responses)[1],
                         cor_mr_ktop1_pq1 = ~wtd.cor(.x, mr_ktop1_pq1, 
@@ -391,6 +391,7 @@ css_correlations <- css_means_mobility |>
   select(-Drop) |> 
   pivot_wider(names_from = "Mobility", values_from = "Correlation") |> 
   select(-3)
+
 
 css_correlations$Name <- gsub("(.+?)(\\..*)", "\\1", css_correlations$Name)
 
