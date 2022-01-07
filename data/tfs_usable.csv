@@ -261,15 +261,15 @@ PLANCOL3_T2,Planning for College: Take a SAT/ACT preparation course,1,0
 PLANLIVE,Where do you plan to live during the fall term?,7,1
 POLIVIEW,How would you characterize your political views?,7,1
 PREVCRED,"Prior to this term, have you ever taken courses at this institution?",7,0
-RACE1,American Indian/Alaska Native,7,0
-RACE10,Puerto Rican,7,0
-RACE11,Other Latino/o/x,7,0
-RACE12,White/Caucasian,7,0
-RACE13,Other,7,0
+RACE01,American Indian/Alaska Native,7,1
+RACE10,Puerto Rican,7,1
+RACE11,Other Latino/o/x,7,1
+RACE12,White/Caucasian,7,1
+RACE13,Other,7,1
 RACE7,Native Hawaiian/Pacific Islander,1,0
-RACE7102_N,Asian,7,0
-RACE8,African American/Black,7,0
-RACE9,Mexican American/Chicano/o/x,7,0
+RACE7102_N,Asian,7,1
+RACE8,African American/Black,7,1
+RACE9,Mexican American/Chicano/o/x,7,1
 RACE9701_N,White,1,0
 RACE9702_N,Black,1,0
 RACE9703_N,American Indian,1,0
@@ -283,7 +283,7 @@ RACE9710_N,Korean,1,0
 RACE9711_N,"Southeast Asian (Vietnamese, Laotian, Cambodian, etc.)",1,0
 RACE9712_N,Other Asian,1,0
 RACE9713_N,Other race/ethnicity,1,0
-RACEGROUP,Race/Ethnicity Group,7,1
+RACEGROUP,Race/Ethnicity Group,7,0
 RATE01,Self Rating: Academic ability,7,1
 RATE02,Self Rating: Artistic ability,7,0
 RATE03,Self Rating: Athletic ability,1,0

@@ -101,7 +101,7 @@ demographics_tfs_subset <- demographics_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 demographics_tfs_subset <- left_join(collnames, demographics_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "YEAR"))
 
 rm(demographics_tfs)
 ```
@@ -187,8 +187,9 @@ tfs_subset_master <- bind_cols(choice_tfs_subset,
                                plans_tfs_subset,
                                view_tfs_subset) |> 
   mutate(campus_id = campus_id...1,
-         SELECTIVITY = SELECTIVITY...35) |> 
-  select(-starts_with(c("campus_id...", "SELECTIVITY..."))) |> 
+         SELECTIVITY = SELECTIVITY...41,
+         STUDWGT = STUDWGT...26) |> 
+  select(-starts_with(c("campus_id...", "SELECTIVITY...", "STUDWGT..."))) |> 
   relocate(campus_id) |> 
   mutate(SELECTIVITY = na_if(SELECTIVITY, 0))
 ```
@@ -268,92 +269,157 @@ big_data <- cbind.data.frame(campus_id, big_data)
 tfs_means <- tfs_subset_master |> 
   group_by(campus_id) |> 
   summarise(across(starts_with("CHOICE"),
-                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                   list(lessthanthird_mean = ~mean(.x==1, na.rm = TRUE),
+                        third_mean = ~mean(.x==2, na.rm = TRUE),
+                        second_mean = ~mean(.x==4, na.rm = TRUE),
+                        first_mean = ~mean(.x==5, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.firstchoice_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("CHOOSE"),
-                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                   list(notimportant_mean = ~mean(.x==1, na.rm = TRUE),
+                        somewhatimportant_mean = ~mean(.x==2, na.rm = TRUE),
+                        veryimportant_mean = ~mean(.x==3, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.veryimportant_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("DISTHOME"),
-                   list(mean = ~mean(.x>=3, na.rm = TRUE),
+                   list(miles10less = ~mean(.x==1, na.rm = TRUE),
+                        miles11to50 = ~mean(.x==2, na.rm = TRUE),
+                        miles51to100 = ~mean(.x==3, na.rm = TRUE),
+                        miles101to500 = ~mean(.x==4, na.rm = TRUE),
+                        miles501plus = ~mean(.x==5, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.51milesplus_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("FINCON"),
-                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                   list(none_mean = ~mean(.x==1, na.rm = TRUE),
+                        some_mean = ~mean(.x==2, na.rm = TRUE),
+                        major_mean = ~mean(.x==3, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.major_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("FIRSTGEN"),
-                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                   list(yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.yes_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("FUTACT"),
-                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                   list(nochance_mean = ~mean(.x==1, na.rm = TRUE),
+                        verylittlechance_mean = ~mean(.x==2, na.rm = TRUE),
+                        somechance_mean = ~mean(.x==3, na.rm = TRUE),
+                        verygoodchance_mean = ~mean(.x==4, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.verygoodchance_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("GOAL"),
-                   list(mean = ~mean(.x>=3, na.rm = TRUE),
+                   list(notimportant_mean = ~mean(.x==1, na.rm = TRUE),
+                        somewhatimportant_mean = ~mean(.x==2, na.rm = TRUE),
+                        veryimportant_mean = ~mean(.x==3, na.rm = TRUE),
+                        essential_mean = ~mean(.x==4, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.veryimportant_essential_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("HSGPA"),
-                   list(mean = ~mean(.x>=7, na.rm = TRUE),
+                   list(d_mean = ~mean(.x==1, na.rm = TRUE),
+                        c_mean = ~mean(.x %in% 2:3, na.rm = TRUE),
+                        b_mean = ~mean(.x %in% 4:6, na.rm = TRUE),
+                        a_mean = ~mean(.x>=7, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.a_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("INCOME"),
-                   list(mean = ~mean(.x>=11, na.rm = TRUE),
+                   list(inclessthan50k = ~mean(.x<18, na.rm = TRUE),
+                        inc50to75k_mean = ~mean(.x %in% 18:20, na.rm = TRUE),
+                        inc75to100k_mean = ~mean(.x==21, na.rm = TRUE),
+                        inc100to150k_mean = ~mean(.x==24, na.rm = TRUE),
+                        inc150to200k_mean = ~mean(.x==27, na.rm = TRUE),
+                        inc200kplus_mean = ~mean(.x==28, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.75kplus_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("MAJORA"),
-                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                   list(business_mean = ~mean(.x==3, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.business_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("PLANLIVE"),
-                   list(mean = ~mean(.x %in% 3:5, na.rm = TRUE),
-                        propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.oncampus_{.fn}"),
-            across(starts_with("POLIVIEW"),
-                   list(mean = ~mean(.x>=4, na.rm = TRUE),
-                        propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.liberal_or_farleft_{.fn}"),
-            across(starts_with("RACEGROUP"),
-                   list(amindian_mean = ~mean(.x==1, na.rm = TRUE),
-                        asian_mean = ~mean(.x==2, na.rm = TRUE),
-                        black_mean = ~mean(.x==3, na.rm = TRUE),
-                        hispanic_mean = ~mean(.x==4, na.rm = TRUE),
-                        white_mean = ~mean(.x==5, na.rm = TRUE),
+                   list(family_mean = ~mean(.x==1, na.rm = TRUE),
+                        offcampus_mean = ~mean(.x==2, na.rm = TRUE),
+                        oncampus_mean = ~mean(.x==3 | .x==5, na.rm = TRUE),
+                        greekhouse_maen = ~mean(.x==4, na.rm = TRUE),
                         other_mean = ~mean(.x==6, na.rm = TRUE),
-                        multiracial_mean = ~mean(.x==7, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}_{.fn}"),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("POLIVIEW"),
+                   list(farright_mean = ~mean(.x==1, na.rm = TRUE),
+                        conservative_mean = ~mean(.x==2, na.rm = TRUE),
+                        middleoftheroad_mean = ~mean(.x==3, na.rm = TRUE),
+                        liberal_mean = ~mean(.x==4, na.rm = TRUE),
+                        farleft_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE01"),
+                   list(amindian_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE10"),
+                   list(puerto_rican_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE11"),
+                   list(other_latino_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE12"),
+                   list(white_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE13"),
+                   list(other_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                    .names = "{.col}.{.fn}"),
+            across(starts_with("RACE7102"),
+                   list(asian_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE8"),
+                   list(black_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+             across(starts_with("RACE9"),
+                   list(mexican_chicano_mean = ~mean(.x==2, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("RATE"),
-                   list(mean = ~mean(.x>=4, na.rm = TRUE),
+                   list(lowest10pct_mean = ~mean(.x==1, na.rm = TRUE),
+                        belowaverage_mean = ~mean(.x==2, na.rm = TRUE),
+                        average_mean = ~mean(.x==3, na.rm = TRUE),
+                        aboveaverage_mean = ~mean(.x==4, na.rm = TRUE),
+                        highest10pct_mean = ~mean(.x==5, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.aboveavg_exceptional_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("REASON"),
-                   list(mean = ~mean(.x==3, na.rm = TRUE),
+                   list(notimportant_mean = ~mean(.x==1, na.rm = TRUE),
+                        somewhatimportant_mean = ~mean(.x==2, na.rm = TRUE),
+                        veryimportant_mean = ~mean(.x==3, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.veryimportant_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("SCAREERA"),
-                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                   list(business_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.business_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("SELECTIVITY"),
-                   list(mean = ~mean(.x, na.rm = TRUE),
+                   list(scale_mean = ~mean(.x, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             across(starts_with("SEX"),
-                   list(mean = ~mean(.x==2, na.rm = TRUE),
+                   list(male_mean = ~mean(.x==1, na.rm = TRUE),
+                        female_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.female_{.fn}"),
-            across(starts_with("SRELIGION"),
-                   list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
-                        catholic_mean = ~mean(.x==12, na.rm = TRUE),
-                        propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}_{.fn}"),
+                   .names = "{.col}.{.fn}"),
+            # across(starts_with("SRELIGION"),
+            #        list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
+            #             catholic_mean = ~mean(.x==12, na.rm = TRUE),
+            #             propna = ~sum(is.na(.)) / n()),
+            #        .names = "{.col}.yes_{.fn}"),
             across(starts_with("VIEW"),
-                   list(mean = ~mean(.x==4, na.rm = TRUE),
+                   list(disagreestrongly = ~mean(.x==1, na.rm = TRUE),
+                        disagreesomewhat = ~mean(.x==2, na.rm = TRUE),
+                        agreesomewhat_mean = ~mean(.x==3, na.rm = TRUE),
+                        agreestrongly_mean = ~mean(.x==4, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.stronglyagree_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             n_responses = n()
   ) |> 
   relocate(campus_id, n_responses) |> 
@@ -369,7 +435,8 @@ varnames <- bind_cols(varnames_original, varnames_summarize)
 colnames(varnames) <- c("Name", "Summarized")
 varnames <- left_join(varnames, tfs_names.labeled)
 varnames <- varnames |> 
-  filter(!str_detect(Summarized, "propna"))
+  filter(!str_detect(Summarized, "propna")) |> 
+  select(-Summarized)
 ```
 
 
@@ -387,7 +454,9 @@ Calculate correlations between all college means and all mobility variables
 tfs_correlations <- tfs_means_mobility |> 
   select(-c(campus_id, ends_with("propna"))) |> 
   summarise_at(vars(-n_responses), 
-                   list(cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
+                   list(cor_n_colleges = ~sum(!is.na(.x)),
+                        cor_wtdprop = ~wtd.mean(.x, weights = n_responses, na.rm = TRUE),
+                        cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
                                                   weight = n_responses)[1],
                         cor_mr_ktop1_pq1 = ~wtd.cor(.x, mr_ktop1_pq1, 
                                                     weight = n_responses)[1],
@@ -420,21 +489,24 @@ tfs_correlations <- tfs_means_mobility |>
                         cor_par_q5 = ~wtd.cor(.x, par_q5, 
                                               weight = n_responses)[1]),
                    .names = "{.col}_{.fn}") |>
-  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:1824) |>
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:6372) |>
   filter(str_detect(Variable, "mean")) |> 
-  separate(Variable, c("Name", "Mobility"), sep = "_mean") |> 
+  separate(Variable, c("Variable", "Mobility"), sep = "_mean") |> 
   separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
-  select(-Drop) |> 
-  pivot_wider(names_from = "Mobility", values_from = "Correlation")
-
-tfs_correlations$Name <- gsub("(.+?)(\\..*)", "\\1", tfs_correlations$Name)
-
-tfs_correlations <- left_join(varnames, tfs_correlations)
+  select(-Drop) |>
+  pivot_wider(names_from = "Mobility", values_from = "Correlation") 
 
 tfs_correlations <- tfs_correlations |> 
+  separate(Variable, c("Name", "Summary"), sep = '[.]') 
+
+tfs_correlations <- left_join(tfs_correlations, varnames) |> 
   select(-c("n_asked", "usable_m")) |> 
   filter(Name != "campus_id") |> 
-  filter(Name != "n_responses")
+  filter(Name != "n_responses") |> 
+  distinct() |> 
+  mutate(Summary = paste0(Name,".",Summary)) |> 
+  relocate(Description, .before = Summary) |> 
+  relocate(n_colleges, .after = wtdprop)
 ```
 
 
