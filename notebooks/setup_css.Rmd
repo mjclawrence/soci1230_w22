@@ -307,13 +307,17 @@ varnames <- varnames |>
   select(-Summarized)
 ```
 
-## Correlations
-
 Merge the variable means by college with the mobility variables
 
 ```{r}
 css_means_mobility <- left_join(css_means, chetty_vars)
 ```
+
+```{r}
+write.csv(css_means_mobility, "../data/css_means_mobility.csv", row.names = FALSE)
+```
+
+## Correlations
 
 Calculate correlations between all college means and all mobility variables
 

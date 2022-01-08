@@ -439,14 +439,17 @@ varnames <- varnames |>
   select(-Summarized)
 ```
 
-
-## Correlations
-
 Merge the variable means by college with the mobility variables
 
 ```{r}
 tfs_means_mobility <- left_join(tfs_means, chetty_vars)
 ```
+
+```{r}
+write.csv(tfs_means_mobility, "../data/tfs_means_mobility.csv", row.names = FALSE)
+```
+
+## Correlations
 
 Calculate correlations between all college means and all mobility variables
 
