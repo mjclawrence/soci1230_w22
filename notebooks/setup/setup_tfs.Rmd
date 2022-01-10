@@ -16,19 +16,19 @@ library(weights)
 The `collnames` file links campus_id, ACERECODE, and super_opeid.
 
 ```{r}
-collnames <- read_csv("../data/collnames.csv")
+collnames <- read_csv("../../data/collnames.csv")
 ```
 
 The `college_mobility` file has chetty variables and css variables and tfs matched variables
 
 ```{r}
-college_mobility <- read_csv("../data/college_mobility.csv")
+college_mobility <- read_csv("../../data/college_mobility.csv")
 ```
 
 The `chetty_table2.csv` file has all the mobility variables
 
 ```{r}
-chetty <- read_csv("../data/chetty_table2.csv")
+chetty <- read_csv("../../data/chetty_table2.csv")
 chetty_vars <- chetty |> 
   select(super_opeid, mr_kq5_pq1,
          mr_ktop1_pq1,
@@ -47,7 +47,7 @@ chetty_vars <- chetty_vars |>
 The `tfs_question_index` file has the question names and descriptions for every survey year.
 
 ```{r}
-tfs_longitudinal <- read_csv("../codebooks/tfs_question_index.csv")
+tfs_longitudinal <- read_csv("../../codebooks/tfs_question_index.csv")
 ```
 
 We only need questions asked at least once in TFS survey years between 1995:2001.
@@ -63,13 +63,13 @@ tfs_longitudinal2 <- tfs_longitudinal |>
   distinct() |>
   filter(n_asked>0)
 
-#write.csv(tfs_longitudinal2, "../data/tfs_usable.csv", row.names = FALSE)
+#write.csv(tfs_longitudinal2, "../../data/tfs_usable.csv", row.names = FALSE)
 ```
 
 Keep the questions we are using
 
 ```{r}
-tfs_names.labeled <- read_csv("../data/tfs_usable.csv")
+tfs_names.labeled <- read_csv("../../data/tfs_usable.csv")
 tfs_names.labeled <- tfs_names.labeled |> 
   filter(usable_m == 1)
 
@@ -81,7 +81,7 @@ Read in the files for each tfs group. Keep only the 1995:2001 survey years and o
 ## TFS - Choice
 
 ```{r}
-choice_tfs <- read_csv("../data/tfs/choice.csv")
+choice_tfs <- read_csv("../../data/tfs/choice.csv")
 choice_tfs_subset <- choice_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -95,7 +95,7 @@ rm(choice_tfs)
 ## TFS - Demographics
 
 ```{r}
-demographics_tfs <- read_csv("../data/tfs/demographics.csv")
+demographics_tfs <- read_csv("../../data/tfs/demographics.csv")
 demographics_tfs_subset <- demographics_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -109,7 +109,7 @@ rm(demographics_tfs)
 ## TFS - Disaggregated
 
 ```{r}
-disagg_tfs <- read_csv("../data/tfs/disagg.csv")
+disagg_tfs <- read_csv("../../data/tfs/disagg.csv")
 disagg_tfs_subset <- disagg_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -123,7 +123,7 @@ rm(disagg_tfs)
 ## TFS - Funds
 
 ```{r}
-funds_tfs <- read_csv("../data/tfs/funds.csv")
+funds_tfs <- read_csv("../../data/tfs/funds.csv")
 funds_tfs_subset <- funds_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -137,7 +137,7 @@ rm(funds_tfs)
 ## TFS - HS
 
 ```{r}
-hs_tfs <- read_csv("../data/tfs/hs.csv")
+hs_tfs <- read_csv("../../data/tfs/hs.csv")
 hs_tfs_subset <- hs_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -151,7 +151,7 @@ rm(hs_tfs)
 ## TFS - Plans
 
 ```{r}
-plans_tfs <- read_csv("../data/tfs/plans.csv")
+plans_tfs <- read_csv("../../data/tfs/plans.csv")
 plans_tfs_subset <- plans_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, any_of(usable_tfs_names))
@@ -165,7 +165,7 @@ rm(plans_tfs)
 ## TFS - Views
 
 ```{r}
-view_tfs <- read_csv("../data/tfs/view.csv")
+view_tfs <- read_csv("../../data/tfs/view.csv")
 view_tfs_subset <- view_tfs |> 
   filter(YEAR %in% 1995:2001) |> 
   select(ACERECODE, YEAR, any_of(usable_tfs_names))
@@ -446,7 +446,7 @@ tfs_means_mobility <- left_join(tfs_means, chetty_vars)
 ```
 
 ```{r}
-write.csv(tfs_means_mobility, "../data/tfs_means_mobility.csv", row.names = FALSE)
+write.csv(tfs_means_mobility, "../../data/tfs_means_mobility.csv", row.names = FALSE)
 ```
 
 ## Correlations
@@ -514,7 +514,7 @@ tfs_correlations <- left_join(tfs_correlations, varnames) |>
 
 
 ```{r}
-write.csv(tfs_correlations, "../data/tfs_correlations.csv", row.names = FALSE)
+write.csv(tfs_correlations, "../../data/tfs_correlations.csv", row.names = FALSE)
 ```
 
 

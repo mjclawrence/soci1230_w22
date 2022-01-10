@@ -16,19 +16,19 @@ library(weights)
 The `collnames` file links campus_id, ACERECODE, and super_opeid.
 
 ```{r}
-collnames <- read_csv("../data/collnames.csv")
+collnames <- read_csv("../../data/collnames.csv")
 ```
 
 The `college_mobility` file has chetty variables and css variables and tfs matched variables
 
 ```{r}
-college_mobility <- read_csv("../data/college_mobility.csv")
+college_mobility <- read_csv("../../data/college_mobility.csv")
 ```
 
 The `chetty_table2.csv` file has all the mobility variables
 
 ```{r}
-chetty <- read_csv("../data/chetty_table2.csv")
+chetty <- read_csv("../../data/chetty_table2.csv")
 chetty_vars <- chetty |> 
   select(super_opeid, mr_kq5_pq1,
          mr_ktop1_pq1,
@@ -47,7 +47,7 @@ chetty_vars <- chetty_vars |>
 The `css_questions_usable` file notes which questions are used in later analyses. It also has the question descriptions.
 
 ```{r}
-css_names.labeled <- read_csv("../data/css_questions_usable.csv")
+css_names.labeled <- read_csv("../../data/css_questions_usable.csv")
 ```
 
 Keep the questions we are using.
@@ -314,7 +314,7 @@ css_means_mobility <- left_join(css_means, chetty_vars)
 ```
 
 ```{r}
-write.csv(css_means_mobility, "../data/css_means_mobility.csv", row.names = FALSE)
+write.csv(css_means_mobility, "../../data/css_means_mobility.csv", row.names = FALSE)
 ```
 
 ## Correlations
@@ -384,7 +384,7 @@ css_correlations <- left_join(css_correlations, varnames) |>
 ```
 
 ```{r}
-write.csv(css_correlations, "../data/css_correlations.csv", row.names = FALSE)
+write.csv(css_correlations, "../../data/css_correlations.csv", row.names = FALSE)
 ```
 
 # CLEANUP TFS
