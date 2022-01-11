@@ -2,6 +2,16 @@ library(tidyverse)
 
 mobility <- read.csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv", stringsAsFactors = TRUE)
 
+# mobility tables
+
+high_mobility <- mobility |> 
+  filter(count>500 & par_q1 > .1) |> 
+  mutate(mr_kq345_pq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1) |> 
+  arrange(desc(mr_kq345_pq1)) |> 
+  top_n(10, mr_kq345_pq1) |> 
+  select(name, mr_kq345_pq1, tier_name)
+
+
 mean_rank <-  mobility |> 
     summarise(pq1 = weighted.mean(k_rank_cond_parq1, count*par_q1),
               pq2 = weighted.mean(k_rank_cond_parq2, count*par_q2),
