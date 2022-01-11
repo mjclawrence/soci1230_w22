@@ -1,10 +1,3 @@
----
-title: "Week One, Class Two"
-author: "ML"
-date: "1/11/2022"
-output: pdf_document
----
-
 ## Getting Started
 
 To begin, copy all the text on this screen. Then open RStudio, and in the "File" menu select "New File" then "R Markdown". Add a title like "SOCI 1230, Week One, Class Two", include your name in the "Author" box, select "PDF" as the Default Output Format, and click Ok. A default markdown file will open. Delete all the text in the default file below the header (everything after line 7) and paste in the text you copied to your clipboard. Make sure that "R Markdown" is selected in the file type drop down menu in the bottom right corner of this pane.
@@ -51,10 +44,6 @@ Can you make a boxplot showing the distribution of `par_q1` by `tier_name`?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r parq1 boxplot example}
-ggplot(mobility, aes(x = tier_name, y = par_q1)) +
-  geom_boxplot() 
-```
 
 How could we improve this?
 
@@ -82,7 +71,7 @@ We ended class yesterday by making a function to create a mobility table for any
 ```{r function setup}
 mobility_table <- function(x) {
   df <- mobility |> 
-    filter(name == x)
+    filter(name == x) # See filter?
   
   pq1 <- c(df$kq1_cond_parq1,
            df$kq2_cond_parq1,
@@ -140,56 +129,9 @@ How can we adapt the function we already created to write a new function (called
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r function setup 2}
-mobility_table_2 <- function(x) { # change the name of the object
-  df <- mobility |> 
-    filter(name == x)
-  
-  pq1 <- c(df$kq1_cond_parq1,
-           df$kq2_cond_parq1,
-           df$kq3_cond_parq1,
-           df$kq4_cond_parq1,
-           df$kq5_cond_parq1) * df$par_q1 # par_q1 is the *access rate*
-  
-  pq2 <- c(df$kq1_cond_parq2,
-           df$kq2_cond_parq2,
-           df$kq3_cond_parq2,
-           df$kq4_cond_parq2,
-           df$kq5_cond_parq2) * df$par_q2
-  
-  pq3 <- c(df$kq1_cond_parq3,
-           df$kq2_cond_parq3,
-           df$kq3_cond_parq3,
-           df$kq4_cond_parq3,
-           df$kq5_cond_parq3) * df$par_q3
-  
-  pq4 <- c(df$kq1_cond_parq4,
-           df$kq2_cond_parq4,
-           df$kq3_cond_parq4,
-           df$kq4_cond_parq4,
-           df$kq5_cond_parq4) * df$par_q4
-  
-  pq5 <- c(df$kq1_cond_parq5,
-           df$kq2_cond_parq5,
-           df$kq3_cond_parq5,
-           df$kq4_cond_parq5,
-           df$kq5_cond_parq5) * df$par_q5
-  
-  college_table <- rbind(pq1, pq2, pq3, pq4, pq5)
-  
-  colnames(college_table) <- c("kq1", "kq2", "kq3", "kq4", "kq5")
-  
-  round(college_table,3)
-}
-```
-
 Run this function the same way as the original function by adding a college's name.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-
-```{r run the weighted mobility function}
-mobility_table_2("Middlebury College")
-```
 
 The top right cell of this table is what Chetty et al call the *mobility rate*: the proportion of all students at an institution from the bottom quintile of the parent's income distribution who end up in the top quintile of the kid's income distribution.
 
@@ -197,25 +139,17 @@ Does anyone know how to show that all the cell values add to 1?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-sum(mobility_table_2("Middlebury College"))
-```
-
-
 Get this weighted mobility table for City College in the CUNY system.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-mobility_table_2("City College Of New York - CUNY")
-```
 
 
 ## Comparing Mobility Rates
 
 Which colleges have the highest mobility rates? There is already a variable in the data frame measuring the mobility rate: `mr_kq5_pq1`. The easiest thing to do at an early stage of analysis is to open the spreadsheet view of the data frame and sort by the values of that variable.
 
-Tomorrow we'll see the `select()` function which helps us choose to keep certain columns. Here's a preview:
+Tomorrow we'll see the `select()` function which lets us choose to keep certain columns (versus `filter()` which lets us choose to keep certain rows). Here's a preview:
 
 ```{r introducing the select function}
 high_mobility_rate <- select(mobility, # the full data frame
@@ -225,10 +159,6 @@ high_mobility_rate <- select(mobility, # the full data frame
 How can we use some of the geom types we saw this morning to visualize the relationship across the variables we have been using? Try a scatterplot of access rates (`par_q1`) by success rates (`kq5_cond_parq1`) with points shaded by their mobility rates (`mr_kq5_pq1`).
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r scatterplot setup}
-ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1, color = mr_kq5_pq1)) +
-  geom_point() 
-```
 
 How could we improve this visualization? Let's try changing the scale of the colors and changing the theme.
 
@@ -292,9 +222,6 @@ top10mobility |> # this "pipe" allows us to chain multiple functions together
 We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r summary of k_rank}
-summary(mobility$k_rank)
-```
 
 These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the average `k_rank` for each `tier_name`.
 
