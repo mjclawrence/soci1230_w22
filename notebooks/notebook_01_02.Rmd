@@ -4,7 +4,7 @@ To begin, copy all the text on this screen. Then open RStudio, and in the "File"
 
 ## Load Packages
 
-```{r}
+```{r load tidyverse}
 library(tidyverse)
 ```
 
