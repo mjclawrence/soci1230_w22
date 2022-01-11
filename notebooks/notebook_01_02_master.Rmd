@@ -1,0 +1,268 @@
+---
+title: "Week One, Class Two"
+author: "ML"
+date: "1/10/2022"
+output: pdf_document
+---
+
+## Load Data and Packages
+
+We'll continue using Table 2 from Opportunity Insights' Mobility Report Cards paper. Load the data as a data frame called `mobility` and load the `tidyverse` packages.
+
+```{r load data and packages}
+mobility <-  read.csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv", stringsAsFactors = TRUE)
+
+library(tidyverse)
+```
+
+
+## Reviewing Mobility Tables
+
+We ended class yesterday by making a function to create a mobility table for any college in our data frame. Let's rerun the function so we can use it again.
+
+```{r function setup}
+mobility_table <- function(x) {
+  df <- mobility |> 
+    filter(name == x)
+  
+  pq1 <- c(df$kq1_cond_parq1,
+           df$kq2_cond_parq1,
+           df$kq3_cond_parq1,
+           df$kq4_cond_parq1,
+           df$kq5_cond_parq1)
+  
+  pq2 <- c(df$kq1_cond_parq2,
+           df$kq2_cond_parq2,
+           df$kq3_cond_parq2,
+           df$kq4_cond_parq2,
+           df$kq5_cond_parq2)
+  
+  pq3 <- c(df$kq1_cond_parq3,
+           df$kq2_cond_parq3,
+           df$kq3_cond_parq3,
+           df$kq4_cond_parq3,
+           df$kq5_cond_parq3)
+  
+  pq4 <- c(df$kq1_cond_parq4,
+           df$kq2_cond_parq4,
+           df$kq3_cond_parq4,
+           df$kq4_cond_parq4,
+           df$kq5_cond_parq4)
+  
+  pq5 <- c(df$kq1_cond_parq5,
+           df$kq2_cond_parq5,
+           df$kq3_cond_parq5,
+           df$kq4_cond_parq5,
+           df$kq5_cond_parq5)
+  
+  college_table <- rbind(pq1, pq2, pq3, pq4, pq5)
+  
+  colnames(college_table) <- c("kq1", "kq2", "kq3", "kq4", "kq5")
+  
+  round(college_table,3)
+}
+```
+
+And use this function to get Middlebury's mobility table.
+
+```{r}
+mobility_table("Middlebury College")
+```
+
+Remember that the top right cell is what Chetty et al call the *success rate*.
+
+What other colleges did you try? Any colleges from the Leonhardt article?
+
+## Adapting the Mobility Table Function
+
+In the mobility table above, each row sums to 1. That helps us summarize the destination quintiles for students from each origin quintile. But that doesn't help us know what proportion of *all* students at a college are in each cell. We need to be able to compare these other proportions to know which colleges have the highest proportions of their students experiencing mobility. 
+
+How can we adapt the function we already created to write a new function (called `mobility_table_2`) that will give us a table showing the proportion of all students at a college in each pq-kq cell?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r function setup 2}
+mobility_table_2 <- function(x) {
+  df <- mobility |> 
+    filter(name == x)
+  
+  pq1 <- c(df$kq1_cond_parq1,
+           df$kq2_cond_parq1,
+           df$kq3_cond_parq1,
+           df$kq4_cond_parq1,
+           df$kq5_cond_parq1) * df$par_q1 # par_q1 is the *access rate*!
+  
+  pq2 <- c(df$kq1_cond_parq2,
+           df$kq2_cond_parq2,
+           df$kq3_cond_parq2,
+           df$kq4_cond_parq2,
+           df$kq5_cond_parq2) * df$par_q2
+  
+  pq3 <- c(df$kq1_cond_parq3,
+           df$kq2_cond_parq3,
+           df$kq3_cond_parq3,
+           df$kq4_cond_parq3,
+           df$kq5_cond_parq3) * df$par_q3
+  
+  pq4 <- c(df$kq1_cond_parq4,
+           df$kq2_cond_parq4,
+           df$kq3_cond_parq4,
+           df$kq4_cond_parq4,
+           df$kq5_cond_parq4) * df$par_q4
+  
+  pq5 <- c(df$kq1_cond_parq5,
+           df$kq2_cond_parq5,
+           df$kq3_cond_parq5,
+           df$kq4_cond_parq5,
+           df$kq5_cond_parq5) * df$par_q5
+  
+  college_table <- rbind(pq1, pq2, pq3, pq4, pq5)
+  
+  colnames(college_table) <- c("kq1", "kq2", "kq3", "kq4", "kq5")
+  
+  round(college_table,3)
+}
+```
+
+Run this same function the same way as the original function by adding a college's name.
+
+```{r}
+mobility_table_2("Middlebury College")
+```
+
+The top right cell of this table is what Chetty et al call the *mobility rate*.
+
+## Comparing Mobility Rates
+
+What colleges have the highest mobility rates? There is already a variable in the data frame measuring the mobility rate: `mr_kq5_pq1`. The easiest thing to do at an early stage of analysis is to open the spreadsheet view of the data frame and sort by the values of that variable.
+
+```{r}
+#View(mobility)
+```
+
+Tomorrow we'll see the `select()` function which helps us choose to keep certain columns. Here's a preview:
+
+```{r}
+high_mobility_rate <- select(mobility, # the full data frame
+                             name, tier_name, mr_kq5_pq1) # the variables to keep
+
+#View(high_mobility_rate)
+```
+
+How can we use some of the geom types we saw this morning to visualize the relationship across the variables we have been using? Try a scatterplot of access rates (`par_q1`) by success rates (`kq5_cond_parq1`) with points shaded by their mobility rates (`mr_kq5_pq1`).
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1, color = mr_kq5_pq1)) +
+  geom_point() 
+```
+
+How could we improve this visualization? Let's try changing the scale of the colors and changing the background.
+
+```{r}
+ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1, color = mr_kq5_pq1)) +
+  geom_point() +
+  scale_color_viridis_c(option = "inferno") + # a scale built in to ggplot
+ theme_dark() # helpful for the light viridis colors to stand out +
+```
+
+We might also want to highlight specific points based on values of a variable. I like the `gghighlight` package for this. Install and load the package.
+
+```{r}
+#install.packages("gghighlight")
+library(gghighlight)
+```
+
+The `gghighlight()` function works like the `filter()` function. Simply assert the conditions for the highlighted layer.
+
+```{r}
+ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1)) + geom_point() +
+  gghighlight(name == "Middlebury College")
+```
+
+Add the `label_key =` option for a label based on the value of a variable:
+
+```{r}
+ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1)) + geom_point() +
+  gghighlight(name == "Middlebury College", label_key = name)
+```
+
+What other points might be interesting to highlight?
+
+## "America's Great Working Class Colleges"
+
+What do we need to replicate this table from Leonhardt's column: 
+
+https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/notes_slides/1230_figures/mrc_upward_mobility_top10.png)
+
+Pay attention to the notes at the top and the bottom. What variables do we need? What functions do they make you think of?
+
+We'll put our table in a new data frame called `top10mobility` based on the existing `mobility` data frame. Start by using `filter()` to choose the rows we want to keep.
+
+```{r}
+top10mobility <- filter()
+```
+
+Then there are a few new things to learn to finish the table.
+
+```{r}
+top10mobility |> # this "pipe" allows us to chain multiple functions together
+  mutate() |>  # to create a new variable
+  arrange(desc()) |> # to sort by highest value to lowest value of a variable
+  select() |> # to keep specific columns
+  top_n() # to keep certain number of observations
+```
+
+## Income Ranks By Tier
+
+We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
+
+```{r}
+summary(mobility$k_rank)
+```
+
+These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the average `k_rank` for each `tier_name`.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+mobility |> 
+  group_by(tier_name) |> # the variable(s) by which to collect observations
+  summarise(mean_rank = mean(k_rank)) # what you want for each group
+```
+
+Since each college has a different number of students, we actually want to use the `weighted.mean()` function rather the `mean()` function to find the averages. The `weighted.mean()` function also requires the variable by which to weight the values; in this example, we will use the `count` variable for our weights. 
+
+```{r}
+mobility |> 
+  group_by(tier_name) |> # the variable(s) by which to collect observations
+  summarise(wtd_mean_rank = weighted.mean(k_rank, w = count)) # what you want for each group
+```
+
+```{r}
+mean_rank_tier <- mobility |> 
+  group_by(tier_name) |> 
+  summarise(pq1 = weighted.mean(k_rank_cond_parq1, count*par_q1),
+            pq2 = weighted.mean(k_rank_cond_parq2, count*par_q2),
+            pq3 = weighted.mean(k_rank_cond_parq3, count*par_q3),
+            pq4 = weighted.mean(k_rank_cond_parq4, count*par_q4),
+            pq5 = weighted.mean(k_rank_cond_parq5, count*par_q5)) |> 
+  pivot_longer(names_to = "pq", values_to = "k_rank", pq1:pq5) |> 
+  mutate(k_rank = round(k_rank,2),
+         tier = tier_name)
+```
+
+```{r}
+library(plotly)
+
+ggplotly(
+  ggplot(mean_rank_tier, aes(x = pq, y = k_rank, 
+                             color = tier_name, group = tier)) + 
+    geom_point() + geom_line() +
+    theme_tufte() + theme(legend.position = "none") + 
+    labs(x = "Parent Quintile", y = "Average Child Rank",
+          title = "Rank by Parent Quintile",
+          subtitle = "Data from Opportunity Insights"),
+  tooltip = c("pq","k_rank","tier_name")
+)
+```
