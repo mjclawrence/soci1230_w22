@@ -283,7 +283,7 @@ ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1)) + geom_point() +
 
 What do we need to replicate this table from Leonhardt's column: 
 
-https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/notes_slides/1230_figures/mrc_upward_mobility_top10.png)
+https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/notes_slides/1230_figures/mrc_upward_mobility_top10.png
 
 Pay attention to the notes at the top and the bottom. What functions do they make you think of? What variables do we already have in our dataframe? What new variables do we need?
 
