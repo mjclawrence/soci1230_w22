@@ -112,6 +112,92 @@ filter(diamonds, price>10000, color == "D")
 
 desirable.clarities <- c("I1", "SI1", "SI2")
 
+### %in% 
+
 filter(diamonds, carat>1.5 & clarity %in% desirable.clarities)
 
-### %in% 
+## Wednesday, January 12
+
+### Introducing group_by()
+
+library(tidyverse)
+
+### plotly has its own group_by so uninstall it before using dplyr::group_by
+
+grouped.diamonds <- dplyr::group_by(.data = diamonds, color)
+
+### What is the average carat of expensive diamonds (>10000) 
+### with colors E and F?
+
+diamonds |> 
+  filter(price > 10000 & color %in% c("E", "F")) |> 
+  group_by(color) |> 
+  summarise(mean_carat = mean(carat))
+
+### Introducing the pipe operator %>%
+
+vector1 <- c(1,2,3)
+mean(vector1)
+
+mean_vector1 <- c(1,2,3) |> 
+  mean()
+mean_vector1
+
+diamonds %>% 
+  filter(price > 10000 & 
+           color %in% c("E", "F")) %>%
+  group_by(color) %>%
+  summarise(mean_carat = mean(carat))
+
+### What is the average delay of flights into Burlington Airport 
+### and the average delay of flights into Logan Airport (in Boston)?
+
+library(nycflights13)
+
+View(flights)
+
+flights |> 
+  filter(dest %in% c("BTV", "BOS")) |> 
+  group_by(dest) |> 
+  summarise(mean_delay = mean(arr_delay, na.rm = TRUE))
+
+# This...
+flights |> 
+  filter(dest %in% c("BTV", "BOS")) |> 
+  mutate(any_arr_delay = ifelse(arr_delay>0, 1, 0)) |> 
+  group_by(dest) |> 
+  summarise(mean_any_arr_delay = mean(any_arr_delay, na.rm = TRUE))
+
+# Is the same as this...
+flights |> 
+  filter(dest %in% c("BTV", "BOS")) |> 
+  group_by(dest) |> 
+  summarise(mean_any_arr_delay = mean(arr_delay>0, na.rm = TRUE))
+
+
+## Examples
+
+flights |> 
+  filter(origin %in% c("JFK", "LGA")) |> 
+  ggplot(aes(x = origin, y = dep_time, fill = origin)) +
+  geom_violin()
+
+flights |> 
+  group_by(carrier) |> 
+  summarise(mean_distance = mean(distance, na.rm = TRUE)) |> 
+  ggplot(aes(x = carrier, y = mean_distance, 
+             fill = mean_distance)) + geom_col()
+
+
+flights |> 
+  group_by(carrier) |> 
+  summarise(mean_distance = mean(distance, na.rm = TRUE)) |> 
+  ggplot(aes(x = reorder(carrier, -mean_distance), y = mean_distance, 
+             fill = mean_distance)) + geom_col()
+
+flights |> 
+  filter(carrier %in% c("DL", "HA", "OO")) |>
+  group_by(carrier, month) |> 
+  summarise(mean_dep_delay = mean(dep_delay, na.rm = TRUE)) |> 
+  ggplot(aes(x = carrier, y = mean_dep_delay, fill = carrier)) +
+  geom_col() + facet_wrap(~month)

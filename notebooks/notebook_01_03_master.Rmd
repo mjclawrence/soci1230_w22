@@ -1,15 +1,18 @@
-## Getting Started
+---
+title: "Week One, Class Three"
+author: "ML"
+date: "1/11/2022"
+output: html_document
+---
 
-To begin, copy all the text on this screen. Then open RStudio, and in the "File" menu select "New File" then "R Markdown". Add a title like "SOCI 1230, Week One, Class Three", include your name in the "Author" box, select "PDF" as the Default Output Format, and click Ok. A default markdown file will open. Delete all the text in the default file below the header (everything after line 7) and paste in the text you copied to your clipboard. Make sure that "R Markdown" is selected in the file type drop down menu in the bottom right corner of this pane.
-
-## Morning Recap
+# Morning Recap
 
 ```{r}
 library(tidyverse)
 library(nycflights13)
 ```
 
-### Example Plots
+## Example Plots
 
 Top left...
 ```{r}
@@ -80,10 +83,18 @@ mobility <-  read.csv("https://opportunityinsights.org/wp-content/uploads/2018/0
 We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r summary of k_rank}
+summary(mobility$k_rank)
+```
 
 These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the mean `k_rank` for each `tier_name`.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r k_rank by tier_name}
+mobility |> # This pipe is the new version of %>%
+  group_by(tier_name) |> # the variable(s) by which to collect observations
+  summarise(mean_rank = mean(k_rank)) # what you want for each group
+```
 
 Since each college has a different number of students, we actually want to use the `weighted.mean()` function rather the `mean()` function to find the averages. The `weighted.mean()` function also requires the variable by which to weight the values; in this example, we will use the `count` variable for our weights. 
 
@@ -117,10 +128,24 @@ So we have to do some data wrangling to make one variable that will have those t
 Make a table showing the distribution of the `iclevel` variable.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+table(mobility$iclevel)
+```
+
 
 We can start by only keeping the observations from Four-year colleges and Two-year colleges. And let's put all of our work for this figure in a new data frame called `rank_tier_level` based on the existing mobility data frame. 
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+rank_tier_level <- mobility |> 
+  filter(iclevel <= 2) # Use the number values since that is how our dataset has them
+```
+
+This also works...
+```{r}
+rank_tier_level <- mobility |> 
+  filter(iclevel != 3) # This is still filter, but != means does not equal
+```
 
 That dropped 49 observations but there are only 46 colleges in iclevel 3. That's because 3 are NA for iclevel. It's okay to drop them too.
 
@@ -138,6 +163,10 @@ Make a table with the distribution of this new variable.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
+```{r}
+table(rank_tier_level$tier_level)
+```
+
 We can also use the mutate function to assert that this new variable will be a factor variable and to assign labels.
 
 ```{r}
@@ -152,6 +181,13 @@ rank_tier_level <- rank_tier_level |>
 What is the weighted average `k_rank` in each of these categories?
 
 ### REPLACE  THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+rank_tier_level |> 
+  group_by(tier_level) |> # the variable with your groups
+  summarise(wtd_mean_rank =  # what you want for each group
+              weighted.mean(k_rank, w = count)) # what you want for each group
+```
 
 That gives us the weighted average across *all* parent quintiles. But we want the weighted
 average for *each* parent quintile. Are there any other variables that might help us here? And let's save this summarized output in a new data frame called `mean_rank_tier_level` so we can use it later.
@@ -201,7 +237,7 @@ rank_tier_plot
 There are many more options for themes in the `ggthemes` package.
 
 ```{r}
-install.packages("ggthemes") # hashtag this line after installing
+#install.packages("ggthemes") # hashtag this line after installing
 library(ggthemes)
 ```
 
@@ -252,7 +288,7 @@ rank_tier_plot2
 Lots of annotations would make this messy. Let's finish by making this plot interactive instead. We'll use the `plotly` package for that. Click "No" if R asks you to update loaded packages.
 
 ```{r install and load plotly}
-install.packages("plotly") # hashtag this line after installation
+#install.packages("plotly") # hashtag this line after installation
 library(plotly)
 ```
 
