@@ -2,7 +2,7 @@
 title: "Week One, Class Two"
 author: "ML"
 date: "1/11/2022"
-output: pdf_document
+output: html_document
 ---
 
 ## Getting Started
@@ -29,7 +29,7 @@ ggplot(diamonds, aes(x = clarity, y = price)) +
 The values of price are in dollars, but the y-axis labels are not. Use the `scales` package to bring in more options for axis labeling.
 
 ```{r scales package}
-install.packages("scales") # put a hashtag in front of this line after installing
+#install.packages("scales") # put a hashtag in front of this line after installing
 library(scales)
 ```
 
@@ -72,7 +72,11 @@ The `reorder()` function sorts the axis labels by the value of another variable.
 ggplot(mobility, aes(x = reorder(tier_name, par_q1), # order tier_name by par_q1
                      y = par_q1)) +
   geom_boxplot() +
-  scale_x_discrete(labels = label_wrap(10))
+  scale_x_discrete(labels = label_wrap(10)) +
+  labs(x = "",
+       y = "Propotion of students from bottom 20%",
+       title = "Proportion of students from bottom 20% by college tier",
+       caption = "Data come from Opportunity Insights")
 ```
 
 ## Reviewing Mobility Tables
@@ -125,7 +129,7 @@ mobility_table <- function(x) {
 And use this function to get Middlebury's mobility table.
 
 ```{r run the mobility table function}
-mobility_table("Middlebury College")
+mobility_table("City College Of New York - CUNY")
 ```
 
 Remember that the top right cell is what Chetty et al call the *success rate*: the proportion of students from the bottom quintile of the parent's income distribution who end up in the top quintile of the kid's income distribution.
@@ -143,7 +147,7 @@ How can we adapt the function we already created to write a new function (called
 ```{r function setup 2}
 mobility_table_2 <- function(x) { # change the name of the object
   df <- mobility |> 
-    filter(name == x)
+    filter(name == x) # Filter!
   
   pq1 <- c(df$kq1_cond_parq1,
            df$kq2_cond_parq1,
@@ -188,7 +192,7 @@ Run this function the same way as the original function by adding a college's na
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 ```{r run the weighted mobility function}
-mobility_table_2("Middlebury College")
+mobility_table_2("City College Of New York - CUNY")
 ```
 
 The top right cell of this table is what Chetty et al call the *mobility rate*: the proportion of all students at an institution from the bottom quintile of the parent's income distribution who end up in the top quintile of the kid's income distribution.
@@ -227,22 +231,25 @@ How can we use some of the geom types we saw this morning to visualize the relat
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 ```{r scatterplot setup}
 ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1, color = mr_kq5_pq1)) +
-  geom_point() 
+  geom_point()
 ```
 
-How could we improve this visualization? Let's try changing the scale of the colors and changing the theme.
+How could we improve this visualization? Let's try changing the scale of the colors, changing the theme, and adding labels.
 
 ```{r scatterplot scale and theme}
 ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1, color = mr_kq5_pq1)) +
   geom_point() +
   scale_color_viridis_c(option = "inferno") + # a scale built in to ggplot
-  theme_dark() # helpful for the light viridis colors to stand out +
+  theme_dark() + # helpful for the light viridis colors to stand out
+  labs(x = "Proportion of students from bottom 20%",
+       y = "Proportion of students from bottom 20% \nwho end up in top 20%", # \n for new line
+       color = "Mobility Rate") # color = color legend
 ```
 
 We might also want to highlight specific points based on values of a variable. I like the `gghighlight` package for this. Install and load the package.
 
 ```{r gghighlight }
-install.packages("gghighlight") # Put a hashtag in front after installing
+#install.packages("gghighlight") # Put a hashtag in front after installing
 library(gghighlight)
 ```
 
@@ -257,10 +264,19 @@ Add the `label_key =` option for a label based on the value of a variable:
 
 ```{r gghighlight label example}
 ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1)) + geom_point() +
-  gghighlight(name == "Middlebury College", label_key = name)
+  gghighlight(name == "Middlebury College", 
+              label_key = name)
 ```
 
-What other points might be interesting to highlight?
+What other points might be interesting to highlight? Can we find the NESCAC schools?
+
+```{r gghighlight NESCAC}
+ggplot(mobility, aes(x = par_q1, y = kq5_cond_parq1)) + geom_point() +
+  gghighlight(tier_name=="Other elite schools (public and private)" & 
+                count<750 & #needs to be higher to include Tufts
+                state %in% c("VT", "NH", "ME", "MA", "NY", "RI"), 
+              label_key = name)
+```
 
 
 ## "America's Great Working Class Colleges"
@@ -274,87 +290,16 @@ Pay attention to the notes at the top and the bottom. What functions do they mak
 We'll put our table in a new data frame called `top10mobility` based on the existing `mobility` data frame. Start by using `filter()` to choose the rows we want to keep.
 
 ```{r filter example}
-top10mobility <- filter()
+top10mobility <- filter(mobility,
+                        count>500 & par_q1>.1)
 ```
 
 Then there are a few new things to learn to finish the table...
 
 ```{r other functions to replicate table}
 top10mobility |> # this "pipe" allows us to chain multiple functions together
-  mutate() |>  # to create a new variable
-  arrange(desc()) |> # to sort by highest value to lowest value of a variable
-  select() |> # to keep specific columns
-  top_n() # to keep a certain number of observations, sorted by a variable
-```
-
-## Income Ranks By Tier
-
-We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
-
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r summary of k_rank}
-summary(mobility$k_rank)
-```
-
-These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the average `k_rank` for each `tier_name`.
-
-```{r k_rank by tier_name}
-mobility |> 
-  group_by(tier_name) |> # the variable(s) by which to collect observations
-  summarise(mean_rank = mean(k_rank)) # what you want for each group
-```
-
-Since each college has a different number of students, we actually want to use the `weighted.mean()` function rather the `mean()` function to find the averages. The `weighted.mean()` function also requires the variable by which to weight the values; in this example, we will use the `count` variable for our weights. 
-
-```{r introducing weighted.mean}
-mobility |> 
-  group_by(tier_name) |> # the variable(s) by which to collect observations
-  summarise(wtd_mean_rank = weighted.mean(k_rank, w = count)) # what you want for each group
-```
-
-```{r rank by pq by tier}
-mean_rank_tier <- mobility |> # to save the summarised output as a new df
-  group_by(tier_name) |> 
-  summarise(pq1 = weighted.mean(k_rank_cond_parq1, count*par_q1),
-            pq2 = weighted.mean(k_rank_cond_parq2, count*par_q2),
-            pq3 = weighted.mean(k_rank_cond_parq3, count*par_q3),
-            pq4 = weighted.mean(k_rank_cond_parq4, count*par_q4),
-            pq5 = weighted.mean(k_rank_cond_parq5, count*par_q5))
-```
-
-We have *wide* data (one row for each tier_name) but need *long* data (one row for each tier_name and pq combination). The `pivot_longer` function takes existing variables and collapses them into two new columns: one with the names and one with the values. Then we can use these new columns as the x and y variables in a plot.
-
-```{r pivot_longer example}
-mean_rank_tier <- mean_rank_tier |> 
-  pivot_longer(names_to = "pq", # takes existing variable names and puts them in a new column
-               values_to = "k_rank", # takes existing values and puts them in a new column
-               pq1:pq5) |> # which existing columns to make long
-  mutate(k_rank = round(k_rank, 2), # round to two decimal places
-         tier_name_replicate = tier_name) # will make labeling easier later
-```
-
-```{r plot example}
-rank_tier_plot <- ggplot(mean_rank_tier, aes(x = pq, y = k_rank, 
-                             color = tier_name, 
-                             group = tier_name_replicate)) + # which points to connect
-  geom_point() + geom_line() +
-  theme(legend.position = "bottom") +
-  labs(x = "Parent Quintile", y = "Average Child Rank",
-          title = "Rank by Parent Quintile")
-
-rank_tier_plot
-```
-
-Lots of annotations would make this messy. Let's make this plot interactive instead.
-
-```{r install and load plotly}
-install.packages("plotly") # hashtag this line after installation
-library(plotly)
-```
-
-```{r plotly example}
-ggplotly(
-  rank_tier_plot + theme(legend.position = "none"),
-  tooltip = c("pq","k_rank","tier_name_replicate")
-)
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1) |>  # to create a new variable
+  arrange(desc(kq345_cond_parq1)) |> # to sort by highest value to lowest value of a variable
+  select(name, kq345_cond_parq1) |> # to keep specific columns
+  top_n(10, kq345_cond_parq1) # to keep a certain number of observations, sorted by a variable
 ```

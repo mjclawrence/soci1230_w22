@@ -32,11 +32,15 @@ chetty <- read_csv("../../data/chetty_table2.csv")
 chetty_vars <- chetty |> 
   select(super_opeid, mr_kq5_pq1,
          mr_ktop1_pq1,
-                 k_rank, k_q5, k_top10pc,
-                 k_top5pc, k_top1pc,
-                 starts_with("k_rank_cond_parq"),
-                 starts_with("kq5_cond_parq"),
-                 par_q1, par_q5)
+         k_rank, k_q1, k_q2, k_q3, k_q4, k_q5, k_top10pc,
+         k_top5pc, k_top1pc,
+         starts_with("k_rank_cond_parq"),
+         starts_with("kq1_cond_parq"),
+         starts_with("kq2_cond_parq"),
+         starts_with("kq3_cond_parq"),
+         starts_with("kq4_cond_parq"),
+         starts_with("kq5_cond_parq"),
+         par_q1, par_q2, par_q3, par_q4, par_q5)
 
 chetty_vars <- left_join(collnames, chetty_vars)
 
@@ -101,7 +105,8 @@ demographics_tfs_subset <- demographics_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 demographics_tfs_subset <- left_join(collnames, demographics_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "YEAR", 
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(demographics_tfs)
 ```
@@ -115,7 +120,8 @@ disagg_tfs_subset <- disagg_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 disagg_tfs_subset <- left_join(collnames, disagg_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR",
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(disagg_tfs)
 ```
@@ -129,7 +135,8 @@ funds_tfs_subset <- funds_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 funds_tfs_subset <- left_join(collnames, funds_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR",
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(funds_tfs)
 ```
@@ -143,7 +150,8 @@ hs_tfs_subset <- hs_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 hs_tfs_subset <- left_join(collnames, hs_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR",
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(hs_tfs)
 ```
@@ -157,7 +165,8 @@ plans_tfs_subset <- plans_tfs |>
   select(ACERECODE, any_of(usable_tfs_names))
 
 plans_tfs_subset <- left_join(collnames, plans_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR",
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(plans_tfs)
 ```
@@ -171,7 +180,8 @@ view_tfs_subset <- view_tfs |>
   select(ACERECODE, YEAR, any_of(usable_tfs_names))
 
 view_tfs_subset <- left_join(collnames, view_tfs_subset) |> 
-  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR"))
+  select(-c("name", "super_opeid", "ACERECODE", "STUDWGT", "YEAR",
+            "iclevel", "type", "region", "state", "tier_name"))
 
 rm(view_tfs)
 ```
@@ -187,8 +197,8 @@ tfs_subset_master <- bind_cols(choice_tfs_subset,
                                plans_tfs_subset,
                                view_tfs_subset) |> 
   mutate(campus_id = campus_id...1,
-         SELECTIVITY = SELECTIVITY...41,
-         STUDWGT = STUDWGT...26) |> 
+         SELECTIVITY = SELECTIVITY...46,
+         STUDWGT = STUDWGT...31) |> 
   select(-starts_with(c("campus_id...", "SELECTIVITY...", "STUDWGT..."))) |> 
   relocate(campus_id) |> 
   mutate(SELECTIVITY = na_if(SELECTIVITY, 0))
@@ -455,7 +465,7 @@ Calculate correlations between all college means and all mobility variables
 
 ```{r}
 tfs_correlations <- tfs_means_mobility |> 
-  select(-c(campus_id, ends_with("propna"))) |> 
+  select(-c(campus_id, iclevel, type, tier_name, state, region, ends_with("propna"))) |>
   summarise_at(vars(-n_responses), 
                    list(cor_n_colleges = ~sum(!is.na(.x)),
                         cor_wtdprop = ~wtd.mean(.x, weights = n_responses, na.rm = TRUE),
@@ -465,6 +475,14 @@ tfs_correlations <- tfs_means_mobility |>
                                                     weight = n_responses)[1],
                         cor_k_rank = ~wtd.cor(.x, k_rank, 
                                               weight = n_responses)[1],
+                        cor_k_q1 = ~wtd.cor(.x, k_q1, 
+                                            weight = n_responses)[1],
+                        cor_k_q2 = ~wtd.cor(.x, k_q2, 
+                                            weight = n_responses)[1],
+                        cor_k_q3 = ~wtd.cor(.x, k_q3, 
+                                            weight = n_responses)[1],
+                        cor_k_q4 = ~wtd.cor(.x, k_q4, 
+                                            weight = n_responses)[1],
                         cor_k_q5 = ~wtd.cor(.x, k_q5, 
                                             weight = n_responses)[1],
                         cor_k_top10pc = ~wtd.cor(.x, k_top10pc, 
@@ -483,16 +501,68 @@ tfs_correlations <- tfs_means_mobility |>
                                                          weight = n_responses)[1],
                         cor_k_rank_cond_parq5 = ~wtd.cor(.x, k_rank_cond_parq5, 
                                                          weight = n_responses)[1],
+                        cor_kq1_cond_parq1 = ~wtd.cor(.x, kq1_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq2_cond_parq1 = ~wtd.cor(.x, kq2_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq3_cond_parq1 = ~wtd.cor(.x, kq3_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq4_cond_parq1 = ~wtd.cor(.x, kq4_cond_parq1, 
+                                                      weight = n_responses)[1],
                         cor_kq5_cond_parq1 = ~wtd.cor(.x, kq5_cond_parq1, 
+                                                      weight = n_responses)[1],
+                        cor_kq1_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
+                                                      weight = n_responses)[1],
+                        cor_kq2_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
+                                                     weight = n_responses)[1],
+                        cor_kq3_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
+                                                      weight = n_responses)[1],
+                        cor_kq4_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
+                                                      weight = n_responses)[1],
+                        cor_kq5_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
+                                                      weight = n_responses)[1],
+                        cor_kq1_cond_parq3 = ~wtd.cor(.x, kq1_cond_parq3, 
+                                                      weight = n_responses)[1],
+                        cor_kq2_cond_parq3 = ~wtd.cor(.x, kq2_cond_parq3, 
+                                                      weight = n_responses)[1],
+                        cor_kq3_cond_parq3 = ~wtd.cor(.x, kq3_cond_parq3, 
+                                                      weight = n_responses)[1],
+                        cor_kq4_cond_parq3 = ~wtd.cor(.x, kq4_cond_parq3, 
+                                                      weight = n_responses)[1],
+                        cor_kq5_cond_parq3 = ~wtd.cor(.x, kq5_cond_parq3, 
+                                                      weight = n_responses)[1],
+                        cor_kq1_cond_parq4 = ~wtd.cor(.x, kq1_cond_parq4, 
+                                                      weight = n_responses)[1],
+                        cor_kq2_cond_parq4 = ~wtd.cor(.x, kq2_cond_parq4, 
+                                                      weight = n_responses)[1],
+                        cor_kq3_cond_parq4 = ~wtd.cor(.x, kq3_cond_parq4, 
+                                                      weight = n_responses)[1],
+                        cor_kq4_cond_parq4 = ~wtd.cor(.x, kq4_cond_parq4, 
+                                                      weight = n_responses)[1],
+                        cor_kq5_cond_parq4 = ~wtd.cor(.x, kq5_cond_parq4, 
+                                                      weight = n_responses)[1],
+                        cor_kq1_cond_parq5 = ~wtd.cor(.x, kq1_cond_parq5, 
+                                                      weight = n_responses)[1],
+                        cor_kq2_cond_parq5 = ~wtd.cor(.x, kq2_cond_parq5, 
+                                                      weight = n_responses)[1],
+                        cor_kq3_cond_parq5 = ~wtd.cor(.x, kq3_cond_parq5, 
+                                                      weight = n_responses)[1],
+                        cor_kq4_cond_parq5 = ~wtd.cor(.x, kq4_cond_parq5, 
                                                       weight = n_responses)[1],
                         cor_kq5_cond_parq5 = ~wtd.cor(.x, kq5_cond_parq5, 
                                                       weight = n_responses)[1],
                         cor_par_q1 = ~wtd.cor(.x, par_q1, 
                                               weight = n_responses)[1],
+                        cor_par_q2 = ~wtd.cor(.x, par_q2, 
+                                              weight = n_responses)[1],
+                        cor_par_q3 = ~wtd.cor(.x, par_q3, 
+                                              weight = n_responses)[1],
+                        cor_par_q4 = ~wtd.cor(.x, par_q4, 
+                                              weight = n_responses)[1],
                         cor_par_q5 = ~wtd.cor(.x, par_q5, 
                                               weight = n_responses)[1]),
-                   .names = "{.col}_{.fn}") |>
-  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:6372) |>
+                   .names = "{.col}_{.fn}") |> 
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:18288) |>
   filter(str_detect(Variable, "mean")) |> 
   separate(Variable, c("Variable", "Mobility"), sep = "_mean") |> 
   separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
@@ -501,6 +571,9 @@ tfs_correlations <- tfs_means_mobility |>
 
 tfs_correlations <- tfs_correlations |> 
   separate(Variable, c("Name", "Summary"), sep = '[.]') 
+
+
+#  mutate(Name = gsub("(.+?)(\\..*)", "\\1", Variable))
 
 tfs_correlations <- left_join(tfs_correlations, varnames) |> 
   select(-c("n_asked", "usable_m")) |> 
@@ -511,7 +584,6 @@ tfs_correlations <- left_join(tfs_correlations, varnames) |>
   relocate(Description, .before = Summary) |> 
   relocate(n_colleges, .after = wtdprop)
 ```
-
 
 ```{r}
 write.csv(tfs_correlations, "../../data/tfs_correlations.csv", row.names = FALSE)

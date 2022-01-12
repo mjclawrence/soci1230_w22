@@ -1,0 +1,32 @@
+---
+title: "College Names Setup"
+author: "ML"
+date: "1/11/2022"
+output: pdf_document
+---
+
+```{r}
+library(tidyverse)
+mobility <- read.csv("../data/chetty_table2.csv")
+collnames <- read.csv("../data/collnames.csv")
+```
+
+```{r}
+mobility <- mobility |> 
+  select(super_opeid, type, tier_name, iclevel, region, state) |> 
+  mutate(type = factor(type,
+                       labels = c("Public", "Private non-profit", "For-profit")),
+         iclevel = factor(iclevel,
+                          labels = c("Four-year", "Two-year", "Less than two-year")),
+         region = factor(region,
+                         labels = c("Northeast", "Midwest", "South", "West")))
+```
+
+```{r}
+collnames <- left_join(collnames, mobility)
+```
+
+```{r}
+write.csv(collnames, "../data/collnames.csv", row.names = FALSE)
+```
+

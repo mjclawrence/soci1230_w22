@@ -1,0 +1,106 @@
+---
+title: "Untitled"
+author: "ML"
+date: "1/11/2022"
+output: html_document
+---
+
+## Setup
+
+```{r load tidyverse and data}
+library(tidyverse)
+mobility <-  read.csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv", stringsAsFactors = TRUE)
+```
+
+## What are the tiers?
+
+### Opportunity Insights uses assigns colleges to selectivity tiers based on the Barron's competitiveness index:
+
+- **Ivy Plus**: Ivy League plus Stanford, MIT, Duke, University of Chicago
+
+- **Other elite schools (public and private)** is Barron's "Most Competitive" category excluding the Ivy Plus schools:
+  - ***Most Competitive***: HS rank in top 10% to 20%, HS GPA of A to B+, SAT median between 655 and 800
+
+- **Highly selective** is Barron's "Highly Competitive" tier:
+  - ***Highly Competitive***: HS rank in top 20% to 35%, HS GPA of B+ to B, SAT median between 620 and 654
+
+- **Competitive** is Barron's next three tiers:
+  - ***Very Competitive***: HS rank in top 35% to 50%, HS GPA no less than B-, SAT median between 573 and 619
+  - ***Competitive***: HS Rank in top 50% to 60%, HS GPA of B- to C, SAT median between 500 and 572
+  - ***Less Competitive***: HS Rank in top 65%, HS GPA of C, SAT median below 500
+
+- **Noncompetitive** is the remaining two Barron's tiers:
+  - ***Noncompetitive***: Generally only require evidence of graduated from HS
+  - ***Special***: Professional schools of art, music, nursing, and other specialized disciplines
+
+## Income Ranks By Tier
+
+We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r summary of k_rank}
+summary(mobility$k_rank)
+```
+
+These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the average `k_rank` for each `tier_name`.
+
+```{r k_rank by tier_name}
+mobility |> 
+  group_by(tier_name) |> # the variable(s) by which to collect observations
+  summarise(mean_rank = mean(k_rank)) # what you want for each group
+```
+
+Since each college has a different number of students, we actually want to use the `weighted.mean()` function rather the `mean()` function to find the averages. The `weighted.mean()` function also requires the variable by which to weight the values; in this example, we will use the `count` variable for our weights. 
+
+```{r introducing weighted.mean}
+mobility |> 
+  group_by(tier_name) |> # the variable(s) by which to collect observations
+  summarise(wtd_mean_rank = weighted.mean(k_rank, w = count)) # what you want for each group
+```
+
+```{r rank by pq by tier}
+mean_rank_tier <- mobility |> # to save the summarised output as a new df
+  group_by(tier_name) |> 
+  summarise(pq1 = weighted.mean(k_rank_cond_parq1, count*par_q1),
+            pq2 = weighted.mean(k_rank_cond_parq2, count*par_q2),
+            pq3 = weighted.mean(k_rank_cond_parq3, count*par_q3),
+            pq4 = weighted.mean(k_rank_cond_parq4, count*par_q4),
+            pq5 = weighted.mean(k_rank_cond_parq5, count*par_q5))
+```
+
+We have *wide* data (one row for each tier_name) but need *long* data (one row for each tier_name and pq combination). The `pivot_longer` function takes existing variables and collapses them into two new columns: one with the names and one with the values. Then we can use these new columns as the x and y variables in a plot.
+
+```{r pivot_longer example}
+mean_rank_tier <- mean_rank_tier |> 
+  pivot_longer(names_to = "pq", # takes existing variable names and puts them in a new column
+               values_to = "k_rank", # takes existing values and puts them in a new column
+               pq1:pq5) |> # which existing columns to make long
+  mutate(k_rank = round(k_rank, 2), # round to two decimal places
+         tier_name_replicate = tier_name) # will make labeling easier later
+```
+
+```{r plot example}
+rank_tier_plot <- ggplot(mean_rank_tier, aes(x = pq, y = k_rank, 
+                             color = tier_name, 
+                             group = tier_name_replicate)) + # which points to connect
+  geom_point() + geom_line() +
+  theme(legend.position = "bottom") +
+  labs(x = "Parent Quintile", y = "Average Child Rank",
+          title = "Rank by Parent Quintile")
+
+rank_tier_plot
+```
+
+Lots of annotations would make this messy. Let's make this plot interactive instead.
+
+```{r install and load plotly}
+#install.packages("plotly") # hashtag this line after installation
+library(plotly)
+```
+
+```{r plotly example}
+ggplotly(
+  rank_tier_plot + theme(legend.position = "none"),
+  tooltip = c("pq","k_rank","tier_name")
+)
+```
