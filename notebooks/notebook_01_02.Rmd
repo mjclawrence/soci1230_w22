@@ -197,7 +197,7 @@ What other points might be interesting to highlight?
 
 What do we need to replicate this table from Leonhardt's column: 
 
-https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/notes_slides/1230_figures/mrc_upward_mobility_top10.png)
+https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/notes_slides/1230_figures/mrc_upward_mobility_top10.png
 
 Pay attention to the notes at the top and the bottom. What functions do they make you think of? What variables do we already have in our dataframe? What new variables do we need?
 
@@ -215,73 +215,4 @@ top10mobility |> # this "pipe" allows us to chain multiple functions together
   arrange(desc()) |> # to sort by highest value to lowest value of a variable
   select() |> # to keep specific columns
   top_n() # to keep a certain number of observations, sorted by a variable
-```
-
-## Income Ranks By Tier
-
-We have not seen the `k_rank` variable yet. It captures the average rank in the kid's income distribution for students at each college. Use the `summary()` function to get the distribution of this variable.
-
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-
-These values are across the full range of all 2202 colleges. Let's use `group_by()` with `summarise()` (not `summary()`) to find the average `k_rank` for each `tier_name`.
-
-```{r k_rank by tier_name}
-mobility |> 
-  group_by(tier_name) |> # the variable(s) by which to collect observations
-  summarise(mean_rank = mean(k_rank)) # what you want for each group
-```
-
-Since each college has a different number of students, we actually want to use the `weighted.mean()` function rather the `mean()` function to find the averages. The `weighted.mean()` function also requires the variable by which to weight the values; in this example, we will use the `count` variable for our weights. 
-
-```{r introducing weighted.mean}
-mobility |> 
-  group_by(tier_name) |> # the variable(s) by which to collect observations
-  summarise(wtd_mean_rank = weighted.mean(k_rank, w = count)) # what you want for each group
-```
-
-```{r rank by pq by tier}
-mean_rank_tier <- mobility |> # to save the summarised output as a new df
-  group_by(tier_name) |> 
-  summarise(pq1 = weighted.mean(k_rank_cond_parq1, count*par_q1),
-            pq2 = weighted.mean(k_rank_cond_parq2, count*par_q2),
-            pq3 = weighted.mean(k_rank_cond_parq3, count*par_q3),
-            pq4 = weighted.mean(k_rank_cond_parq4, count*par_q4),
-            pq5 = weighted.mean(k_rank_cond_parq5, count*par_q5))
-```
-
-We have *wide* data (one row for each tier_name) but need *long* data (one row for each tier_name and pq combination). The `pivot_longer` function takes existing variables and collapses them into two new columns: one with the names and one with the values. Then we can use these new columns as the x and y variables in a plot.
-
-```{r pivot_longer example}
-mean_rank_tier <- mean_rank_tier |> 
-  pivot_longer(names_to = "pq", # takes existing variable names and puts them in a new column
-               values_to = "k_rank", # takes existing values and puts them in a new column
-               pq1:pq5) |> # which existing columns to make long
-  mutate(k_rank = round(k_rank, 2), # round to two decimal places
-         tier_name_replicate = tier_name) # will make labeling easier later
-```
-
-```{r plot example}
-rank_tier_plot <- ggplot(mean_rank_tier, aes(x = pq, y = k_rank, 
-                             color = tier_name, 
-                             group = tier_name_replicate)) + # which points to connect
-  geom_point() + geom_line() +
-  theme(legend.position = "bottom") +
-  labs(x = "Parent Quintile", y = "Average Child Rank",
-          title = "Rank by Parent Quintile")
-
-rank_tier_plot
-```
-
-Lots of annotations would make this messy. Let's make this plot interactive instead.
-
-```{r install and load plotly}
-install.packages("plotly") # hashtag this line after installation
-library(plotly)
-```
-
-```{r plotly example}
-ggplotly(
-  rank_tier_plot + theme(legend.position = "none"),
-  tooltip = c("pq","k_rank","tier_name_replicate")
-)
 ```
