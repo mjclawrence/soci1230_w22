@@ -1,0 +1,207 @@
+## Setup
+
+```{r load packages and data}
+library(tidyverse)
+
+tfs <- read.csv("../data/tfs_question_summary.csv")
+css <- read.csv("../data/css_question_summary.csv")
+```
+
+The tfs file is for "The Freshman Survey" and the css file is for the "College Senior Survey". Some questions are similar in both but most are different. Open the spreadsheet view of the tfs file to see how the data are summarized.
+
+Is this long data or wide data?
+
+There are 335 observations. How many survey questions do they represent?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+It might be helpful to make a dataframe with only one row for each unique question.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+Set up the same dataframe for the css.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+How many css questions are there?
+
+Going back and forth from this notebook to the spreadsheet view works fine but might be tedious. The `DT` package gives us some great options for including searchable tables inside this window.
+
+```{r}
+install.packages("DT")
+library(DT)
+```
+
+DT stands for datatable. And that's the name of the function we'll use too.
+
+```{r}
+datatable(tfs)
+```
+
+This table is fully functional if you knit your notebook as an html document!
+
+We can add a couple options to make this even more helpful. The filter option (similar to tidyverse's filter function) allows us to subset rows. We can put the filter buttons on the top or the bottom of the datatable. And I would suggest adding a caption to the table so we know which variables are for the tfs and which are for the css. Adding `rownames = FALSE` gets rid of the line numbers on the far left.
+
+```{r}
+datatable(tfs,
+          filter = "top",
+          caption = "TFS Questions",
+          rownames = FALSE)
+```
+
+There are some neat extensions in the DT package. In the future these buttons might be helpful (but probably not necessary now).
+
+```{r}
+datatable(tfs,
+          filter = "top",
+          caption = "TFS Questions",
+          rownames = FALSE,
+          extensions = 'Buttons', options = list(
+            dom = 'Bftip', # Buttons, filter search box, table entries, info, pages
+            buttons = c('copy', 'csv', 'excel', 'pdf')
+  )
+)
+```
+
+Run the code above in the console (the bottom left pane) to put the table in the viewer pane (the bottom right pane). You can keep it there or open it in a new window if you want it always visible.
+
+Make a datatable for the css too.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+## Visualizations
+
+What kind of figure could you make showing the distribution of responses to the `CHOICE` question? (Don't scroll down too far!)
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How can we make this look better? We saw the viridis color palette earlier this week. You can try it with `scale_fill_viridis_d()`. For more color palettes, the RColorBrewer package is a helpful resource.
+
+```{r}
+install.packages("RColorBrewer")
+library(RColorBrewer)
+display.brewer.all()
+```
+
+```{r}
+tfs |> 
+  filter(Name == "CHOICE") |> 
+  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
+  geom_col() +
+  scale_fill_brewer(palette = "Spectral")
+```
+
+How do we order the variables? Reorder would work in this example, but better to change factor levels.
+
+```{r}
+tfs |>  
+  filter(Name == "CHOICE") |> 
+  mutate(Summary = factor(Summary,
+                          levels = c("CHOICE.first",
+                                     "CHOICE.second",
+                                     "CHOICE.third",
+                                     "CHOICE.lessthanthird"),
+                          labels = c("First choice", "Second choice",
+                                     "Third choice", "Less than third choice"))) |> 
+  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + geom_col() +
+  scale_fill_brewer(palette = "Spectral")
+```
+
+How do we add labels?
+
+```{r}
+tfs |>  
+  filter(Name == "CHOICE") |> 
+  mutate(Summary = factor(Summary,
+                          levels = c("CHOICE.first",
+                                     "CHOICE.second",
+                                     "CHOICE.third",
+                                     "CHOICE.lessthanthird"),
+                          labels = c("First choice", "Second choice",
+                                     "Third choice", "Less than third choice"))) |> 
+  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
+  geom_col() +
+  scale_fill_brewer(palette = "Spectral") +
+  geom_text(aes(label = round(wtdprop, 2)), # Round here
+            position = position_dodge(width = .9), # Centers above each column
+            vjust = -.25) # Moves away from center
+```
+
+What else to change? Get rid of the legend? Use a different theme?
+
+My final plot requires the ggthemes package...
+
+```{r}
+library(ggthemes)
+```
+
+```{r}
+tfs |>  
+  filter(Name == "CHOICE") |> 
+  mutate(Summary = factor(Summary,
+                          levels = c("CHOICE.first",
+                                     "CHOICE.second",
+                                     "CHOICE.third",
+                                     "CHOICE.lessthanthird"),
+                          labels = c("First choice", "Second choice",
+                                     "Third choice", "Less than third choice"))) |> 
+  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) +
+  geom_col() +
+  geom_text(aes(label = round(wtdprop, 2)),
+            position = position_dodge(width = .9),
+            vjust = -.25) +
+  labs(x = "", y = "Proportion", fill = "",
+       title = "TFS CHOICE", # I like the survey and variable names in the title
+       subtitle = "Is this college your...") + # And the description in the subtitle
+  theme_economist() +
+  theme(axis.ticks.x = element_blank(),
+        legend.position = "none") +
+  scale_fill_brewer(palette = "Set1")
+```
+
+What about a different type of column plot with stacked columns?
+
+```{r}
+tfs |>  
+  filter(Name == "CHOICE") |> 
+  mutate(Summary = factor(Summary,
+                          levels = c("CHOICE.first",
+                                     "CHOICE.second",
+                                     "CHOICE.third",
+                                     "CHOICE.lessthanthird"),
+                          labels = c("First choice", "Second choice",
+                                     "Third choice", "Less than third choice"))) |> 
+  ggplot(aes(x = Name, y = wtdprop, fill = Summary)) + # Use Name as the x variable
+  geom_col(position = "stack") + # Change the position here
+  geom_text(aes(label = round(wtdprop,2)), 
+              position = position_stack(vjust = .5)) + # Change position of labels too
+  labs(x = "", y = "Proportion", fill = "",
+       title = "TFS CHOICE",
+       subtitle = "Is this college your...") +
+  theme_fivethirtyeight() +
+  theme(axis.ticks.x = element_blank(),
+        axis.title.x = element_blank(),
+        legend.position = "bottom") + # Probably need a legend now
+  scale_fill_brewer(palette = "Set1")
+```
+
+Make a plot for the CHOOSE06 variable
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
