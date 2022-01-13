@@ -18,7 +18,7 @@ The tfs file is for "The Freshman Survey" and the css file is for the "College S
 
 Is this long data or wide data?
 
-There are 324 observations. How many survey questions do they represent?
+There are 335 observations. How many survey questions do they represent?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 ```{r}
@@ -44,8 +44,6 @@ css_questions <- css |>
 ```
 
 How many css questions are there?
-
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 Going back and forth from this notebook to the spreadsheet view works fine but might be tedious. The `DT` package gives us some great options for including searchable tables inside this window.
 

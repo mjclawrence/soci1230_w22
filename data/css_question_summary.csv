@@ -770,16 +770,28 @@
 "SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.not",0.0641818456933705,183
 "SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.somewhat",0.596350676408516,183
 "SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.very",0.339467477898113,183
+"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.disagreestrongly",0.138189530121017,279
+"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.disagreesomewhat",0.352412926929681,279
 "VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.agreesomewhat",0.316219084577575,279
 "VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.agreestrongly",0.193178458371728,279
+"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.disagreestrongly",0.312019422891635,318
+"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.disagreesomewhat",0.435537956423557,318
 "VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.agreesomewhat",0.214429429621027,318
 "VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.agreestrongly",0.0380131910637813,318
+"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.disagreestrongly",0.297172865813069,94
+"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.disagreesomewhat",0.396689757249045,94
 "VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.agreesomewhat",0.266111824712642,94
 "VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.agreestrongly",0.0400255522252447,94
+"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.disagreestrongly",0.237318857997323,196
+"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.disagreesomewhat",0.311677118079314,196
 "VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.agreesomewhat",0.363189765438924,196
 "VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.agreestrongly",0.0878142584844389,196
+"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.disagreestrongly",0.254732871331255,259
+"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.disagreesomewhat",0.477268413913156,259
 "VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.agreesomewhat",0.235591997818556,259
 "VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.agreestrongly",0.0324067169370328,259
+"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.disagreestrongly",0.133373101587714,318
+"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.disagreesomewhat",0.280628435263458,318
 "VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.agreesomewhat",0.382747258882993,318
 "VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.agreestrongly",0.203251204265835,318
 "ACADEMIC_SELFCONCEPT","Scale: Academic Self Concept","ACADEMIC_SELFCONCEPT.scale",49.7283054152952,318

@@ -1,5 +1,4 @@
 library(tidyverse)
-library(DT)
 
 tfs <- read.csv("data/tfs_correlations.csv")
 css <- read.csv("data/css_correlations.csv")
@@ -10,7 +9,5 @@ tfs_subset <- tfs |>
 css_subset <- css |> 
   select(1:5)
 
-tfs_subset |> 
-  filter(Name == "Choice") |> 
-  ggplot(aes(x = Summary, y = wtdprop)) +
-  geom_col()
+write.csv(tfs_subset, "data/tfs_question_summary.csv", row.names = FALSE)
+write.csv(css_subset, "data/css_question_summary.csv", row.names = FALSE)
