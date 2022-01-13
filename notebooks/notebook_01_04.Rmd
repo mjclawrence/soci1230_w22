@@ -16,8 +16,8 @@ The tfs file is for "The Freshman Survey" and the css file is for the "College S
 How do you save datafiles? Use the `write_csv()` function.
 
 ```{r saving csv files}
-write_csv(tfs, "../data/tfs_question_summary.csv") # df name, your path
-write_csv(css, "../data/css_question_summary.csv")
+write_csv(tfs, "tfs_question_summary.csv") # df name, your path
+write_csv(css, "css_question_summary.csv")
 ```
 
 Then you can read in the saved file from that path.
