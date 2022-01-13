@@ -40,6 +40,14 @@ Is this long data or wide data?
 There are 335 observations. How many survey questions do they represent?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+tfs |> 
+  group_by(Name) |> 
+  count(Name)
+```
+
+
 ```{r the length and unique functions}
 length(unique(tfs$Name))
 ```
@@ -49,7 +57,7 @@ It might be helpful to make a dataframe with only one row for each unique questi
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 ```{r the distinct function}
 tfs_questions <- tfs |> 
-  select(Name, Description) |> 
+  select(Name, Description) |> # to choose columns
   distinct()
 ```
 
@@ -59,7 +67,7 @@ Set up the same dataframe for the css.
 ```{r css codebook}
 css_questions <- css |> 
   select(Name, Description) |> 
-  distinct()
+  distinct() # keep one distinct row of any with multiple copies
 ```
 
 How many css questions are there?
@@ -128,7 +136,8 @@ What kind of figure could you make showing the distribution of responses to the 
 ```{r plot 1 setup}
 tfs |> 
   filter(Name == "CHOICE") |> 
-  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + geom_col()
+  ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
+  geom_col()
 ```
 
 How can we make this look better? We saw the viridis color palette earlier this week. You can try it with `scale_fill_viridis_d()`. For more color palettes, the RColorBrewer package is a helpful resource.
@@ -144,7 +153,7 @@ tfs |>
   filter(Name == "CHOICE") |> 
   ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
   geom_col() +
-  scale_fill_brewer(palette = "Spectral")
+  scale_fill_brewer(palette = "Dark2")
 ```
 
 How do we order the variables? Reorder would work in this example, but better to change factor levels.
@@ -180,7 +189,10 @@ tfs |>
   scale_fill_brewer(palette = "Spectral") +
   geom_text(aes(label = round(wtdprop, 2)), # Round here
             position = position_dodge(width = .9), # Centers above each column
-            vjust = -.25) # Moves away from center
+            vjust = -.25) + # Moves away from center
+  labs(x = "", y = "Probability of attending",
+       title = "TFS CHOICE",
+       subtitle = "Is this college your...")
 ```
 
 What else to change? Get rid of the legend? Use a different theme?
@@ -209,11 +221,15 @@ tfs |>
   labs(x = "", y = "Proportion", fill = "",
        title = "TFS CHOICE", # I like the survey and variable names in the title
        subtitle = "Is this college your...") + # And the description in the subtitle
-  theme_economist() +
+  theme_fivethirtyeight() +
   theme(axis.ticks.x = element_blank(),
         legend.position = "none") +
   scale_fill_brewer(palette = "Set1")
 ```
+Examples of ggthemes types are here:
+
+https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/
+
 
 What about a different type of column plot with stacked columns?
 
@@ -234,9 +250,10 @@ tfs |>
   labs(x = "", y = "Proportion", fill = "",
        title = "TFS CHOICE",
        subtitle = "Is this college your...") +
-  theme_fivethirtyeight() +
+  theme_economist() +
   theme(axis.ticks.x = element_blank(),
         axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
         legend.position = "bottom") + # Probably need a legend now
   scale_fill_brewer(palette = "Set1")
 ```
