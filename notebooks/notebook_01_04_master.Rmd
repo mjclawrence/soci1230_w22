@@ -10,25 +10,44 @@ output: html_document
 ```{r load packages and data}
 library(tidyverse)
 
-tfs <- read.csv("../data/tfs_question_summary.csv")
-css <- read.csv("../data/css_question_summary.csv")
+tfs <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary.csv")
+css <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary.csv")
 ```
 
-The tfs file is for "The Freshman Survey" and the css file is for the "College Senior Survey". Some questions are similar in both but most are different. Open the spreadsheet view of the tfs file to see how the data are summarized.
+The tfs file is for "The Freshman Survey" and the css file is for the "College Senior Survey". Some questions are similar in both but most are different. 
+
+How do you save datafiles? Use the `write_csv()` function.
+
+```{r saving csv files}
+write_csv(tfs, "../data/tfs_question_summary.csv") # df name, your path
+write_csv(css, "../data/css_question_summary.csv")
+```
+
+Then you can read in the saved file from that path.
+
+```{r reading saved files}
+tfs <- read_csv("../data/tfs_question_summary.csv")
+css <- read_csv("../data/css_question_summary.csv")
+```
+
+
+## Exploring the data
+
+Open the spreadsheet view of the tfs file to see how the data are summarized.
 
 Is this long data or wide data?
 
 There are 335 observations. How many survey questions do they represent?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r}
+```{r the length and unique functions}
 length(unique(tfs$Name))
 ```
 
 It might be helpful to make a dataframe with only one row for each unique question.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r}
+```{r the distinct function}
 tfs_questions <- tfs |> 
   select(Name, Description) |> 
   distinct()
@@ -37,7 +56,7 @@ tfs_questions <- tfs |>
 Set up the same dataframe for the css.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r}
+```{r css codebook}
 css_questions <- css |> 
   select(Name, Description) |> 
   distinct()
@@ -47,14 +66,14 @@ How many css questions are there?
 
 Going back and forth from this notebook to the spreadsheet view works fine but might be tedious. The `DT` package gives us some great options for including searchable tables inside this window.
 
-```{r}
+```{r install the DT package}
 #install.packages("DT")
 library(DT)
 ```
 
 DT stands for datatable. And that's the name of the function we'll use too.
 
-```{r}
+```{r datatable function}
 datatable(tfs)
 ```
 
@@ -62,7 +81,7 @@ This table is fully functional if you knit your notebook as an html document!
 
 We can add a couple options to make this even more helpful. The filter option (similar to tidyverse's filter function) allows us to subset rows. We can put the filter buttons on the top or the bottom of the datatable. And I would suggest adding a caption to the table so we know which variables are for the tfs and which are for the css. Adding `rownames = FALSE` gets rid of the line numbers on the far left.
 
-```{r}
+```{r datatable options}
 datatable(tfs,
           filter = "top",
           caption = "TFS Questions",
@@ -71,7 +90,7 @@ datatable(tfs,
 
 There are some neat extensions in the DT package. In the future these buttons might be helpful (but probably not necessary now).
 
-```{r}
+```{r datatable extensions}
 datatable(tfs,
           filter = "top",
           caption = "TFS Questions",
@@ -88,7 +107,7 @@ Run the code above in the console (the bottom left pane) to put the table in the
 Make a datatable for the css too.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r}
+```{r css datatable}
 datatable(css,
           filter = "top",
           caption = "CSS Questions",
@@ -106,7 +125,7 @@ What kind of figure could you make showing the distribution of responses to the 
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
+```{r plot 1 setup}
 tfs |> 
   filter(Name == "CHOICE") |> 
   ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + geom_col()
@@ -114,13 +133,13 @@ tfs |>
 
 How can we make this look better? We saw the viridis color palette earlier this week. You can try it with `scale_fill_viridis_d()`. For more color palettes, the RColorBrewer package is a helpful resource.
 
-```{r}
+```{r install RColorBrewer package}
 #install.packages("RColorBrewer")
 library(RColorBrewer)
-display.brewer.all()
+display.brewer.all() # to show all the color palettes
 ```
 
-```{r}
+```{r palette example}
 tfs |> 
   filter(Name == "CHOICE") |> 
   ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
@@ -130,7 +149,7 @@ tfs |>
 
 How do we order the variables? Reorder would work in this example, but better to change factor levels.
 
-```{r}
+```{r change factor levels and labels}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -146,7 +165,7 @@ tfs |>
 
 How do we add labels?
 
-```{r}
+```{r plot labels}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -168,11 +187,11 @@ What else to change? Get rid of the legend? Use a different theme?
 
 My final plot requires the ggthemes package...
 
-```{r}
+```{r load ggthemes}
 library(ggthemes)
 ```
 
-```{r}
+```{r ml final plot}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -198,7 +217,7 @@ tfs |>
 
 What about a different type of column plot with stacked columns?
 
-```{r}
+```{r stacked plot example}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -226,7 +245,7 @@ Make a plot for the CHOOSE06 variable
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
+```{r plot2 dodge}
 tfs |>  
   filter(Name == "CHOOSE06") |> 
   mutate(Summary = factor(Summary,
@@ -247,7 +266,7 @@ tfs |>
     scale_fill_brewer(palette = "Set1")
 ```
 
-```{r}
+```{r plot 2 stack}
 tfs |>  
   filter(Name == "CHOOSE06") |> 
   mutate(Summary = factor(Summary,

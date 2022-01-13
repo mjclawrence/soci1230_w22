@@ -1,800 +1,800 @@
-"Name","Description","Summary","wtdprop","n_colleges"
-"ACT05","Act: Challenged a professors ideas in class","ACT05.notatall",0.267925949622901,295
-"ACT05","Act: Challenged a professors ideas in class","ACT05.occasionally",0.590410268461357,295
-"ACT05","Act: Challenged a professors ideas in class","ACT05.frequently",0.141663781915742,295
-"ACT11","Act: Did extra (unassigned) work for a course","ACT11.notatall",0.278775240821133,260
-"ACT11","Act: Did extra (unassigned) work for a course","ACT11.occasionally",0.621128495426912,260
-"ACT11","Act: Did extra (unassigned) work for a course","ACT11.frequently",0.100096263751955,260
-"ACT12","Act: Did not have time to study due to family responsibilities","ACT12.notatall",0.569878331185313,183
-"ACT12","Act: Did not have time to study due to family responsibilities","ACT12.occasionally",0.378670909324195,183
-"ACT12","Act: Did not have time to study due to family responsibilities","ACT12.frequently",0.0514507594904923,183
-"ACT13","Act: Did not have time to study due to job responsibilities","ACT13.notatall",0.540440299004366,183
-"ACT13","Act: Did not have time to study due to job responsibilities","ACT13.occasionally",0.380521936836878,183
-"ACT13","Act: Did not have time to study due to job responsibilities","ACT13.frequently",0.0790377641587555,183
-"ACT14","Act: Discussed course content with students outside of class","ACT14.notatall",0.0204521294392061,318
-"ACT14","Act: Discussed course content with students outside of class","ACT14.occasionally",0.29238510549658,318
-"ACT14","Act: Discussed course content with students outside of class","ACT14.frequently",0.687162765064214,318
-"ACT16","Act: Failed to complete homework on time","ACT16.notatall",0.395818581077898,318
-"ACT16","Act: Failed to complete homework on time","ACT16.occasionally",0.541159680549799,318
-"ACT16","Act: Failed to complete homework on time","ACT16.frequently",0.0630217383723026,318
-"ACT18","Act: Felt discriminated against by faculty","ACT18.notatall",0.740966385003238,116
-"ACT18","Act: Felt discriminated against by faculty","ACT18.occasionally",0.232356862706165,116
-"ACT18","Act: Felt discriminated against by faculty","ACT18.frequently",0.0266767522905971,116
-"ACT19","Act: Felt discriminated against by students","ACT19.notatall",0.752318928543489,116
-"ACT19","Act: Felt discriminated against by students","ACT19.occasionally",0.222095914282841,116
-"ACT19","Act: Felt discriminated against by students","ACT19.frequently",0.0255851571736701,116
-"ACT20","Act: Felt faculty took a personal interest in your progress","ACT20.notatall",0.0563704694102312,139
-"ACT20","Act: Felt faculty took a personal interest in your progress","ACT20.occasionally",0.422536147299107,139
-"ACT20","Act: Felt faculty took a personal interest in your progress","ACT20.frequently",0.521093383290662,139
-"ACT26","Act: Felt Supported by My Family","ACT26.notatall",0.0231394886028589,132
-"ACT26","Act: Felt Supported by My Family","ACT26.occasionally",0.154466823213014,132
-"ACT26","Act: Felt Supported by My Family","ACT26.frequently",0.822393688184127,132
-"ACT27","Act: Felt your comments were not taken seriously by faculty","ACT27.notatall",0.418183566093675,242
-"ACT27","Act: Felt your comments were not taken seriously by faculty","ACT27.occasionally",0.485552427520215,242
-"ACT27","Act: Felt your comments were not taken seriously by faculty","ACT27.frequently",0.0962640063861102,242
-"ACT28","Act: Had difficulty getting the courses you needed","ACT28.notatall",0.472255551096469,98
-"ACT28","Act: Had difficulty getting the courses you needed","ACT28.occasionally",0.446763555848459,98
-"ACT28","Act: Had difficulty getting the courses you needed","ACT28.frequently",0.0809808930550714,98
-"ACT31","Act: Have been a guest in professor's home","ACT31.notatall",0.539439905665936,318
-"ACT31","Act: Have been a guest in professor's home","ACT31.occasionally",0.399761742020696,318
-"ACT31","Act: Have been a guest in professor's home","ACT31.frequently",0.0607983523133685,318
-"ACT36","Act: Met with an advisor/counselor about your career plans","ACT36.notatall",0.159434862104619,98
-"ACT36","Act: Met with an advisor/counselor about your career plans","ACT36.occasionally",0.640317250901135,98
-"ACT36","Act: Met with an advisor/counselor about your career plans","ACT36.frequently",0.200247886994246,98
-"ACT37","Act: Met with Faculty During Office Hours","ACT37.notatall",0.0252615180898831,168
-"ACT37","Act: Met with Faculty During Office Hours","ACT37.occasionally",0.674017461545377,168
-"ACT37","Act: Met with Faculty During Office Hours","ACT37.frequently",0.30072102036474,168
-"ACT38","Act: Met with Faculty Outside Class or Office Hours","ACT38.notatall",0.215027028086788,168
-"ACT38","Act: Met with Faculty Outside Class or Office Hours","ACT38.occasionally",0.610471623179707,168
-"ACT38","Act: Met with Faculty Outside Class or Office Hours","ACT38.frequently",0.174501348733505,168
-"ACT40","Act: Missed Class Due to employment","ACT40.notatall",0.749801368057528,258
-"ACT40","Act: Missed Class Due to employment","ACT40.occasionally",0.225961459667336,258
-"ACT40","Act: Missed Class Due to employment","ACT40.frequently",0.0242371722751361,258
-"ACT48","Act: Performed community service as part of a class","ACT48.notatall",0.445843993574193,98
-"ACT48","Act: Performed community service as part of a class","ACT48.occasionally",0.443027453358813,98
-"ACT48","Act: Performed community service as part of a class","ACT48.frequently",0.111128553066995,98
-"ACT55","Act: Studied with other students","ACT55.notatall",0.0478009344017672,318
-"ACT55","Act: Studied with other students","ACT55.occasionally",0.52779581217366,318
-"ACT55","Act: Studied with other students","ACT55.frequently",0.424403253424573,318
-"ACT58","Act: Took interdisciplinary courses","ACT58.notatall",0.376854122501118,318
-"ACT58","Act: Took interdisciplinary courses","ACT58.occasionally",0.420090689359892,318
-"ACT58","Act: Took interdisciplinary courses","ACT58.frequently",0.20305518813899,318
-"ACT70","Act: Voted in a student election","ACT70.notatall",0.320215188861439,318
-"ACT70","Act: Voted in a student election","ACT70.occasionally",0.44691733549369,318
-"ACT70","Act: Voted in a student election","ACT70.frequently",0.232867475644871,318
-"ACT74","Act: Worked on group projects in class","ACT74.notatall",0.0343991644799691,301
-"ACT74","Act: Worked on group projects in class","ACT74.occasionally",0.479050570012695,301
-"ACT74","Act: Worked on group projects in class","ACT74.frequently",0.486550265507336,301
-"ACT75","Act: Worked on independent study projects","ACT75.notatall",0.428174984514126,318
-"ACT75","Act: Worked on independent study projects","ACT75.occasionally",0.388040196040758,318
-"ACT75","Act: Worked on independent study projects","ACT75.frequently",0.183784819445115,318
-"COLACT02_9406","Act in College: Attended racial/cultural awareness workshop","COLACT02_9406.yes",0.25984085902013,318
-"COLACT07_9406","Act in College: Enrolled in honors or advanced courses","COLACT07_9406.yes",0.223750449726294,318
-"COLACT11_9406","Act in College: Had a part-time job off-campus","COLACT11_9406.yes",0.543025487869123,309
-"COLACT12_9406","Act in College: Had a part-time job on campus","COLACT12_9406.yes",0.530301259201943,309
-"COLACT13_9406","Act in College: Had a roommate of different race/ethnicity","COLACT13_9406.yes",0.324910565995611,299
-"COLACT14_9406","Act in College: Joined a fraternity or sorority","COLACT14_9406.yes",0.190036996345805,318
-"COLACT15_9406","Act in College: Participated in college internship program","COLACT15_9406.yes",0.308097067345502,56
-"COLACT16_9406","Act in College: Participated in study abroad program","COLACT16_9406.yes",0.222544985804923,202
-"COLACT17_9406","Act in College: Participated in an ethnic/racial student organization","COLACT17_9406.yes",0.14028310086361,318
-"COLACT18_9406","Act in College: Participated In an internship program","COLACT18_9406.yes",0.396154621393831,318
-"COLACT19_9406","Act in College: Participated in campus protests","COLACT19_9406.yes",0.0970311858184918,197
-"COLACT21_9406","Act in College: Participated in leadership training","COLACT21_9406.yes",0.214026852220709,318
-"COLACT23_9406","Act in College: Participated in student government","COLACT23_9406.yes",0.11901031513608,318
-"COLACT27_9406","Act in College: Taken a remedial course","COLACT27_9406.yes",0.0656989479143775,318
-"COLACT32_9406","Act in College: Transferred from a Community College","COLACT32_9406.yes",0.104454388628683,209
-"COLACT33_9406","Act in College: Transferred from a Four-year College","COLACT33_9406.yes",0.0886030306963806,209
-"COLACT34_9406","Act in College: Transferred from another college","COLACT34_9406.yes",0.189795455387071,278
-"COLACT36_9406","Act in College: Voted in a state/national election","COLACT36_9406.yes",0.61562199478735,228
-"COLACT40_9406","Act in College: Worked full-time while attending school","COLACT40_9406.yes",0.15065148103878,318
-"COLACT41_9406","Act in College: Worked on prof's research project","COLACT41_9406.yes",0.173590368510739,56
-"CSV","Since entering college, have you performed any community/volunteer service?","CSV.yes",0.760209949143888,139
-"CSVCOURSE","Since entering college, how many of your courses have included community service/service learning","CSVCOURSE.yes",0.225991950440092,224
-"CSVHOW1","CSV Performed: As part of a class or course","CSVHOW1.yes",0.372376011055725,222
-"CSVHOW2","CSV Performed: As part of a collegiate-sponsored activity (sorority, campus, org, etc.)","CSVHOW2.yes",0.470771613816668,222
-"CSVHOW3","CSV Performed: Independently through a non-collegiate group (church, family, etc.)","CSVHOW3.yes",0.420480074235279,222
-"FACPRV01","Faculty Provide: A letter of recommendation","FACPRV01.notatall",0.285487497734634,311
-"FACPRV01","Faculty Provide: A letter of recommendation","FACPRV01.occasionally",0.446363828000784,311
-"FACPRV01","Faculty Provide: A letter of recommendation","FACPRV01.frequently",0.268148674264582,311
-"FACPRV02","Faculty Provide: Advice and guidance about your educational program","FACPRV02.notatall",0.134963161762169,311
-"FACPRV02","Faculty Provide: Advice and guidance about your educational program","FACPRV02.occasionally",0.55497864857014,311
-"FACPRV02","Faculty Provide: Advice and guidance about your educational program","FACPRV02.frequently",0.310058189667691,311
-"FACPRV04","Faculty Provide: Encouragement to discuss coursework outside of class","FACPRV04.notatall",0.0711714274357142,311
-"FACPRV04","Faculty Provide: Encouragement to discuss coursework outside of class","FACPRV04.occasionally",0.47999753552724,311
-"FACPRV04","Faculty Provide: Encouragement to discuss coursework outside of class","FACPRV04.frequently",0.448831037037046,311
-"FACPRV05","Faculty Provide: An opportunity to publish","FACPRV05.notatall",0.700432505268009,311
-"FACPRV05","Faculty Provide: An opportunity to publish","FACPRV05.occasionally",0.243202256636857,311
-"FACPRV05","Faculty Provide: An opportunity to publish","FACPRV05.frequently",0.0563652380951339,311
-"FACPRV06","Faculty Provide: An opportunity to work on a research project","FACPRV06.notatall",0.326909865395463,311
-"FACPRV06","Faculty Provide: An opportunity to work on a research project","FACPRV06.occasionally",0.449764668294649,311
-"FACPRV06","Faculty Provide: An opportunity to work on a research project","FACPRV06.frequently",0.223325466309889,311
-"FACPRV07","Faculty Provide: Assistance to improve your study skills","FACPRV07.notatall",0.343386618302779,311
-"FACPRV07","Faculty Provide: Assistance to improve your study skills","FACPRV07.occasionally",0.500137895115589,311
-"FACPRV07","Faculty Provide: Assistance to improve your study skills","FACPRV07.frequently",0.156475486581632,311
-"FACPRV08","Faculty Provide: Emotional support and encouragement","FACPRV08.notatall",0.203926717921279,311
-"FACPRV08","Faculty Provide: Emotional support and encouragement","FACPRV08.occasionally",0.527861628239394,311
-"FACPRV08","Faculty Provide: Emotional support and encouragement","FACPRV08.frequently",0.268211653839327,311
-"FACPRV09","Faculty Provide: Encouragement to pursue graduate/professional school","FACPRV09.notatall",0.325354517542631,238
-"FACPRV09","Faculty Provide: Encouragement to pursue graduate/professional school","FACPRV09.occasionally",0.456609006440247,238
-"FACPRV09","Faculty Provide: Encouragement to pursue graduate/professional school","FACPRV09.frequently",0.218036476017122,238
-"FACPRV10","Faculty Provide: Encouragement to pursue graduate/professional study","FACPRV10.notatall",0.222830435292193,275
-"FACPRV10","Faculty Provide: Encouragement to pursue graduate/professional study","FACPRV10.occasionally",0.453845812495547,275
-"FACPRV10","Faculty Provide: Encouragement to pursue graduate/professional study","FACPRV10.frequently",0.32332375221226,275
-"FACPRV13","Faculty Provide: Help in achieving your professional goals","FACPRV13.notatall",0.179067234296056,258
-"FACPRV13","Faculty Provide: Help in achieving your professional goals","FACPRV13.occasionally",0.517157043116041,258
-"FACPRV13","Faculty Provide: Help in achieving your professional goals","FACPRV13.frequently",0.303775722587903,258
-"FACPRV15","Faculty Provide: Honest feedback about your skills and abilities","FACPRV15.notatall",0.0846643689237566,221
-"FACPRV15","Faculty Provide: Honest feedback about your skills and abilities","FACPRV15.occasionally",0.485363476161918,221
-"FACPRV15","Faculty Provide: Honest feedback about your skills and abilities","FACPRV15.frequently",0.429972154914325,221
-"FACPRV16","Faculty Provide: Intellectual challenge and stimulation","FACPRV16.notatall",0.0575847823147939,311
-"FACPRV16","Faculty Provide: Intellectual challenge and stimulation","FACPRV16.occasionally",0.465508308598641,311
-"FACPRV16","Faculty Provide: Intellectual challenge and stimulation","FACPRV16.frequently",0.476906909086565,311
-"FACPRV17","Faculty Provide: Negative feedback about your abilities and skills","FACPRV17.notatall",0.482898427304609,215
-"FACPRV17","Faculty Provide: Negative feedback about your abilities and skills","FACPRV17.occasionally",0.456846153255901,215
-"FACPRV17","Faculty Provide: Negative feedback about your abilities and skills","FACPRV17.frequently",0.06025541943949,215
-"FACPRV18","Faculty Provide: Negative Feedback about your Academic Work","FACPRV18.notatall",0.410301805034505,258
-"FACPRV18","Faculty Provide: Negative Feedback about your Academic Work","FACPRV18.occasionally",0.523202213309521,258
-"FACPRV18","Faculty Provide: Negative Feedback about your Academic Work","FACPRV18.frequently",0.0664959816559737,258
-"FACPRV19","Faculty Provide: Respect (treated you like a colleague/peer)","FACPRV19.notatall",0.046245479672215,311
-"FACPRV19","Faculty Provide: Respect (treated you like a colleague/peer)","FACPRV19.occasionally",0.374232786782433,311
-"FACPRV19","Faculty Provide: Respect (treated you like a colleague/peer)","FACPRV19.frequently",0.579521733545352,311
-"GENACT04","Act in Part Year: Been lonely or homesick","GENACT04.notatall",0.412655245977693,246
-"GENACT04","Act in Part Year: Been lonely or homesick","GENACT04.occasionally",0.528854824207641,246
-"GENACT04","Act in Part Year: Been lonely or homesick","GENACT04.frequently",0.0584899298146663,246
-"GENACT07","Act in Past Year: Discussed politics","GENACT07.notatall",0.250345144103516,318
-"GENACT07","Act in Past Year: Discussed politics","GENACT07.occasionally",0.565312734647803,318
-"GENACT07","Act in Past Year: Discussed politics","GENACT07.frequently",0.184342121248681,318
-"GENACT15","Act in Part Year: Felt depressed","GENACT15.notatall",0.357564555483766,318
-"GENACT15","Act in Part Year: Felt depressed","GENACT15.occasionally",0.565477154672371,318
-"GENACT15","Act in Part Year: Felt depressed","GENACT15.frequently",0.0769582898438632,318
-"GENACT18","Act in Past Year: Felt lonely or homesick","GENACT18.notatall",0.444990162248093,258
-"GENACT18","Act in Past Year: Felt lonely or homesick","GENACT18.occasionally",0.497201896932282,258
-"GENACT18","Act in Past Year: Felt lonely or homesick","GENACT18.frequently",0.0578079408196254,258
-"GENACT19","Act in Part Year: Felt overwhelmed by all I had to do","GENACT19.notatall",0.0764012775369791,318
-"GENACT19","Act in Part Year: Felt overwhelmed by all I had to do","GENACT19.occasionally",0.579880002563187,318
-"GENACT19","Act in Part Year: Felt overwhelmed by all I had to do","GENACT19.frequently",0.343718719899834,318
-"GENACT22","Act in Part Year: Participated in organized demonstrations","GENACT22.notatall",0.80397138031119,318
-"GENACT22","Act in Part Year: Participated in organized demonstrations","GENACT22.occasionally",0.173246973922302,318
-"GENACT22","Act in Part Year: Participated in organized demonstrations","GENACT22.frequently",0.0227816457665083,318
-"GENACT26","Act in Part Year: Performed volunteer work","GENACT26.notatall",0.270566698799799,318
-"GENACT26","Act in Part Year: Performed volunteer work","GENACT26.occasionally",0.557110293158977,318
-"GENACT26","Act in Part Year: Performed volunteer work","GENACT26.frequently",0.172323008041224,318
-"GENACT28","Act in Part Year: Received career/vocational counseling","GENACT28.notatall",0.430565935699816,56
-"GENACT28","Act in Part Year: Received career/vocational counseling","GENACT28.occasionally",0.499362564683433,56
-"GENACT28","Act in Part Year: Received career/vocational counseling","GENACT28.frequently",0.0700714996167507,56
-"GENACT30","Act in Part Year: Socialized with someone of another racial/ethnic group","GENACT30.notatall",0.0466043589726496,318
-"GENACT30","Act in Part Year: Socialized with someone of another racial/ethnic group","GENACT30.occasionally",0.48502049419974,318
-"GENACT30","Act in Part Year: Socialized with someone of another racial/ethnic group","GENACT30.frequently",0.468375146827611,318
-"GENACT31","Act in Past Year: Sought personal counseling","GENACT31.notatall",0.800023635255301,258
-"GENACT31","Act in Past Year: Sought personal counseling","GENACT31.occasionally",0.167431045310027,258
-"GENACT31","Act in Past Year: Sought personal counseling","GENACT31.frequently",0.0325453194346716,258
-"GENACT35","Act in Past Year: Visited a museum or art gallery","GENACT35.notatall",0.323490746448774,280
-"GENACT35","Act in Past Year: Visited a museum or art gallery","GENACT35.occasionally",0.582612308263538,280
-"GENACT35","Act in Past Year: Visited a museum or art gallery","GENACT35.frequently",0.0938969452876878,280
-"GENACT36","Act in Past Year: Voted in state/national election","GENACT36.notatall",0.416696221471953,199
-"GENACT36","Act in Past Year: Voted in state/national election","GENACT36.occasionally",0.378942093417461,199
-"GENACT36","Act in Past Year: Voted in state/national election","GENACT36.frequently",0.204361685110586,199
-"GENACT37","Act in Past Year: Worked on a local, state, or national political campaign","GENACT37.notatall",0.923293879179974,266
-"GENACT37","Act in Past Year: Worked on a local, state, or national political campaign","GENACT37.occasionally",0.0615951868001209,266
-"GENACT37","Act in Past Year: Worked on a local, state, or national political campaign","GENACT37.frequently",0.015110934019905,266
-"GOAL02","Goal: Becoming a community leader","GOAL02.notimportant",0.251700608445368,318
-"GOAL02","Goal: Becoming a community leader","GOAL02.somewhatimportant",0.40083950234909,318
-"GOAL02","Goal: Becoming a community leader","GOAL02.veryimportant",0.248609627711707,318
-"GOAL02","Goal: Becoming a community leader","GOAL02.essential",0.0988502614938351,318
-"GOAL03","Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)","GOAL03.notimportant",0.618673860618218,318
-"GOAL03","Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)","GOAL03.somewhatimportant",0.231358557667816,318
-"GOAL03","Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)","GOAL03.veryimportant",0.0872957302786815,318
-"GOAL03","Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)","GOAL03.essential",0.0626718514352845,318
-"GOAL04","Goal: Becoming an authority in my field","GOAL04.notimportant",0.081578757810594,318
-"GOAL04","Goal: Becoming an authority in my field","GOAL04.somewhatimportant",0.272646388873055,318
-"GOAL04","Goal: Becoming an authority in my field","GOAL04.veryimportant",0.415610947973371,318
-"GOAL04","Goal: Becoming an authority in my field","GOAL04.essential",0.23016390534298,318
-"GOAL05","Goal: Becoming involved in programs to clean up the environment","GOAL05.notimportant",0.284175730278971,318
-"GOAL05","Goal: Becoming involved in programs to clean up the environment","GOAL05.somewhatimportant",0.484136460162487,318
-"GOAL05","Goal: Becoming involved in programs to clean up the environment","GOAL05.veryimportant",0.17403921812754,318
-"GOAL05","Goal: Becoming involved in programs to clean up the environment","GOAL05.essential",0.0576485914310021,318
-"GOAL06","Goal: Becoming successful in a business of my own","GOAL06.notimportant",0.3785724644953,318
-"GOAL06","Goal: Becoming successful in a business of my own","GOAL06.somewhatimportant",0.285390049242174,318
-"GOAL06","Goal: Becoming successful in a business of my own","GOAL06.veryimportant",0.206268494216906,318
-"GOAL06","Goal: Becoming successful in a business of my own","GOAL06.essential",0.12976899204562,318
-"GOAL07","Goal: Being very well off financially","GOAL07.notimportant",0.100538708785685,318
-"GOAL07","Goal: Being very well off financially","GOAL07.somewhatimportant",0.334665241613889,318
-"GOAL07","Goal: Being very well off financially","GOAL07.veryimportant",0.348280110276246,318
-"GOAL07","Goal: Being very well off financially","GOAL07.essential",0.21651593932418,318
-"GOAL08","Goal: Creating artistic work (paintings, sculpture, etc.)","GOAL08.notimportant",0.573404120134565,318
-"GOAL08","Goal: Creating artistic work (paintings, sculpture, etc.)","GOAL08.somewhatimportant",0.248151787756024,318
-"GOAL08","Goal: Creating artistic work (paintings, sculpture, etc.)","GOAL08.veryimportant",0.109208152313009,318
-"GOAL08","Goal: Creating artistic work (paintings, sculpture, etc.)","GOAL08.essential",0.0692359397964007,318
-"GOAL09","Goal: Developing a meaningful philosophy of life","GOAL09.notimportant",0.153401022447141,318
-"GOAL09","Goal: Developing a meaningful philosophy of life","GOAL09.somewhatimportant",0.281801572261788,318
-"GOAL09","Goal: Developing a meaningful philosophy of life","GOAL09.veryimportant",0.315863902513457,318
-"GOAL09","Goal: Developing a meaningful philosophy of life","GOAL09.essential",0.248933502777614,318
-"GOAL10","Goal: Having administrative responsibility for the work of others","GOAL10.notimportant",0.225032222597429,318
-"GOAL10","Goal: Having administrative responsibility for the work of others","GOAL10.somewhatimportant",0.380908395083234,318
-"GOAL10","Goal: Having administrative responsibility for the work of others","GOAL10.veryimportant",0.29823308952293,318
-"GOAL10","Goal: Having administrative responsibility for the work of others","GOAL10.essential",0.095826292796407,318
-"GOAL11","Goal: Helping others who are in difficulty","GOAL11.notimportant",0.0236025114879863,318
-"GOAL11","Goal: Helping others who are in difficulty","GOAL11.somewhatimportant",0.241297325911189,318
-"GOAL11","Goal: Helping others who are in difficulty","GOAL11.veryimportant",0.465226759016154,318
-"GOAL11","Goal: Helping others who are in difficulty","GOAL11.essential",0.269873403584671,318
-"GOAL12","Goal: Helping to promote racial understanding","GOAL12.notimportant",0.20833873842055,318
-"GOAL12","Goal: Helping to promote racial understanding","GOAL12.somewhatimportant",0.408230287500181,318
-"GOAL12","Goal: Helping to promote racial understanding","GOAL12.veryimportant",0.266144673934047,318
-"GOAL12","Goal: Helping to promote racial understanding","GOAL12.essential",0.117286300145222,318
-"GOAL15","Goal: Influencing social values","GOAL15.notimportant",0.146814434233866,318
-"GOAL15","Goal: Influencing social values","GOAL15.somewhatimportant",0.364652267224718,318
-"GOAL15","Goal: Influencing social values","GOAL15.veryimportant",0.360223356661665,318
-"GOAL15","Goal: Influencing social values","GOAL15.essential",0.128309941879751,318
-"GOAL16","Goal: Influencing the political structure","GOAL16.notimportant",0.419490075165669,318
-"GOAL16","Goal: Influencing the political structure","GOAL16.somewhatimportant",0.374036053749543,318
-"GOAL16","Goal: Influencing the political structure","GOAL16.veryimportant",0.149507575465954,318
-"GOAL16","Goal: Influencing the political structure","GOAL16.essential",0.0569662956188336,318
-"GOAL18","Goal: Keeping up to date with political affairs","GOAL18.notimportant",0.168123469773851,318
-"GOAL18","Goal: Keeping up to date with political affairs","GOAL18.somewhatimportant",0.403460450160245,318
-"GOAL18","Goal: Keeping up to date with political affairs","GOAL18.veryimportant",0.303684474694212,318
-"GOAL18","Goal: Keeping up to date with political affairs","GOAL18.essential",0.124731605371692,318
-"GOAL19","Goal: Making a theoretical contribution to science","GOAL19.notimportant",0.60825055696601,318
-"GOAL19","Goal: Making a theoretical contribution to science","GOAL19.somewhatimportant",0.246041517768255,318
-"GOAL19","Goal: Making a theoretical contribution to science","GOAL19.veryimportant",0.104809010044722,318
-"GOAL19","Goal: Making a theoretical contribution to science","GOAL19.essential",0.0408989152210129,318
-"GOAL20","Goal: Obtaining recognition from my colleagues for contributions to my special field","GOAL20.notimportant",0.126819548040173,318
-"GOAL20","Goal: Obtaining recognition from my colleagues for contributions to my special field","GOAL20.somewhatimportant",0.364782207899317,318
-"GOAL20","Goal: Obtaining recognition from my colleagues for contributions to my special field","GOAL20.veryimportant",0.366882138064446,318
-"GOAL20","Goal: Obtaining recognition from my colleagues for contributions to my special field","GOAL20.essential",0.141516105996065,318
-"GOAL21","Goal: Participating in a community action program","GOAL21.notimportant",0.249320737334348,318
-"GOAL21","Goal: Participating in a community action program","GOAL21.somewhatimportant",0.451756075266781,318
-"GOAL21","Goal: Participating in a community action program","GOAL21.veryimportant",0.227359230231144,318
-"GOAL21","Goal: Participating in a community action program","GOAL21.essential",0.071563957167727,318
-"GOAL22","Goal: Raising a family","GOAL22.notimportant",0.070368279052008,318
-"GOAL22","Goal: Raising a family","GOAL22.somewhatimportant",0.154140600598836,318
-"GOAL22","Goal: Raising a family","GOAL22.veryimportant",0.325387739556561,318
-"GOAL22","Goal: Raising a family","GOAL22.essential",0.450103380792595,318
-"GOAL24","Goal: Writing original works (poems, novels, etc.)","GOAL24.notimportant",0.58017625604123,318
-"GOAL24","Goal: Writing original works (poems, novels, etc.)","GOAL24.somewhatimportant",0.240015296646414,318
-"GOAL24","Goal: Writing original works (poems, novels, etc.)","GOAL24.veryimportant",0.109973659504151,318
-"GOAL24","Goal: Writing original works (poems, novels, etc.)","GOAL24.essential",0.0698347878082053,318
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours0",0.00577347171391199,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours0to1",0.00337706586884194,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours1to2",0.0127960581514776,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours3to5",0.0774871665149321,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours6to10",0.249350418473465,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours11to15",0.356589752496144,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours16to20",0.213941957847615,165
-"HPW01","Hours per Week: Attending Classes/Labs","HPW01.hours21plus",0.0806841089336126,165
-"HPW03","Hours per Week: Classes/labs","HPW03.hours0",0.0242707034966195,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours0to1",0.0112776095343153,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours1to2",0.0244555260542329,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours3to5",0.0792166760803886,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours6to10",0.196603997771679,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours11to15",0.328697274584935,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours16to20",0.223873221671275,301
-"HPW03","Hours per Week: Classes/labs","HPW03.hours21plus",0.111604990806554,301
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours0",0.301779566031701,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours0to1",0.134791281510202,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours1to2",0.232846841731061,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours3to5",0.177431996506391,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours6to10",0.0797587515448304,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours11to15",0.0329596131302184,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours16to20",0.0154201270816008,196
-"HPW04","Hours per Week: Participating in student clubs/groups","HPW04.hours21plus",0.0250118224639955,196
-"HPW05","Hours per Week: Commuting","HPW05.hours0",0.388953111578157,318
-"HPW05","Hours per Week: Commuting","HPW05.hours0to1",0.190623198055957,318
-"HPW05","Hours per Week: Commuting","HPW05.hours1to2",0.160992095003762,318
-"HPW05","Hours per Week: Commuting","HPW05.hours3to5",0.13254717153005,318
-"HPW05","Hours per Week: Commuting","HPW05.hours6to10",0.0776313073719241,318
-"HPW05","Hours per Week: Commuting","HPW05.hours11to15",0.0252545156458734,318
-"HPW05","Hours per Week: Commuting","HPW05.hours16to20",0.00882095140764091,318
-"HPW05","Hours per Week: Commuting","HPW05.hours21plus",0.0151776494066352,318
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours0",0.370356188655049,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours0to1",0.195745047235242,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours1to2",0.231296535239931,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours3to5",0.115012248583043,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours6to10",0.0384672121668949,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours11to15",0.0138619323393424,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours16to20",0.00785433476101213,299
-"HPW08","Hours per Week: Performing household/childcare duties","HPW08.hours21plus",0.027406501019486,299
-"HPW10","Hours per Week: Partying","HPW10.hours0",0.206810246384692,318
-"HPW10","Hours per Week: Partying","HPW10.hours0to1",0.135732132658318,318
-"HPW10","Hours per Week: Partying","HPW10.hours1to2",0.163580012808725,318
-"HPW10","Hours per Week: Partying","HPW10.hours3to5",0.21471167961998,318
-"HPW10","Hours per Week: Partying","HPW10.hours6to10",0.152877974266872,318
-"HPW10","Hours per Week: Partying","HPW10.hours11to15",0.0654404980675747,318
-"HPW10","Hours per Week: Partying","HPW10.hours16to20",0.0302349837478942,318
-"HPW10","Hours per Week: Partying","HPW10.hours21plus",0.030612472445944,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours0",0.281272397766786,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours0to1",0.287176971417808,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours1to2",0.249588270677496,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours3to5",0.12147324707303,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours6to10",0.0391979143828148,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours11to15",0.0114530702200045,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours16to20",0.00449134161004271,318
-"HPW13","Hours per Week: Reading for pleasure","HPW13.hours21plus",0.00534678685201738,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours0",0.00446932224754971,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours0to1",0.0175318031902514,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours1to2",0.0677502414106686,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours3to5",0.178496002008095,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours6to10",0.255907530023273,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours11to15",0.184042137121748,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours16to20",0.120728129851976,318
-"HPW15","Hours per Week: Socializing with friends in person","HPW15.hours21plus",0.171074834146438,318
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours0",0.405384156614411,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours0to1",0.142663092547009,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours1to2",0.204417519518683,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours3to5",0.144013211239648,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours6to10",0.0597763416040464,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours11to15",0.0215117778860961,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours16to20",0.00941959347208464,299
-"HPW16","Hours per Week: Working with classmates on group projects","HPW16.hours21plus",0.0128143071180221,299
-"HPW17","Hours per Week: Studying/homework","HPW17.hours0",0.00427001742915699,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours0to1",0.0118545827618344,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours1to2",0.0589611727173989,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours3to5",0.208218429656478,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours6to10",0.280554036182353,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours11to15",0.191675332316011,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours16to20",0.125816878125924,318
-"HPW17","Hours per Week: Studying/homework","HPW17.hours21plus",0.118649550810844,318
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours0",0.115334738868679,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours0to1",0.471555716397397,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours1to2",0.31021878367749,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours3to5",0.0792563154468613,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours6to10",0.0168986580099897,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours11to15",0.00410381787073334,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours16to20",0.00129256089579997,98
-"HPW19","Hours per Week: Talking with faculty during office hours","HPW19.hours21plus",0.00133940883304973,98
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours0",0.0800190978466749,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours0to1",0.435086921295192,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours1to2",0.347519681608157,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours3to5",0.107894642765897,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours6to10",0.0206332684176985,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours11to15",0.00521470375137012,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours16to20",0.00177351239215541,268
-"HPW20","Hours per Week: Talking with faculty outside class","HPW20.hours21plus",0.00185817192285456,268
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours0",0.215258834391833,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours0to1",0.490678441304939,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours1to2",0.222618813923334,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours3to5",0.0505927696303278,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours6to10",0.013667185907948,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours11to15",0.00477216739815886,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours16to20",0.00107520735358801,98
-"HPW21","Hours per Week: Talking with faculty outside of class or office hours","HPW21.hours21plus",0.00133658008987108,98
-"HPW23","Hours per Week: Volunteer work","HPW23.hours0",0.371062371741824,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours0to1",0.25127832227496,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours1to2",0.201822871978652,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours3to5",0.102785142273675,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours6to10",0.0414773372749868,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours11to15",0.0148020986117692,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours16to20",0.00760055820409446,309
-"HPW23","Hours per Week: Volunteer work","HPW23.hours21plus",0.00917129764003821,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours0",0.206444619037688,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours0to1",0.02273142295083,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours1to2",0.0353988318396483,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours3to5",0.0853331259103387,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours6to10",0.181857745420934,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours11to15",0.13753663127943,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours16to20",0.127613937533489,309
-"HPW25","Hours per Week: Working (for pay)","HPW25.hours21plus",0.203083686027643,309
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours0",0.503407124991424,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours0to1",0.0186548276651299,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours1to2",0.0322359101827904,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours3to5",0.0519600735599613,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours6to10",0.0871378328030267,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours11to15",0.0722424099352245,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours16to20",0.0790843699087895,98
-"HPW26","Hours per Week: Working (for pay) off campus","HPW26.hours21plus",0.155277450953653,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours0",0.550376149635709,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours0to1",0.0178815652262467,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours1to2",0.039607541345293,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours3to5",0.0881598699517539,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours6to10",0.163736106357883,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours11to15",0.0758426682978861,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours16to20",0.0379421478255837,98
-"HPW27","Hours per Week: Working (for pay) on campus","HPW27.hours21plus",0.0264539513596443,98
-"MAJOR1A_9415","Primary undergraduate major 1 aggregated (1994-2015)","MAJOR1A_9415.business",0.193373843673065,318
-"NATENGSP","Is English your native language?","NATENGSP.yes",0.92370003704011,318
-"PLANS02","Plans: Attending graduate or professional school","PLANS02.yes",0.23052505725449,318
-"PLANS07","Plans: Participating in a community service organization","PLANS07.yes",0.0975986956011263,299
-"PLANS08","Plans: Participating in a community service organization (e.g., AmeriCorps, Peace Corps. etc.)","PLANS08.yes",0.0422915424285235,197
-"PLANS14","Plans: Working for a government agency","PLANS14.yes",0.0294399244700983,246
-"PLANS15","Plans: Working for a non-profit organization","PLANS15.yes",0.0574961284646902,246
-"PLANS19","Plans: Working in private industry","PLANS19.yes",0.0847296558487773,197
-"POLIVIEW","How would you characterize your political views?","POLIVIEW.farright",0.0111969929944065,318
-"POLIVIEW","How would you characterize your political views?","POLIVIEW.conservative",0.251737560861732,318
-"POLIVIEW","How would you characterize your political views?","POLIVIEW.middleoftheroad",0.438943880146714,318
-"POLIVIEW","How would you characterize your political views?","POLIVIEW.liberal",0.269842140659452,318
-"POLIVIEW","How would you characterize your political views?","POLIVIEW.farleft",0.0282794253376962,318
-"RACE1","White/Caucasian","RACE1.yes",0.828591162904105,318
-"RACE2","African American/Black","RACE2.yes",0.0535023064316516,318
-"RACE3","American Indian/Alaska Native","RACE3.yes",0.0177438313182961,318
-"RACE4","Asian","RACE4.yes",0.0593727453337419,318
-"RACE5","Native Hawaiian/Pacific Islander","RACE5.yes",0.00830460798970937,209
-"RACE6","Mexican American/Chicana/o/x","RACE6.yes",0.0270418546076048,318
-"RACE7","Puerto Rican","RACE7.yes",0.00933636899131679,318
-"RACE8","Other Latina/o/x","RACE8.yes",0.0227491059159064,318
-"RACE9","Other","RACE9.yes",0.0374199703600838,318
-"RACEGROUP","Race/Ethnicity Group","RACEGROUP.yes",0.0515699171890286,318
-"RATE01","Self Rating: Academic ability","RATE01.lowest10pct",0.00113684367708067,318
-"RATE01","Self Rating: Academic ability","RATE01.belowaverage",0.00832011773519168,318
-"RATE01","Self Rating: Academic ability","RATE01.average",0.235834324350123,318
-"RATE01","Self Rating: Academic ability","RATE01.aboveaverage",0.5231972393076,318
-"RATE01","Self Rating: Academic ability","RATE01.highest10pct",0.231511474930005,318
-"RATE02","Self Rating: Artistic ability","RATE02.lowest10pct",0.0731404493894046,318
-"RATE02","Self Rating: Artistic ability","RATE02.belowaverage",0.2690822331072,318
-"RATE02","Self Rating: Artistic ability","RATE02.average",0.353486402086991,318
-"RATE02","Self Rating: Artistic ability","RATE02.aboveaverage",0.23286589893536,318
-"RATE02","Self Rating: Artistic ability","RATE02.highest10pct",0.0714250164810453,318
-"RATE04","Self Rating: Competitiveness","RATE04.lowest10pct",0.0132976704994541,318
-"RATE04","Self Rating: Competitiveness","RATE04.belowaverage",0.0836751155701435,318
-"RATE04","Self Rating: Competitiveness","RATE04.average",0.338019138959863,318
-"RATE04","Self Rating: Competitiveness","RATE04.aboveaverage",0.37477189866855,318
-"RATE04","Self Rating: Competitiveness","RATE04.highest10pct",0.190236176301989,318
-"RATE06","Self Rating: Cooperativeness","RATE06.lowest10pct",0.00216536895755359,318
-"RATE06","Self Rating: Cooperativeness","RATE06.belowaverage",0.0162778933980109,318
-"RATE06","Self Rating: Cooperativeness","RATE06.average",0.227034756573894,318
-"RATE06","Self Rating: Cooperativeness","RATE06.aboveaverage",0.524698252291872,318
-"RATE06","Self Rating: Cooperativeness","RATE06.highest10pct",0.22982372877867,318
-"RATE07","Self Rating: Creativity","RATE07.lowest10pct",0.0104841759123525,318
-"RATE07","Self Rating: Creativity","RATE07.belowaverage",0.0836866959893852,318
-"RATE07","Self Rating: Creativity","RATE07.average",0.35109427229708,318
-"RATE07","Self Rating: Creativity","RATE07.aboveaverage",0.39807142499307,318
-"RATE07","Self Rating: Creativity","RATE07.highest10pct",0.156663430808112,318
-"RATE08","Self Rating: Cynicism","RATE08.lowest10pct",0.0648022054920943,116
-"RATE08","Self Rating: Cynicism","RATE08.belowaverage",0.194764256224834,116
-"RATE08","Self Rating: Cynicism","RATE08.average",0.462677548126542,116
-"RATE08","Self Rating: Cynicism","RATE08.aboveaverage",0.200943279230339,116
-"RATE08","Self Rating: Cynicism","RATE08.highest10pct",0.0768127109261901,116
-"RATE09","Self Rating: Drive to achieve","RATE09.lowest10pct",0.00371579336072164,318
-"RATE09","Self Rating: Drive to achieve","RATE09.belowaverage",0.0273679933514681,318
-"RATE09","Self Rating: Drive to achieve","RATE09.average",0.216266161021803,318
-"RATE09","Self Rating: Drive to achieve","RATE09.aboveaverage",0.441305484776809,318
-"RATE09","Self Rating: Drive to achieve","RATE09.highest10pct",0.311344567489198,318
-"RATE10","Self Rating: Emotional health","RATE10.lowest10pct",0.00839402550163616,318
-"RATE10","Self Rating: Emotional health","RATE10.belowaverage",0.0634623661516586,318
-"RATE10","Self Rating: Emotional health","RATE10.average",0.341505578053097,318
-"RATE10","Self Rating: Emotional health","RATE10.aboveaverage",0.386786837430923,318
-"RATE10","Self Rating: Emotional health","RATE10.highest10pct",0.199851192862685,318
-"RATE12","Self Rating: Leadership ability","RATE12.lowest10pct",0.00616725287958511,318
-"RATE12","Self Rating: Leadership ability","RATE12.belowaverage",0.055010380375881,318
-"RATE12","Self Rating: Leadership ability","RATE12.average",0.30364890205344,318
-"RATE12","Self Rating: Leadership ability","RATE12.aboveaverage",0.425824271152108,318
-"RATE12","Self Rating: Leadership ability","RATE12.highest10pct",0.209349193538987,318
-"RATE22","Self Rating: Self-confidence (intellectual)","RATE22.lowest10pct",0.00398416850173939,318
-"RATE22","Self Rating: Self-confidence (intellectual)","RATE22.belowaverage",0.0375013238947387,318
-"RATE22","Self Rating: Self-confidence (intellectual)","RATE22.average",0.279339550779974,318
-"RATE22","Self Rating: Self-confidence (intellectual)","RATE22.aboveaverage",0.467209756786775,318
-"RATE22","Self Rating: Self-confidence (intellectual)","RATE22.highest10pct",0.211965200036773,318
-"RATE23","Self Rating: Self-confidence (social)","RATE23.lowest10pct",0.00905965375531929,318
-"RATE23","Self Rating: Self-confidence (social)","RATE23.belowaverage",0.0810402733696265,318
-"RATE23","Self Rating: Self-confidence (social)","RATE23.average",0.331437533183372,318
-"RATE23","Self Rating: Self-confidence (social)","RATE23.aboveaverage",0.402877463778977,318
-"RATE23","Self Rating: Self-confidence (social)","RATE23.highest10pct",0.175585075912705,318
-"RATE27","Self Rating: Understanding of others","RATE27.lowest10pct",0.00263291750170193,318
-"RATE27","Self Rating: Understanding of others","RATE27.belowaverage",0.0153986829274765,318
-"RATE27","Self Rating: Understanding of others","RATE27.average",0.259179180460019,318
-"RATE27","Self Rating: Understanding of others","RATE27.aboveaverage",0.506704479850908,318
-"RATE27","Self Rating: Understanding of others","RATE27.highest10pct",0.216084739259895,318
-"RATE28","Self Rating: Writing ability","RATE28.lowest10pct",0.00659572373317911,318
-"RATE28","Self Rating: Writing ability","RATE28.belowaverage",0.0565186944400864,318
-"RATE28","Self Rating: Writing ability","RATE28.average",0.351913693168373,318
-"RATE28","Self Rating: Writing ability","RATE28.aboveaverage",0.422184235075667,318
-"RATE28","Self Rating: Writing ability","RATE28.highest10pct",0.162787653582695,318
-"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?","REENROLL_9406.defno",0.0392727355981132,318
-"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?","REENROLL_9406.probno",0.116866303626649,318
-"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?","REENROLL_9406.dontknow",0.0420249244405179,318
-"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?","REENROLL_9406.probyes",0.385637416563365,318
-"REENROLL_9406","If you could make your college choice over, would you still choose to enroll at your current college?","REENROLL_9406.defyes",0.416198619771355,318
-"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor","SATIS01_9406.cantrate",0.0626523671405355,318
-"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor","SATIS01_9406.dissatisfied",0.0547388893068774,318
-"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor","SATIS01_9406.neutral",0.1902424596613,318
-"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor","SATIS01_9406.satisfied",0.442204799320242,318
-"SATIS01_9406","Satisfaction: Ability to find a faculty or staff mentor","SATIS01_9406.verysatisfied",0.250161484571045,318
-"SATIS02_9406","Satisfaction: Academic advising","SATIS02_9406.cantrate",0.0301668472247929,318
-"SATIS02_9406","Satisfaction: Academic advising","SATIS02_9406.dissatisfied",0.168953089670934,318
-"SATIS02_9406","Satisfaction: Academic advising","SATIS02_9406.neutral",0.239048683570609,318
-"SATIS02_9406","Satisfaction: Academic advising","SATIS02_9406.satisfied",0.394760050877073,318
-"SATIS02_9406","Satisfaction: Academic advising","SATIS02_9406.verysatisfied",0.167071328656591,318
-"SATIS03_9406","Satisfaction: Amount of contact with faculty","SATIS03_9406.cantrate",0.00758522959501314,309
-"SATIS03_9406","Satisfaction: Amount of contact with faculty","SATIS03_9406.dissatisfied",0.0376511845713597,309
-"SATIS03_9406","Satisfaction: Amount of contact with faculty","SATIS03_9406.neutral",0.177982295936181,309
-"SATIS03_9406","Satisfaction: Amount of contact with faculty","SATIS03_9406.satisfied",0.481033206613176,309
-"SATIS03_9406","Satisfaction: Amount of contact with faculty","SATIS03_9406.verysatisfied",0.29574808328427,309
-"SATIS05_9406","Satisfaction: Campus health services","SATIS05_9406.cantrate",0.168099052885494,318
-"SATIS05_9406","Satisfaction: Campus health services","SATIS05_9406.dissatisfied",0.167756608523901,318
-"SATIS05_9406","Satisfaction: Campus health services","SATIS05_9406.neutral",0.245789247638656,318
-"SATIS05_9406","Satisfaction: Campus health services","SATIS05_9406.satisfied",0.325200122342256,318
-"SATIS05_9406","Satisfaction: Campus health services","SATIS05_9406.verysatisfied",0.0931549686096933,318
-"SATIS06_9406","Satisfaction: Career counseling and advising","SATIS06_9406.cantrate",0.137391244231478,318
-"SATIS06_9406","Satisfaction: Career counseling and advising","SATIS06_9406.dissatisfied",0.160076136095594,318
-"SATIS06_9406","Satisfaction: Career counseling and advising","SATIS06_9406.neutral",0.272559982182836,318
-"SATIS06_9406","Satisfaction: Career counseling and advising","SATIS06_9406.satisfied",0.312946360984493,318
-"SATIS06_9406","Satisfaction: Career counseling and advising","SATIS06_9406.verysatisfied",0.117026276505599,318
-"SATIS07_9406","Satisfaction: Class size","SATIS07_9406.cantrate",0.00303236154111632,309
-"SATIS07_9406","Satisfaction: Class size","SATIS07_9406.dissatisfied",0.0362016645260288,309
-"SATIS07_9406","Satisfaction: Class size","SATIS07_9406.neutral",0.131268469617958,309
-"SATIS07_9406","Satisfaction: Class size","SATIS07_9406.satisfied",0.512135901232786,309
-"SATIS07_9406","Satisfaction: Class size","SATIS07_9406.verysatisfied",0.317361603082111,309
-"SATIS08_9406","Satisfaction: Computer facilities","SATIS08_9406.cantrate",0.0175740132907681,318
-"SATIS08_9406","Satisfaction: Computer facilities","SATIS08_9406.dissatisfied",0.131425954118846,318
-"SATIS08_9406","Satisfaction: Computer facilities","SATIS08_9406.neutral",0.178312399537213,318
-"SATIS08_9406","Satisfaction: Computer facilities","SATIS08_9406.satisfied",0.453540026625486,318
-"SATIS08_9406","Satisfaction: Computer facilities","SATIS08_9406.verysatisfied",0.219147606427687,318
-"SATIS09_9406","Satisfaction: Connection with your peers","SATIS09_9406.cantrate",0.0154373924131619,125
-"SATIS09_9406","Satisfaction: Connection with your peers","SATIS09_9406.dissatisfied",0.040703008181335,125
-"SATIS09_9406","Satisfaction: Connection with your peers","SATIS09_9406.neutral",0.182373499679659,125
-"SATIS09_9406","Satisfaction: Connection with your peers","SATIS09_9406.satisfied",0.495984944416585,125
-"SATIS09_9406","Satisfaction: Connection with your peers","SATIS09_9406.verysatisfied",0.265501155309259,125
-"SATIS10_9406","Satisfaction: Courses in your major field","SATIS10_9406.cantrate",0.0145831239324294,309
-"SATIS10_9406","Satisfaction: Courses in your major field","SATIS10_9406.dissatisfied",0.0498541817542259,309
-"SATIS10_9406","Satisfaction: Courses in your major field","SATIS10_9406.neutral",0.0755691228820195,309
-"SATIS10_9406","Satisfaction: Courses in your major field","SATIS10_9406.satisfied",0.411212257871526,309
-"SATIS10_9406","Satisfaction: Courses in your major field","SATIS10_9406.verysatisfied",0.448781313559799,309
-"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students","SATIS12_9406.cantrate",0.0491881343284047,228
-"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students","SATIS12_9406.dissatisfied",0.206200503883503,228
-"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students","SATIS12_9406.neutral",0.373042239051737,228
-"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students","SATIS12_9406.satisfied",0.301025142003317,228
-"SATIS12_9406","Satisfaction: Ethnic/racial diversity of students","SATIS12_9406.verysatisfied",0.0705439807330391,228
-"SATIS13_9406","Satisfaction: Financial aid services","SATIS13_9406.cantrate",0.187815046819852,318
-"SATIS13_9406","Satisfaction: Financial aid services","SATIS13_9406.dissatisfied",0.146026918909908,318
-"SATIS13_9406","Satisfaction: Financial aid services","SATIS13_9406.neutral",0.234515419342691,318
-"SATIS13_9406","Satisfaction: Financial aid services","SATIS13_9406.satisfied",0.321636107258187,318
-"SATIS13_9406","Satisfaction: Financial aid services","SATIS13_9406.verysatisfied",0.110006507669363,318
-"SATIS14_9406","Satisfaction: General education or core curriculum courses","SATIS14_9406.cantrate",0.0130596367214131,279
-"SATIS14_9406","Satisfaction: General education or core curriculum courses","SATIS14_9406.dissatisfied",0.0619934653407994,279
-"SATIS14_9406","Satisfaction: General education or core curriculum courses","SATIS14_9406.neutral",0.166794330706607,279
-"SATIS14_9406","Satisfaction: General education or core curriculum courses","SATIS14_9406.satisfied",0.578112538906261,279
-"SATIS14_9406","Satisfaction: General education or core curriculum courses","SATIS14_9406.verysatisfied",0.180040028324919,279
-"SATIS15_9406","Satisfaction: Humanities courses","SATIS15_9406.cantrate",0.0921141175238809,318
-"SATIS15_9406","Satisfaction: Humanities courses","SATIS15_9406.dissatisfied",0.0363070509587982,318
-"SATIS15_9406","Satisfaction: Humanities courses","SATIS15_9406.neutral",0.226323956995262,318
-"SATIS15_9406","Satisfaction: Humanities courses","SATIS15_9406.satisfied",0.464652825931075,318
-"SATIS15_9406","Satisfaction: Humanities courses","SATIS15_9406.verysatisfied",0.180602048590985,318
-"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences","SATIS16_9406.cantrate",0.16642193368385,56
-"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences","SATIS16_9406.dissatisfied",0.138773213316809,56
-"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences","SATIS16_9406.neutral",0.343555921488777,56
-"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences","SATIS16_9406.satisfied",0.27643665120705,56
-"SATIS16_9406","Satisfaction: Institutional support of racial/cultural differences","SATIS16_9406.verysatisfied",0.0748122803035151,56
-"SATIS17_9406","Satisfaction: Interaction with other students","SATIS17_9406.cantrate",0.00345572488245143,309
-"SATIS17_9406","Satisfaction: Interaction with other students","SATIS17_9406.dissatisfied",0.0318247275041927,309
-"SATIS17_9406","Satisfaction: Interaction with other students","SATIS17_9406.neutral",0.132522829434719,309
-"SATIS17_9406","Satisfaction: Interaction with other students","SATIS17_9406.satisfied",0.517292646442265,309
-"SATIS17_9406","Satisfaction: Interaction with other students","SATIS17_9406.verysatisfied",0.314904071736372,309
-"SATIS18_9406","Satisfaction: Job placement services for students","SATIS18_9406.cantrate",0.251340184435046,318
-"SATIS18_9406","Satisfaction: Job placement services for students","SATIS18_9406.dissatisfied",0.150804016129028,318
-"SATIS18_9406","Satisfaction: Job placement services for students","SATIS18_9406.neutral",0.264291341609019,318
-"SATIS18_9406","Satisfaction: Job placement services for students","SATIS18_9406.satisfied",0.251270244382031,318
-"SATIS18_9406","Satisfaction: Job placement services for students","SATIS18_9406.verysatisfied",0.0822942134448762,318
-"SATIS19_9406","Satisfaction: Laboratory facilities and equipment","SATIS19_9406.cantrate",0.146432826586131,318
-"SATIS19_9406","Satisfaction: Laboratory facilities and equipment","SATIS19_9406.dissatisfied",0.0889557947248767,318
-"SATIS19_9406","Satisfaction: Laboratory facilities and equipment","SATIS19_9406.neutral",0.238230565651937,318
-"SATIS19_9406","Satisfaction: Laboratory facilities and equipment","SATIS19_9406.satisfied",0.391411588463599,318
-"SATIS19_9406","Satisfaction: Laboratory facilities and equipment","SATIS19_9406.verysatisfied",0.134969224573457,318
-"SATIS20_9406","Satisfaction: Leadership opportunities","SATIS20_9406.cantrate",0.140523533561838,318
-"SATIS20_9406","Satisfaction: Leadership opportunities","SATIS20_9406.dissatisfied",0.0295663348721934,318
-"SATIS20_9406","Satisfaction: Leadership opportunities","SATIS20_9406.neutral",0.280184881062811,318
-"SATIS20_9406","Satisfaction: Leadership opportunities","SATIS20_9406.satisfied",0.382919771549934,318
-"SATIS20_9406","Satisfaction: Leadership opportunities","SATIS20_9406.verysatisfied",0.166805478953224,318
-"SATIS21_9406","Satisfaction: Library facilities","SATIS21_9406.cantrate",0.0103029281686968,318
-"SATIS21_9406","Satisfaction: Library facilities","SATIS21_9406.dissatisfied",0.164207643300209,318
-"SATIS21_9406","Satisfaction: Library facilities","SATIS21_9406.neutral",0.186171602597979,318
-"SATIS21_9406","Satisfaction: Library facilities","SATIS21_9406.satisfied",0.437342646438724,318
-"SATIS21_9406","Satisfaction: Library facilities","SATIS21_9406.verysatisfied",0.201975179494391,318
-"SATIS22_9406","Satisfaction: Opportunities for community service","SATIS22_9406.cantrate",0.170421807155286,318
-"SATIS22_9406","Satisfaction: Opportunities for community service","SATIS22_9406.dissatisfied",0.0291616602266777,318
-"SATIS22_9406","Satisfaction: Opportunities for community service","SATIS22_9406.neutral",0.236264522455957,318
-"SATIS22_9406","Satisfaction: Opportunities for community service","SATIS22_9406.satisfied",0.357156606157381,318
-"SATIS22_9406","Satisfaction: Opportunities for community service","SATIS22_9406.verysatisfied",0.206995404004698,318
-"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors","SATIS24_9406.cantrate",0.0188342622886065,56
-"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors","SATIS24_9406.dissatisfied",0.0297814045533748,56
-"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors","SATIS24_9406.neutral",0.141002873165208,56
-"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors","SATIS24_9406.satisfied",0.445403750426679,56
-"SATIS24_9406","Satisfaction: Opportunities to discuss coursework outside of class with professors","SATIS24_9406.verysatisfied",0.364977709566132,56
-"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities","SATIS25_9406.cantrate",0.089552290943513,56
-"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities","SATIS25_9406.dissatisfied",0.0389385024094471,56
-"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities","SATIS25_9406.neutral",0.166481490216941,56
-"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities","SATIS25_9406.satisfied",0.388651443653222,56
-"SATIS25_9406","Satisfaction: Opportunities to participate in extracurricular activities","SATIS25_9406.verysatisfied",0.316376272776876,56
-"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses","SATIS26_9406.cantrate",0.196493564119633,56
-"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses","SATIS26_9406.dissatisfied",0.0552095156694037,56
-"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses","SATIS26_9406.neutral",0.295899187768949,56
-"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses","SATIS26_9406.satisfied",0.339403518005686,56
-"SATIS26_9406","Satisfaction: Opportunities to take interdisciplinary courses","SATIS26_9406.verysatisfied",0.112994214436329,56
-"SATIS27_9406","Satisfaction: Overall college experience","SATIS27_9406.cantrate",0.00228419147067927,309
-"SATIS27_9406","Satisfaction: Overall college experience","SATIS27_9406.dissatisfied",0.0330040814512628,309
-"SATIS27_9406","Satisfaction: Overall college experience","SATIS27_9406.neutral",0.125491349431019,309
-"SATIS27_9406","Satisfaction: Overall college experience","SATIS27_9406.satisfied",0.528867454475982,309
-"SATIS27_9406","Satisfaction: Overall college experience","SATIS27_9406.verysatisfied",0.310352923171057,309
-"SATIS28_9406","Satisfaction: Overall quality of instruction","SATIS28_9406.cantrate",0.00183191033408743,309
-"SATIS28_9406","Satisfaction: Overall quality of instruction","SATIS28_9406.dissatisfied",0.0318097511482763,309
-"SATIS28_9406","Satisfaction: Overall quality of instruction","SATIS28_9406.neutral",0.138451651721106,309
-"SATIS28_9406","Satisfaction: Overall quality of instruction","SATIS28_9406.satisfied",0.569700105306977,309
-"SATIS28_9406","Satisfaction: Overall quality of instruction","SATIS28_9406.verysatisfied",0.258206581489554,309
-"SATIS30_9406","Satisfaction: Recreational facilities","SATIS30_9406.cantrate",0.0857705893279286,318
-"SATIS30_9406","Satisfaction: Recreational facilities","SATIS30_9406.dissatisfied",0.124992783027275,318
-"SATIS30_9406","Satisfaction: Recreational facilities","SATIS30_9406.neutral",0.220887051636673,318
-"SATIS30_9406","Satisfaction: Recreational facilities","SATIS30_9406.satisfied",0.402880892631282,318
-"SATIS30_9406","Satisfaction: Recreational facilities","SATIS30_9406.verysatisfied",0.165468683376841,318
-"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life","SATIS31_9406.cantrate",0.0073419882798325,309
-"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life","SATIS31_9406.dissatisfied",0.0846734293805096,309
-"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life","SATIS31_9406.neutral",0.262244641707417,309
-"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life","SATIS31_9406.satisfied",0.494654105101664,309
-"SATIS31_9406","Satisfaction: Relevance of coursework to everyday life","SATIS31_9406.verysatisfied",0.151085835530577,309
-"SATIS32_9406","Satisfaction: Science and mathematics courses","SATIS32_9406.cantrate",0.0601397089052066,318
-"SATIS32_9406","Satisfaction: Science and mathematics courses","SATIS32_9406.dissatisfied",0.0946214607949332,318
-"SATIS32_9406","Satisfaction: Science and mathematics courses","SATIS32_9406.neutral",0.265272531230382,318
-"SATIS32_9406","Satisfaction: Science and mathematics courses","SATIS32_9406.satisfied",0.438638755684552,318
-"SATIS32_9406","Satisfaction: Science and mathematics courses","SATIS32_9406.verysatisfied",0.141327543384926,318
-"SATIS33_9406","Satisfaction: Sense of community on campus","SATIS33_9406.cantrate",0.0238066963892755,309
-"SATIS33_9406","Satisfaction: Sense of community on campus","SATIS33_9406.dissatisfied",0.140606323129216,309
-"SATIS33_9406","Satisfaction: Sense of community on campus","SATIS33_9406.neutral",0.261178426628354,309
-"SATIS33_9406","Satisfaction: Sense of community on campus","SATIS33_9406.satisfied",0.380224991913103,309
-"SATIS33_9406","Satisfaction: Sense of community on campus","SATIS33_9406.verysatisfied",0.194183561940052,309
-"SATIS34_9406","Satisfaction: Social science courses","SATIS34_9406.cantrate",0.0852127030703232,318
-"SATIS34_9406","Satisfaction: Social science courses","SATIS34_9406.dissatisfied",0.039217675189773,318
-"SATIS34_9406","Satisfaction: Social science courses","SATIS34_9406.neutral",0.231752232873589,318
-"SATIS34_9406","Satisfaction: Social science courses","SATIS34_9406.satisfied",0.457686486218729,318
-"SATIS34_9406","Satisfaction: Social science courses","SATIS34_9406.verysatisfied",0.186130902647586,318
-"SATIS35_9406","Satisfaction: Student housing","SATIS35_9406.cantrate",0.165022841478117,318
-"SATIS35_9406","Satisfaction: Student housing","SATIS35_9406.dissatisfied",0.161374202655471,318
-"SATIS35_9406","Satisfaction: Student housing","SATIS35_9406.neutral",0.218723239860906,318
-"SATIS35_9406","Satisfaction: Student housing","SATIS35_9406.satisfied",0.358592188074889,318
-"SATIS35_9406","Satisfaction: Student housing","SATIS35_9406.verysatisfied",0.0962875279306177,318
-"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance","SATIS36_9406.cantrate",0.246508118323741,318
-"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance","SATIS36_9406.dissatisfied",0.0427010249738666,318
-"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance","SATIS36_9406.neutral",0.282131711682947,318
-"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance","SATIS36_9406.satisfied",0.321780532149932,318
-"SATIS36_9406","Satisfaction: Tutorial help or other academic assistance","SATIS36_9406.verysatisfied",0.106878612869515,318
-"SEX","Your sex:","SEX.male",0.38495071378415,318
-"SEX","Your sex:","SEX.female",0.61504928621585,318
-"SLFCHG01","Change: Ability to get along with people of different races/cultures","SLFCHG01.muchweaker",0.00330713464058376,318
-"SLFCHG01","Change: Ability to get along with people of different races/cultures","SLFCHG01.weaker",0.01149234699275,318
-"SLFCHG01","Change: Ability to get along with people of different races/cultures","SLFCHG01.nochange",0.396568143003315,318
-"SLFCHG01","Change: Ability to get along with people of different races/cultures","SLFCHG01.stronger",0.392384895466444,318
-"SLFCHG01","Change: Ability to get along with people of different races/cultures","SLFCHG01.muchstronger",0.196247479896907,318
-"SLFCHG04","Change: Ability to think critically","SLFCHG04.muchweaker",0.0010883108716514,318
-"SLFCHG04","Change: Ability to think critically","SLFCHG04.weaker",0.00434834130053889,318
-"SLFCHG04","Change: Ability to think critically","SLFCHG04.nochange",0.0782364760495966,318
-"SLFCHG04","Change: Ability to think critically","SLFCHG04.stronger",0.540666142465539,318
-"SLFCHG04","Change: Ability to think critically","SLFCHG04.muchstronger",0.375660729312674,318
-"SLFCHG05","Change: Ability to work cooperatively","SLFCHG05.muchweaker",0.0015672828640798,295
-"SLFCHG05","Change: Ability to work cooperatively","SLFCHG05.weaker",0.00643414670108672,295
-"SLFCHG05","Change: Ability to work cooperatively","SLFCHG05.nochange",0.224488874387692,295
-"SLFCHG05","Change: Ability to work cooperatively","SLFCHG05.stronger",0.543726032061369,295
-"SLFCHG05","Change: Ability to work cooperatively","SLFCHG05.muchstronger",0.223783663985772,295
-"SLFCHG08","Change: Analytical and problem-solving skills","SLFCHG08.muchweaker",0.00108990757975227,318
-"SLFCHG08","Change: Analytical and problem-solving skills","SLFCHG08.weaker",0.00573931535959413,318
-"SLFCHG08","Change: Analytical and problem-solving skills","SLFCHG08.nochange",0.0839885001488271,318
-"SLFCHG08","Change: Analytical and problem-solving skills","SLFCHG08.stronger",0.57071367568412,318
-"SLFCHG08","Change: Analytical and problem-solving skills","SLFCHG08.muchstronger",0.338468601227707,318
-"SLFCHG09","Change: Commitment to serving your community","SLFCHG09.muchweaker",0.00487620467570397,56
-"SLFCHG09","Change: Commitment to serving your community","SLFCHG09.weaker",0.0246333908405659,56
-"SLFCHG09","Change: Commitment to serving your community","SLFCHG09.nochange",0.426886292811808,56
-"SLFCHG09","Change: Commitment to serving your community","SLFCHG09.stronger",0.399574962953318,56
-"SLFCHG09","Change: Commitment to serving your community","SLFCHG09.muchstronger",0.144029148718604,56
-"SLFCHG16","Change: Foreign language ability","SLFCHG16.muchweaker",0.0419533888075819,318
-"SLFCHG16","Change: Foreign language ability","SLFCHG16.weaker",0.12468309539243,318
-"SLFCHG16","Change: Foreign language ability","SLFCHG16.nochange",0.463820503586343,318
-"SLFCHG16","Change: Foreign language ability","SLFCHG16.stronger",0.252294941332667,318
-"SLFCHG16","Change: Foreign language ability","SLFCHG16.muchstronger",0.117248070880978,318
-"SLFCHG17","Change: General knowledge","SLFCHG17.muchweaker",0.00139208877453063,318
-"SLFCHG17","Change: General knowledge","SLFCHG17.weaker",0.00471028501411491,318
-"SLFCHG17","Change: General knowledge","SLFCHG17.nochange",0.0258406984716021,318
-"SLFCHG17","Change: General knowledge","SLFCHG17.stronger",0.495311900149042,318
-"SLFCHG17","Change: General knowledge","SLFCHG17.muchstronger",0.47274502759071,318
-"SLFCHG18","Change: Interpersonal skills","SLFCHG18.muchweaker",0.00220186684849403,318
-"SLFCHG18","Change: Interpersonal skills","SLFCHG18.weaker",0.012222730988013,318
-"SLFCHG18","Change: Interpersonal skills","SLFCHG18.nochange",0.134618794314939,318
-"SLFCHG18","Change: Interpersonal skills","SLFCHG18.stronger",0.539173584899808,318
-"SLFCHG18","Change: Interpersonal skills","SLFCHG18.muchstronger",0.311783022948745,318
-"SLFCHG19","Change: Knowledge of a particular field or discipline","SLFCHG19.muchweaker",0.00112365682808408,318
-"SLFCHG19","Change: Knowledge of a particular field or discipline","SLFCHG19.weaker",0.00219456335538193,318
-"SLFCHG19","Change: Knowledge of a particular field or discipline","SLFCHG19.nochange",0.0263394638858112,318
-"SLFCHG19","Change: Knowledge of a particular field or discipline","SLFCHG19.stronger",0.341614323200372,318
-"SLFCHG19","Change: Knowledge of a particular field or discipline","SLFCHG19.muchstronger",0.628727992730351,318
-"SLFCHG20","Change: knowledge of people from different races/cultures","SLFCHG20.muchweaker",0.00627541180964242,318
-"SLFCHG20","Change: knowledge of people from different races/cultures","SLFCHG20.weaker",0.0240121051990287,318
-"SLFCHG20","Change: knowledge of people from different races/cultures","SLFCHG20.nochange",0.294382811683813,318
-"SLFCHG20","Change: knowledge of people from different races/cultures","SLFCHG20.stronger",0.478785319232565,318
-"SLFCHG20","Change: knowledge of people from different races/cultures","SLFCHG20.muchstronger",0.196544352074951,318
-"SLFCHG21","Change: Leadership abilities","SLFCHG21.muchweaker",0.00266996283324562,318
-"SLFCHG21","Change: Leadership abilities","SLFCHG21.weaker",0.0177010019171816,318
-"SLFCHG21","Change: Leadership abilities","SLFCHG21.nochange",0.243149139712428,318
-"SLFCHG21","Change: Leadership abilities","SLFCHG21.stronger",0.489624917695193,318
-"SLFCHG21","Change: Leadership abilities","SLFCHG21.muchstronger",0.246854977841952,318
-"SLFCHG22","Change: Mathematical skills","SLFCHG22.muchweaker",0.0156306320973425,318
-"SLFCHG22","Change: Mathematical skills","SLFCHG22.weaker",0.0875269055903679,318
-"SLFCHG22","Change: Mathematical skills","SLFCHG22.nochange",0.40464559095412,318
-"SLFCHG22","Change: Mathematical skills","SLFCHG22.stronger",0.369278113492846,318
-"SLFCHG22","Change: Mathematical skills","SLFCHG22.muchstronger",0.122918757865323,318
-"SLFCHG23","Change: Preparation for future career","SLFCHG23.muchweaker",0.00240873111914346,56
-"SLFCHG23","Change: Preparation for future career","SLFCHG23.weaker",0.00962861036605379,56
-"SLFCHG23","Change: Preparation for future career","SLFCHG23.nochange",0.0771670590288402,56
-"SLFCHG23","Change: Preparation for future career","SLFCHG23.stronger",0.488951595529582,56
-"SLFCHG23","Change: Preparation for future career","SLFCHG23.muchstronger",0.421844003956381,56
-"SLFCHG24","Change: Preparation for graduate or professional school","SLFCHG24.muchweaker",0.00545612973477466,56
-"SLFCHG24","Change: Preparation for graduate or professional school","SLFCHG24.weaker",0.010251553462609,56
-"SLFCHG24","Change: Preparation for graduate or professional school","SLFCHG24.nochange",0.18319649331732,56
-"SLFCHG24","Change: Preparation for graduate or professional school","SLFCHG24.stronger",0.511670397475566,56
-"SLFCHG24","Change: Preparation for graduate or professional school","SLFCHG24.muchstronger",0.28942542600973,56
-"SLFCHG28","Change: Public speaking ability","SLFCHG28.muchweaker",0.00282990446549057,318
-"SLFCHG28","Change: Public speaking ability","SLFCHG28.weaker",0.0170662191010204,318
-"SLFCHG28","Change: Public speaking ability","SLFCHG28.nochange",0.214920400349424,318
-"SLFCHG28","Change: Public speaking ability","SLFCHG28.stronger",0.506233485696554,318
-"SLFCHG28","Change: Public speaking ability","SLFCHG28.muchstronger",0.258949990387511,318
-"SLFCHG29","Change: Reading speed and comprehension","SLFCHG29.muchweaker",0.00216853566573309,295
-"SLFCHG29","Change: Reading speed and comprehension","SLFCHG29.weaker",0.0141933078703403,295
-"SLFCHG29","Change: Reading speed and comprehension","SLFCHG29.nochange",0.293485620349188,295
-"SLFCHG29","Change: Reading speed and comprehension","SLFCHG29.stronger",0.523646172034805,295
-"SLFCHG29","Change: Reading speed and comprehension","SLFCHG29.muchstronger",0.166506364079933,295
-"SLFCHG30","Change: Religious beliefs and convictions","SLFCHG30.muchweaker",0.026559321568755,309
-"SLFCHG30","Change: Religious beliefs and convictions","SLFCHG30.weaker",0.075766428563209,309
-"SLFCHG30","Change: Religious beliefs and convictions","SLFCHG30.nochange",0.443648242314645,309
-"SLFCHG30","Change: Religious beliefs and convictions","SLFCHG30.stronger",0.29179992228714,309
-"SLFCHG30","Change: Religious beliefs and convictions","SLFCHG30.muchstronger",0.162226085266252,309
-"SLFCHG32","Change: Understanding of global issues","SLFCHG32.muchweaker",0.0037507630357072,183
-"SLFCHG32","Change: Understanding of global issues","SLFCHG32.weaker",0.0147779807998309,183
-"SLFCHG32","Change: Understanding of global issues","SLFCHG32.nochange",0.188600572368031,183
-"SLFCHG32","Change: Understanding of global issues","SLFCHG32.stronger",0.518550082843098,183
-"SLFCHG32","Change: Understanding of global issues","SLFCHG32.muchstronger",0.274320600953333,183
-"SLFCHG34","Change: Understanding of social problems facing our nation","SLFCHG34.muchweaker",0.00386639876228249,318
-"SLFCHG34","Change: Understanding of social problems facing our nation","SLFCHG34.weaker",0.0151857000765424,318
-"SLFCHG34","Change: Understanding of social problems facing our nation","SLFCHG34.nochange",0.214653885661851,318
-"SLFCHG34","Change: Understanding of social problems facing our nation","SLFCHG34.stronger",0.530093792552267,318
-"SLFCHG34","Change: Understanding of social problems facing our nation","SLFCHG34.muchstronger",0.236200222947057,318
-"SLFCHG35","Change: Understanding of the problems facing your community","SLFCHG35.muchweaker",0.00348678436156291,318
-"SLFCHG35","Change: Understanding of the problems facing your community","SLFCHG35.weaker",0.0161526981181198,318
-"SLFCHG35","Change: Understanding of the problems facing your community","SLFCHG35.nochange",0.308116248613318,318
-"SLFCHG35","Change: Understanding of the problems facing your community","SLFCHG35.stronger",0.491658137005407,318
-"SLFCHG35","Change: Understanding of the problems facing your community","SLFCHG35.muchstronger",0.180586131901592,318
-"SLFCHG36","Change: Writing skills","SLFCHG36.muchweaker",0.00339708705075746,318
-"SLFCHG36","Change: Writing skills","SLFCHG36.weaker",0.0221094345009444,318
-"SLFCHG36","Change: Writing skills","SLFCHG36.nochange",0.143122605565078,318
-"SLFCHG36","Change: Writing skills","SLFCHG36.stronger",0.541048002996356,318
-"SLFCHG36","Change: Writing skills","SLFCHG36.muchstronger",0.290322869886865,318
-"SUCCSES1","Success: Adjusting to academic demands of college","SUCCSES1.not",0.0173350463296271,183
-"SUCCSES1","Success: Adjusting to academic demands of college","SUCCSES1.somewhat",0.338228798347778,183
-"SUCCSES1","Success: Adjusting to academic demands of college","SUCCSES1.very",0.644436155322595,183
-"SUCCSES2","Success: Developing close friendships with other students","SUCCSES2.not",0.0416914775886086,183
-"SUCCSES2","Success: Developing close friendships with other students","SUCCSES2.somewhat",0.272618675375189,183
-"SUCCSES2","Success: Developing close friendships with other students","SUCCSES2.very",0.685689847036202,183
-"SUCCSES3","Success: Developing effective study skills","SUCCSES3.not",0.0571976291776292,183
-"SUCCSES3","Success: Developing effective study skills","SUCCSES3.somewhat",0.447169474215759,183
-"SUCCSES3","Success: Developing effective study skills","SUCCSES3.very",0.495632896606612,183
-"SUCCSES4","Success: Getting to know faculty","SUCCSES4.not",0.0800032482810946,183
-"SUCCSES4","Success: Getting to know faculty","SUCCSES4.somewhat",0.503142470191979,183
-"SUCCSES4","Success: Getting to know faculty","SUCCSES4.very",0.416854281526926,183
-"SUCCSES5","Success: Managing your time effectively","SUCCSES5.not",0.0624584541182399,183
-"SUCCSES5","Success: Managing your time effectively","SUCCSES5.somewhat",0.467180211886336,183
-"SUCCSES5","Success: Managing your time effectively","SUCCSES5.very",0.470361333995424,183
-"SUCCSES6","Success: Understanding what your professors expect of you academically","SUCCSES6.not",0.0117581331251682,183
-"SUCCSES6","Success: Understanding what your professors expect of you academically","SUCCSES6.somewhat",0.328937776472229,183
-"SUCCSES6","Success: Understanding what your professors expect of you academically","SUCCSES6.very",0.659304090402603,183
-"SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.not",0.0641818456933705,183
-"SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.somewhat",0.596350676408516,183
-"SUCCSES7","Success: Utilizing campus services available to students","SUCCSES7.very",0.339467477898113,183
-"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.disagreestrongly",0.138189530121017,279
-"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.disagreesomewhat",0.352412926929681,279
-"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.agreesomewhat",0.316219084577575,279
-"VIEW04","View: Affirmative action in college admissions should be abolished","VIEW04.agreestrongly",0.193178458371728,279
-"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.disagreestrongly",0.312019422891635,318
-"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.disagreesomewhat",0.435537956423557,318
-"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.agreesomewhat",0.214429429621027,318
-"VIEW25","View: Realistically, an individual can do little to bring about changes in our society","VIEW25.agreestrongly",0.0380131910637813,318
-"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.disagreestrongly",0.297172865813069,94
-"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.disagreesomewhat",0.396689757249045,94
-"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.agreesomewhat",0.266111824712642,94
-"VIEW28","View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions","VIEW28.agreestrongly",0.0400255522252447,94
-"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.disagreestrongly",0.237318857997323,196
-"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.disagreesomewhat",0.311677118079314,196
-"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.agreesomewhat",0.363189765438924,196
-"VIEW31","View: The chief benefit of a college education is that it increases one's earning power","VIEW31.agreestrongly",0.0878142584844389,196
-"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.disagreestrongly",0.254732871331255,259
-"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.disagreesomewhat",0.477268413913156,259
-"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.agreesomewhat",0.235591997818556,259
-"VIEW38","View: The federal government should raise taxes to reduce the deficit","VIEW38.agreestrongly",0.0324067169370328,259
-"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.disagreestrongly",0.133373101587714,318
-"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.disagreesomewhat",0.280628435263458,318
-"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.agreesomewhat",0.382747258882993,318
-"VIEW42","View: Wealthy people should pay a larger share of taxes than they do now","VIEW42.agreestrongly",0.203251204265835,318
-"ACADEMIC_SELFCONCEPT","Scale: Academic Self Concept","ACADEMIC_SELFCONCEPT.scale",49.7283054152952,318
-"SOCIAL_SELFCONCEPT","Scale: Social Self Concept","SOCIAL_SELFCONCEPT.scale",51.9218612201016,318
-"SOCIAL_AGENCY","Scale: Social Agency","SOCIAL_AGENCY.scale",50.7154506696659,318
-"FAC_INTERACTION","Scale: Faculty Interaction","FAC_INTERACTION.scale_scale",48.3875485523413,258
+Name,Description,Summary,wtdprop,n_colleges
+ACT05,Act: Challenged a professors ideas in class,ACT05.notatall,0.267925949622901,295
+ACT05,Act: Challenged a professors ideas in class,ACT05.occasionally,0.590410268461357,295
+ACT05,Act: Challenged a professors ideas in class,ACT05.frequently,0.141663781915742,295
+ACT11,Act: Did extra (unassigned) work for a course,ACT11.notatall,0.278775240821133,260
+ACT11,Act: Did extra (unassigned) work for a course,ACT11.occasionally,0.621128495426912,260
+ACT11,Act: Did extra (unassigned) work for a course,ACT11.frequently,0.100096263751955,260
+ACT12,Act: Did not have time to study due to family responsibilities,ACT12.notatall,0.569878331185313,183
+ACT12,Act: Did not have time to study due to family responsibilities,ACT12.occasionally,0.378670909324195,183
+ACT12,Act: Did not have time to study due to family responsibilities,ACT12.frequently,0.0514507594904923,183
+ACT13,Act: Did not have time to study due to job responsibilities,ACT13.notatall,0.540440299004366,183
+ACT13,Act: Did not have time to study due to job responsibilities,ACT13.occasionally,0.380521936836878,183
+ACT13,Act: Did not have time to study due to job responsibilities,ACT13.frequently,0.0790377641587555,183
+ACT14,Act: Discussed course content with students outside of class,ACT14.notatall,0.0204521294392061,318
+ACT14,Act: Discussed course content with students outside of class,ACT14.occasionally,0.29238510549658,318
+ACT14,Act: Discussed course content with students outside of class,ACT14.frequently,0.687162765064214,318
+ACT16,Act: Failed to complete homework on time,ACT16.notatall,0.395818581077898,318
+ACT16,Act: Failed to complete homework on time,ACT16.occasionally,0.541159680549799,318
+ACT16,Act: Failed to complete homework on time,ACT16.frequently,0.0630217383723026,318
+ACT18,Act: Felt discriminated against by faculty,ACT18.notatall,0.740966385003238,116
+ACT18,Act: Felt discriminated against by faculty,ACT18.occasionally,0.232356862706165,116
+ACT18,Act: Felt discriminated against by faculty,ACT18.frequently,0.0266767522905971,116
+ACT19,Act: Felt discriminated against by students,ACT19.notatall,0.752318928543489,116
+ACT19,Act: Felt discriminated against by students,ACT19.occasionally,0.222095914282841,116
+ACT19,Act: Felt discriminated against by students,ACT19.frequently,0.0255851571736701,116
+ACT20,Act: Felt faculty took a personal interest in your progress,ACT20.notatall,0.0563704694102312,139
+ACT20,Act: Felt faculty took a personal interest in your progress,ACT20.occasionally,0.422536147299107,139
+ACT20,Act: Felt faculty took a personal interest in your progress,ACT20.frequently,0.521093383290662,139
+ACT26,Act: Felt Supported by My Family,ACT26.notatall,0.0231394886028589,132
+ACT26,Act: Felt Supported by My Family,ACT26.occasionally,0.154466823213014,132
+ACT26,Act: Felt Supported by My Family,ACT26.frequently,0.822393688184127,132
+ACT27,Act: Felt your comments were not taken seriously by faculty,ACT27.notatall,0.418183566093675,242
+ACT27,Act: Felt your comments were not taken seriously by faculty,ACT27.occasionally,0.485552427520215,242
+ACT27,Act: Felt your comments were not taken seriously by faculty,ACT27.frequently,0.0962640063861102,242
+ACT28,Act: Had difficulty getting the courses you needed,ACT28.notatall,0.472255551096469,98
+ACT28,Act: Had difficulty getting the courses you needed,ACT28.occasionally,0.446763555848459,98
+ACT28,Act: Had difficulty getting the courses you needed,ACT28.frequently,0.0809808930550714,98
+ACT31,Act: Have been a guest in professor's home,ACT31.notatall,0.539439905665936,318
+ACT31,Act: Have been a guest in professor's home,ACT31.occasionally,0.399761742020696,318
+ACT31,Act: Have been a guest in professor's home,ACT31.frequently,0.0607983523133685,318
+ACT36,Act: Met with an advisor/counselor about your career plans,ACT36.notatall,0.159434862104619,98
+ACT36,Act: Met with an advisor/counselor about your career plans,ACT36.occasionally,0.640317250901135,98
+ACT36,Act: Met with an advisor/counselor about your career plans,ACT36.frequently,0.200247886994246,98
+ACT37,Act: Met with Faculty During Office Hours,ACT37.notatall,0.0252615180898831,168
+ACT37,Act: Met with Faculty During Office Hours,ACT37.occasionally,0.674017461545377,168
+ACT37,Act: Met with Faculty During Office Hours,ACT37.frequently,0.30072102036474,168
+ACT38,Act: Met with Faculty Outside Class or Office Hours,ACT38.notatall,0.215027028086788,168
+ACT38,Act: Met with Faculty Outside Class or Office Hours,ACT38.occasionally,0.610471623179707,168
+ACT38,Act: Met with Faculty Outside Class or Office Hours,ACT38.frequently,0.174501348733505,168
+ACT40,Act: Missed Class Due to employment,ACT40.notatall,0.749801368057528,258
+ACT40,Act: Missed Class Due to employment,ACT40.occasionally,0.225961459667336,258
+ACT40,Act: Missed Class Due to employment,ACT40.frequently,0.0242371722751361,258
+ACT48,Act: Performed community service as part of a class,ACT48.notatall,0.445843993574193,98
+ACT48,Act: Performed community service as part of a class,ACT48.occasionally,0.443027453358813,98
+ACT48,Act: Performed community service as part of a class,ACT48.frequently,0.111128553066995,98
+ACT55,Act: Studied with other students,ACT55.notatall,0.0478009344017672,318
+ACT55,Act: Studied with other students,ACT55.occasionally,0.52779581217366,318
+ACT55,Act: Studied with other students,ACT55.frequently,0.424403253424573,318
+ACT58,Act: Took interdisciplinary courses,ACT58.notatall,0.376854122501118,318
+ACT58,Act: Took interdisciplinary courses,ACT58.occasionally,0.420090689359892,318
+ACT58,Act: Took interdisciplinary courses,ACT58.frequently,0.20305518813899,318
+ACT70,Act: Voted in a student election,ACT70.notatall,0.320215188861439,318
+ACT70,Act: Voted in a student election,ACT70.occasionally,0.44691733549369,318
+ACT70,Act: Voted in a student election,ACT70.frequently,0.232867475644871,318
+ACT74,Act: Worked on group projects in class,ACT74.notatall,0.0343991644799691,301
+ACT74,Act: Worked on group projects in class,ACT74.occasionally,0.479050570012695,301
+ACT74,Act: Worked on group projects in class,ACT74.frequently,0.486550265507336,301
+ACT75,Act: Worked on independent study projects,ACT75.notatall,0.428174984514126,318
+ACT75,Act: Worked on independent study projects,ACT75.occasionally,0.388040196040758,318
+ACT75,Act: Worked on independent study projects,ACT75.frequently,0.183784819445115,318
+COLACT02_9406,Act in College: Attended racial/cultural awareness workshop,COLACT02_9406.yes,0.25984085902013,318
+COLACT07_9406,Act in College: Enrolled in honors or advanced courses,COLACT07_9406.yes,0.223750449726294,318
+COLACT11_9406,Act in College: Had a part-time job off-campus,COLACT11_9406.yes,0.543025487869123,309
+COLACT12_9406,Act in College: Had a part-time job on campus,COLACT12_9406.yes,0.530301259201943,309
+COLACT13_9406,Act in College: Had a roommate of different race/ethnicity,COLACT13_9406.yes,0.324910565995611,299
+COLACT14_9406,Act in College: Joined a fraternity or sorority,COLACT14_9406.yes,0.190036996345805,318
+COLACT15_9406,Act in College: Participated in college internship program,COLACT15_9406.yes,0.308097067345502,56
+COLACT16_9406,Act in College: Participated in study abroad program,COLACT16_9406.yes,0.222544985804923,202
+COLACT17_9406,Act in College: Participated in an ethnic/racial student organization,COLACT17_9406.yes,0.14028310086361,318
+COLACT18_9406,Act in College: Participated In an internship program,COLACT18_9406.yes,0.396154621393831,318
+COLACT19_9406,Act in College: Participated in campus protests,COLACT19_9406.yes,0.0970311858184918,197
+COLACT21_9406,Act in College: Participated in leadership training,COLACT21_9406.yes,0.214026852220709,318
+COLACT23_9406,Act in College: Participated in student government,COLACT23_9406.yes,0.11901031513608,318
+COLACT27_9406,Act in College: Taken a remedial course,COLACT27_9406.yes,0.0656989479143775,318
+COLACT32_9406,Act in College: Transferred from a Community College,COLACT32_9406.yes,0.104454388628683,209
+COLACT33_9406,Act in College: Transferred from a Four-year College,COLACT33_9406.yes,0.0886030306963806,209
+COLACT34_9406,Act in College: Transferred from another college,COLACT34_9406.yes,0.189795455387071,278
+COLACT36_9406,Act in College: Voted in a state/national election,COLACT36_9406.yes,0.61562199478735,228
+COLACT40_9406,Act in College: Worked full-time while attending school,COLACT40_9406.yes,0.15065148103878,318
+COLACT41_9406,Act in College: Worked on prof's research project,COLACT41_9406.yes,0.173590368510739,56
+CSV,"Since entering college, have you performed any community/volunteer service?",CSV.yes,0.760209949143888,139
+CSVCOURSE,"Since entering college, how many of your courses have included community service/service learning",CSVCOURSE.yes,0.225991950440092,224
+CSVHOW1,CSV Performed: As part of a class or course,CSVHOW1.yes,0.372376011055725,222
+CSVHOW2,"CSV Performed: As part of a collegiate-sponsored activity (sorority, campus, org, etc.)",CSVHOW2.yes,0.470771613816668,222
+CSVHOW3,"CSV Performed: Independently through a non-collegiate group (church, family, etc.)",CSVHOW3.yes,0.420480074235279,222
+FACPRV01,Faculty Provide: A letter of recommendation,FACPRV01.notatall,0.285487497734634,311
+FACPRV01,Faculty Provide: A letter of recommendation,FACPRV01.occasionally,0.446363828000784,311
+FACPRV01,Faculty Provide: A letter of recommendation,FACPRV01.frequently,0.268148674264582,311
+FACPRV02,Faculty Provide: Advice and guidance about your educational program,FACPRV02.notatall,0.134963161762169,311
+FACPRV02,Faculty Provide: Advice and guidance about your educational program,FACPRV02.occasionally,0.55497864857014,311
+FACPRV02,Faculty Provide: Advice and guidance about your educational program,FACPRV02.frequently,0.310058189667691,311
+FACPRV04,Faculty Provide: Encouragement to discuss coursework outside of class,FACPRV04.notatall,0.0711714274357142,311
+FACPRV04,Faculty Provide: Encouragement to discuss coursework outside of class,FACPRV04.occasionally,0.47999753552724,311
+FACPRV04,Faculty Provide: Encouragement to discuss coursework outside of class,FACPRV04.frequently,0.448831037037046,311
+FACPRV05,Faculty Provide: An opportunity to publish,FACPRV05.notatall,0.700432505268009,311
+FACPRV05,Faculty Provide: An opportunity to publish,FACPRV05.occasionally,0.243202256636857,311
+FACPRV05,Faculty Provide: An opportunity to publish,FACPRV05.frequently,0.0563652380951339,311
+FACPRV06,Faculty Provide: An opportunity to work on a research project,FACPRV06.notatall,0.326909865395463,311
+FACPRV06,Faculty Provide: An opportunity to work on a research project,FACPRV06.occasionally,0.449764668294649,311
+FACPRV06,Faculty Provide: An opportunity to work on a research project,FACPRV06.frequently,0.223325466309889,311
+FACPRV07,Faculty Provide: Assistance to improve your study skills,FACPRV07.notatall,0.343386618302779,311
+FACPRV07,Faculty Provide: Assistance to improve your study skills,FACPRV07.occasionally,0.500137895115589,311
+FACPRV07,Faculty Provide: Assistance to improve your study skills,FACPRV07.frequently,0.156475486581632,311
+FACPRV08,Faculty Provide: Emotional support and encouragement,FACPRV08.notatall,0.203926717921279,311
+FACPRV08,Faculty Provide: Emotional support and encouragement,FACPRV08.occasionally,0.527861628239394,311
+FACPRV08,Faculty Provide: Emotional support and encouragement,FACPRV08.frequently,0.268211653839327,311
+FACPRV09,Faculty Provide: Encouragement to pursue graduate/professional school,FACPRV09.notatall,0.325354517542631,238
+FACPRV09,Faculty Provide: Encouragement to pursue graduate/professional school,FACPRV09.occasionally,0.456609006440247,238
+FACPRV09,Faculty Provide: Encouragement to pursue graduate/professional school,FACPRV09.frequently,0.218036476017122,238
+FACPRV10,Faculty Provide: Encouragement to pursue graduate/professional study,FACPRV10.notatall,0.222830435292193,275
+FACPRV10,Faculty Provide: Encouragement to pursue graduate/professional study,FACPRV10.occasionally,0.453845812495547,275
+FACPRV10,Faculty Provide: Encouragement to pursue graduate/professional study,FACPRV10.frequently,0.32332375221226,275
+FACPRV13,Faculty Provide: Help in achieving your professional goals,FACPRV13.notatall,0.179067234296056,258
+FACPRV13,Faculty Provide: Help in achieving your professional goals,FACPRV13.occasionally,0.517157043116041,258
+FACPRV13,Faculty Provide: Help in achieving your professional goals,FACPRV13.frequently,0.303775722587903,258
+FACPRV15,Faculty Provide: Honest feedback about your skills and abilities,FACPRV15.notatall,0.0846643689237566,221
+FACPRV15,Faculty Provide: Honest feedback about your skills and abilities,FACPRV15.occasionally,0.485363476161918,221
+FACPRV15,Faculty Provide: Honest feedback about your skills and abilities,FACPRV15.frequently,0.429972154914325,221
+FACPRV16,Faculty Provide: Intellectual challenge and stimulation,FACPRV16.notatall,0.0575847823147939,311
+FACPRV16,Faculty Provide: Intellectual challenge and stimulation,FACPRV16.occasionally,0.465508308598641,311
+FACPRV16,Faculty Provide: Intellectual challenge and stimulation,FACPRV16.frequently,0.476906909086565,311
+FACPRV17,Faculty Provide: Negative feedback about your abilities and skills,FACPRV17.notatall,0.482898427304609,215
+FACPRV17,Faculty Provide: Negative feedback about your abilities and skills,FACPRV17.occasionally,0.456846153255901,215
+FACPRV17,Faculty Provide: Negative feedback about your abilities and skills,FACPRV17.frequently,0.06025541943949,215
+FACPRV18,Faculty Provide: Negative Feedback about your Academic Work,FACPRV18.notatall,0.410301805034505,258
+FACPRV18,Faculty Provide: Negative Feedback about your Academic Work,FACPRV18.occasionally,0.523202213309521,258
+FACPRV18,Faculty Provide: Negative Feedback about your Academic Work,FACPRV18.frequently,0.0664959816559737,258
+FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.notatall,0.046245479672215,311
+FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.occasionally,0.374232786782433,311
+FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.frequently,0.579521733545352,311
+GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.notatall,0.412655245977693,246
+GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.occasionally,0.528854824207641,246
+GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.frequently,0.0584899298146663,246
+GENACT07,Act in Past Year: Discussed politics,GENACT07.notatall,0.250345144103516,318
+GENACT07,Act in Past Year: Discussed politics,GENACT07.occasionally,0.565312734647803,318
+GENACT07,Act in Past Year: Discussed politics,GENACT07.frequently,0.184342121248681,318
+GENACT15,Act in Part Year: Felt depressed,GENACT15.notatall,0.357564555483766,318
+GENACT15,Act in Part Year: Felt depressed,GENACT15.occasionally,0.565477154672371,318
+GENACT15,Act in Part Year: Felt depressed,GENACT15.frequently,0.0769582898438632,318
+GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.notatall,0.444990162248093,258
+GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.occasionally,0.497201896932282,258
+GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.frequently,0.0578079408196254,258
+GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.notatall,0.0764012775369791,318
+GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.occasionally,0.579880002563187,318
+GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.frequently,0.343718719899834,318
+GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.notatall,0.80397138031119,318
+GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.occasionally,0.173246973922302,318
+GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.frequently,0.0227816457665083,318
+GENACT26,Act in Part Year: Performed volunteer work,GENACT26.notatall,0.270566698799799,318
+GENACT26,Act in Part Year: Performed volunteer work,GENACT26.occasionally,0.557110293158977,318
+GENACT26,Act in Part Year: Performed volunteer work,GENACT26.frequently,0.172323008041224,318
+GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.notatall,0.430565935699816,56
+GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.occasionally,0.499362564683433,56
+GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.frequently,0.0700714996167507,56
+GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.notatall,0.0466043589726496,318
+GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.occasionally,0.48502049419974,318
+GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.frequently,0.468375146827611,318
+GENACT31,Act in Past Year: Sought personal counseling,GENACT31.notatall,0.800023635255301,258
+GENACT31,Act in Past Year: Sought personal counseling,GENACT31.occasionally,0.167431045310027,258
+GENACT31,Act in Past Year: Sought personal counseling,GENACT31.frequently,0.0325453194346716,258
+GENACT35,Act in Past Year: Visited a museum or art gallery,GENACT35.notatall,0.323490746448774,280
+GENACT35,Act in Past Year: Visited a museum or art gallery,GENACT35.occasionally,0.582612308263538,280
+GENACT35,Act in Past Year: Visited a museum or art gallery,GENACT35.frequently,0.0938969452876878,280
+GENACT36,Act in Past Year: Voted in state/national election,GENACT36.notatall,0.416696221471953,199
+GENACT36,Act in Past Year: Voted in state/national election,GENACT36.occasionally,0.378942093417461,199
+GENACT36,Act in Past Year: Voted in state/national election,GENACT36.frequently,0.204361685110586,199
+GENACT37,"Act in Past Year: Worked on a local, state, or national political campaign",GENACT37.notatall,0.923293879179974,266
+GENACT37,"Act in Past Year: Worked on a local, state, or national political campaign",GENACT37.occasionally,0.0615951868001209,266
+GENACT37,"Act in Past Year: Worked on a local, state, or national political campaign",GENACT37.frequently,0.015110934019905,266
+GOAL02,Goal: Becoming a community leader,GOAL02.notimportant,0.251700608445368,318
+GOAL02,Goal: Becoming a community leader,GOAL02.somewhatimportant,0.40083950234909,318
+GOAL02,Goal: Becoming a community leader,GOAL02.veryimportant,0.248609627711707,318
+GOAL02,Goal: Becoming a community leader,GOAL02.essential,0.0988502614938351,318
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.notimportant,0.618673860618218,318
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.somewhatimportant,0.231358557667816,318
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.veryimportant,0.0872957302786815,318
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.essential,0.0626718514352845,318
+GOAL04,Goal: Becoming an authority in my field,GOAL04.notimportant,0.081578757810594,318
+GOAL04,Goal: Becoming an authority in my field,GOAL04.somewhatimportant,0.272646388873055,318
+GOAL04,Goal: Becoming an authority in my field,GOAL04.veryimportant,0.415610947973371,318
+GOAL04,Goal: Becoming an authority in my field,GOAL04.essential,0.23016390534298,318
+GOAL05,Goal: Becoming involved in programs to clean up the environment,GOAL05.notimportant,0.284175730278971,318
+GOAL05,Goal: Becoming involved in programs to clean up the environment,GOAL05.somewhatimportant,0.484136460162487,318
+GOAL05,Goal: Becoming involved in programs to clean up the environment,GOAL05.veryimportant,0.17403921812754,318
+GOAL05,Goal: Becoming involved in programs to clean up the environment,GOAL05.essential,0.0576485914310021,318
+GOAL06,Goal: Becoming successful in a business of my own,GOAL06.notimportant,0.3785724644953,318
+GOAL06,Goal: Becoming successful in a business of my own,GOAL06.somewhatimportant,0.285390049242174,318
+GOAL06,Goal: Becoming successful in a business of my own,GOAL06.veryimportant,0.206268494216906,318
+GOAL06,Goal: Becoming successful in a business of my own,GOAL06.essential,0.12976899204562,318
+GOAL07,Goal: Being very well off financially,GOAL07.notimportant,0.100538708785685,318
+GOAL07,Goal: Being very well off financially,GOAL07.somewhatimportant,0.334665241613889,318
+GOAL07,Goal: Being very well off financially,GOAL07.veryimportant,0.348280110276246,318
+GOAL07,Goal: Being very well off financially,GOAL07.essential,0.21651593932418,318
+GOAL08,"Goal: Creating artistic work (paintings, sculpture, etc.)",GOAL08.notimportant,0.573404120134565,318
+GOAL08,"Goal: Creating artistic work (paintings, sculpture, etc.)",GOAL08.somewhatimportant,0.248151787756024,318
+GOAL08,"Goal: Creating artistic work (paintings, sculpture, etc.)",GOAL08.veryimportant,0.109208152313009,318
+GOAL08,"Goal: Creating artistic work (paintings, sculpture, etc.)",GOAL08.essential,0.0692359397964007,318
+GOAL09,Goal: Developing a meaningful philosophy of life,GOAL09.notimportant,0.153401022447141,318
+GOAL09,Goal: Developing a meaningful philosophy of life,GOAL09.somewhatimportant,0.281801572261788,318
+GOAL09,Goal: Developing a meaningful philosophy of life,GOAL09.veryimportant,0.315863902513457,318
+GOAL09,Goal: Developing a meaningful philosophy of life,GOAL09.essential,0.248933502777614,318
+GOAL10,Goal: Having administrative responsibility for the work of others,GOAL10.notimportant,0.225032222597429,318
+GOAL10,Goal: Having administrative responsibility for the work of others,GOAL10.somewhatimportant,0.380908395083234,318
+GOAL10,Goal: Having administrative responsibility for the work of others,GOAL10.veryimportant,0.29823308952293,318
+GOAL10,Goal: Having administrative responsibility for the work of others,GOAL10.essential,0.095826292796407,318
+GOAL11,Goal: Helping others who are in difficulty,GOAL11.notimportant,0.0236025114879863,318
+GOAL11,Goal: Helping others who are in difficulty,GOAL11.somewhatimportant,0.241297325911189,318
+GOAL11,Goal: Helping others who are in difficulty,GOAL11.veryimportant,0.465226759016154,318
+GOAL11,Goal: Helping others who are in difficulty,GOAL11.essential,0.269873403584671,318
+GOAL12,Goal: Helping to promote racial understanding,GOAL12.notimportant,0.20833873842055,318
+GOAL12,Goal: Helping to promote racial understanding,GOAL12.somewhatimportant,0.408230287500181,318
+GOAL12,Goal: Helping to promote racial understanding,GOAL12.veryimportant,0.266144673934047,318
+GOAL12,Goal: Helping to promote racial understanding,GOAL12.essential,0.117286300145222,318
+GOAL15,Goal: Influencing social values,GOAL15.notimportant,0.146814434233866,318
+GOAL15,Goal: Influencing social values,GOAL15.somewhatimportant,0.364652267224718,318
+GOAL15,Goal: Influencing social values,GOAL15.veryimportant,0.360223356661665,318
+GOAL15,Goal: Influencing social values,GOAL15.essential,0.128309941879751,318
+GOAL16,Goal: Influencing the political structure,GOAL16.notimportant,0.419490075165669,318
+GOAL16,Goal: Influencing the political structure,GOAL16.somewhatimportant,0.374036053749543,318
+GOAL16,Goal: Influencing the political structure,GOAL16.veryimportant,0.149507575465954,318
+GOAL16,Goal: Influencing the political structure,GOAL16.essential,0.0569662956188336,318
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.notimportant,0.168123469773851,318
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.somewhatimportant,0.403460450160245,318
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.veryimportant,0.303684474694212,318
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.essential,0.124731605371692,318
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.notimportant,0.60825055696601,318
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.somewhatimportant,0.246041517768255,318
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.veryimportant,0.104809010044722,318
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.essential,0.0408989152210129,318
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.notimportant,0.126819548040173,318
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.somewhatimportant,0.364782207899317,318
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.veryimportant,0.366882138064446,318
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.essential,0.141516105996065,318
+GOAL21,Goal: Participating in a community action program,GOAL21.notimportant,0.249320737334348,318
+GOAL21,Goal: Participating in a community action program,GOAL21.somewhatimportant,0.451756075266781,318
+GOAL21,Goal: Participating in a community action program,GOAL21.veryimportant,0.227359230231144,318
+GOAL21,Goal: Participating in a community action program,GOAL21.essential,0.071563957167727,318
+GOAL22,Goal: Raising a family,GOAL22.notimportant,0.070368279052008,318
+GOAL22,Goal: Raising a family,GOAL22.somewhatimportant,0.154140600598836,318
+GOAL22,Goal: Raising a family,GOAL22.veryimportant,0.325387739556561,318
+GOAL22,Goal: Raising a family,GOAL22.essential,0.450103380792595,318
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.notimportant,0.58017625604123,318
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.somewhatimportant,0.240015296646414,318
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.veryimportant,0.109973659504151,318
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.essential,0.0698347878082053,318
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours0,0.00577347171391199,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours0to1,0.00337706586884194,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours1to2,0.0127960581514776,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours3to5,0.0774871665149321,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours6to10,0.249350418473465,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours11to15,0.356589752496144,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours16to20,0.213941957847615,165
+HPW01,Hours per Week: Attending Classes/Labs,HPW01.hours21plus,0.0806841089336126,165
+HPW03,Hours per Week: Classes/labs,HPW03.hours0,0.0242707034966195,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours0to1,0.0112776095343153,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours1to2,0.0244555260542329,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours3to5,0.0792166760803886,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours6to10,0.196603997771679,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours11to15,0.328697274584935,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours16to20,0.223873221671275,301
+HPW03,Hours per Week: Classes/labs,HPW03.hours21plus,0.111604990806554,301
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours0,0.301779566031701,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours0to1,0.134791281510202,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours1to2,0.232846841731061,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours3to5,0.177431996506391,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours6to10,0.0797587515448304,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours11to15,0.0329596131302184,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours16to20,0.0154201270816008,196
+HPW04,Hours per Week: Participating in student clubs/groups,HPW04.hours21plus,0.0250118224639955,196
+HPW05,Hours per Week: Commuting,HPW05.hours0,0.388953111578157,318
+HPW05,Hours per Week: Commuting,HPW05.hours0to1,0.190623198055957,318
+HPW05,Hours per Week: Commuting,HPW05.hours1to2,0.160992095003762,318
+HPW05,Hours per Week: Commuting,HPW05.hours3to5,0.13254717153005,318
+HPW05,Hours per Week: Commuting,HPW05.hours6to10,0.0776313073719241,318
+HPW05,Hours per Week: Commuting,HPW05.hours11to15,0.0252545156458734,318
+HPW05,Hours per Week: Commuting,HPW05.hours16to20,0.00882095140764091,318
+HPW05,Hours per Week: Commuting,HPW05.hours21plus,0.0151776494066352,318
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours0,0.370356188655049,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours0to1,0.195745047235242,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours1to2,0.231296535239931,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours3to5,0.115012248583043,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours6to10,0.0384672121668949,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours11to15,0.0138619323393424,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours16to20,0.00785433476101213,299
+HPW08,Hours per Week: Performing household/childcare duties,HPW08.hours21plus,0.027406501019486,299
+HPW10,Hours per Week: Partying,HPW10.hours0,0.206810246384692,318
+HPW10,Hours per Week: Partying,HPW10.hours0to1,0.135732132658318,318
+HPW10,Hours per Week: Partying,HPW10.hours1to2,0.163580012808725,318
+HPW10,Hours per Week: Partying,HPW10.hours3to5,0.21471167961998,318
+HPW10,Hours per Week: Partying,HPW10.hours6to10,0.152877974266872,318
+HPW10,Hours per Week: Partying,HPW10.hours11to15,0.0654404980675747,318
+HPW10,Hours per Week: Partying,HPW10.hours16to20,0.0302349837478942,318
+HPW10,Hours per Week: Partying,HPW10.hours21plus,0.030612472445944,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours0,0.281272397766786,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours0to1,0.287176971417808,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours1to2,0.249588270677496,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours3to5,0.12147324707303,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours6to10,0.0391979143828148,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours11to15,0.0114530702200045,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours16to20,0.00449134161004271,318
+HPW13,Hours per Week: Reading for pleasure,HPW13.hours21plus,0.00534678685201738,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours0,0.00446932224754971,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours0to1,0.0175318031902514,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours1to2,0.0677502414106686,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours3to5,0.178496002008095,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours6to10,0.255907530023273,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours11to15,0.184042137121748,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours16to20,0.120728129851976,318
+HPW15,Hours per Week: Socializing with friends in person,HPW15.hours21plus,0.171074834146438,318
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours0,0.405384156614411,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours0to1,0.142663092547009,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours1to2,0.204417519518683,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours3to5,0.144013211239648,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours6to10,0.0597763416040464,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours11to15,0.0215117778860961,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours16to20,0.00941959347208464,299
+HPW16,Hours per Week: Working with classmates on group projects,HPW16.hours21plus,0.0128143071180221,299
+HPW17,Hours per Week: Studying/homework,HPW17.hours0,0.00427001742915699,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours0to1,0.0118545827618344,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours1to2,0.0589611727173989,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours3to5,0.208218429656478,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours6to10,0.280554036182353,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours11to15,0.191675332316011,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours16to20,0.125816878125924,318
+HPW17,Hours per Week: Studying/homework,HPW17.hours21plus,0.118649550810844,318
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours0,0.115334738868679,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours0to1,0.471555716397397,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours1to2,0.31021878367749,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours3to5,0.0792563154468613,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours6to10,0.0168986580099897,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours11to15,0.00410381787073334,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours16to20,0.00129256089579997,98
+HPW19,Hours per Week: Talking with faculty during office hours,HPW19.hours21plus,0.00133940883304973,98
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours0,0.0800190978466749,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours0to1,0.435086921295192,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours1to2,0.347519681608157,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours3to5,0.107894642765897,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours6to10,0.0206332684176985,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours11to15,0.00521470375137012,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours16to20,0.00177351239215541,268
+HPW20,Hours per Week: Talking with faculty outside class,HPW20.hours21plus,0.00185817192285456,268
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours0,0.215258834391833,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours0to1,0.490678441304939,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours1to2,0.222618813923334,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours3to5,0.0505927696303278,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours6to10,0.013667185907948,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours11to15,0.00477216739815886,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours16to20,0.00107520735358801,98
+HPW21,Hours per Week: Talking with faculty outside of class or office hours,HPW21.hours21plus,0.00133658008987108,98
+HPW23,Hours per Week: Volunteer work,HPW23.hours0,0.371062371741824,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours0to1,0.25127832227496,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours1to2,0.201822871978652,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours3to5,0.102785142273675,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours6to10,0.0414773372749868,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours11to15,0.0148020986117692,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours16to20,0.00760055820409446,309
+HPW23,Hours per Week: Volunteer work,HPW23.hours21plus,0.00917129764003821,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours0,0.206444619037688,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours0to1,0.02273142295083,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours1to2,0.0353988318396483,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours3to5,0.0853331259103387,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours6to10,0.181857745420934,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours11to15,0.13753663127943,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours16to20,0.127613937533489,309
+HPW25,Hours per Week: Working (for pay),HPW25.hours21plus,0.203083686027643,309
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours0,0.503407124991424,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours0to1,0.0186548276651299,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours1to2,0.0322359101827904,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours3to5,0.0519600735599613,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours6to10,0.0871378328030267,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours11to15,0.0722424099352245,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours16to20,0.0790843699087895,98
+HPW26,Hours per Week: Working (for pay) off campus,HPW26.hours21plus,0.155277450953653,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours0,0.550376149635709,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours0to1,0.0178815652262467,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours1to2,0.039607541345293,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours3to5,0.0881598699517539,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours6to10,0.163736106357883,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours11to15,0.0758426682978861,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours16to20,0.0379421478255837,98
+HPW27,Hours per Week: Working (for pay) on campus,HPW27.hours21plus,0.0264539513596443,98
+MAJOR1A_9415,Primary undergraduate major 1 aggregated (1994-2015),MAJOR1A_9415.business,0.193373843673065,318
+"NATENGSP",Is English your native language?,"NATENGSP.yes",0.92370003704011,318
+PLANS02,Plans: Attending graduate or professional school,PLANS02.yes,0.23052505725449,318
+PLANS07,Plans: Participating in a community service organization,PLANS07.yes,0.0975986956011263,299
+PLANS08,"Plans: Participating in a community service organization (e.g., AmeriCorps, Peace Corps. etc.)",PLANS08.yes,0.0422915424285235,197
+PLANS14,Plans: Working for a government agency,PLANS14.yes,0.0294399244700983,246
+PLANS15,Plans: Working for a non-profit organization,PLANS15.yes,0.0574961284646902,246
+PLANS19,Plans: Working in private industry,PLANS19.yes,0.0847296558487773,197
+POLIVIEW,How would you characterize your political views?,POLIVIEW.farright,0.0111969929944065,318
+POLIVIEW,How would you characterize your political views?,POLIVIEW.conservative,0.251737560861732,318
+POLIVIEW,How would you characterize your political views?,POLIVIEW.middleoftheroad,0.438943880146714,318
+POLIVIEW,How would you characterize your political views?,POLIVIEW.liberal,0.269842140659452,318
+POLIVIEW,How would you characterize your political views?,POLIVIEW.farleft,0.0282794253376962,318
+RACE1,White/Caucasian,RACE1.yes,0.828591162904105,318
+RACE2,African American/Black,RACE2.yes,0.0535023064316516,318
+RACE3,American Indian/Alaska Native,RACE3.yes,0.0177438313182961,318
+RACE4,Asian,RACE4.yes,0.0593727453337419,318
+RACE5,Native Hawaiian/Pacific Islander,RACE5.yes,0.00830460798970937,209
+RACE6,Mexican American/Chicana/o/x,RACE6.yes,0.0270418546076048,318
+RACE7,Puerto Rican,RACE7.yes,0.00933636899131679,318
+RACE8,Other Latina/o/x,RACE8.yes,0.0227491059159064,318
+RACE9,Other,RACE9.yes,0.0374199703600838,318
+RACEGROUP,Race/Ethnicity Group,RACEGROUP.yes,0.0515699171890286,318
+RATE01,Self Rating: Academic ability,RATE01.lowest10pct,0.00113684367708067,318
+RATE01,Self Rating: Academic ability,RATE01.belowaverage,0.00832011773519168,318
+RATE01,Self Rating: Academic ability,RATE01.average,0.235834324350123,318
+RATE01,Self Rating: Academic ability,RATE01.aboveaverage,0.5231972393076,318
+RATE01,Self Rating: Academic ability,RATE01.highest10pct,0.231511474930005,318
+RATE02,Self Rating: Artistic ability,RATE02.lowest10pct,0.0731404493894046,318
+RATE02,Self Rating: Artistic ability,RATE02.belowaverage,0.2690822331072,318
+RATE02,Self Rating: Artistic ability,RATE02.average,0.353486402086991,318
+RATE02,Self Rating: Artistic ability,RATE02.aboveaverage,0.23286589893536,318
+RATE02,Self Rating: Artistic ability,RATE02.highest10pct,0.0714250164810453,318
+RATE04,Self Rating: Competitiveness,RATE04.lowest10pct,0.0132976704994541,318
+RATE04,Self Rating: Competitiveness,RATE04.belowaverage,0.0836751155701435,318
+RATE04,Self Rating: Competitiveness,RATE04.average,0.338019138959863,318
+RATE04,Self Rating: Competitiveness,RATE04.aboveaverage,0.37477189866855,318
+RATE04,Self Rating: Competitiveness,RATE04.highest10pct,0.190236176301989,318
+RATE06,Self Rating: Cooperativeness,RATE06.lowest10pct,0.00216536895755359,318
+RATE06,Self Rating: Cooperativeness,RATE06.belowaverage,0.0162778933980109,318
+RATE06,Self Rating: Cooperativeness,RATE06.average,0.227034756573894,318
+RATE06,Self Rating: Cooperativeness,RATE06.aboveaverage,0.524698252291872,318
+RATE06,Self Rating: Cooperativeness,RATE06.highest10pct,0.22982372877867,318
+RATE07,Self Rating: Creativity,RATE07.lowest10pct,0.0104841759123525,318
+RATE07,Self Rating: Creativity,RATE07.belowaverage,0.0836866959893852,318
+RATE07,Self Rating: Creativity,RATE07.average,0.35109427229708,318
+RATE07,Self Rating: Creativity,RATE07.aboveaverage,0.39807142499307,318
+RATE07,Self Rating: Creativity,RATE07.highest10pct,0.156663430808112,318
+RATE08,Self Rating: Cynicism,RATE08.lowest10pct,0.0648022054920943,116
+RATE08,Self Rating: Cynicism,RATE08.belowaverage,0.194764256224834,116
+RATE08,Self Rating: Cynicism,RATE08.average,0.462677548126542,116
+RATE08,Self Rating: Cynicism,RATE08.aboveaverage,0.200943279230339,116
+RATE08,Self Rating: Cynicism,RATE08.highest10pct,0.0768127109261901,116
+RATE09,Self Rating: Drive to achieve,RATE09.lowest10pct,0.00371579336072164,318
+RATE09,Self Rating: Drive to achieve,RATE09.belowaverage,0.0273679933514681,318
+RATE09,Self Rating: Drive to achieve,RATE09.average,0.216266161021803,318
+RATE09,Self Rating: Drive to achieve,RATE09.aboveaverage,0.441305484776809,318
+RATE09,Self Rating: Drive to achieve,RATE09.highest10pct,0.311344567489198,318
+RATE10,Self Rating: Emotional health,RATE10.lowest10pct,0.00839402550163616,318
+RATE10,Self Rating: Emotional health,RATE10.belowaverage,0.0634623661516586,318
+RATE10,Self Rating: Emotional health,RATE10.average,0.341505578053097,318
+RATE10,Self Rating: Emotional health,RATE10.aboveaverage,0.386786837430923,318
+RATE10,Self Rating: Emotional health,RATE10.highest10pct,0.199851192862685,318
+RATE12,Self Rating: Leadership ability,RATE12.lowest10pct,0.00616725287958511,318
+RATE12,Self Rating: Leadership ability,RATE12.belowaverage,0.055010380375881,318
+RATE12,Self Rating: Leadership ability,RATE12.average,0.30364890205344,318
+RATE12,Self Rating: Leadership ability,RATE12.aboveaverage,0.425824271152108,318
+RATE12,Self Rating: Leadership ability,RATE12.highest10pct,0.209349193538987,318
+RATE22,Self Rating: Self-confidence (intellectual),RATE22.lowest10pct,0.00398416850173939,318
+RATE22,Self Rating: Self-confidence (intellectual),RATE22.belowaverage,0.0375013238947387,318
+RATE22,Self Rating: Self-confidence (intellectual),RATE22.average,0.279339550779974,318
+RATE22,Self Rating: Self-confidence (intellectual),RATE22.aboveaverage,0.467209756786775,318
+RATE22,Self Rating: Self-confidence (intellectual),RATE22.highest10pct,0.211965200036773,318
+RATE23,Self Rating: Self-confidence (social),RATE23.lowest10pct,0.00905965375531929,318
+RATE23,Self Rating: Self-confidence (social),RATE23.belowaverage,0.0810402733696265,318
+RATE23,Self Rating: Self-confidence (social),RATE23.average,0.331437533183372,318
+RATE23,Self Rating: Self-confidence (social),RATE23.aboveaverage,0.402877463778977,318
+RATE23,Self Rating: Self-confidence (social),RATE23.highest10pct,0.175585075912705,318
+RATE27,Self Rating: Understanding of others,RATE27.lowest10pct,0.00263291750170193,318
+RATE27,Self Rating: Understanding of others,RATE27.belowaverage,0.0153986829274765,318
+RATE27,Self Rating: Understanding of others,RATE27.average,0.259179180460019,318
+RATE27,Self Rating: Understanding of others,RATE27.aboveaverage,0.506704479850908,318
+RATE27,Self Rating: Understanding of others,RATE27.highest10pct,0.216084739259895,318
+RATE28,Self Rating: Writing ability,RATE28.lowest10pct,0.00659572373317911,318
+RATE28,Self Rating: Writing ability,RATE28.belowaverage,0.0565186944400864,318
+RATE28,Self Rating: Writing ability,RATE28.average,0.351913693168373,318
+RATE28,Self Rating: Writing ability,RATE28.aboveaverage,0.422184235075667,318
+RATE28,Self Rating: Writing ability,RATE28.highest10pct,0.162787653582695,318
+REENROLL_9406,"If you could make your college choice over, would you still choose to enroll at your current college?",REENROLL_9406.defno,0.0392727355981132,318
+REENROLL_9406,"If you could make your college choice over, would you still choose to enroll at your current college?",REENROLL_9406.probno,0.116866303626649,318
+REENROLL_9406,"If you could make your college choice over, would you still choose to enroll at your current college?",REENROLL_9406.dontknow,0.0420249244405179,318
+REENROLL_9406,"If you could make your college choice over, would you still choose to enroll at your current college?",REENROLL_9406.probyes,0.385637416563365,318
+REENROLL_9406,"If you could make your college choice over, would you still choose to enroll at your current college?",REENROLL_9406.defyes,0.416198619771355,318
+SATIS01_9406,Satisfaction: Ability to find a faculty or staff mentor,SATIS01_9406.cantrate,0.0626523671405355,318
+SATIS01_9406,Satisfaction: Ability to find a faculty or staff mentor,SATIS01_9406.dissatisfied,0.0547388893068774,318
+SATIS01_9406,Satisfaction: Ability to find a faculty or staff mentor,SATIS01_9406.neutral,0.1902424596613,318
+SATIS01_9406,Satisfaction: Ability to find a faculty or staff mentor,SATIS01_9406.satisfied,0.442204799320242,318
+SATIS01_9406,Satisfaction: Ability to find a faculty or staff mentor,SATIS01_9406.verysatisfied,0.250161484571045,318
+SATIS02_9406,Satisfaction: Academic advising,SATIS02_9406.cantrate,0.0301668472247929,318
+SATIS02_9406,Satisfaction: Academic advising,SATIS02_9406.dissatisfied,0.168953089670934,318
+SATIS02_9406,Satisfaction: Academic advising,SATIS02_9406.neutral,0.239048683570609,318
+SATIS02_9406,Satisfaction: Academic advising,SATIS02_9406.satisfied,0.394760050877073,318
+SATIS02_9406,Satisfaction: Academic advising,SATIS02_9406.verysatisfied,0.167071328656591,318
+SATIS03_9406,Satisfaction: Amount of contact with faculty,SATIS03_9406.cantrate,0.00758522959501314,309
+SATIS03_9406,Satisfaction: Amount of contact with faculty,SATIS03_9406.dissatisfied,0.0376511845713597,309
+SATIS03_9406,Satisfaction: Amount of contact with faculty,SATIS03_9406.neutral,0.177982295936181,309
+SATIS03_9406,Satisfaction: Amount of contact with faculty,SATIS03_9406.satisfied,0.481033206613176,309
+SATIS03_9406,Satisfaction: Amount of contact with faculty,SATIS03_9406.verysatisfied,0.29574808328427,309
+SATIS05_9406,Satisfaction: Campus health services,SATIS05_9406.cantrate,0.168099052885494,318
+SATIS05_9406,Satisfaction: Campus health services,SATIS05_9406.dissatisfied,0.167756608523901,318
+SATIS05_9406,Satisfaction: Campus health services,SATIS05_9406.neutral,0.245789247638656,318
+SATIS05_9406,Satisfaction: Campus health services,SATIS05_9406.satisfied,0.325200122342256,318
+SATIS05_9406,Satisfaction: Campus health services,SATIS05_9406.verysatisfied,0.0931549686096933,318
+SATIS06_9406,Satisfaction: Career counseling and advising,SATIS06_9406.cantrate,0.137391244231478,318
+SATIS06_9406,Satisfaction: Career counseling and advising,SATIS06_9406.dissatisfied,0.160076136095594,318
+SATIS06_9406,Satisfaction: Career counseling and advising,SATIS06_9406.neutral,0.272559982182836,318
+SATIS06_9406,Satisfaction: Career counseling and advising,SATIS06_9406.satisfied,0.312946360984493,318
+SATIS06_9406,Satisfaction: Career counseling and advising,SATIS06_9406.verysatisfied,0.117026276505599,318
+SATIS07_9406,Satisfaction: Class size,SATIS07_9406.cantrate,0.00303236154111632,309
+SATIS07_9406,Satisfaction: Class size,SATIS07_9406.dissatisfied,0.0362016645260288,309
+SATIS07_9406,Satisfaction: Class size,SATIS07_9406.neutral,0.131268469617958,309
+SATIS07_9406,Satisfaction: Class size,SATIS07_9406.satisfied,0.512135901232786,309
+SATIS07_9406,Satisfaction: Class size,SATIS07_9406.verysatisfied,0.317361603082111,309
+SATIS08_9406,Satisfaction: Computer facilities,SATIS08_9406.cantrate,0.0175740132907681,318
+SATIS08_9406,Satisfaction: Computer facilities,SATIS08_9406.dissatisfied,0.131425954118846,318
+SATIS08_9406,Satisfaction: Computer facilities,SATIS08_9406.neutral,0.178312399537213,318
+SATIS08_9406,Satisfaction: Computer facilities,SATIS08_9406.satisfied,0.453540026625486,318
+SATIS08_9406,Satisfaction: Computer facilities,SATIS08_9406.verysatisfied,0.219147606427687,318
+SATIS09_9406,Satisfaction: Connection with your peers,SATIS09_9406.cantrate,0.0154373924131619,125
+SATIS09_9406,Satisfaction: Connection with your peers,SATIS09_9406.dissatisfied,0.040703008181335,125
+SATIS09_9406,Satisfaction: Connection with your peers,SATIS09_9406.neutral,0.182373499679659,125
+SATIS09_9406,Satisfaction: Connection with your peers,SATIS09_9406.satisfied,0.495984944416585,125
+SATIS09_9406,Satisfaction: Connection with your peers,SATIS09_9406.verysatisfied,0.265501155309259,125
+SATIS10_9406,Satisfaction: Courses in your major field,SATIS10_9406.cantrate,0.0145831239324294,309
+SATIS10_9406,Satisfaction: Courses in your major field,SATIS10_9406.dissatisfied,0.0498541817542259,309
+SATIS10_9406,Satisfaction: Courses in your major field,SATIS10_9406.neutral,0.0755691228820195,309
+SATIS10_9406,Satisfaction: Courses in your major field,SATIS10_9406.satisfied,0.411212257871526,309
+SATIS10_9406,Satisfaction: Courses in your major field,SATIS10_9406.verysatisfied,0.448781313559799,309
+SATIS12_9406,Satisfaction: Ethnic/racial diversity of students,SATIS12_9406.cantrate,0.0491881343284047,228
+SATIS12_9406,Satisfaction: Ethnic/racial diversity of students,SATIS12_9406.dissatisfied,0.206200503883503,228
+SATIS12_9406,Satisfaction: Ethnic/racial diversity of students,SATIS12_9406.neutral,0.373042239051737,228
+SATIS12_9406,Satisfaction: Ethnic/racial diversity of students,SATIS12_9406.satisfied,0.301025142003317,228
+SATIS12_9406,Satisfaction: Ethnic/racial diversity of students,SATIS12_9406.verysatisfied,0.0705439807330391,228
+SATIS13_9406,Satisfaction: Financial aid services,SATIS13_9406.cantrate,0.187815046819852,318
+SATIS13_9406,Satisfaction: Financial aid services,SATIS13_9406.dissatisfied,0.146026918909908,318
+SATIS13_9406,Satisfaction: Financial aid services,SATIS13_9406.neutral,0.234515419342691,318
+SATIS13_9406,Satisfaction: Financial aid services,SATIS13_9406.satisfied,0.321636107258187,318
+SATIS13_9406,Satisfaction: Financial aid services,SATIS13_9406.verysatisfied,0.110006507669363,318
+SATIS14_9406,Satisfaction: General education or core curriculum courses,SATIS14_9406.cantrate,0.0130596367214131,279
+SATIS14_9406,Satisfaction: General education or core curriculum courses,SATIS14_9406.dissatisfied,0.0619934653407994,279
+SATIS14_9406,Satisfaction: General education or core curriculum courses,SATIS14_9406.neutral,0.166794330706607,279
+SATIS14_9406,Satisfaction: General education or core curriculum courses,SATIS14_9406.satisfied,0.578112538906261,279
+SATIS14_9406,Satisfaction: General education or core curriculum courses,SATIS14_9406.verysatisfied,0.180040028324919,279
+SATIS15_9406,Satisfaction: Humanities courses,SATIS15_9406.cantrate,0.0921141175238809,318
+SATIS15_9406,Satisfaction: Humanities courses,SATIS15_9406.dissatisfied,0.0363070509587982,318
+SATIS15_9406,Satisfaction: Humanities courses,SATIS15_9406.neutral,0.226323956995262,318
+SATIS15_9406,Satisfaction: Humanities courses,SATIS15_9406.satisfied,0.464652825931075,318
+SATIS15_9406,Satisfaction: Humanities courses,SATIS15_9406.verysatisfied,0.180602048590985,318
+SATIS16_9406,Satisfaction: Institutional support of racial/cultural differences,SATIS16_9406.cantrate,0.16642193368385,56
+SATIS16_9406,Satisfaction: Institutional support of racial/cultural differences,SATIS16_9406.dissatisfied,0.138773213316809,56
+SATIS16_9406,Satisfaction: Institutional support of racial/cultural differences,SATIS16_9406.neutral,0.343555921488777,56
+SATIS16_9406,Satisfaction: Institutional support of racial/cultural differences,SATIS16_9406.satisfied,0.27643665120705,56
+SATIS16_9406,Satisfaction: Institutional support of racial/cultural differences,SATIS16_9406.verysatisfied,0.0748122803035151,56
+SATIS17_9406,Satisfaction: Interaction with other students,SATIS17_9406.cantrate,0.00345572488245143,309
+SATIS17_9406,Satisfaction: Interaction with other students,SATIS17_9406.dissatisfied,0.0318247275041927,309
+SATIS17_9406,Satisfaction: Interaction with other students,SATIS17_9406.neutral,0.132522829434719,309
+SATIS17_9406,Satisfaction: Interaction with other students,SATIS17_9406.satisfied,0.517292646442265,309
+SATIS17_9406,Satisfaction: Interaction with other students,SATIS17_9406.verysatisfied,0.314904071736372,309
+SATIS18_9406,Satisfaction: Job placement services for students,SATIS18_9406.cantrate,0.251340184435046,318
+SATIS18_9406,Satisfaction: Job placement services for students,SATIS18_9406.dissatisfied,0.150804016129028,318
+SATIS18_9406,Satisfaction: Job placement services for students,SATIS18_9406.neutral,0.264291341609019,318
+SATIS18_9406,Satisfaction: Job placement services for students,SATIS18_9406.satisfied,0.251270244382031,318
+SATIS18_9406,Satisfaction: Job placement services for students,SATIS18_9406.verysatisfied,0.0822942134448762,318
+SATIS19_9406,Satisfaction: Laboratory facilities and equipment,SATIS19_9406.cantrate,0.146432826586131,318
+SATIS19_9406,Satisfaction: Laboratory facilities and equipment,SATIS19_9406.dissatisfied,0.0889557947248767,318
+SATIS19_9406,Satisfaction: Laboratory facilities and equipment,SATIS19_9406.neutral,0.238230565651937,318
+SATIS19_9406,Satisfaction: Laboratory facilities and equipment,SATIS19_9406.satisfied,0.391411588463599,318
+SATIS19_9406,Satisfaction: Laboratory facilities and equipment,SATIS19_9406.verysatisfied,0.134969224573457,318
+SATIS20_9406,Satisfaction: Leadership opportunities,SATIS20_9406.cantrate,0.140523533561838,318
+SATIS20_9406,Satisfaction: Leadership opportunities,SATIS20_9406.dissatisfied,0.0295663348721934,318
+SATIS20_9406,Satisfaction: Leadership opportunities,SATIS20_9406.neutral,0.280184881062811,318
+SATIS20_9406,Satisfaction: Leadership opportunities,SATIS20_9406.satisfied,0.382919771549934,318
+SATIS20_9406,Satisfaction: Leadership opportunities,SATIS20_9406.verysatisfied,0.166805478953224,318
+SATIS21_9406,Satisfaction: Library facilities,SATIS21_9406.cantrate,0.0103029281686968,318
+SATIS21_9406,Satisfaction: Library facilities,SATIS21_9406.dissatisfied,0.164207643300209,318
+SATIS21_9406,Satisfaction: Library facilities,SATIS21_9406.neutral,0.186171602597979,318
+SATIS21_9406,Satisfaction: Library facilities,SATIS21_9406.satisfied,0.437342646438724,318
+SATIS21_9406,Satisfaction: Library facilities,SATIS21_9406.verysatisfied,0.201975179494391,318
+SATIS22_9406,Satisfaction: Opportunities for community service,SATIS22_9406.cantrate,0.170421807155286,318
+SATIS22_9406,Satisfaction: Opportunities for community service,SATIS22_9406.dissatisfied,0.0291616602266777,318
+SATIS22_9406,Satisfaction: Opportunities for community service,SATIS22_9406.neutral,0.236264522455957,318
+SATIS22_9406,Satisfaction: Opportunities for community service,SATIS22_9406.satisfied,0.357156606157381,318
+SATIS22_9406,Satisfaction: Opportunities for community service,SATIS22_9406.verysatisfied,0.206995404004698,318
+SATIS24_9406,Satisfaction: Opportunities to discuss coursework outside of class with professors,SATIS24_9406.cantrate,0.0188342622886065,56
+SATIS24_9406,Satisfaction: Opportunities to discuss coursework outside of class with professors,SATIS24_9406.dissatisfied,0.0297814045533748,56
+SATIS24_9406,Satisfaction: Opportunities to discuss coursework outside of class with professors,SATIS24_9406.neutral,0.141002873165208,56
+SATIS24_9406,Satisfaction: Opportunities to discuss coursework outside of class with professors,SATIS24_9406.satisfied,0.445403750426679,56
+SATIS24_9406,Satisfaction: Opportunities to discuss coursework outside of class with professors,SATIS24_9406.verysatisfied,0.364977709566132,56
+SATIS25_9406,Satisfaction: Opportunities to participate in extracurricular activities,SATIS25_9406.cantrate,0.089552290943513,56
+SATIS25_9406,Satisfaction: Opportunities to participate in extracurricular activities,SATIS25_9406.dissatisfied,0.0389385024094471,56
+SATIS25_9406,Satisfaction: Opportunities to participate in extracurricular activities,SATIS25_9406.neutral,0.166481490216941,56
+SATIS25_9406,Satisfaction: Opportunities to participate in extracurricular activities,SATIS25_9406.satisfied,0.388651443653222,56
+SATIS25_9406,Satisfaction: Opportunities to participate in extracurricular activities,SATIS25_9406.verysatisfied,0.316376272776876,56
+SATIS26_9406,Satisfaction: Opportunities to take interdisciplinary courses,SATIS26_9406.cantrate,0.196493564119633,56
+SATIS26_9406,Satisfaction: Opportunities to take interdisciplinary courses,SATIS26_9406.dissatisfied,0.0552095156694037,56
+SATIS26_9406,Satisfaction: Opportunities to take interdisciplinary courses,SATIS26_9406.neutral,0.295899187768949,56
+SATIS26_9406,Satisfaction: Opportunities to take interdisciplinary courses,SATIS26_9406.satisfied,0.339403518005686,56
+SATIS26_9406,Satisfaction: Opportunities to take interdisciplinary courses,SATIS26_9406.verysatisfied,0.112994214436329,56
+SATIS27_9406,Satisfaction: Overall college experience,SATIS27_9406.cantrate,0.00228419147067927,309
+SATIS27_9406,Satisfaction: Overall college experience,SATIS27_9406.dissatisfied,0.0330040814512628,309
+SATIS27_9406,Satisfaction: Overall college experience,SATIS27_9406.neutral,0.125491349431019,309
+SATIS27_9406,Satisfaction: Overall college experience,SATIS27_9406.satisfied,0.528867454475982,309
+SATIS27_9406,Satisfaction: Overall college experience,SATIS27_9406.verysatisfied,0.310352923171057,309
+SATIS28_9406,Satisfaction: Overall quality of instruction,SATIS28_9406.cantrate,0.00183191033408743,309
+SATIS28_9406,Satisfaction: Overall quality of instruction,SATIS28_9406.dissatisfied,0.0318097511482763,309
+SATIS28_9406,Satisfaction: Overall quality of instruction,SATIS28_9406.neutral,0.138451651721106,309
+SATIS28_9406,Satisfaction: Overall quality of instruction,SATIS28_9406.satisfied,0.569700105306977,309
+SATIS28_9406,Satisfaction: Overall quality of instruction,SATIS28_9406.verysatisfied,0.258206581489554,309
+SATIS30_9406,Satisfaction: Recreational facilities,SATIS30_9406.cantrate,0.0857705893279286,318
+SATIS30_9406,Satisfaction: Recreational facilities,SATIS30_9406.dissatisfied,0.124992783027275,318
+SATIS30_9406,Satisfaction: Recreational facilities,SATIS30_9406.neutral,0.220887051636673,318
+SATIS30_9406,Satisfaction: Recreational facilities,SATIS30_9406.satisfied,0.402880892631282,318
+SATIS30_9406,Satisfaction: Recreational facilities,SATIS30_9406.verysatisfied,0.165468683376841,318
+SATIS31_9406,Satisfaction: Relevance of coursework to everyday life,SATIS31_9406.cantrate,0.0073419882798325,309
+SATIS31_9406,Satisfaction: Relevance of coursework to everyday life,SATIS31_9406.dissatisfied,0.0846734293805096,309
+SATIS31_9406,Satisfaction: Relevance of coursework to everyday life,SATIS31_9406.neutral,0.262244641707417,309
+SATIS31_9406,Satisfaction: Relevance of coursework to everyday life,SATIS31_9406.satisfied,0.494654105101664,309
+SATIS31_9406,Satisfaction: Relevance of coursework to everyday life,SATIS31_9406.verysatisfied,0.151085835530577,309
+SATIS32_9406,Satisfaction: Science and mathematics courses,SATIS32_9406.cantrate,0.0601397089052066,318
+SATIS32_9406,Satisfaction: Science and mathematics courses,SATIS32_9406.dissatisfied,0.0946214607949332,318
+SATIS32_9406,Satisfaction: Science and mathematics courses,SATIS32_9406.neutral,0.265272531230382,318
+SATIS32_9406,Satisfaction: Science and mathematics courses,SATIS32_9406.satisfied,0.438638755684552,318
+SATIS32_9406,Satisfaction: Science and mathematics courses,SATIS32_9406.verysatisfied,0.141327543384926,318
+SATIS33_9406,Satisfaction: Sense of community on campus,SATIS33_9406.cantrate,0.0238066963892755,309
+SATIS33_9406,Satisfaction: Sense of community on campus,SATIS33_9406.dissatisfied,0.140606323129216,309
+SATIS33_9406,Satisfaction: Sense of community on campus,SATIS33_9406.neutral,0.261178426628354,309
+SATIS33_9406,Satisfaction: Sense of community on campus,SATIS33_9406.satisfied,0.380224991913103,309
+SATIS33_9406,Satisfaction: Sense of community on campus,SATIS33_9406.verysatisfied,0.194183561940052,309
+SATIS34_9406,Satisfaction: Social science courses,SATIS34_9406.cantrate,0.0852127030703232,318
+SATIS34_9406,Satisfaction: Social science courses,SATIS34_9406.dissatisfied,0.039217675189773,318
+SATIS34_9406,Satisfaction: Social science courses,SATIS34_9406.neutral,0.231752232873589,318
+SATIS34_9406,Satisfaction: Social science courses,SATIS34_9406.satisfied,0.457686486218729,318
+SATIS34_9406,Satisfaction: Social science courses,SATIS34_9406.verysatisfied,0.186130902647586,318
+SATIS35_9406,Satisfaction: Student housing,SATIS35_9406.cantrate,0.165022841478117,318
+SATIS35_9406,Satisfaction: Student housing,SATIS35_9406.dissatisfied,0.161374202655471,318
+SATIS35_9406,Satisfaction: Student housing,SATIS35_9406.neutral,0.218723239860906,318
+SATIS35_9406,Satisfaction: Student housing,SATIS35_9406.satisfied,0.358592188074889,318
+SATIS35_9406,Satisfaction: Student housing,SATIS35_9406.verysatisfied,0.0962875279306177,318
+SATIS36_9406,Satisfaction: Tutorial help or other academic assistance,SATIS36_9406.cantrate,0.246508118323741,318
+SATIS36_9406,Satisfaction: Tutorial help or other academic assistance,SATIS36_9406.dissatisfied,0.0427010249738666,318
+SATIS36_9406,Satisfaction: Tutorial help or other academic assistance,SATIS36_9406.neutral,0.282131711682947,318
+SATIS36_9406,Satisfaction: Tutorial help or other academic assistance,SATIS36_9406.satisfied,0.321780532149932,318
+SATIS36_9406,Satisfaction: Tutorial help or other academic assistance,SATIS36_9406.verysatisfied,0.106878612869515,318
+SEX,Your sex:,SEX.male,0.38495071378415,318
+SEX,Your sex:,SEX.female,0.61504928621585,318
+SLFCHG01,Change: Ability to get along with people of different races/cultures,SLFCHG01.muchweaker,0.00330713464058376,318
+SLFCHG01,Change: Ability to get along with people of different races/cultures,SLFCHG01.weaker,0.01149234699275,318
+SLFCHG01,Change: Ability to get along with people of different races/cultures,SLFCHG01.nochange,0.396568143003315,318
+SLFCHG01,Change: Ability to get along with people of different races/cultures,SLFCHG01.stronger,0.392384895466444,318
+SLFCHG01,Change: Ability to get along with people of different races/cultures,SLFCHG01.muchstronger,0.196247479896907,318
+SLFCHG04,Change: Ability to think critically,SLFCHG04.muchweaker,0.0010883108716514,318
+SLFCHG04,Change: Ability to think critically,SLFCHG04.weaker,0.00434834130053889,318
+SLFCHG04,Change: Ability to think critically,SLFCHG04.nochange,0.0782364760495966,318
+SLFCHG04,Change: Ability to think critically,SLFCHG04.stronger,0.540666142465539,318
+SLFCHG04,Change: Ability to think critically,SLFCHG04.muchstronger,0.375660729312674,318
+SLFCHG05,Change: Ability to work cooperatively,SLFCHG05.muchweaker,0.0015672828640798,295
+SLFCHG05,Change: Ability to work cooperatively,SLFCHG05.weaker,0.00643414670108672,295
+SLFCHG05,Change: Ability to work cooperatively,SLFCHG05.nochange,0.224488874387692,295
+SLFCHG05,Change: Ability to work cooperatively,SLFCHG05.stronger,0.543726032061369,295
+SLFCHG05,Change: Ability to work cooperatively,SLFCHG05.muchstronger,0.223783663985772,295
+SLFCHG08,Change: Analytical and problem-solving skills,SLFCHG08.muchweaker,0.00108990757975227,318
+SLFCHG08,Change: Analytical and problem-solving skills,SLFCHG08.weaker,0.00573931535959413,318
+SLFCHG08,Change: Analytical and problem-solving skills,SLFCHG08.nochange,0.0839885001488271,318
+SLFCHG08,Change: Analytical and problem-solving skills,SLFCHG08.stronger,0.57071367568412,318
+SLFCHG08,Change: Analytical and problem-solving skills,SLFCHG08.muchstronger,0.338468601227707,318
+SLFCHG09,Change: Commitment to serving your community,SLFCHG09.muchweaker,0.00487620467570397,56
+SLFCHG09,Change: Commitment to serving your community,SLFCHG09.weaker,0.0246333908405659,56
+SLFCHG09,Change: Commitment to serving your community,SLFCHG09.nochange,0.426886292811808,56
+SLFCHG09,Change: Commitment to serving your community,SLFCHG09.stronger,0.399574962953318,56
+SLFCHG09,Change: Commitment to serving your community,SLFCHG09.muchstronger,0.144029148718604,56
+SLFCHG16,Change: Foreign language ability,SLFCHG16.muchweaker,0.0419533888075819,318
+SLFCHG16,Change: Foreign language ability,SLFCHG16.weaker,0.12468309539243,318
+SLFCHG16,Change: Foreign language ability,SLFCHG16.nochange,0.463820503586343,318
+SLFCHG16,Change: Foreign language ability,SLFCHG16.stronger,0.252294941332667,318
+SLFCHG16,Change: Foreign language ability,SLFCHG16.muchstronger,0.117248070880978,318
+SLFCHG17,Change: General knowledge,SLFCHG17.muchweaker,0.00139208877453063,318
+SLFCHG17,Change: General knowledge,SLFCHG17.weaker,0.00471028501411491,318
+SLFCHG17,Change: General knowledge,SLFCHG17.nochange,0.0258406984716021,318
+SLFCHG17,Change: General knowledge,SLFCHG17.stronger,0.495311900149042,318
+SLFCHG17,Change: General knowledge,SLFCHG17.muchstronger,0.47274502759071,318
+SLFCHG18,Change: Interpersonal skills,SLFCHG18.muchweaker,0.00220186684849403,318
+SLFCHG18,Change: Interpersonal skills,SLFCHG18.weaker,0.012222730988013,318
+SLFCHG18,Change: Interpersonal skills,SLFCHG18.nochange,0.134618794314939,318
+SLFCHG18,Change: Interpersonal skills,SLFCHG18.stronger,0.539173584899808,318
+SLFCHG18,Change: Interpersonal skills,SLFCHG18.muchstronger,0.311783022948745,318
+SLFCHG19,Change: Knowledge of a particular field or discipline,SLFCHG19.muchweaker,0.00112365682808408,318
+SLFCHG19,Change: Knowledge of a particular field or discipline,SLFCHG19.weaker,0.00219456335538193,318
+SLFCHG19,Change: Knowledge of a particular field or discipline,SLFCHG19.nochange,0.0263394638858112,318
+SLFCHG19,Change: Knowledge of a particular field or discipline,SLFCHG19.stronger,0.341614323200372,318
+SLFCHG19,Change: Knowledge of a particular field or discipline,SLFCHG19.muchstronger,0.628727992730351,318
+SLFCHG20,Change: knowledge of people from different races/cultures,SLFCHG20.muchweaker,0.00627541180964242,318
+SLFCHG20,Change: knowledge of people from different races/cultures,SLFCHG20.weaker,0.0240121051990287,318
+SLFCHG20,Change: knowledge of people from different races/cultures,SLFCHG20.nochange,0.294382811683813,318
+SLFCHG20,Change: knowledge of people from different races/cultures,SLFCHG20.stronger,0.478785319232565,318
+SLFCHG20,Change: knowledge of people from different races/cultures,SLFCHG20.muchstronger,0.196544352074951,318
+SLFCHG21,Change: Leadership abilities,SLFCHG21.muchweaker,0.00266996283324562,318
+SLFCHG21,Change: Leadership abilities,SLFCHG21.weaker,0.0177010019171816,318
+SLFCHG21,Change: Leadership abilities,SLFCHG21.nochange,0.243149139712428,318
+SLFCHG21,Change: Leadership abilities,SLFCHG21.stronger,0.489624917695193,318
+SLFCHG21,Change: Leadership abilities,SLFCHG21.muchstronger,0.246854977841952,318
+SLFCHG22,Change: Mathematical skills,SLFCHG22.muchweaker,0.0156306320973425,318
+SLFCHG22,Change: Mathematical skills,SLFCHG22.weaker,0.0875269055903679,318
+SLFCHG22,Change: Mathematical skills,SLFCHG22.nochange,0.40464559095412,318
+SLFCHG22,Change: Mathematical skills,SLFCHG22.stronger,0.369278113492846,318
+SLFCHG22,Change: Mathematical skills,SLFCHG22.muchstronger,0.122918757865323,318
+SLFCHG23,Change: Preparation for future career,SLFCHG23.muchweaker,0.00240873111914346,56
+SLFCHG23,Change: Preparation for future career,SLFCHG23.weaker,0.00962861036605379,56
+SLFCHG23,Change: Preparation for future career,SLFCHG23.nochange,0.0771670590288402,56
+SLFCHG23,Change: Preparation for future career,SLFCHG23.stronger,0.488951595529582,56
+SLFCHG23,Change: Preparation for future career,SLFCHG23.muchstronger,0.421844003956381,56
+SLFCHG24,Change: Preparation for graduate or professional school,SLFCHG24.muchweaker,0.00545612973477466,56
+SLFCHG24,Change: Preparation for graduate or professional school,SLFCHG24.weaker,0.010251553462609,56
+SLFCHG24,Change: Preparation for graduate or professional school,SLFCHG24.nochange,0.18319649331732,56
+SLFCHG24,Change: Preparation for graduate or professional school,SLFCHG24.stronger,0.511670397475566,56
+SLFCHG24,Change: Preparation for graduate or professional school,SLFCHG24.muchstronger,0.28942542600973,56
+SLFCHG28,Change: Public speaking ability,SLFCHG28.muchweaker,0.00282990446549057,318
+SLFCHG28,Change: Public speaking ability,SLFCHG28.weaker,0.0170662191010204,318
+SLFCHG28,Change: Public speaking ability,SLFCHG28.nochange,0.214920400349424,318
+SLFCHG28,Change: Public speaking ability,SLFCHG28.stronger,0.506233485696554,318
+SLFCHG28,Change: Public speaking ability,SLFCHG28.muchstronger,0.258949990387511,318
+SLFCHG29,Change: Reading speed and comprehension,SLFCHG29.muchweaker,0.00216853566573309,295
+SLFCHG29,Change: Reading speed and comprehension,SLFCHG29.weaker,0.0141933078703403,295
+SLFCHG29,Change: Reading speed and comprehension,SLFCHG29.nochange,0.293485620349188,295
+SLFCHG29,Change: Reading speed and comprehension,SLFCHG29.stronger,0.523646172034805,295
+SLFCHG29,Change: Reading speed and comprehension,SLFCHG29.muchstronger,0.166506364079933,295
+SLFCHG30,Change: Religious beliefs and convictions,SLFCHG30.muchweaker,0.026559321568755,309
+SLFCHG30,Change: Religious beliefs and convictions,SLFCHG30.weaker,0.075766428563209,309
+SLFCHG30,Change: Religious beliefs and convictions,SLFCHG30.nochange,0.443648242314645,309
+SLFCHG30,Change: Religious beliefs and convictions,SLFCHG30.stronger,0.29179992228714,309
+SLFCHG30,Change: Religious beliefs and convictions,SLFCHG30.muchstronger,0.162226085266252,309
+SLFCHG32,Change: Understanding of global issues,SLFCHG32.muchweaker,0.0037507630357072,183
+SLFCHG32,Change: Understanding of global issues,SLFCHG32.weaker,0.0147779807998309,183
+SLFCHG32,Change: Understanding of global issues,SLFCHG32.nochange,0.188600572368031,183
+SLFCHG32,Change: Understanding of global issues,SLFCHG32.stronger,0.518550082843098,183
+SLFCHG32,Change: Understanding of global issues,SLFCHG32.muchstronger,0.274320600953333,183
+SLFCHG34,Change: Understanding of social problems facing our nation,SLFCHG34.muchweaker,0.00386639876228249,318
+SLFCHG34,Change: Understanding of social problems facing our nation,SLFCHG34.weaker,0.0151857000765424,318
+SLFCHG34,Change: Understanding of social problems facing our nation,SLFCHG34.nochange,0.214653885661851,318
+SLFCHG34,Change: Understanding of social problems facing our nation,SLFCHG34.stronger,0.530093792552267,318
+SLFCHG34,Change: Understanding of social problems facing our nation,SLFCHG34.muchstronger,0.236200222947057,318
+SLFCHG35,Change: Understanding of the problems facing your community,SLFCHG35.muchweaker,0.00348678436156291,318
+SLFCHG35,Change: Understanding of the problems facing your community,SLFCHG35.weaker,0.0161526981181198,318
+SLFCHG35,Change: Understanding of the problems facing your community,SLFCHG35.nochange,0.308116248613318,318
+SLFCHG35,Change: Understanding of the problems facing your community,SLFCHG35.stronger,0.491658137005407,318
+SLFCHG35,Change: Understanding of the problems facing your community,SLFCHG35.muchstronger,0.180586131901592,318
+SLFCHG36,Change: Writing skills,SLFCHG36.muchweaker,0.00339708705075746,318
+SLFCHG36,Change: Writing skills,SLFCHG36.weaker,0.0221094345009444,318
+SLFCHG36,Change: Writing skills,SLFCHG36.nochange,0.143122605565078,318
+SLFCHG36,Change: Writing skills,SLFCHG36.stronger,0.541048002996356,318
+SLFCHG36,Change: Writing skills,SLFCHG36.muchstronger,0.290322869886865,318
+SUCCSES1,Success: Adjusting to academic demands of college,SUCCSES1.not,0.0173350463296271,183
+SUCCSES1,Success: Adjusting to academic demands of college,SUCCSES1.somewhat,0.338228798347778,183
+SUCCSES1,Success: Adjusting to academic demands of college,SUCCSES1.very,0.644436155322595,183
+SUCCSES2,Success: Developing close friendships with other students,SUCCSES2.not,0.0416914775886086,183
+SUCCSES2,Success: Developing close friendships with other students,SUCCSES2.somewhat,0.272618675375189,183
+SUCCSES2,Success: Developing close friendships with other students,SUCCSES2.very,0.685689847036202,183
+SUCCSES3,Success: Developing effective study skills,SUCCSES3.not,0.0571976291776292,183
+SUCCSES3,Success: Developing effective study skills,SUCCSES3.somewhat,0.447169474215759,183
+SUCCSES3,Success: Developing effective study skills,SUCCSES3.very,0.495632896606612,183
+SUCCSES4,Success: Getting to know faculty,SUCCSES4.not,0.0800032482810946,183
+SUCCSES4,Success: Getting to know faculty,SUCCSES4.somewhat,0.503142470191979,183
+SUCCSES4,Success: Getting to know faculty,SUCCSES4.very,0.416854281526926,183
+SUCCSES5,Success: Managing your time effectively,SUCCSES5.not,0.0624584541182399,183
+SUCCSES5,Success: Managing your time effectively,SUCCSES5.somewhat,0.467180211886336,183
+SUCCSES5,Success: Managing your time effectively,SUCCSES5.very,0.470361333995424,183
+SUCCSES6,Success: Understanding what your professors expect of you academically,SUCCSES6.not,0.0117581331251682,183
+SUCCSES6,Success: Understanding what your professors expect of you academically,SUCCSES6.somewhat,0.328937776472229,183
+SUCCSES6,Success: Understanding what your professors expect of you academically,SUCCSES6.very,0.659304090402603,183
+SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.not,0.0641818456933705,183
+SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.somewhat,0.596350676408516,183
+SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.very,0.339467477898113,183
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.disagreestrongly,0.138189530121017,279
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.disagreesomewhat,0.352412926929681,279
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.agreesomewhat,0.316219084577575,279
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.agreestrongly,0.193178458371728,279
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.disagreestrongly,0.312019422891635,318
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.disagreesomewhat,0.435537956423557,318
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.agreesomewhat,0.214429429621027,318
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.agreestrongly,0.0380131910637813,318
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.disagreestrongly,0.297172865813069,94
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.disagreesomewhat,0.396689757249045,94
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.agreesomewhat,0.266111824712642,94
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.agreestrongly,0.0400255522252447,94
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.disagreestrongly,0.237318857997323,196
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.disagreesomewhat,0.311677118079314,196
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.agreesomewhat,0.363189765438924,196
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.agreestrongly,0.0878142584844389,196
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.disagreestrongly,0.254732871331255,259
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.disagreesomewhat,0.477268413913156,259
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.agreesomewhat,0.235591997818556,259
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.agreestrongly,0.0324067169370328,259
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.disagreestrongly,0.133373101587714,318
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.disagreesomewhat,0.280628435263458,318
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.agreesomewhat,0.382747258882993,318
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.agreestrongly,0.203251204265835,318
+ACADEMIC_SELFCONCEPT,Scale: Academic Self Concept,ACADEMIC_SELFCONCEPT.scale,49.7283054152952,318
+SOCIAL_SELFCONCEPT,Scale: Social Self Concept,SOCIAL_SELFCONCEPT.scale,51.9218612201016,318
+SOCIAL_AGENCY,Scale: Social Agency,SOCIAL_AGENCY.scale,50.7154506696659,318
+FAC_INTERACTION,Scale: Faculty Interaction,FAC_INTERACTION.scale_scale,48.3875485523413,258

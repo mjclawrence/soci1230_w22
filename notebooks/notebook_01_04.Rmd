@@ -1,13 +1,36 @@
+## Getting Started
+
+To begin, copy all the text on this screen. Then open RStudio, and in the "File" menu select "New File" then "R Markdown". Add a title like "SOCI 1230, Week One, Class Four", include your name in the "Author" box, select "PDF" as the Default Output Format, and click Ok. A default markdown file will open. Delete all the text in the default file below the header (everything after line 7) and paste in the text you copied to your clipboard. Make sure that "R Markdown" is selected in the file type drop down menu in the bottom right corner of this pane.
+
 ## Setup
 
 ```{r load packages and data}
 library(tidyverse)
 
-tfs <- read.csv("../data/tfs_question_summary.csv")
-css <- read.csv("../data/css_question_summary.csv")
+tfs <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary.csv")
+css <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary.csv")
 ```
 
-The tfs file is for "The Freshman Survey" and the css file is for the "College Senior Survey". Some questions are similar in both but most are different. Open the spreadsheet view of the tfs file to see how the data are summarized.
+The tfs file is for "The Freshman Survey" and the css file is for the "College Senior Survey". Some questions are similar in both but most are different. 
+
+How do you save datafiles? Use the `write_csv()` function.
+
+```{r saving csv files}
+write_csv(tfs, "../data/tfs_question_summary.csv") # df name, your path
+write_csv(css, "../data/css_question_summary.csv")
+```
+
+Then you can read in the saved file from that path.
+
+```{r reading saved files}
+tfs <- read_csv("../data/tfs_question_summary.csv")
+css <- read_csv("../data/css_question_summary.csv")
+```
+
+
+## Exploring the data
+
+Open the spreadsheet view of the tfs file to see how the data are summarized.
 
 Is this long data or wide data?
 
@@ -27,14 +50,14 @@ How many css questions are there?
 
 Going back and forth from this notebook to the spreadsheet view works fine but might be tedious. The `DT` package gives us some great options for including searchable tables inside this window.
 
-```{r}
-install.packages("DT")
+```{r install the DT package}
+install.packages("DT") # hashtag this line after installation
 library(DT)
 ```
 
 DT stands for datatable. And that's the name of the function we'll use too.
 
-```{r}
+```{r the datatable function}
 datatable(tfs)
 ```
 
@@ -42,7 +65,7 @@ This table is fully functional if you knit your notebook as an html document!
 
 We can add a couple options to make this even more helpful. The filter option (similar to tidyverse's filter function) allows us to subset rows. We can put the filter buttons on the top or the bottom of the datatable. And I would suggest adding a caption to the table so we know which variables are for the tfs and which are for the css. Adding `rownames = FALSE` gets rid of the line numbers on the far left.
 
-```{r}
+```{r datatable options}
 datatable(tfs,
           filter = "top",
           caption = "TFS Questions",
@@ -51,7 +74,7 @@ datatable(tfs,
 
 There are some neat extensions in the DT package. In the future these buttons might be helpful (but probably not necessary now).
 
-```{r}
+```{r datatable extensions}
 datatable(tfs,
           filter = "top",
           caption = "TFS Questions",
@@ -94,13 +117,13 @@ What kind of figure could you make showing the distribution of responses to the 
 
 How can we make this look better? We saw the viridis color palette earlier this week. You can try it with `scale_fill_viridis_d()`. For more color palettes, the RColorBrewer package is a helpful resource.
 
-```{r}
-install.packages("RColorBrewer")
+```{r install the RColorBrewer package }
+install.packages("RColorBrewer") # hashtag this line after installation
 library(RColorBrewer)
-display.brewer.all()
+display.brewer.all() # to show all the color palettes
 ```
 
-```{r}
+```{r palette example}
 tfs |> 
   filter(Name == "CHOICE") |> 
   ggplot(aes(x = Summary, y = wtdprop, fill = Summary)) + 
@@ -110,7 +133,7 @@ tfs |>
 
 How do we order the variables? Reorder would work in this example, but better to change factor levels.
 
-```{r}
+```{r changing factor levels and labels}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -126,7 +149,7 @@ tfs |>
 
 How do we add labels?
 
-```{r}
+```{r plot labels}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -148,11 +171,11 @@ What else to change? Get rid of the legend? Use a different theme?
 
 My final plot requires the ggthemes package...
 
-```{r}
+```{r install the ggthemes package}
 library(ggthemes)
 ```
 
-```{r}
+```{r ml final plot}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
@@ -178,7 +201,7 @@ tfs |>
 
 What about a different type of column plot with stacked columns?
 
-```{r}
+```{r stacked column plot example}
 tfs |>  
   filter(Name == "CHOICE") |> 
   mutate(Summary = factor(Summary,
