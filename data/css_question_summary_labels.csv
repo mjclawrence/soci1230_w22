@@ -1,0 +1,800 @@
+Summary,Label
+ACT05.notatall,Not at all
+ACT05.occasionally,Occasionally
+ACT05.frequently,Frequently
+ACT11.notatall,Not at all
+ACT11.occasionally,Occasionally
+ACT11.frequently,Frequently
+ACT12.notatall,Not at all
+ACT12.occasionally,Occasionally
+ACT12.frequently,Frequently
+ACT13.notatall,Not at all
+ACT13.occasionally,Occasionally
+ACT13.frequently,Frequently
+ACT14.notatall,Not at all
+ACT14.occasionally,Occasionally
+ACT14.frequently,Frequently
+ACT16.notatall,Not at all
+ACT16.occasionally,Occasionally
+ACT16.frequently,Frequently
+ACT18.notatall,Not at all
+ACT18.occasionally,Occasionally
+ACT18.frequently,Frequently
+ACT19.notatall,Not at all
+ACT19.occasionally,Occasionally
+ACT19.frequently,Frequently
+ACT20.notatall,Not at all
+ACT20.occasionally,Occasionally
+ACT20.frequently,Frequently
+ACT26.notatall,Not at all
+ACT26.occasionally,Occasionally
+ACT26.frequently,Frequently
+ACT27.notatall,Not at all
+ACT27.occasionally,Occasionally
+ACT27.frequently,Frequently
+ACT28.notatall,Not at all
+ACT28.occasionally,Occasionally
+ACT28.frequently,Frequently
+ACT31.notatall,Not at all
+ACT31.occasionally,Occasionally
+ACT31.frequently,Frequently
+ACT36.notatall,Not at all
+ACT36.occasionally,Occasionally
+ACT36.frequently,Frequently
+ACT37.notatall,Not at all
+ACT37.occasionally,Occasionally
+ACT37.frequently,Frequently
+ACT38.notatall,Not at all
+ACT38.occasionally,Occasionally
+ACT38.frequently,Frequently
+ACT40.notatall,Not at all
+ACT40.occasionally,Occasionally
+ACT40.frequently,Frequently
+ACT48.notatall,Not at all
+ACT48.occasionally,Occasionally
+ACT48.frequently,Frequently
+ACT55.notatall,Not at all
+ACT55.occasionally,Occasionally
+ACT55.frequently,Frequently
+ACT58.notatall,Not at all
+ACT58.occasionally,Occasionally
+ACT58.frequently,Frequently
+ACT70.notatall,Not at all
+ACT70.occasionally,Occasionally
+ACT70.frequently,Frequently
+ACT74.notatall,Not at all
+ACT74.occasionally,Occasionally
+ACT74.frequently,Frequently
+ACT75.notatall,Not at all
+ACT75.occasionally,Occasionally
+ACT75.frequently,Frequently
+COLACT02_9406.yes,Yes
+COLACT07_9406.yes,Yes
+COLACT11_9406.yes,Yes
+COLACT12_9406.yes,Yes
+COLACT13_9406.yes,Yes
+COLACT14_9406.yes,Yes
+COLACT15_9406.yes,Yes
+COLACT16_9406.yes,Yes
+COLACT17_9406.yes,Yes
+COLACT18_9406.yes,Yes
+COLACT19_9406.yes,Yes
+COLACT21_9406.yes,Yes
+COLACT23_9406.yes,Yes
+COLACT27_9406.yes,Yes
+COLACT32_9406.yes,Yes
+COLACT33_9406.yes,Yes
+COLACT34_9406.yes,Yes
+COLACT36_9406.yes,Yes
+COLACT40_9406.yes,Yes
+COLACT41_9406.yes,Yes
+CSV.yes,Yes
+CSVCOURSE.yes,Yes
+CSVHOW1.yes,Yes
+CSVHOW2.yes,Yes
+CSVHOW3.yes,Yes
+FACPRV01.notatall,Not at all
+FACPRV01.occasionally,Occasionally
+FACPRV01.frequently,Frequently
+FACPRV02.notatall,Not at all
+FACPRV02.occasionally,Occasionally
+FACPRV02.frequently,Frequently
+FACPRV04.notatall,Not at all
+FACPRV04.occasionally,Occasionally
+FACPRV04.frequently,Frequently
+FACPRV05.notatall,Not at all
+FACPRV05.occasionally,Occasionally
+FACPRV05.frequently,Frequently
+FACPRV06.notatall,Not at all
+FACPRV06.occasionally,Occasionally
+FACPRV06.frequently,Frequently
+FACPRV07.notatall,Not at all
+FACPRV07.occasionally,Occasionally
+FACPRV07.frequently,Frequently
+FACPRV08.notatall,Not at all
+FACPRV08.occasionally,Occasionally
+FACPRV08.frequently,Frequently
+FACPRV09.notatall,Not at all
+FACPRV09.occasionally,Occasionally
+FACPRV09.frequently,Frequently
+FACPRV10.notatall,Not at all
+FACPRV10.occasionally,Occasionally
+FACPRV10.frequently,Frequently
+FACPRV13.notatall,Not at all
+FACPRV13.occasionally,Occasionally
+FACPRV13.frequently,Frequently
+FACPRV15.notatall,Not at all
+FACPRV15.occasionally,Occasionally
+FACPRV15.frequently,Frequently
+FACPRV16.notatall,Not at all
+FACPRV16.occasionally,Occasionally
+FACPRV16.frequently,Frequently
+FACPRV17.notatall,Not at all
+FACPRV17.occasionally,Occasionally
+FACPRV17.frequently,Frequently
+FACPRV18.notatall,Not at all
+FACPRV18.occasionally,Occasionally
+FACPRV18.frequently,Frequently
+FACPRV19.notatall,Not at all
+FACPRV19.occasionally,Occasionally
+FACPRV19.frequently,Frequently
+GENACT04.notatall,Not at all
+GENACT04.occasionally,Occasionally
+GENACT04.frequently,Frequently
+GENACT07.notatall,Not at all
+GENACT07.occasionally,Occasionally
+GENACT07.frequently,Frequently
+GENACT15.notatall,Not at all
+GENACT15.occasionally,Occasionally
+GENACT15.frequently,Frequently
+GENACT18.notatall,Not at all
+GENACT18.occasionally,Occasionally
+GENACT18.frequently,Frequently
+GENACT19.notatall,Not at all
+GENACT19.occasionally,Occasionally
+GENACT19.frequently,Frequently
+GENACT22.notatall,Not at all
+GENACT22.occasionally,Occasionally
+GENACT22.frequently,Frequently
+GENACT26.notatall,Not at all
+GENACT26.occasionally,Occasionally
+GENACT26.frequently,Frequently
+GENACT28.notatall,Not at all
+GENACT28.occasionally,Occasionally
+GENACT28.frequently,Frequently
+GENACT30.notatall,Not at all
+GENACT30.occasionally,Occasionally
+GENACT30.frequently,Frequently
+GENACT31.notatall,Not at all
+GENACT31.occasionally,Occasionally
+GENACT31.frequently,Frequently
+GENACT35.notatall,Not at all
+GENACT35.occasionally,Occasionally
+GENACT35.frequently,Frequently
+GENACT36.notatall,Not at all
+GENACT36.occasionally,Occasionally
+GENACT36.frequently,Frequently
+GENACT37.notatall,Not at all
+GENACT37.occasionally,Occasionally
+GENACT37.frequently,Frequently
+GOAL02.notimportant,Not important
+GOAL02.somewhatimportant,Somewhat important
+GOAL02.veryimportant,Very important
+GOAL02.essential,Essential
+GOAL03.notimportant,Not important
+GOAL03.somewhatimportant,Somewhat important
+GOAL03.veryimportant,Very important
+GOAL03.essential,Essential
+GOAL04.notimportant,Not important
+GOAL04.somewhatimportant,Somewhat important
+GOAL04.veryimportant,Very important
+GOAL04.essential,Essential
+GOAL05.notimportant,Not important
+GOAL05.somewhatimportant,Somewhat important
+GOAL05.veryimportant,Very important
+GOAL05.essential,Essential
+GOAL06.notimportant,Not important
+GOAL06.somewhatimportant,Somewhat important
+GOAL06.veryimportant,Very important
+GOAL06.essential,Essential
+GOAL07.notimportant,Not important
+GOAL07.somewhatimportant,Somewhat important
+GOAL07.veryimportant,Very important
+GOAL07.essential,Essential
+GOAL08.notimportant,Not important
+GOAL08.somewhatimportant,Somewhat important
+GOAL08.veryimportant,Very important
+GOAL08.essential,Essential
+GOAL09.notimportant,Not important
+GOAL09.somewhatimportant,Somewhat important
+GOAL09.veryimportant,Very important
+GOAL09.essential,Essential
+GOAL10.notimportant,Not important
+GOAL10.somewhatimportant,Somewhat important
+GOAL10.veryimportant,Very important
+GOAL10.essential,Essential
+GOAL11.notimportant,Not important
+GOAL11.somewhatimportant,Somewhat important
+GOAL11.veryimportant,Very important
+GOAL11.essential,Essential
+GOAL12.notimportant,Not important
+GOAL12.somewhatimportant,Somewhat important
+GOAL12.veryimportant,Very important
+GOAL12.essential,Essential
+GOAL15.notimportant,Not important
+GOAL15.somewhatimportant,Somewhat important
+GOAL15.veryimportant,Very important
+GOAL15.essential,Essential
+GOAL16.notimportant,Not important
+GOAL16.somewhatimportant,Somewhat important
+GOAL16.veryimportant,Very important
+GOAL16.essential,Essential
+GOAL18.notimportant,Not important
+GOAL18.somewhatimportant,Somewhat important
+GOAL18.veryimportant,Very important
+GOAL18.essential,Essential
+GOAL19.notimportant,Not important
+GOAL19.somewhatimportant,Somewhat important
+GOAL19.veryimportant,Very important
+GOAL19.essential,Essential
+GOAL20.notimportant,Not important
+GOAL20.somewhatimportant,Somewhat important
+GOAL20.veryimportant,Very important
+GOAL20.essential,Essential
+GOAL21.notimportant,Not important
+GOAL21.somewhatimportant,Somewhat important
+GOAL21.veryimportant,Very important
+GOAL21.essential,Essential
+GOAL22.notimportant,Not important
+GOAL22.somewhatimportant,Somewhat important
+GOAL22.veryimportant,Very important
+GOAL22.essential,Essential
+GOAL24.notimportant,Not important
+GOAL24.somewhatimportant,Somewhat important
+GOAL24.veryimportant,Very important
+GOAL24.essential,Essential
+HPW01.hours0,No hours
+HPW01.hours0to1,Less than one hour
+HPW01.hours1to2,One to two hours
+HPW01.hours3to5,Three to five hours
+HPW01.hours6to10,Six to ten hours
+HPW01.hours11to15,Eleven to fifteen hours
+HPW01.hours16to20,Sixteen to twenty hours
+HPW01.hours21plus,More than twenty hours
+HPW03.hours0,No hours
+HPW03.hours0to1,Less than one hour
+HPW03.hours1to2,One to two hours
+HPW03.hours3to5,Three to five hours
+HPW03.hours6to10,Six to ten hours
+HPW03.hours11to15,Eleven to fifteen hours
+HPW03.hours16to20,Sixteen to twenty hours
+HPW03.hours21plus,More than twenty hours
+HPW04.hours0,No hours
+HPW04.hours0to1,Less than one hour
+HPW04.hours1to2,One to two hours
+HPW04.hours3to5,Three to five hours
+HPW04.hours6to10,Six to ten hours
+HPW04.hours11to15,Eleven to fifteen hours
+HPW04.hours16to20,Sixteen to twenty hours
+HPW04.hours21plus,More than twenty hours
+HPW05.hours0,No hours
+HPW05.hours0to1,Less than one hour
+HPW05.hours1to2,One to two hours
+HPW05.hours3to5,Three to five hours
+HPW05.hours6to10,Six to ten hours
+HPW05.hours11to15,Eleven to fifteen hours
+HPW05.hours16to20,Sixteen to twenty hours
+HPW05.hours21plus,More than twenty hours
+HPW08.hours0,No hours
+HPW08.hours0to1,Less than one hour
+HPW08.hours1to2,One to two hours
+HPW08.hours3to5,Three to five hours
+HPW08.hours6to10,Six to ten hours
+HPW08.hours11to15,Eleven to fifteen hours
+HPW08.hours16to20,Sixteen to twenty hours
+HPW08.hours21plus,More than twenty hours
+HPW10.hours0,No hours
+HPW10.hours0to1,Less than one hour
+HPW10.hours1to2,One to two hours
+HPW10.hours3to5,Three to five hours
+HPW10.hours6to10,Six to ten hours
+HPW10.hours11to15,Eleven to fifteen hours
+HPW10.hours16to20,Sixteen to twenty hours
+HPW10.hours21plus,More than twenty hours
+HPW13.hours0,No hours
+HPW13.hours0to1,Less than one hour
+HPW13.hours1to2,One to two hours
+HPW13.hours3to5,Three to five hours
+HPW13.hours6to10,Six to ten hours
+HPW13.hours11to15,Eleven to fifteen hours
+HPW13.hours16to20,Sixteen to twenty hours
+HPW13.hours21plus,More than twenty hours
+HPW15.hours0,No hours
+HPW15.hours0to1,Less than one hour
+HPW15.hours1to2,One to two hours
+HPW15.hours3to5,Three to five hours
+HPW15.hours6to10,Six to ten hours
+HPW15.hours11to15,Eleven to fifteen hours
+HPW15.hours16to20,Sixteen to twenty hours
+HPW15.hours21plus,More than twenty hours
+HPW16.hours0,No hours
+HPW16.hours0to1,Less than one hour
+HPW16.hours1to2,One to two hours
+HPW16.hours3to5,Three to five hours
+HPW16.hours6to10,Six to ten hours
+HPW16.hours11to15,Eleven to fifteen hours
+HPW16.hours16to20,Sixteen to twenty hours
+HPW16.hours21plus,More than twenty hours
+HPW17.hours0,No hours
+HPW17.hours0to1,Less than one hour
+HPW17.hours1to2,One to two hours
+HPW17.hours3to5,Three to five hours
+HPW17.hours6to10,Six to ten hours
+HPW17.hours11to15,Eleven to fifteen hours
+HPW17.hours16to20,Sixteen to twenty hours
+HPW17.hours21plus,More than twenty hours
+HPW19.hours0,No hours
+HPW19.hours0to1,Less than one hour
+HPW19.hours1to2,One to two hours
+HPW19.hours3to5,Three to five hours
+HPW19.hours6to10,Six to ten hours
+HPW19.hours11to15,Eleven to fifteen hours
+HPW19.hours16to20,Sixteen to twenty hours
+HPW19.hours21plus,More than twenty hours
+HPW20.hours0,No hours
+HPW20.hours0to1,Less than one hour
+HPW20.hours1to2,One to two hours
+HPW20.hours3to5,Three to five hours
+HPW20.hours6to10,Six to ten hours
+HPW20.hours11to15,Eleven to fifteen hours
+HPW20.hours16to20,Sixteen to twenty hours
+HPW20.hours21plus,More than twenty hours
+HPW21.hours0,No hours
+HPW21.hours0to1,Less than one hour
+HPW21.hours1to2,One to two hours
+HPW21.hours3to5,Three to five hours
+HPW21.hours6to10,Six to ten hours
+HPW21.hours11to15,Eleven to fifteen hours
+HPW21.hours16to20,Sixteen to twenty hours
+HPW21.hours21plus,More than twenty hours
+HPW23.hours0,No hours
+HPW23.hours0to1,Less than one hour
+HPW23.hours1to2,One to two hours
+HPW23.hours3to5,Three to five hours
+HPW23.hours6to10,Six to ten hours
+HPW23.hours11to15,Eleven to fifteen hours
+HPW23.hours16to20,Sixteen to twenty hours
+HPW23.hours21plus,More than twenty hours
+HPW25.hours0,No hours
+HPW25.hours0to1,Less than one hour
+HPW25.hours1to2,One to two hours
+HPW25.hours3to5,Three to five hours
+HPW25.hours6to10,Six to ten hours
+HPW25.hours11to15,Eleven to fifteen hours
+HPW25.hours16to20,Sixteen to twenty hours
+HPW25.hours21plus,More than twenty hours
+HPW26.hours0,No hours
+HPW26.hours0to1,Less than one hour
+HPW26.hours1to2,One to two hours
+HPW26.hours3to5,Three to five hours
+HPW26.hours6to10,Six to ten hours
+HPW26.hours11to15,Eleven to fifteen hours
+HPW26.hours16to20,Sixteen to twenty hours
+HPW26.hours21plus,More than twenty hours
+HPW27.hours0,No hours
+HPW27.hours0to1,Less than one hour
+HPW27.hours1to2,One to two hours
+HPW27.hours3to5,Three to five hours
+HPW27.hours6to10,Six to ten hours
+HPW27.hours11to15,Eleven to fifteen hours
+HPW27.hours16to20,Sixteen to twenty hours
+HPW27.hours21plus,More than twenty hours
+MAJOR1A_9415.business,Business
+NATENGSP.yes,Yes
+PLANS02.yes,Yes
+PLANS07.yes,Yes
+PLANS08.yes,Yes
+PLANS14.yes,Yes
+PLANS15.yes,Yes
+PLANS19.yes,Yes
+POLIVIEW.farright,Far right
+POLIVIEW.conservative,Conservative
+POLIVIEW.middleoftheroad,Middle of the road
+POLIVIEW.liberal,Liberal
+POLIVIEW.farleft,Far left
+RACE1.yes,Yes
+RACE2.yes,Yes
+RACE3.yes,Yes
+RACE4.yes,Yes
+RACE5.yes,Yes
+RACE6.yes,Yes
+RACE7.yes,Yes
+RACE8.yes,Yes
+RACE9.yes,Yes
+RACEGROUP.yes,Yes
+RATE01.lowest10pct,Lowest ten percent
+RATE01.belowaverage,Below average
+RATE01.average,Average
+RATE01.aboveaverage,Above average
+RATE01.highest10pct,Highest ten percent
+RATE02.lowest10pct,Lowest ten percent
+RATE02.belowaverage,Below average
+RATE02.average,Average
+RATE02.aboveaverage,Above average
+RATE02.highest10pct,Highest ten percent
+RATE04.lowest10pct,Lowest ten percent
+RATE04.belowaverage,Below average
+RATE04.average,Average
+RATE04.aboveaverage,Above average
+RATE04.highest10pct,Highest ten percent
+RATE06.lowest10pct,Lowest ten percent
+RATE06.belowaverage,Below average
+RATE06.average,Average
+RATE06.aboveaverage,Above average
+RATE06.highest10pct,Highest ten percent
+RATE07.lowest10pct,Lowest ten percent
+RATE07.belowaverage,Below average
+RATE07.average,Average
+RATE07.aboveaverage,Above average
+RATE07.highest10pct,Highest ten percent
+RATE08.lowest10pct,Lowest ten percent
+RATE08.belowaverage,Below average
+RATE08.average,Average
+RATE08.aboveaverage,Above average
+RATE08.highest10pct,Highest ten percent
+RATE09.lowest10pct,Lowest ten percent
+RATE09.belowaverage,Below average
+RATE09.average,Average
+RATE09.aboveaverage,Above average
+RATE09.highest10pct,Highest ten percent
+RATE10.lowest10pct,Lowest ten percent
+RATE10.belowaverage,Below average
+RATE10.average,Average
+RATE10.aboveaverage,Above average
+RATE10.highest10pct,Highest ten percent
+RATE12.lowest10pct,Lowest ten percent
+RATE12.belowaverage,Below average
+RATE12.average,Average
+RATE12.aboveaverage,Above average
+RATE12.highest10pct,Highest ten percent
+RATE22.lowest10pct,Lowest ten percent
+RATE22.belowaverage,Below average
+RATE22.average,Average
+RATE22.aboveaverage,Above average
+RATE22.highest10pct,Highest ten percent
+RATE23.lowest10pct,Lowest ten percent
+RATE23.belowaverage,Below average
+RATE23.average,Average
+RATE23.aboveaverage,Above average
+RATE23.highest10pct,Highest ten percent
+RATE27.lowest10pct,Lowest ten percent
+RATE27.belowaverage,Below average
+RATE27.average,Average
+RATE27.aboveaverage,Above average
+RATE27.highest10pct,Highest ten percent
+RATE28.lowest10pct,Lowest ten percent
+RATE28.belowaverage,Below average
+RATE28.average,Average
+RATE28.aboveaverage,Above average
+RATE28.highest10pct,Highest ten percent
+REENROLL_9406.defno,Definitely no
+REENROLL_9406.probno,Probably no
+REENROLL_9406.dontknow,Dont know
+REENROLL_9406.probyes,Probably yes
+REENROLL_9406.defyes,Definitely yes
+SATIS01_9406.cantrate,Cant rate
+SATIS01_9406.dissatisfied,Dissatisfied
+SATIS01_9406.neutral,Neutral
+SATIS01_9406.satisfied,Satisfied
+SATIS01_9406.verysatisfied,Very satisfied
+SATIS02_9406.cantrate,Cant rate
+SATIS02_9406.dissatisfied,Dissatisfied
+SATIS02_9406.neutral,Neutral
+SATIS02_9406.satisfied,Satisfied
+SATIS02_9406.verysatisfied,Very satisfied
+SATIS03_9406.cantrate,Cant rate
+SATIS03_9406.dissatisfied,Dissatisfied
+SATIS03_9406.neutral,Neutral
+SATIS03_9406.satisfied,Satisfied
+SATIS03_9406.verysatisfied,Very satisfied
+SATIS05_9406.cantrate,Cant rate
+SATIS05_9406.dissatisfied,Dissatisfied
+SATIS05_9406.neutral,Neutral
+SATIS05_9406.satisfied,Satisfied
+SATIS05_9406.verysatisfied,Very satisfied
+SATIS06_9406.cantrate,Cant rate
+SATIS06_9406.dissatisfied,Dissatisfied
+SATIS06_9406.neutral,Neutral
+SATIS06_9406.satisfied,Satisfied
+SATIS06_9406.verysatisfied,Very satisfied
+SATIS07_9406.cantrate,Cant rate
+SATIS07_9406.dissatisfied,Dissatisfied
+SATIS07_9406.neutral,Neutral
+SATIS07_9406.satisfied,Satisfied
+SATIS07_9406.verysatisfied,Very satisfied
+SATIS08_9406.cantrate,Cant rate
+SATIS08_9406.dissatisfied,Dissatisfied
+SATIS08_9406.neutral,Neutral
+SATIS08_9406.satisfied,Satisfied
+SATIS08_9406.verysatisfied,Very satisfied
+SATIS09_9406.cantrate,Cant rate
+SATIS09_9406.dissatisfied,Dissatisfied
+SATIS09_9406.neutral,Neutral
+SATIS09_9406.satisfied,Satisfied
+SATIS09_9406.verysatisfied,Very satisfied
+SATIS10_9406.cantrate,Cant rate
+SATIS10_9406.dissatisfied,Dissatisfied
+SATIS10_9406.neutral,Neutral
+SATIS10_9406.satisfied,Satisfied
+SATIS10_9406.verysatisfied,Very satisfied
+SATIS12_9406.cantrate,Cant rate
+SATIS12_9406.dissatisfied,Dissatisfied
+SATIS12_9406.neutral,Neutral
+SATIS12_9406.satisfied,Satisfied
+SATIS12_9406.verysatisfied,Very satisfied
+SATIS13_9406.cantrate,Cant rate
+SATIS13_9406.dissatisfied,Dissatisfied
+SATIS13_9406.neutral,Neutral
+SATIS13_9406.satisfied,Satisfied
+SATIS13_9406.verysatisfied,Very satisfied
+SATIS14_9406.cantrate,Cant rate
+SATIS14_9406.dissatisfied,Dissatisfied
+SATIS14_9406.neutral,Neutral
+SATIS14_9406.satisfied,Satisfied
+SATIS14_9406.verysatisfied,Very satisfied
+SATIS15_9406.cantrate,Cant rate
+SATIS15_9406.dissatisfied,Dissatisfied
+SATIS15_9406.neutral,Neutral
+SATIS15_9406.satisfied,Satisfied
+SATIS15_9406.verysatisfied,Very satisfied
+SATIS16_9406.cantrate,Cant rate
+SATIS16_9406.dissatisfied,Dissatisfied
+SATIS16_9406.neutral,Neutral
+SATIS16_9406.satisfied,Satisfied
+SATIS16_9406.verysatisfied,Very satisfied
+SATIS17_9406.cantrate,Cant rate
+SATIS17_9406.dissatisfied,Dissatisfied
+SATIS17_9406.neutral,Neutral
+SATIS17_9406.satisfied,Satisfied
+SATIS17_9406.verysatisfied,Very satisfied
+SATIS18_9406.cantrate,Cant rate
+SATIS18_9406.dissatisfied,Dissatisfied
+SATIS18_9406.neutral,Neutral
+SATIS18_9406.satisfied,Satisfied
+SATIS18_9406.verysatisfied,Very satisfied
+SATIS19_9406.cantrate,Cant rate
+SATIS19_9406.dissatisfied,Dissatisfied
+SATIS19_9406.neutral,Neutral
+SATIS19_9406.satisfied,Satisfied
+SATIS19_9406.verysatisfied,Very satisfied
+SATIS20_9406.cantrate,Cant rate
+SATIS20_9406.dissatisfied,Dissatisfied
+SATIS20_9406.neutral,Neutral
+SATIS20_9406.satisfied,Satisfied
+SATIS20_9406.verysatisfied,Very satisfied
+SATIS21_9406.cantrate,Cant rate
+SATIS21_9406.dissatisfied,Dissatisfied
+SATIS21_9406.neutral,Neutral
+SATIS21_9406.satisfied,Satisfied
+SATIS21_9406.verysatisfied,Very satisfied
+SATIS22_9406.cantrate,Cant rate
+SATIS22_9406.dissatisfied,Dissatisfied
+SATIS22_9406.neutral,Neutral
+SATIS22_9406.satisfied,Satisfied
+SATIS22_9406.verysatisfied,Very satisfied
+SATIS24_9406.cantrate,Cant rate
+SATIS24_9406.dissatisfied,Dissatisfied
+SATIS24_9406.neutral,Neutral
+SATIS24_9406.satisfied,Satisfied
+SATIS24_9406.verysatisfied,Very satisfied
+SATIS25_9406.cantrate,Cant rate
+SATIS25_9406.dissatisfied,Dissatisfied
+SATIS25_9406.neutral,Neutral
+SATIS25_9406.satisfied,Satisfied
+SATIS25_9406.verysatisfied,Very satisfied
+SATIS26_9406.cantrate,Cant rate
+SATIS26_9406.dissatisfied,Dissatisfied
+SATIS26_9406.neutral,Neutral
+SATIS26_9406.satisfied,Satisfied
+SATIS26_9406.verysatisfied,Very satisfied
+SATIS27_9406.cantrate,Cant rate
+SATIS27_9406.dissatisfied,Dissatisfied
+SATIS27_9406.neutral,Neutral
+SATIS27_9406.satisfied,Satisfied
+SATIS27_9406.verysatisfied,Very satisfied
+SATIS28_9406.cantrate,Cant rate
+SATIS28_9406.dissatisfied,Dissatisfied
+SATIS28_9406.neutral,Neutral
+SATIS28_9406.satisfied,Satisfied
+SATIS28_9406.verysatisfied,Very satisfied
+SATIS30_9406.cantrate,Cant rate
+SATIS30_9406.dissatisfied,Dissatisfied
+SATIS30_9406.neutral,Neutral
+SATIS30_9406.satisfied,Satisfied
+SATIS30_9406.verysatisfied,Very satisfied
+SATIS31_9406.cantrate,Cant rate
+SATIS31_9406.dissatisfied,Dissatisfied
+SATIS31_9406.neutral,Neutral
+SATIS31_9406.satisfied,Satisfied
+SATIS31_9406.verysatisfied,Very satisfied
+SATIS32_9406.cantrate,Cant rate
+SATIS32_9406.dissatisfied,Dissatisfied
+SATIS32_9406.neutral,Neutral
+SATIS32_9406.satisfied,Satisfied
+SATIS32_9406.verysatisfied,Very satisfied
+SATIS33_9406.cantrate,Cant rate
+SATIS33_9406.dissatisfied,Dissatisfied
+SATIS33_9406.neutral,Neutral
+SATIS33_9406.satisfied,Satisfied
+SATIS33_9406.verysatisfied,Very satisfied
+SATIS34_9406.cantrate,Cant rate
+SATIS34_9406.dissatisfied,Dissatisfied
+SATIS34_9406.neutral,Neutral
+SATIS34_9406.satisfied,Satisfied
+SATIS34_9406.verysatisfied,Very satisfied
+SATIS35_9406.cantrate,Cant rate
+SATIS35_9406.dissatisfied,Dissatisfied
+SATIS35_9406.neutral,Neutral
+SATIS35_9406.satisfied,Satisfied
+SATIS35_9406.verysatisfied,Very satisfied
+SATIS36_9406.cantrate,Cant rate
+SATIS36_9406.dissatisfied,Dissatisfied
+SATIS36_9406.neutral,Neutral
+SATIS36_9406.satisfied,Satisfied
+SATIS36_9406.verysatisfied,Very satisfied
+SEX.male,Male
+SEX.female,Female
+SLFCHG01.muchweaker,Much weaker
+SLFCHG01.weaker,Weaker
+SLFCHG01.nochange,No change
+SLFCHG01.stronger,Stronger
+SLFCHG01.muchstronger,Much strongly
+SLFCHG04.muchweaker,Much weaker
+SLFCHG04.weaker,Weaker
+SLFCHG04.nochange,No change
+SLFCHG04.stronger,Stronger
+SLFCHG04.muchstronger,Much strongly
+SLFCHG05.muchweaker,Much weaker
+SLFCHG05.weaker,Weaker
+SLFCHG05.nochange,No change
+SLFCHG05.stronger,Stronger
+SLFCHG05.muchstronger,Much strongly
+SLFCHG08.muchweaker,Much weaker
+SLFCHG08.weaker,Weaker
+SLFCHG08.nochange,No change
+SLFCHG08.stronger,Stronger
+SLFCHG08.muchstronger,Much strongly
+SLFCHG09.muchweaker,Much weaker
+SLFCHG09.weaker,Weaker
+SLFCHG09.nochange,No change
+SLFCHG09.stronger,Stronger
+SLFCHG09.muchstronger,Much strongly
+SLFCHG16.muchweaker,Much weaker
+SLFCHG16.weaker,Weaker
+SLFCHG16.nochange,No change
+SLFCHG16.stronger,Stronger
+SLFCHG16.muchstronger,Much strongly
+SLFCHG17.muchweaker,Much weaker
+SLFCHG17.weaker,Weaker
+SLFCHG17.nochange,No change
+SLFCHG17.stronger,Stronger
+SLFCHG17.muchstronger,Much strongly
+SLFCHG18.muchweaker,Much weaker
+SLFCHG18.weaker,Weaker
+SLFCHG18.nochange,No change
+SLFCHG18.stronger,Stronger
+SLFCHG18.muchstronger,Much strongly
+SLFCHG19.muchweaker,Much weaker
+SLFCHG19.weaker,Weaker
+SLFCHG19.nochange,No change
+SLFCHG19.stronger,Stronger
+SLFCHG19.muchstronger,Much strongly
+SLFCHG20.muchweaker,Much weaker
+SLFCHG20.weaker,Weaker
+SLFCHG20.nochange,No change
+SLFCHG20.stronger,Stronger
+SLFCHG20.muchstronger,Much strongly
+SLFCHG21.muchweaker,Much weaker
+SLFCHG21.weaker,Weaker
+SLFCHG21.nochange,No change
+SLFCHG21.stronger,Stronger
+SLFCHG21.muchstronger,Much strongly
+SLFCHG22.muchweaker,Much weaker
+SLFCHG22.weaker,Weaker
+SLFCHG22.nochange,No change
+SLFCHG22.stronger,Stronger
+SLFCHG22.muchstronger,Much strongly
+SLFCHG23.muchweaker,Much weaker
+SLFCHG23.weaker,Weaker
+SLFCHG23.nochange,No change
+SLFCHG23.stronger,Stronger
+SLFCHG23.muchstronger,Much strongly
+SLFCHG24.muchweaker,Much weaker
+SLFCHG24.weaker,Weaker
+SLFCHG24.nochange,No change
+SLFCHG24.stronger,Stronger
+SLFCHG24.muchstronger,Much strongly
+SLFCHG28.muchweaker,Much weaker
+SLFCHG28.weaker,Weaker
+SLFCHG28.nochange,No change
+SLFCHG28.stronger,Stronger
+SLFCHG28.muchstronger,Much strongly
+SLFCHG29.muchweaker,Much weaker
+SLFCHG29.weaker,Weaker
+SLFCHG29.nochange,No change
+SLFCHG29.stronger,Stronger
+SLFCHG29.muchstronger,Much strongly
+SLFCHG30.muchweaker,Much weaker
+SLFCHG30.weaker,Weaker
+SLFCHG30.nochange,No change
+SLFCHG30.stronger,Stronger
+SLFCHG30.muchstronger,Much strongly
+SLFCHG32.muchweaker,Much weaker
+SLFCHG32.weaker,Weaker
+SLFCHG32.nochange,No change
+SLFCHG32.stronger,Stronger
+SLFCHG32.muchstronger,Much strongly
+SLFCHG34.muchweaker,Much weaker
+SLFCHG34.weaker,Weaker
+SLFCHG34.nochange,No change
+SLFCHG34.stronger,Stronger
+SLFCHG34.muchstronger,Much strongly
+SLFCHG35.muchweaker,Much weaker
+SLFCHG35.weaker,Weaker
+SLFCHG35.nochange,No change
+SLFCHG35.stronger,Stronger
+SLFCHG35.muchstronger,Much strongly
+SLFCHG36.muchweaker,Much weaker
+SLFCHG36.weaker,Weaker
+SLFCHG36.nochange,No change
+SLFCHG36.stronger,Stronger
+SLFCHG36.muchstronger,Much strongly
+SUCCSES1.not,Not successful
+SUCCSES1.somewhat,Somewhat successful
+SUCCSES1.very,Very successful
+SUCCSES2.not,Not successful
+SUCCSES2.somewhat,Somewhat successful
+SUCCSES2.very,Very successful
+SUCCSES3.not,Not successful
+SUCCSES3.somewhat,Somewhat successful
+SUCCSES3.very,Very successful
+SUCCSES4.not,Not successful
+SUCCSES4.somewhat,Somewhat successful
+SUCCSES4.very,Very successful
+SUCCSES5.not,Not successful
+SUCCSES5.somewhat,Somewhat successful
+SUCCSES5.very,Very successful
+SUCCSES6.not,Not successful
+SUCCSES6.somewhat,Somewhat successful
+SUCCSES6.very,Very successful
+SUCCSES7.not,Not successful
+SUCCSES7.somewhat,Somewhat successful
+SUCCSES7.very,Very successful
+VIEW04.disagreestrongly,Disagree strongly
+VIEW04.disagreesomewhat,Disagree somewhat
+VIEW04.agreesomewhat,Agree somewhat
+VIEW04.agreestrongly,Agree strongly
+VIEW25.disagreestrongly,Disagree strongly
+VIEW25.disagreesomewhat,Disagree somewhat
+VIEW25.agreesomewhat,Agree somewhat
+VIEW25.agreestrongly,Agree strongly
+VIEW28.disagreestrongly,Disagree strongly
+VIEW28.disagreesomewhat,Disagree somewhat
+VIEW28.agreesomewhat,Agree somewhat
+VIEW28.agreestrongly,Agree strongly
+VIEW31.disagreestrongly,Disagree strongly
+VIEW31.disagreesomewhat,Disagree somewhat
+VIEW31.agreesomewhat,Agree somewhat
+VIEW31.agreestrongly,Agree strongly
+VIEW38.disagreestrongly,Disagree strongly
+VIEW38.disagreesomewhat,Disagree somewhat
+VIEW38.agreesomewhat,Agree somewhat
+VIEW38.agreestrongly,Agree strongly
+VIEW42.disagreestrongly,Disagree strongly
+VIEW42.disagreesomewhat,Disagree somewhat
+VIEW42.agreesomewhat,Agree somewhat
+VIEW42.agreestrongly,Agree strongly
+ACADEMIC_SELFCONCEPT.scale,Scale
+SOCIAL_SELFCONCEPT.scale,Scale
+SOCIAL_AGENCY.scale,Scale
+FAC_INTERACTION.scale_scale,Scale
