@@ -23,8 +23,8 @@ write_csv(css, "css_question_summary.csv")
 Then you can read in the saved file from that path.
 
 ```{r reading saved files}
-tfs <- read_csv("../data/tfs_question_summary.csv")
-css <- read_csv("../data/css_question_summary.csv")
+tfs <- read_csv("tfs_question_summary.csv")
+css <- read_csv("css_question_summary.csv")
 ```
 
 
