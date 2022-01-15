@@ -1,336 +1,336 @@
-Summary,Label
-CHOICE.lessthanthird,Less than third choice
-CHOICE.third,Third choice
-CHOICE.second,Second choice
-CHOICE.first,First choice
-CHOOSE06.notimportant,Not important
-CHOOSE06.somewhatimportant,Somewhat important
-CHOOSE06.veryimportant,Very important
-CHOOSE12.notimportant,Not important
-CHOOSE12.somewhatimportant,Somewhat important
-CHOOSE12.veryimportant,Very important
-CHOOSE16.notimportant,Not important
-CHOOSE16.somewhatimportant,Somewhat important
-CHOOSE16.veryimportant,Very important
-CHOOSE21.notimportant,Not important
-CHOOSE21.somewhatimportant,Somewhat important
-CHOOSE21.veryimportant,Very important
-CHOOSE24.notimportant,Not important
-CHOOSE24.somewhatimportant,Somewhat important
-CHOOSE24.veryimportant,Very important
-CHOOSE25.notimportant,Not important
-CHOOSE25.somewhatimportant,Somewhat important
-CHOOSE25.veryimportant,Very important
-CHOOSE26.notimportant,Not important
-CHOOSE26.somewhatimportant,Somewhat important
-CHOOSE26.veryimportant,Very important
-CHOOSE28.notimportant,Not important
-CHOOSE28.somewhatimportant,Somewhat important
-CHOOSE28.veryimportant,Very important
-CHOOSE29.notimportant,Not important
-CHOOSE29.somewhatimportant,Somewhat important
-CHOOSE29.veryimportant,Very important
-DISTHOME.miles10less,Ten miles or less
-DISTHOME.miles11to50,Eleven to fifty miles
-DISTHOME.miles51to100,Fifty one to one hundred miles
-DISTHOME.miles101to500,One hundred one to five hundred miles
-DISTHOME.miles501plus,More than five hundred miles
-FINCON.none,None
-FINCON.some,Some
-FINCON.major,Major
-FIRSTGEN.yes,Yes
-FUTACT01.nochance,No chance
-FUTACT01.verylittlechance,Very little chance
-FUTACT01.somechance,Some chance
-FUTACT01.verygoodchance,Very good chance
-FUTACT02.nochance,No chance
-FUTACT02.verylittlechance,Very little chance
-FUTACT02.somechance,Some chance
-FUTACT02.verygoodchance,Very good chance
-FUTACT03.nochance,No chance
-FUTACT03.verylittlechance,Very little chance
-FUTACT03.somechance,Some chance
-FUTACT03.verygoodchance,Very good chance
-FUTACT04.nochance,No chance
-FUTACT04.verylittlechance,Very little chance
-FUTACT04.somechance,Some chance
-FUTACT04.verygoodchance,Very good chance
-FUTACT05.nochance,No chance
-FUTACT05.verylittlechance,Very little chance
-FUTACT05.somechance,Some chance
-FUTACT05.verygoodchance,Very good chance
-FUTACT11.nochance,No chance
-FUTACT11.verylittlechance,Very little chance
-FUTACT11.somechance,Some chance
-FUTACT11.verygoodchance,Very good chance
-FUTACT12.nochance,No chance
-FUTACT12.verylittlechance,Very little chance
-FUTACT12.somechance,Some chance
-FUTACT12.verygoodchance,Very good chance
-FUTACT15.nochance,No chance
-FUTACT15.verylittlechance,Very little chance
-FUTACT15.somechance,Some chance
-FUTACT15.verygoodchance,Very good chance
-FUTACT18.nochance,No chance
-FUTACT18.verylittlechance,Very little chance
-FUTACT18.somechance,Some chance
-FUTACT18.verygoodchance,Very good chance
-FUTACT19.nochance,No chance
-FUTACT19.verylittlechance,Very little chance
-FUTACT19.somechance,Some chance
-FUTACT19.verygoodchance,Very good chance
-FUTACT20.nochance,No chance
-FUTACT20.verylittlechance,Very little chance
-FUTACT20.somechance,Some chance
-FUTACT20.verygoodchance,Very good chance
-FUTACT24.nochance,No chance
-FUTACT24.verylittlechance,Very little chance
-FUTACT24.somechance,Some chance
-FUTACT24.verygoodchance,Very good chance
-FUTACT25.nochance,No chance
-FUTACT25.verylittlechance,Very little chance
-FUTACT25.somechance,Some chance
-FUTACT25.verygoodchance,Very good chance
-FUTACT28.nochance,No chance
-FUTACT28.verylittlechance,Very little chance
-FUTACT28.somechance,Some chance
-FUTACT28.verygoodchance,Very good chance
-FUTACT29.nochance,No chance
-FUTACT29.verylittlechance,Very little chance
-FUTACT29.somechance,Some chance
-FUTACT29.verygoodchance,Very good chance
-FUTACT33.nochance,No chance
-FUTACT33.verylittlechance,Very little chance
-FUTACT33.somechance,Some chance
-FUTACT33.verygoodchance,Very good chance
-GOAL02.notimportant,Not important
-GOAL02.somewhatimportant,Somewhat important
-GOAL02.veryimportant,Very important
-GOAL02.essential,Essential
-GOAL03.notimportant,Not important
-GOAL03.somewhatimportant,Somewhat important
-GOAL03.veryimportant,Very important
-GOAL03.essential,Essential
-GOAL04.notimportant,Not important
-GOAL04.somewhatimportant,Somewhat important
-GOAL04.veryimportant,Very important
-GOAL04.essential,Essential
-GOAL06.notimportant,Not important
-GOAL06.somewhatimportant,Somewhat important
-GOAL06.veryimportant,Very important
-GOAL06.essential,Essential
-GOAL07.notimportant,Not important
-GOAL07.somewhatimportant,Somewhat important
-GOAL07.veryimportant,Very important
-GOAL07.essential,Essential
-GOAL08.notimportant,Not important
-GOAL08.somewhatimportant,Somewhat important
-GOAL08.veryimportant,Very important
-GOAL08.essential,Essential
-GOAL09.notimportant,Not important
-GOAL09.somewhatimportant,Somewhat important
-GOAL09.veryimportant,Very important
-GOAL09.essential,Essential
-GOAL10.notimportant,Not important
-GOAL10.somewhatimportant,Somewhat important
-GOAL10.veryimportant,Very important
-GOAL10.essential,Essential
-GOAL11.notimportant,Not important
-GOAL11.somewhatimportant,Somewhat important
-GOAL11.veryimportant,Very important
-GOAL11.essential,Essential
-GOAL12.notimportant,Not important
-GOAL12.somewhatimportant,Somewhat important
-GOAL12.veryimportant,Very important
-GOAL12.essential,Essential
-GOAL13.notimportant,Not important
-GOAL13.somewhatimportant,Somewhat important
-GOAL13.veryimportant,Very important
-GOAL13.essential,Essential
-GOAL15.notimportant,Not important
-GOAL15.somewhatimportant,Somewhat important
-GOAL15.veryimportant,Very important
-GOAL15.essential,Essential
-GOAL16.notimportant,Not important
-GOAL16.somewhatimportant,Somewhat important
-GOAL16.veryimportant,Very important
-GOAL16.essential,Essential
-GOAL17.notimportant,Not important
-GOAL17.somewhatimportant,Somewhat important
-GOAL17.veryimportant,Very important
-GOAL17.essential,Essential
-GOAL18.notimportant,Not important
-GOAL18.somewhatimportant,Somewhat important
-GOAL18.veryimportant,Very important
-GOAL18.essential,Essential
-GOAL19.notimportant,Not important
-GOAL19.somewhatimportant,Somewhat important
-GOAL19.veryimportant,Very important
-GOAL19.essential,Essential
-GOAL20.notimportant,Not important
-GOAL20.somewhatimportant,Somewhat important
-GOAL20.veryimportant,Very important
-GOAL20.essential,Essential
-GOAL21.notimportant,Not important
-GOAL21.somewhatimportant,Somewhat important
-GOAL21.veryimportant,Very important
-GOAL21.essential,Essential
-GOAL23.notimportant,Not important
-GOAL23.somewhatimportant,Somewhat important
-GOAL23.veryimportant,Very important
-GOAL23.essential,Essential
-GOAL24.notimportant,Not important
-GOAL24.somewhatimportant,Somewhat important
-GOAL24.veryimportant,Very important
-GOAL24.essential,Essential
-HSGPA.d,D
-HSGPA.c,C
-HSGPA.b,B
-HSGPA.a,A
-INCOME.inclessthan50k,Less than 50k
-INCOME.inc50to75k,Between 50k and 75k
-INCOME.inc75to100k,Between 75k and 100k
-INCOME.inc100to150k,Between 100k and 150k
-INCOME.inc150to200k,Between 150k and 200k
-INCOME.inc200kplus,More than 200k
-MAJORA.business,Business
-PLANLIVE.family,With family
-PLANLIVE.offcampus,Off campus
-PLANLIVE.oncampus,On campus
-PLANLIVE.greekhouse,Greek house
-PLANLIVE.other,Other
-POLIVIEW.farright,Far right
-POLIVIEW.conservative,Conservative
-POLIVIEW.middleoftheroad,Middle of the road
-POLIVIEW.liberal,Liberal
-POLIVIEW.farleft,Far left
-RACE10.puerto_rican,Puerto Rican
-RACE11.other_latino,Other Latino
-RACE12.white,White
-RACE13.other,Other
-RACE7102_N.asian,Asian
-RACE8.black,Black
-RACE9.mexican_chicano,Mexican or Chicano
-RATE01.lowest10pct,Lowest ten percent
-RATE01.belowaverage,Below average
-RATE01.average,Average
-RATE01.aboveaverage,Above average
-RATE01.highest10pct,Highest ten percent
-RATE04.lowest10pct,Lowest ten percent
-RATE04.belowaverage,Below average
-RATE04.average,Average
-RATE04.aboveaverage,Above average
-RATE04.highest10pct,Highest ten percent
-RATE06.lowest10pct,Lowest ten percent
-RATE06.belowaverage,Below average
-RATE06.average,Average
-RATE06.aboveaverage,Above average
-RATE06.highest10pct,Highest ten percent
-RATE07.lowest10pct,Lowest ten percent
-RATE07.belowaverage,Below average
-RATE07.average,Average
-RATE07.aboveaverage,Above average
-RATE07.highest10pct,Highest ten percent
-RATE08.lowest10pct,Lowest ten percent
-RATE08.belowaverage,Below average
-RATE08.average,Average
-RATE08.aboveaverage,Above average
-RATE08.highest10pct,Highest ten percent
-RATE09.lowest10pct,Lowest ten percent
-RATE09.belowaverage,Below average
-RATE09.average,Average
-RATE09.aboveaverage,Above average
-RATE09.highest10pct,Highest ten percent
-RATE10.lowest10pct,Lowest ten percent
-RATE10.belowaverage,Below average
-RATE10.average,Average
-RATE10.aboveaverage,Above average
-RATE10.highest10pct,Highest ten percent
-RATE11.lowest10pct,Lowest ten percent
-RATE11.belowaverage,Below average
-RATE11.average,Average
-RATE11.aboveaverage,Above average
-RATE11.highest10pct,Highest ten percent
-RATE13.lowest10pct,Lowest ten percent
-RATE13.belowaverage,Below average
-RATE13.average,Average
-RATE13.aboveaverage,Above average
-RATE13.highest10pct,Highest ten percent
-RATE14.lowest10pct,Lowest ten percent
-RATE14.belowaverage,Below average
-RATE14.average,Average
-RATE14.aboveaverage,Above average
-RATE14.highest10pct,Highest ten percent
-RATE15.lowest10pct,Lowest ten percent
-RATE15.belowaverage,Below average
-RATE15.average,Average
-RATE15.aboveaverage,Above average
-RATE15.highest10pct,Highest ten percent
-RATE16.lowest10pct,Lowest ten percent
-RATE16.belowaverage,Below average
-RATE16.average,Average
-RATE16.aboveaverage,Above average
-RATE16.highest10pct,Highest ten percent
-RATE17.lowest10pct,Lowest ten percent
-RATE17.belowaverage,Below average
-RATE17.average,Average
-RATE17.aboveaverage,Above average
-RATE17.highest10pct,Highest ten percent
-RATE19.lowest10pct,Lowest ten percent
-RATE19.belowaverage,Below average
-RATE19.average,Average
-RATE19.aboveaverage,Above average
-RATE19.highest10pct,Highest ten percent
-RATE20.lowest10pct,Lowest ten percent
-RATE20.belowaverage,Below average
-RATE20.average,Average
-RATE20.aboveaverage,Above average
-RATE20.highest10pct,Highest ten percent
-REASON01.notimportant,Not important
-REASON01.somewhatimportant,Somewhat important
-REASON01.veryimportant,Very important
-REASON02.notimportant,Not important
-REASON02.somewhatimportant,Somewhat important
-REASON02.veryimportant,Very important
-REASON03.notimportant,Not important
-REASON03.somewhatimportant,Somewhat important
-REASON03.veryimportant,Very important
-REASON04.notimportant,Not important
-REASON04.somewhatimportant,Somewhat important
-REASON04.veryimportant,Very important
-REASON05.notimportant,Not important
-REASON05.somewhatimportant,Somewhat important
-REASON05.veryimportant,Very important
-REASON06.notimportant,Not important
-REASON06.somewhatimportant,Somewhat important
-REASON06.veryimportant,Very important
-REASON08.notimportant,Not important
-REASON08.somewhatimportant,Somewhat important
-REASON08.veryimportant,Very important
-REASON09.notimportant,Not important
-REASON09.somewhatimportant,Somewhat important
-REASON09.veryimportant,Very important
-REASON10.notimportant,Not important
-REASON10.somewhatimportant,Somewhat important
-REASON10.veryimportant,Very important
-REASON11.notimportant,Not important
-REASON11.somewhatimportant,Somewhat important
-REASON11.veryimportant,Very important
-REASON12.notimportant,Not important
-REASON12.somewhatimportant,Somewhat important
-REASON12.veryimportant,Very important
-REASON13.notimportant,Not important
-REASON13.somewhatimportant,Somewhat important
-REASON13.veryimportant,Very important
-SCAREERA.business,Business
-SELECTIVITY.scale,Scale
-SEX.male,Male
-SEX.female,Female
-VIEW19.disagreestrongly,Disagree strongly
-VIEW19.disagreesomewhat,Disagree somewhat
-VIEW19.agreesomewhat,Agree somewhat
-VIEW19.agreestrongly,Agree strongly
-VIEW31.disagreestrongly,Disagree strongly
-VIEW31.disagreesomewhat,Disagree somewhat
-VIEW31.agreesomewhat,Agree somewhat
-VIEW31.agreestrongly,Agree strongly
+Summary,Label,Group
+CHOICE.lessthanthird,Less than third choice,College Preference
+CHOICE.third,Third choice,College Preference
+CHOICE.second,Second choice,College Preference
+CHOICE.first,First choice,College Preference
+CHOOSE06.notimportant,Not important,College Choice Factors
+CHOOSE06.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE06.veryimportant,Very important,College Choice Factors
+CHOOSE12.notimportant,Not important,College Choice Factors
+CHOOSE12.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE12.veryimportant,Very important,College Choice Factors
+CHOOSE16.notimportant,Not important,College Choice Factors
+CHOOSE16.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE16.veryimportant,Very important,College Choice Factors
+CHOOSE21.notimportant,Not important,College Choice Factors
+CHOOSE21.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE21.veryimportant,Very important,College Choice Factors
+CHOOSE24.notimportant,Not important,College Choice Factors
+CHOOSE24.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE24.veryimportant,Very important,College Choice Factors
+CHOOSE25.notimportant,Not important,College Choice Factors
+CHOOSE25.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE25.veryimportant,Very important,College Choice Factors
+CHOOSE26.notimportant,Not important,College Choice Factors
+CHOOSE26.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE26.veryimportant,Very important,College Choice Factors
+CHOOSE28.notimportant,Not important,College Choice Factors
+CHOOSE28.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE28.veryimportant,Very important,College Choice Factors
+CHOOSE29.notimportant,Not important,College Choice Factors
+CHOOSE29.somewhatimportant,Somewhat important,College Choice Factors
+CHOOSE29.veryimportant,Very important,College Choice Factors
+DISTHOME.miles10less,Ten miles or less,Family Background And Demographics
+DISTHOME.miles11to50,Eleven to fifty miles,Family Background And Demographics
+DISTHOME.miles51to100,Fifty one to one hundred miles,Family Background And Demographics
+DISTHOME.miles101to500,One hundred one to five hundred miles,Family Background And Demographics
+DISTHOME.miles501plus,More than five hundred miles,Family Background And Demographics
+FINCON.none,None,Educational Expenses
+FINCON.some,Some,Educational Expenses
+FINCON.major,Major,Educational Expenses
+FIRSTGEN.yes,Yes,Family Background And Demographics
+FUTACT01.nochance,No chance,Plans For College
+FUTACT01.verylittlechance,Very little chance,Plans For College
+FUTACT01.somechance,Some chance,Plans For College
+FUTACT01.verygoodchance,Very good chance,Plans For College
+FUTACT02.nochance,No chance,Plans For College
+FUTACT02.verylittlechance,Very little chance,Plans For College
+FUTACT02.somechance,Some chance,Plans For College
+FUTACT02.verygoodchance,Very good chance,Plans For College
+FUTACT03.nochance,No chance,Plans For College
+FUTACT03.verylittlechance,Very little chance,Plans For College
+FUTACT03.somechance,Some chance,Plans For College
+FUTACT03.verygoodchance,Very good chance,Plans For College
+FUTACT04.nochance,No chance,Plans For College
+FUTACT04.verylittlechance,Very little chance,Plans For College
+FUTACT04.somechance,Some chance,Plans For College
+FUTACT04.verygoodchance,Very good chance,Plans For College
+FUTACT05.nochance,No chance,Plans For College
+FUTACT05.verylittlechance,Very little chance,Plans For College
+FUTACT05.somechance,Some chance,Plans For College
+FUTACT05.verygoodchance,Very good chance,Plans For College
+FUTACT11.nochance,No chance,Plans For College
+FUTACT11.verylittlechance,Very little chance,Plans For College
+FUTACT11.somechance,Some chance,Plans For College
+FUTACT11.verygoodchance,Very good chance,Plans For College
+FUTACT12.nochance,No chance,Plans For College
+FUTACT12.verylittlechance,Very little chance,Plans For College
+FUTACT12.somechance,Some chance,Plans For College
+FUTACT12.verygoodchance,Very good chance,Plans For College
+FUTACT15.nochance,No chance,Plans For College
+FUTACT15.verylittlechance,Very little chance,Plans For College
+FUTACT15.somechance,Some chance,Plans For College
+FUTACT15.verygoodchance,Very good chance,Plans For College
+FUTACT18.nochance,No chance,Plans For College
+FUTACT18.verylittlechance,Very little chance,Plans For College
+FUTACT18.somechance,Some chance,Plans For College
+FUTACT18.verygoodchance,Very good chance,Plans For College
+FUTACT19.nochance,No chance,Plans For College
+FUTACT19.verylittlechance,Very little chance,Plans For College
+FUTACT19.somechance,Some chance,Plans For College
+FUTACT19.verygoodchance,Very good chance,Plans For College
+FUTACT20.nochance,No chance,Plans For College
+FUTACT20.verylittlechance,Very little chance,Plans For College
+FUTACT20.somechance,Some chance,Plans For College
+FUTACT20.verygoodchance,Very good chance,Plans For College
+FUTACT24.nochance,No chance,Plans For College
+FUTACT24.verylittlechance,Very little chance,Plans For College
+FUTACT24.somechance,Some chance,Plans For College
+FUTACT24.verygoodchance,Very good chance,Plans For College
+FUTACT25.nochance,No chance,Plans For College
+FUTACT25.verylittlechance,Very little chance,Plans For College
+FUTACT25.somechance,Some chance,Plans For College
+FUTACT25.verygoodchance,Very good chance,Plans For College
+FUTACT28.nochance,No chance,Plans For College
+FUTACT28.verylittlechance,Very little chance,Plans For College
+FUTACT28.somechance,Some chance,Plans For College
+FUTACT28.verygoodchance,Very good chance,Plans For College
+FUTACT29.nochance,No chance,Plans For College
+FUTACT29.verylittlechance,Very little chance,Plans For College
+FUTACT29.somechance,Some chance,Plans For College
+FUTACT29.verygoodchance,Very good chance,Plans For College
+FUTACT33.nochance,No chance,Plans For College
+FUTACT33.verylittlechance,Very little chance,Plans For College
+FUTACT33.somechance,Some chance,Plans For College
+FUTACT33.verygoodchance,Very good chance,Plans For College
+GOAL02.notimportant,Not important,Importance Of Personal Goals
+GOAL02.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL02.veryimportant,Very important,Importance Of Personal Goals
+GOAL02.essential,Essential,Importance Of Personal Goals
+GOAL03.notimportant,Not important,Importance Of Personal Goals
+GOAL03.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL03.veryimportant,Very important,Importance Of Personal Goals
+GOAL03.essential,Essential,Importance Of Personal Goals
+GOAL04.notimportant,Not important,Importance Of Personal Goals
+GOAL04.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL04.veryimportant,Very important,Importance Of Personal Goals
+GOAL04.essential,Essential,Importance Of Personal Goals
+GOAL06.notimportant,Not important,Importance Of Personal Goals
+GOAL06.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL06.veryimportant,Very important,Importance Of Personal Goals
+GOAL06.essential,Essential,Importance Of Personal Goals
+GOAL07.notimportant,Not important,Importance Of Personal Goals
+GOAL07.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL07.veryimportant,Very important,Importance Of Personal Goals
+GOAL07.essential,Essential,Importance Of Personal Goals
+GOAL08.notimportant,Not important,Importance Of Personal Goals
+GOAL08.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL08.veryimportant,Very important,Importance Of Personal Goals
+GOAL08.essential,Essential,Importance Of Personal Goals
+GOAL09.notimportant,Not important,Importance Of Personal Goals
+GOAL09.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL09.veryimportant,Very important,Importance Of Personal Goals
+GOAL09.essential,Essential,Importance Of Personal Goals
+GOAL10.notimportant,Not important,Importance Of Personal Goals
+GOAL10.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL10.veryimportant,Very important,Importance Of Personal Goals
+GOAL10.essential,Essential,Importance Of Personal Goals
+GOAL11.notimportant,Not important,Importance Of Personal Goals
+GOAL11.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL11.veryimportant,Very important,Importance Of Personal Goals
+GOAL11.essential,Essential,Importance Of Personal Goals
+GOAL12.notimportant,Not important,Importance Of Personal Goals
+GOAL12.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL12.veryimportant,Very important,Importance Of Personal Goals
+GOAL12.essential,Essential,Importance Of Personal Goals
+GOAL13.notimportant,Not important,Importance Of Personal Goals
+GOAL13.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL13.veryimportant,Very important,Importance Of Personal Goals
+GOAL13.essential,Essential,Importance Of Personal Goals
+GOAL15.notimportant,Not important,Importance Of Personal Goals
+GOAL15.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL15.veryimportant,Very important,Importance Of Personal Goals
+GOAL15.essential,Essential,Importance Of Personal Goals
+GOAL16.notimportant,Not important,Importance Of Personal Goals
+GOAL16.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL16.veryimportant,Very important,Importance Of Personal Goals
+GOAL16.essential,Essential,Importance Of Personal Goals
+GOAL17.notimportant,Not important,Importance Of Personal Goals
+GOAL17.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL17.veryimportant,Very important,Importance Of Personal Goals
+GOAL17.essential,Essential,Importance Of Personal Goals
+GOAL18.notimportant,Not important,Importance Of Personal Goals
+GOAL18.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL18.veryimportant,Very important,Importance Of Personal Goals
+GOAL18.essential,Essential,Importance Of Personal Goals
+GOAL19.notimportant,Not important,Importance Of Personal Goals
+GOAL19.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL19.veryimportant,Very important,Importance Of Personal Goals
+GOAL19.essential,Essential,Importance Of Personal Goals
+GOAL20.notimportant,Not important,Importance Of Personal Goals
+GOAL20.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL20.veryimportant,Very important,Importance Of Personal Goals
+GOAL20.essential,Essential,Importance Of Personal Goals
+GOAL21.notimportant,Not important,Importance Of Personal Goals
+GOAL21.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL21.veryimportant,Very important,Importance Of Personal Goals
+GOAL21.essential,Essential,Importance Of Personal Goals
+GOAL23.notimportant,Not important,Importance Of Personal Goals
+GOAL23.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL23.veryimportant,Very important,Importance Of Personal Goals
+GOAL23.essential,Essential,Importance Of Personal Goals
+GOAL24.notimportant,Not important,Importance Of Personal Goals
+GOAL24.somewhatimportant,Somewhat important,Importance Of Personal Goals
+GOAL24.veryimportant,Very important,Importance Of Personal Goals
+GOAL24.essential,Essential,Importance Of Personal Goals
+HSGPA.d,D,High School GPA
+HSGPA.c,C,High School GPA
+HSGPA.b,B,High School GPA
+HSGPA.a,A,High School GPA
+INCOME.inclessthan50k,Less than 50k,Family Background And Demographics
+INCOME.inc50to75k,Between 50k and 75k,Family Background And Demographics
+INCOME.inc75to100k,Between 75k and 100k,Family Background And Demographics
+INCOME.inc100to150k,Between 100k and 150k,Family Background And Demographics
+INCOME.inc150to200k,Between 150k and 200k,Family Background And Demographics
+INCOME.inc200kplus,More than 200k,Family Background And Demographics
+MAJORA.business,Business,Academic And Career Plans
+PLANLIVE.family,With family,Plans For College
+PLANLIVE.offcampus,Off campus,Plans For College
+PLANLIVE.oncampus,On campus,Plans For College
+PLANLIVE.greekhouse,Greek house,Plans For College
+PLANLIVE.other,Other,Plans For College
+POLIVIEW.farright,Far right,Social And Political Views
+POLIVIEW.conservative,Conservative,Political Views
+POLIVIEW.middleoftheroad,Middle of the road,Political Views
+POLIVIEW.liberal,Liberal,Political Views
+POLIVIEW.farleft,Far left,Political Views
+RACE10.puerto_rican,Puerto Rican,Family Background And Demographics
+RACE11.other_latino,Other Latino,Family Background And Demographics
+RACE12.white,White,Family Background And Demographics
+RACE13.other,Other,Family Background And Demographics
+RACE7102_N.asian,Asian,Family Background And Demographics
+RACE8.black,Black,Family Background And Demographics
+RACE9.mexican_chicano,Mexican or Chicano,Family Background And Demographics
+RATE01.lowest10pct,Lowest ten percent,Self Ratings
+RATE01.belowaverage,Below average,Self Ratings
+RATE01.average,Average,Self Ratings
+RATE01.aboveaverage,Above average,Self Ratings
+RATE01.highest10pct,Highest ten percent,Self Ratings
+RATE04.lowest10pct,Lowest ten percent,Self Ratings
+RATE04.belowaverage,Below average,Self Ratings
+RATE04.average,Average,Self Ratings
+RATE04.aboveaverage,Above average,Self Ratings
+RATE04.highest10pct,Highest ten percent,Self Ratings
+RATE06.lowest10pct,Lowest ten percent,Self Ratings
+RATE06.belowaverage,Below average,Self Ratings
+RATE06.average,Average,Self Ratings
+RATE06.aboveaverage,Above average,Self Ratings
+RATE06.highest10pct,Highest ten percent,Self Ratings
+RATE07.lowest10pct,Lowest ten percent,Self Ratings
+RATE07.belowaverage,Below average,Self Ratings
+RATE07.average,Average,Self Ratings
+RATE07.aboveaverage,Above average,Self Ratings
+RATE07.highest10pct,Highest ten percent,Self Ratings
+RATE08.lowest10pct,Lowest ten percent,Self Ratings
+RATE08.belowaverage,Below average,Self Ratings
+RATE08.average,Average,Self Ratings
+RATE08.aboveaverage,Above average,Self Ratings
+RATE08.highest10pct,Highest ten percent,Self Ratings
+RATE09.lowest10pct,Lowest ten percent,Self Ratings
+RATE09.belowaverage,Below average,Self Ratings
+RATE09.average,Average,Self Ratings
+RATE09.aboveaverage,Above average,Self Ratings
+RATE09.highest10pct,Highest ten percent,Self Ratings
+RATE10.lowest10pct,Lowest ten percent,Self Ratings
+RATE10.belowaverage,Below average,Self Ratings
+RATE10.average,Average,Self Ratings
+RATE10.aboveaverage,Above average,Self Ratings
+RATE10.highest10pct,Highest ten percent,Self Ratings
+RATE11.lowest10pct,Lowest ten percent,Self Ratings
+RATE11.belowaverage,Below average,Self Ratings
+RATE11.average,Average,Self Ratings
+RATE11.aboveaverage,Above average,Self Ratings
+RATE11.highest10pct,Highest ten percent,Self Ratings
+RATE13.lowest10pct,Lowest ten percent,Self Ratings
+RATE13.belowaverage,Below average,Self Ratings
+RATE13.average,Average,Self Ratings
+RATE13.aboveaverage,Above average,Self Ratings
+RATE13.highest10pct,Highest ten percent,Self Ratings
+RATE14.lowest10pct,Lowest ten percent,Self Ratings
+RATE14.belowaverage,Below average,Self Ratings
+RATE14.average,Average,Self Ratings
+RATE14.aboveaverage,Above average,Self Ratings
+RATE14.highest10pct,Highest ten percent,Self Ratings
+RATE15.lowest10pct,Lowest ten percent,Self Ratings
+RATE15.belowaverage,Below average,Self Ratings
+RATE15.average,Average,Self Ratings
+RATE15.aboveaverage,Above average,Self Ratings
+RATE15.highest10pct,Highest ten percent,Self Ratings
+RATE16.lowest10pct,Lowest ten percent,Self Ratings
+RATE16.belowaverage,Below average,Self Ratings
+RATE16.average,Average,Self Ratings
+RATE16.aboveaverage,Above average,Self Ratings
+RATE16.highest10pct,Highest ten percent,Self Ratings
+RATE17.lowest10pct,Lowest ten percent,Self Ratings
+RATE17.belowaverage,Below average,Self Ratings
+RATE17.average,Average,Self Ratings
+RATE17.aboveaverage,Above average,Self Ratings
+RATE17.highest10pct,Highest ten percent,Self Ratings
+RATE19.lowest10pct,Lowest ten percent,Self Ratings
+RATE19.belowaverage,Below average,Self Ratings
+RATE19.average,Average,Self Ratings
+RATE19.aboveaverage,Above average,Self Ratings
+RATE19.highest10pct,Highest ten percent,Self Ratings
+RATE20.lowest10pct,Lowest ten percent,Self Ratings
+RATE20.belowaverage,Below average,Self Ratings
+RATE20.average,Average,Self Ratings
+RATE20.aboveaverage,Above average,Self Ratings
+RATE20.highest10pct,Highest ten percent,Self Ratings
+REASON01.notimportant,Not important,Reasons For Attending College
+REASON01.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON01.veryimportant,Very important,Reasons For Attending College
+REASON02.notimportant,Not important,Reasons For Attending College
+REASON02.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON02.veryimportant,Very important,Reasons For Attending College
+REASON03.notimportant,Not important,Reasons For Attending College
+REASON03.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON03.veryimportant,Very important,Reasons For Attending College
+REASON04.notimportant,Not important,Reasons For Attending College
+REASON04.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON04.veryimportant,Very important,Reasons For Attending College
+REASON05.notimportant,Not important,Reasons For Attending College
+REASON05.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON05.veryimportant,Very important,Reasons For Attending College
+REASON06.notimportant,Not important,Reasons For Attending College
+REASON06.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON06.veryimportant,Very important,Reasons For Attending College
+REASON08.notimportant,Not important,Reasons For Attending College
+REASON08.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON08.veryimportant,Very important,Reasons For Attending College
+REASON09.notimportant,Not important,Reasons For Attending College
+REASON09.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON09.veryimportant,Very important,Reasons For Attending College
+REASON10.notimportant,Not important,Reasons For Attending College
+REASON10.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON10.veryimportant,Very important,Reasons For Attending College
+REASON11.notimportant,Not important,Reasons For Attending College
+REASON11.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON11.veryimportant,Very important,Reasons For Attending College
+REASON12.notimportant,Not important,Reasons For Attending College
+REASON12.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON12.veryimportant,Very important,Reasons For Attending College
+REASON13.notimportant,Not important,Reasons For Attending College
+REASON13.somewhatimportant,Somewhat important,Reasons For Attending College
+REASON13.veryimportant,Very important,Reasons For Attending College
+SCAREERA.business,Business,Academic And Career Plans
+SELECTIVITY.scale,Scale,College Selectivity
+SEX.male,Male,Family Background And Demographics
+SEX.female,Female,Family Background And Demographics
+VIEW19.disagreestrongly,Disagree strongly,Social And Political Views
+VIEW19.disagreesomewhat,Disagree somewhat,Social And Political Views
+VIEW19.agreesomewhat,Agree somewhat,Social And Political Views
+VIEW19.agreestrongly,Agree strongly,Social And Political Views
+VIEW31.disagreestrongly,Disagree strongly,Social And Political Views
+VIEW31.disagreesomewhat,Disagree somewhat,Social And Political Views
+VIEW31.agreesomewhat,Agree somewhat,Social And Political Views
+VIEW31.agreestrongly,Agree strongly,Social And Political Views
