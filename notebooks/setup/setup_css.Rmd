@@ -159,11 +159,13 @@ css_means <- college_mobility.filtered |>
                         propna = ~sum(is.na(.)) / n()), 
                    .names = "{.col}.{.fn}"),
             across(starts_with("COLACT"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("CSV"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("FACPRV"),
@@ -201,11 +203,13 @@ css_means <- college_mobility.filtered |>
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("NATENG"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                   list(no_maen = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("PLANS"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("POLIVIEW"),
@@ -217,7 +221,8 @@ css_means <- college_mobility.filtered |>
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RATE"),
@@ -318,7 +323,7 @@ css_means_mobility <- left_join(css_means, chetty_vars)
 ```
 
 ```{r}
-write.csv(css_means_mobility, "../../data/css_means_mobility.csv", row.names = FALSE)
+write.csv(css_means_mobility, "../../data/css_means_mobility_withno.csv", row.names = FALSE)
 ```
 
 ## Correlations
@@ -424,7 +429,7 @@ css_correlations <- css_means_mobility |>
                         cor_par_q5 = ~wtd.cor(.x, par_q5, 
                                               weight = n_responses)[1]),
                    .names = "{.col}_{.fn}") |> 
-  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:40560) |>
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:42576) |>
   filter(str_detect(Variable, "mean")) |> 
   separate(Variable, c("Variable", "Mobility"), sep = "_mean") |> 
   separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
@@ -448,7 +453,7 @@ css_correlations <- left_join(css_correlations, varnames) |>
 ```
 
 ```{r}
-write.csv(css_correlations, "../../data/css_correlations.csv", row.names = FALSE)
+write.csv(css_correlations, "../../data/css_correlations_withno.csv", row.names = FALSE)
 ```
 
 # CLEANUP TFS

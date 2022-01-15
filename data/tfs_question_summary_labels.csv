@@ -1,336 +1,344 @@
-Summary,Label,Group,Survey,Survey_Name
-CHOICE.lessthanthird,Less than third choice,College Preference,TFS,The Freshman Survey
-CHOICE.third,Third choice,College Preference,TFS,The Freshman Survey
-CHOICE.second,Second choice,College Preference,TFS,The Freshman Survey
-CHOICE.first,First choice,College Preference,TFS,The Freshman Survey
-CHOOSE06.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE06.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE06.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE12.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE12.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE12.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE16.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE16.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE16.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE21.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE21.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE21.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE24.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE24.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE24.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE25.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE25.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE25.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE26.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE26.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE26.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE28.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE28.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE28.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE29.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE29.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
-CHOOSE29.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
-DISTHOME.miles10less,Ten miles or less,Family Background And Demographics,TFS,The Freshman Survey
-DISTHOME.miles11to50,Eleven to fifty miles,Family Background And Demographics,TFS,The Freshman Survey
-DISTHOME.miles51to100,Fifty one to one hundred miles,Family Background And Demographics,TFS,The Freshman Survey
-DISTHOME.miles101to500,One hundred one to five hundred miles,Family Background And Demographics,TFS,The Freshman Survey
-DISTHOME.miles501plus,More than five hundred miles,Family Background And Demographics,TFS,The Freshman Survey
-FINCON.none,None,Educational Expenses,TFS,The Freshman Survey
-FINCON.some,Some,Educational Expenses,TFS,The Freshman Survey
-FINCON.major,Major,Educational Expenses,TFS,The Freshman Survey
-FIRSTGEN.yes,Yes,Family Background And Demographics,TFS,The Freshman Survey
-FUTACT01.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT01.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT01.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT01.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT02.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT02.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT02.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT02.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT03.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT03.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT03.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT03.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT04.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT04.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT04.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT04.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT05.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT05.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT05.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT05.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT11.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT11.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT11.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT11.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT12.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT12.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT12.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT12.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT15.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT15.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT15.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT15.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT18.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT18.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT18.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT18.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT19.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT19.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT19.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT19.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT20.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT20.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT20.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT20.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT24.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT24.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT24.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT24.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT25.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT25.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT25.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT25.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT28.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT28.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT28.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT28.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT29.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT29.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT29.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT29.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-FUTACT33.nochance,No chance,Plans For College,TFS,The Freshman Survey
-FUTACT33.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
-FUTACT33.somechance,Some chance,Plans For College,TFS,The Freshman Survey
-FUTACT33.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
-GOAL02.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL02.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL02.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL02.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL03.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL03.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL03.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL03.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL04.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL04.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL04.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL04.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL06.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL06.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL06.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL06.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL07.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL07.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL07.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL07.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL08.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL08.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL08.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL08.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL09.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL09.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL09.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL09.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL10.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL10.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL10.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL10.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL11.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL11.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL11.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL11.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL12.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL12.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL12.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL12.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL13.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL13.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL13.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL13.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL15.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL15.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL15.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL15.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL16.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL16.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL16.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL16.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL17.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL17.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL17.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL17.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL18.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL18.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL18.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL18.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL19.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL19.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL19.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL19.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL20.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL20.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL20.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL20.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL21.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL21.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL21.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL21.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL23.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL23.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL23.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL23.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL24.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL24.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL24.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
-GOAL24.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
-HSGPA.d,D,High School GPA,TFS,The Freshman Survey
-HSGPA.c,C,High School GPA,TFS,The Freshman Survey
-HSGPA.b,B,High School GPA,TFS,The Freshman Survey
-HSGPA.a,A,High School GPA,TFS,The Freshman Survey
-INCOME.inclessthan50k,Less than 50k,Family Background And Demographics,TFS,The Freshman Survey
-INCOME.inc50to75k,Between 50k and 75k,Family Background And Demographics,TFS,The Freshman Survey
-INCOME.inc75to100k,Between 75k and 100k,Family Background And Demographics,TFS,The Freshman Survey
-INCOME.inc100to150k,Between 100k and 150k,Family Background And Demographics,TFS,The Freshman Survey
-INCOME.inc150to200k,Between 150k and 200k,Family Background And Demographics,TFS,The Freshman Survey
-INCOME.inc200kplus,More than 200k,Family Background And Demographics,TFS,The Freshman Survey
-MAJORA.business,Business,Academic And Career Plans,TFS,The Freshman Survey
-PLANLIVE.family,With family,Plans For College,TFS,The Freshman Survey
-PLANLIVE.offcampus,Off campus,Plans For College,TFS,The Freshman Survey
-PLANLIVE.oncampus,On campus,Plans For College,TFS,The Freshman Survey
-PLANLIVE.greekhouse,Greek house,Plans For College,TFS,The Freshman Survey
-PLANLIVE.other,Other,Plans For College,TFS,The Freshman Survey
-POLIVIEW.farright,Far right,Social And Political Views,TFS,The Freshman Survey
-POLIVIEW.conservative,Conservative,Social And Political Views,TFS,The Freshman Survey
-POLIVIEW.middleoftheroad,Middle of the road,Social And Political Views,TFS,The Freshman Survey
-POLIVIEW.liberal,Liberal,Social And Political Views,TFS,The Freshman Survey
-POLIVIEW.farleft,Far left,Social And Political Views,TFS,The Freshman Survey
-RACE10.puerto_rican,Puerto Rican,Family Background And Demographics,TFS,The Freshman Survey
-RACE11.other_latino,Other Latino,Family Background And Demographics,TFS,The Freshman Survey
-RACE12.white,White,Family Background And Demographics,TFS,The Freshman Survey
-RACE13.other,Other,Family Background And Demographics,TFS,The Freshman Survey
-RACE7102_N.asian,Asian,Family Background And Demographics,TFS,The Freshman Survey
-RACE8.black,Black,Family Background And Demographics,TFS,The Freshman Survey
-RACE9.mexican_chicano,Mexican or Chicano,Family Background And Demographics,TFS,The Freshman Survey
-RATE01.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE01.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE01.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE01.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE01.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE04.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE04.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE04.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE04.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE04.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE06.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE06.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE06.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE06.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE06.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE07.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE07.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE07.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE07.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE07.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE08.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE08.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE08.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE08.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE08.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE09.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE09.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE09.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE09.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE09.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE10.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE10.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE10.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE10.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE10.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE11.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE11.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE11.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE11.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE11.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE13.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE13.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE13.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE13.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE13.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE14.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE14.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE14.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE14.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE14.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE15.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE15.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE15.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE15.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE15.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE16.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE16.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE16.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE16.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE16.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE17.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE17.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE17.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE17.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE17.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE19.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE19.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE19.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE19.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE19.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE20.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
-RATE20.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
-RATE20.average,Average,Self Ratings,TFS,The Freshman Survey
-RATE20.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
-RATE20.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
-REASON01.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON01.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON01.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON02.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON02.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON02.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON03.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON03.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON03.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON04.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON04.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON04.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON05.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON05.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON05.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON06.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON06.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON06.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON08.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON08.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON08.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON09.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON09.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON09.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON10.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON10.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON10.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON11.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON11.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON11.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON12.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON12.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON12.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-REASON13.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
-REASON13.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
-REASON13.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
-SCAREERA.business,Business,Academic And Career Plans,TFS,The Freshman Survey
-SELECTIVITY.scale,Scale,College Selectivity,TFS,The Freshman Survey
-SEX.male,Male,Family Background And Demographics,TFS,The Freshman Survey
-SEX.female,Female,Family Background And Demographics,TFS,The Freshman Survey
-VIEW19.disagreestrongly,Disagree strongly,Social And Political Views,TFS,The Freshman Survey
-VIEW19.disagreesomewhat,Disagree somewhat,Social And Political Views,TFS,The Freshman Survey
-VIEW19.agreesomewhat,Agree somewhat,Social And Political Views,TFS,The Freshman Survey
-VIEW19.agreestrongly,Agree strongly,Social And Political Views,TFS,The Freshman Survey
-VIEW31.disagreestrongly,Disagree strongly,Social And Political Views,TFS,The Freshman Survey
-VIEW31.disagreesomewhat,Disagree somewhat,Social And Political Views,TFS,The Freshman Survey
-VIEW31.agreesomewhat,Agree somewhat,Social And Political Views,TFS,The Freshman Survey
-VIEW31.agreestrongly,Agree strongly,Social And Political Views,TFS,The Freshman Survey
+Name,Description,Summary,wtdprop,n_colleges,Survey,Survey_Name,Label,Group
+CHOICE,Choice: Is this college your:,CHOICE.lessthanthird,0.025471214,351,TFS,The Freshman Survey,Less than third choice,College Preference
+CHOICE,Choice: Is this college your:,CHOICE.third,0.046781415,351,TFS,The Freshman Survey,Third choice,College Preference
+CHOICE,Choice: Is this college your:,CHOICE.second,0.190372294,351,TFS,The Freshman Survey,Second choice,College Preference
+CHOICE,Choice: Is this college your:,CHOICE.first,0.737375078,351,TFS,The Freshman Survey,First choice,College Preference
+CHOOSE06,Choose to Attend: High school counselor advised me,CHOOSE06.notimportant,0.669874603,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE06,Choose to Attend: High school counselor advised me,CHOOSE06.somewhatimportant,0.274555439,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE06,Choose to Attend: High school counselor advised me,CHOOSE06.veryimportant,0.055569958,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE12,Choose to Attend: I was offered financial assistance,CHOOSE12.notimportant,0.395012243,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE12,Choose to Attend: I was offered financial assistance,CHOOSE12.somewhatimportant,0.241854974,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE12,Choose to Attend: I was offered financial assistance,CHOOSE12.veryimportant,0.363132783,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE16,Choose to Attend: My relatives wanted me to come here,CHOOSE16.notimportant,0.634302404,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE16,Choose to Attend: My relatives wanted me to come here,CHOOSE16.somewhatimportant,0.292237758,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE16,Choose to Attend: My relatives wanted me to come here,CHOOSE16.veryimportant,0.073459838,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE21,Choose to Attend: Rankings in national magazines,CHOOSE21.notimportant,0.507784702,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE21,Choose to Attend: Rankings in national magazines,CHOOSE21.somewhatimportant,0.354485045,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE21,Choose to Attend: Rankings in national magazines,CHOOSE21.veryimportant,0.137730253,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE24,Choose to Attend: This college has a good reputation for its social activities,CHOOSE24.notimportant,0.211256937,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE24,Choose to Attend: This college has a good reputation for its social activities,CHOOSE24.somewhatimportant,0.495565268,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE24,Choose to Attend: This college has a good reputation for its social activities,CHOOSE24.veryimportant,0.293177795,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE25,Choose to Attend: This college has a very good academic reputation,CHOOSE25.notimportant,0.046289044,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE25,Choose to Attend: This college has a very good academic reputation,CHOOSE25.somewhatimportant,0.30466835,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE25,Choose to Attend: This college has a very good academic reputation,CHOOSE25.veryimportant,0.649042607,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE26,Choose to Attend: This college has low tuition,CHOOSE26.notimportant,0.565963162,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE26,Choose to Attend: This college has low tuition,CHOOSE26.somewhatimportant,0.284190562,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE26,Choose to Attend: This college has low tuition,CHOOSE26.veryimportant,0.149846275,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE28,Choose to Attend: This college's graduates gain admission to top graduate/professional schools,CHOOSE28.notimportant,0.25268557,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE28,Choose to Attend: This college's graduates gain admission to top graduate/professional schools,CHOOSE28.somewhatimportant,0.380302766,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE28,Choose to Attend: This college's graduates gain admission to top graduate/professional schools,CHOOSE28.veryimportant,0.367011664,351,TFS,The Freshman Survey,Very important,College Choice Factors
+CHOOSE29,Choose to Attend: This college's graduates get good jobs,CHOOSE29.notimportant,0.109335575,351,TFS,The Freshman Survey,Not important,College Choice Factors
+CHOOSE29,Choose to Attend: This college's graduates get good jobs,CHOOSE29.somewhatimportant,0.319598043,351,TFS,The Freshman Survey,Somewhat important,College Choice Factors
+CHOOSE29,Choose to Attend: This college's graduates get good jobs,CHOOSE29.veryimportant,0.571066382,351,TFS,The Freshman Survey,Very important,College Choice Factors
+DISTHOME,How many miles is this college from your permanent home?,DISTHOME.miles10less,0.085923166,351,TFS,The Freshman Survey,Ten miles or less,Family Background And Demographics
+DISTHOME,How many miles is this college from your permanent home?,DISTHOME.miles11to50,0.197966479,351,TFS,The Freshman Survey,Eleven to fifty miles,Family Background And Demographics
+DISTHOME,How many miles is this college from your permanent home?,DISTHOME.miles51to100,0.16082371,351,TFS,The Freshman Survey,Fifty one to one hundred miles,Family Background And Demographics
+DISTHOME,How many miles is this college from your permanent home?,DISTHOME.miles101to500,0.383575481,351,TFS,The Freshman Survey,One hundred one to five hundred miles,Family Background And Demographics
+DISTHOME,How many miles is this college from your permanent home?,DISTHOME.miles501plus,0.171711163,351,TFS,The Freshman Survey,More than five hundred miles,Family Background And Demographics
+FINCON,Do you have any concern about your ability to finance your college education?,FINCON.none,0.333073439,351,TFS,The Freshman Survey,None,Educational Expenses
+FINCON,Do you have any concern about your ability to finance your college education?,FINCON.some,0.523545827,351,TFS,The Freshman Survey,Some,Educational Expenses
+FINCON,Do you have any concern about your ability to finance your college education?,FINCON.major,0.143380735,351,TFS,The Freshman Survey,Major,Educational Expenses
+FIRSTGEN,First generation status based on parent(s) with less than 'some college',FIRSTGEN.no,0.821932127,351,TFS,The Freshman Survey,No,Family Background And Demographics
+FIRSTGEN,First generation status based on parent(s) with less than 'some college',FIRSTGEN.yes,0.178067873,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+FUTACT01,Future Act: Be elected to an academic honor society,FUTACT01.nochance,0.135800597,336,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT01,Future Act: Be elected to an academic honor society,FUTACT01.verylittlechance,0.30805968,336,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT01,Future Act: Be elected to an academic honor society,FUTACT01.somechance,0.439048735,336,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT01,Future Act: Be elected to an academic honor society,FUTACT01.verygoodchance,0.117090988,336,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT02,Future Act: Be elected to student office,FUTACT02.nochance,0.260668955,336,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT02,Future Act: Be elected to student office,FUTACT02.verylittlechance,0.422740373,336,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT02,Future Act: Be elected to student office,FUTACT02.somechance,0.279581524,336,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT02,Future Act: Be elected to student office,FUTACT02.verygoodchance,0.037009147,336,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT03,Future Act: Be satisfied with your college,FUTACT03.nochance,0.01022735,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT03,Future Act: Be satisfied with your college,FUTACT03.verylittlechance,0.031559132,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT03,Future Act: Be satisfied with your college,FUTACT03.somechance,0.405905807,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT03,Future Act: Be satisfied with your college,FUTACT03.verygoodchance,0.552307711,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT04,Future Act: Change career choice,FUTACT04.nochance,0.123171125,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT04,Future Act: Change career choice,FUTACT04.verylittlechance,0.318959465,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT04,Future Act: Change career choice,FUTACT04.somechance,0.408498749,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT04,Future Act: Change career choice,FUTACT04.verygoodchance,0.149370661,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT05,Future Act: Change major field,FUTACT05.nochance,0.134096313,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT05,Future Act: Change major field,FUTACT05.verylittlechance,0.347474041,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT05,Future Act: Change major field,FUTACT05.somechance,0.366729019,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT05,Future Act: Change major field,FUTACT05.verygoodchance,0.151700627,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT11,"Future Act: Get a bachelor's degree (B.A., B.S., etc.)",FUTACT11.nochance,0.011099958,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT11,"Future Act: Get a bachelor's degree (B.A., B.S., etc.)",FUTACT11.verylittlechance,0.027239518,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT11,"Future Act: Get a bachelor's degree (B.A., B.S., etc.)",FUTACT11.somechance,0.168848972,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT11,"Future Act: Get a bachelor's degree (B.A., B.S., etc.)",FUTACT11.verygoodchance,0.792811553,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT12,Future Act: Get a job to help pay for college expenses,FUTACT12.nochance,0.075891015,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT12,Future Act: Get a job to help pay for college expenses,FUTACT12.verylittlechance,0.159173721,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT12,Future Act: Get a job to help pay for college expenses,FUTACT12.somechance,0.349833705,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT12,Future Act: Get a job to help pay for college expenses,FUTACT12.verygoodchance,0.415101559,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT15,Future Act: Graduate with honors,FUTACT15.nochance,0.038220006,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT15,Future Act: Graduate with honors,FUTACT15.verylittlechance,0.176371134,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT15,Future Act: Graduate with honors,FUTACT15.somechance,0.575740822,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT15,Future Act: Graduate with honors,FUTACT15.verygoodchance,0.209668037,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT18,"Future Act: Join a social fraternity, sorority, or club",FUTACT18.nochance,0.199693146,336,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT18,"Future Act: Join a social fraternity, sorority, or club",FUTACT18.verylittlechance,0.249878037,336,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT18,"Future Act: Join a social fraternity, sorority, or club",FUTACT18.somechance,0.350359768,336,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT18,"Future Act: Join a social fraternity, sorority, or club",FUTACT18.verygoodchance,0.200069049,336,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT19,Future Act: Make at least a 'B' average,FUTACT19.nochance,0.005297219,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT19,Future Act: Make at least a 'B' average,FUTACT19.verylittlechance,0.032717648,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT19,Future Act: Make at least a 'B' average,FUTACT19.somechance,0.385089765,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT19,Future Act: Make at least a 'B' average,FUTACT19.verygoodchance,0.576895367,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT20,Future Act: Need extra time to complete your degree requirements,FUTACT20.nochance,0.148206289,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT20,Future Act: Need extra time to complete your degree requirements,FUTACT20.verylittlechance,0.473285437,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT20,Future Act: Need extra time to complete your degree requirements,FUTACT20.somechance,0.313118272,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT20,Future Act: Need extra time to complete your degree requirements,FUTACT20.verygoodchance,0.065390003,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT24,Future Act: Participate in student protests or demonstrations,FUTACT24.nochance,0.243236359,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT24,Future Act: Participate in student protests or demonstrations,FUTACT24.verylittlechance,0.459631307,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT24,Future Act: Participate in student protests or demonstrations,FUTACT24.somechance,0.247081416,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT24,Future Act: Participate in student protests or demonstrations,FUTACT24.verygoodchance,0.050050919,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT25,Future Act: Participate in volunteer or community service work,FUTACT25.nochance,0.066079084,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT25,Future Act: Participate in volunteer or community service work,FUTACT25.verylittlechance,0.215405604,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT25,Future Act: Participate in volunteer or community service work,FUTACT25.somechance,0.432879129,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT25,Future Act: Participate in volunteer or community service work,FUTACT25.verygoodchance,0.285636183,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT28,Future Act: Play varsity/intercollegiate athletics,FUTACT28.nochance,0.354650425,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT28,Future Act: Play varsity/intercollegiate athletics,FUTACT28.verylittlechance,0.278156631,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT28,Future Act: Play varsity/intercollegiate athletics,FUTACT28.somechance,0.198605749,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT28,Future Act: Play varsity/intercollegiate athletics,FUTACT28.verygoodchance,0.168587195,351,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT29,Future Act: Seek personal counseling,FUTACT29.nochance,0.21451978,349,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT29,Future Act: Seek personal counseling,FUTACT29.verylittlechance,0.48152722,349,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT29,Future Act: Seek personal counseling,FUTACT29.somechance,0.247777497,349,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT29,Future Act: Seek personal counseling,FUTACT29.verygoodchance,0.056175503,349,TFS,The Freshman Survey,Very good chance,Plans For College
+FUTACT33,Future Act: Work full-time while attending college,FUTACT33.nochance,0.442406033,351,TFS,The Freshman Survey,No chance,Plans For College
+FUTACT33,Future Act: Work full-time while attending college,FUTACT33.verylittlechance,0.385069516,351,TFS,The Freshman Survey,Very little chance,Plans For College
+FUTACT33,Future Act: Work full-time while attending college,FUTACT33.somechance,0.137271905,351,TFS,The Freshman Survey,Some chance,Plans For College
+FUTACT33,Future Act: Work full-time while attending college,FUTACT33.verygoodchance,0.035252545,351,TFS,The Freshman Survey,Very good chance,Plans For College
+GOAL02,Goal: Becoming a community leader,GOAL02.notimportant,0.245595932,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL02,Goal: Becoming a community leader,GOAL02.somewhatimportant,0.411603717,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL02,Goal: Becoming a community leader,GOAL02.veryimportant,0.248032948,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL02,Goal: Becoming a community leader,GOAL02.essential,0.094767402,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.notimportant,0.642820083,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.somewhatimportant,0.217922932,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.veryimportant,0.08060824,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL03,"Goal: Becoming accomplished in one of the performing arts (acting, dancing, etc.)",GOAL03.essential,0.058648745,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL04,Goal: Becoming an authority in my field,GOAL04.notimportant,0.077486411,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL04,Goal: Becoming an authority in my field,GOAL04.somewhatimportant,0.29938598,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL04,Goal: Becoming an authority in my field,GOAL04.veryimportant,0.409129591,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL04,Goal: Becoming an authority in my field,GOAL04.essential,0.213998019,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL06,Goal: Becoming involved in programs to clean up the environment,GOAL06.notimportant,0.330857899,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL06,Goal: Becoming involved in programs to clean up the environment,GOAL06.somewhatimportant,0.478364723,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL06,Goal: Becoming involved in programs to clean up the environment,GOAL06.veryimportant,0.146028104,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL06,Goal: Becoming involved in programs to clean up the environment,GOAL06.essential,0.044749274,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL07,Goal: Becoming successful in a business of my own,GOAL07.notimportant,0.328636363,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL07,Goal: Becoming successful in a business of my own,GOAL07.somewhatimportant,0.295664521,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL07,Goal: Becoming successful in a business of my own,GOAL07.veryimportant,0.222820485,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL07,Goal: Becoming successful in a business of my own,GOAL07.essential,0.152878632,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL08,Goal: Being very well off financially,GOAL08.notimportant,0.05400555,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL08,Goal: Being very well off financially,GOAL08.somewhatimportant,0.2468943,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL08,Goal: Being very well off financially,GOAL08.veryimportant,0.372989904,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL08,Goal: Being very well off financially,GOAL08.essential,0.326110246,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL09,"Goal: Creating artistic works (painting, sculpture, etc.)",GOAL09.notimportant,0.647452679,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL09,"Goal: Creating artistic works (painting, sculpture, etc.)",GOAL09.somewhatimportant,0.216313867,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL09,"Goal: Creating artistic works (painting, sculpture, etc.)",GOAL09.veryimportant,0.085522341,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL09,"Goal: Creating artistic works (painting, sculpture, etc.)",GOAL09.essential,0.050711113,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL10,Goal: Developing a meaningful philosophy of life,GOAL10.notimportant,0.209801258,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL10,Goal: Developing a meaningful philosophy of life,GOAL10.somewhatimportant,0.330409076,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL10,Goal: Developing a meaningful philosophy of life,GOAL10.veryimportant,0.278525337,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL10,Goal: Developing a meaningful philosophy of life,GOAL10.essential,0.181264329,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL11,Goal: Having administrative responsibility for the work of others,GOAL11.notimportant,0.205558482,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL11,Goal: Having administrative responsibility for the work of others,GOAL11.somewhatimportant,0.428600889,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL11,Goal: Having administrative responsibility for the work of others,GOAL11.veryimportant,0.280460508,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL11,Goal: Having administrative responsibility for the work of others,GOAL11.essential,0.085380121,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL12,Goal: Helping others who are in difficulty,GOAL12.notimportant,0.042037953,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL12,Goal: Helping others who are in difficulty,GOAL12.somewhatimportant,0.320836926,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL12,Goal: Helping others who are in difficulty,GOAL12.veryimportant,0.419566863,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL12,Goal: Helping others who are in difficulty,GOAL12.essential,0.217558259,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL13,Goal: Helping to promote racial understanding,GOAL13.notimportant,0.236343473,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL13,Goal: Helping to promote racial understanding,GOAL13.somewhatimportant,0.435202117,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL13,Goal: Helping to promote racial understanding,GOAL13.veryimportant,0.236428484,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL13,Goal: Helping to promote racial understanding,GOAL13.essential,0.092025926,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL15,Goal: Influencing social values,GOAL15.notimportant,0.181470886,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL15,Goal: Influencing social values,GOAL15.somewhatimportant,0.427394783,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL15,Goal: Influencing social values,GOAL15.veryimportant,0.297834914,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL15,Goal: Influencing social values,GOAL15.essential,0.093299417,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL16,Goal: Influencing the political structure,GOAL16.notimportant,0.420058739,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL16,Goal: Influencing the political structure,GOAL16.somewhatimportant,0.400750471,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL16,Goal: Influencing the political structure,GOAL16.veryimportant,0.127476503,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL16,Goal: Influencing the political structure,GOAL16.essential,0.051714288,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL17,Goal: Integrating spirituality into my life,GOAL17.notimportant,0.223506649,337,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL17,Goal: Integrating spirituality into my life,GOAL17.somewhatimportant,0.302266078,337,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL17,Goal: Integrating spirituality into my life,GOAL17.veryimportant,0.225227825,337,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL17,Goal: Integrating spirituality into my life,GOAL17.essential,0.248999448,337,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.notimportant,0.246258648,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.somewhatimportant,0.424872595,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.veryimportant,0.242248491,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL18,Goal: Keeping up to date with political affairs,GOAL18.essential,0.086620266,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.notimportant,0.520861576,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.somewhatimportant,0.30855721,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.veryimportant,0.123883466,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL19,Goal: Making a theoretical contribution to science,GOAL19.essential,0.046697748,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.notimportant,0.105224218,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.somewhatimportant,0.372928485,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.veryimportant,0.37572554,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL20,Goal: Obtaining recognition from my colleagues for contributions to my special field,GOAL20.essential,0.146121757,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL21,Goal: Participating in a community action program,GOAL21.notimportant,0.274299142,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL21,Goal: Participating in a community action program,GOAL21.somewhatimportant,0.468923927,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL21,Goal: Participating in a community action program,GOAL21.veryimportant,0.200504496,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL21,Goal: Participating in a community action program,GOAL21.essential,0.056272434,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL23,Goal: Raising a family,GOAL23.notimportant,0.071194402,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL23,Goal: Raising a family,GOAL23.somewhatimportant,0.181769291,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL23,Goal: Raising a family,GOAL23.veryimportant,0.348447975,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL23,Goal: Raising a family,GOAL23.essential,0.398588332,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.notimportant,0.618176416,351,TFS,The Freshman Survey,Not important,Importance Of Personal Goals
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.somewhatimportant,0.236585964,351,TFS,The Freshman Survey,Somewhat important,Importance Of Personal Goals
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.veryimportant,0.090140026,351,TFS,The Freshman Survey,Very important,Importance Of Personal Goals
+GOAL24,"Goal: Writing original works (poems, novels, etc.)",GOAL24.essential,0.055097594,351,TFS,The Freshman Survey,Essential,Importance Of Personal Goals
+HSGPA,What was your average grade in high school?,HSGPA.d,0.000885152,351,TFS,The Freshman Survey,D,High School GPA
+HSGPA,What was your average grade in high school?,HSGPA.c,0.05146407,351,TFS,The Freshman Survey,C,High School GPA
+HSGPA,What was your average grade in high school?,HSGPA.b,0.448791135,351,TFS,The Freshman Survey,B,High School GPA
+HSGPA,What was your average grade in high school?,HSGPA.a,0.491900179,351,TFS,The Freshman Survey,A,High School GPA
+INCOME,Parental Income,INCOME.inclessthan50k,0.336550498,351,TFS,The Freshman Survey,Less than 50k,Family Background And Demographics
+INCOME,Parental Income,INCOME.inc50to75k,0.215088986,351,TFS,The Freshman Survey,Between 50k and 75k,Family Background And Demographics
+INCOME,Parental Income,INCOME.inc75to100k,0.144299795,351,TFS,The Freshman Survey,Between 75k and 100k,Family Background And Demographics
+INCOME,Parental Income,INCOME.inc100to150k,0.141871813,351,TFS,The Freshman Survey,Between 100k and 150k,Family Background And Demographics
+INCOME,Parental Income,INCOME.inc150to200k,0.055834209,351,TFS,The Freshman Survey,Between 150k and 200k,Family Background And Demographics
+INCOME,Parental Income,INCOME.inc200kplus,0.078839775,351,TFS,The Freshman Survey,More than 200k,Family Background And Demographics
+MAJORA,Student's major aggregated,MAJORA.business,0.170313709,351,TFS,The Freshman Survey,Business,Academic And Career Plans
+PLANLIVE,Where do you plan to live during the fall term?,PLANLIVE.family,0.100512906,351,TFS,The Freshman Survey,With family,Plans For College
+PLANLIVE,Where do you plan to live during the fall term?,PLANLIVE.offcampus,0.036451328,351,TFS,The Freshman Survey,Off campus,Plans For College
+PLANLIVE,Where do you plan to live during the fall term?,PLANLIVE.oncampus,0.852927768,351,TFS,The Freshman Survey,On campus,Plans For College
+PLANLIVE,Where do you plan to live during the fall term?,PLANLIVE.greekhouse,0.00685319,351,TFS,The Freshman Survey,Greek house,Plans For College
+PLANLIVE,Where do you plan to live during the fall term?,PLANLIVE.other,0.003254809,351,TFS,The Freshman Survey,Other,Plans For College
+POLIVIEW,How would you characterize your political views?,POLIVIEW.farright,0.015377727,351,TFS,The Freshman Survey,Far right,Social And Political Views
+POLIVIEW,How would you characterize your political views?,POLIVIEW.conservative,0.224607651,351,TFS,The Freshman Survey,Conservative,Social And Political Views
+POLIVIEW,How would you characterize your political views?,POLIVIEW.middleoftheroad,0.49116568,351,TFS,The Freshman Survey,Middle of the road,Social And Political Views
+POLIVIEW,How would you characterize your political views?,POLIVIEW.liberal,0.246116815,351,TFS,The Freshman Survey,Liberal,Social And Political Views
+POLIVIEW,How would you characterize your political views?,POLIVIEW.farleft,0.022732128,351,TFS,The Freshman Survey,Far left,Social And Political Views
+RACE10,Puerto Rican,RACE10.puerto_rican_yes,0.99123228,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE10,Puerto Rican,RACE10.puerto_rican_no,0.00876772,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE11,Other Latino/o/x,RACE11.other_latino_no,0.98016677,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE11,Other Latino/o/x,RACE11.other_latino_yes,0.01983323,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE12,White/Caucasian,RACE12.white_no,0.184598419,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE12,White/Caucasian,RACE12.white_yes,0.815401581,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE13,Other,RACE13.other_no,0.969703467,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE13,Other,RACE13.other_yes,0.030296533,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE7102_N,Asian,RACE7102_N.asian_no,0.930978059,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE7102_N,Asian,RACE7102_N.asian_yes,0.069021941,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE8,African American/Black,RACE8.black_no,0.930042101,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE8,African American/Black,RACE8.black_yes,0.069957899,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RACE9,Mexican American/Chicano/o/x,RACE9.mexican_chicano_no,0.976551477,351,TFS,The Freshman Survey,No,Family Background And Demographics
+RACE9,Mexican American/Chicano/o/x,RACE9.mexican_chicano_yes,0.023448523,351,TFS,The Freshman Survey,Yes,Family Background And Demographics
+RATE01,Self Rating: Academic ability,RATE01.lowest10pct,0.000810802,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE01,Self Rating: Academic ability,RATE01.belowaverage,0.008071392,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE01,Self Rating: Academic ability,RATE01.average,0.261988055,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE01,Self Rating: Academic ability,RATE01.aboveaverage,0.509060932,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE01,Self Rating: Academic ability,RATE01.highest10pct,0.22006882,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE04,Self Rating: Competitiveness,RATE04.lowest10pct,0.011955922,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE04,Self Rating: Competitiveness,RATE04.belowaverage,0.075006962,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE04,Self Rating: Competitiveness,RATE04.average,0.331886138,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE04,Self Rating: Competitiveness,RATE04.aboveaverage,0.368932097,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE04,Self Rating: Competitiveness,RATE04.highest10pct,0.21221888,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE06,Self Rating: Cooperativeness,RATE06.lowest10pct,0.001852988,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE06,Self Rating: Cooperativeness,RATE06.belowaverage,0.017167972,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE06,Self Rating: Cooperativeness,RATE06.average,0.243226538,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE06,Self Rating: Cooperativeness,RATE06.aboveaverage,0.503718827,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE06,Self Rating: Cooperativeness,RATE06.highest10pct,0.234033675,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE07,Self Rating: Creativity,RATE07.lowest10pct,0.00808639,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE07,Self Rating: Creativity,RATE07.belowaverage,0.078410538,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE07,Self Rating: Creativity,RATE07.average,0.357722813,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE07,Self Rating: Creativity,RATE07.aboveaverage,0.391485134,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE07,Self Rating: Creativity,RATE07.highest10pct,0.164295124,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE08,Self Rating: Drive to achieve,RATE08.lowest10pct,0.002478917,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE08,Self Rating: Drive to achieve,RATE08.belowaverage,0.024859356,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE08,Self Rating: Drive to achieve,RATE08.average,0.235703023,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE08,Self Rating: Drive to achieve,RATE08.aboveaverage,0.429484378,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE08,Self Rating: Drive to achieve,RATE08.highest10pct,0.307474326,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE09,Self Rating: Emotional health,RATE09.lowest10pct,0.007588807,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE09,Self Rating: Emotional health,RATE09.belowaverage,0.058504631,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE09,Self Rating: Emotional health,RATE09.average,0.360328912,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE09,Self Rating: Emotional health,RATE09.aboveaverage,0.368214255,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE09,Self Rating: Emotional health,RATE09.highest10pct,0.205363395,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE10,Self Rating: Leadership ability,RATE10.lowest10pct,0.006699745,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE10,Self Rating: Leadership ability,RATE10.belowaverage,0.067881244,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE10,Self Rating: Leadership ability,RATE10.average,0.311615234,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE10,Self Rating: Leadership ability,RATE10.aboveaverage,0.399325204,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE10,Self Rating: Leadership ability,RATE10.highest10pct,0.214478574,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE11,Self Rating: Mathematical ability,RATE11.lowest10pct,0.029570371,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE11,Self Rating: Mathematical ability,RATE11.belowaverage,0.147125955,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE11,Self Rating: Mathematical ability,RATE11.average,0.339299805,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE11,Self Rating: Mathematical ability,RATE11.aboveaverage,0.337550654,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE11,Self Rating: Mathematical ability,RATE11.highest10pct,0.146453215,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE13,Self Rating: Popularity,RATE13.lowest10pct,0.011170725,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE13,Self Rating: Popularity,RATE13.belowaverage,0.06613526,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE13,Self Rating: Popularity,RATE13.average,0.516086127,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE13,Self Rating: Popularity,RATE13.aboveaverage,0.330897328,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE13,Self Rating: Popularity,RATE13.highest10pct,0.07571056,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE14,Self Rating: Public speaking ability,RATE14.lowest10pct,0.04209404,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE14,Self Rating: Public speaking ability,RATE14.belowaverage,0.198760425,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE14,Self Rating: Public speaking ability,RATE14.average,0.381225124,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE14,Self Rating: Public speaking ability,RATE14.aboveaverage,0.266968425,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE14,Self Rating: Public speaking ability,RATE14.highest10pct,0.110951986,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE15,Self Rating: Self-confidence (intellectual),RATE15.lowest10pct,0.004911316,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE15,Self Rating: Self-confidence (intellectual),RATE15.belowaverage,0.046119775,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE15,Self Rating: Self-confidence (intellectual),RATE15.average,0.331518489,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE15,Self Rating: Self-confidence (intellectual),RATE15.aboveaverage,0.425986852,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE15,Self Rating: Self-confidence (intellectual),RATE15.highest10pct,0.191463567,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE16,Self Rating: Self-confidence (social),RATE16.lowest10pct,0.011772603,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE16,Self Rating: Self-confidence (social),RATE16.belowaverage,0.102536215,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE16,Self Rating: Self-confidence (social),RATE16.average,0.379024573,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE16,Self Rating: Self-confidence (social),RATE16.aboveaverage,0.358861905,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE16,Self Rating: Self-confidence (social),RATE16.highest10pct,0.147804705,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE17,Self Rating: Self-understanding,RATE17.lowest10pct,0.004533713,349,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE17,Self Rating: Self-understanding,RATE17.belowaverage,0.036332994,349,TFS,The Freshman Survey,Below average,Self Ratings
+RATE17,Self Rating: Self-understanding,RATE17.average,0.368845476,349,TFS,The Freshman Survey,Average,Self Ratings
+RATE17,Self Rating: Self-understanding,RATE17.aboveaverage,0.399427443,349,TFS,The Freshman Survey,Above average,Self Ratings
+RATE17,Self Rating: Self-understanding,RATE17.highest10pct,0.190860374,349,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE19,Self Rating: Understanding of others,RATE19.lowest10pct,0.002649349,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE19,Self Rating: Understanding of others,RATE19.belowaverage,0.020503333,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE19,Self Rating: Understanding of others,RATE19.average,0.296436754,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE19,Self Rating: Understanding of others,RATE19.aboveaverage,0.478405929,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE19,Self Rating: Understanding of others,RATE19.highest10pct,0.202004636,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+RATE20,Self Rating: Writing ability,RATE20.lowest10pct,0.011911114,351,TFS,The Freshman Survey,Lowest ten percent,Self Ratings
+RATE20,Self Rating: Writing ability,RATE20.belowaverage,0.094530287,351,TFS,The Freshman Survey,Below average,Self Ratings
+RATE20,Self Rating: Writing ability,RATE20.average,0.402679573,351,TFS,The Freshman Survey,Average,Self Ratings
+RATE20,Self Rating: Writing ability,RATE20.aboveaverage,0.365776864,351,TFS,The Freshman Survey,Above average,Self Ratings
+RATE20,Self Rating: Writing ability,RATE20.highest10pct,0.125102162,351,TFS,The Freshman Survey,Highest ten percent,Self Ratings
+REASON01,Reason Attend: A mentor/role model encouraged me to go,REASON01.notimportant,0.512929112,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON01,Reason Attend: A mentor/role model encouraged me to go,REASON01.somewhatimportant,0.356096259,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON01,Reason Attend: A mentor/role model encouraged me to go,REASON01.veryimportant,0.130974629,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON02,Reason Attend: I could not find a job,REASON02.notimportant,0.888124445,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON02,Reason Attend: I could not find a job,REASON02.somewhatimportant,0.068042132,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON02,Reason Attend: I could not find a job,REASON02.veryimportant,0.043833423,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON03,Reason Attend: My parents wanted me to go,REASON03.notimportant,0.239610128,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON03,Reason Attend: My parents wanted me to go,REASON03.somewhatimportant,0.423837645,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON03,Reason Attend: My parents wanted me to go,REASON03.veryimportant,0.336552227,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON04,Reason Attend: There was nothing better to do,REASON04.notimportant,0.866150771,349,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON04,Reason Attend: There was nothing better to do,REASON04.somewhatimportant,0.102292804,349,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON04,Reason Attend: There was nothing better to do,REASON04.veryimportant,0.031556425,349,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON05,Reason Attend: To be able to get a better job,REASON05.notimportant,0.118113171,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON05,Reason Attend: To be able to get a better job,REASON05.somewhatimportant,0.163831793,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON05,Reason Attend: To be able to get a better job,REASON05.veryimportant,0.718055036,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON06,Reason Attend: To be able to make more money,REASON06.notimportant,0.074611391,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON06,Reason Attend: To be able to make more money,REASON06.somewhatimportant,0.252567346,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON06,Reason Attend: To be able to make more money,REASON06.veryimportant,0.672821263,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON08,Reason Attend: To gain a general education and appreciation of ideas,REASON08.notimportant,0.038066262,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON08,Reason Attend: To gain a general education and appreciation of ideas,REASON08.somewhatimportant,0.29606633,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON08,Reason Attend: To gain a general education and appreciation of ideas,REASON08.veryimportant,0.665867408,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON09,Reason Attend: To improve my reading and study skills,REASON09.notimportant,0.134401552,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON09,Reason Attend: To improve my reading and study skills,REASON09.somewhatimportant,0.454654797,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON09,Reason Attend: To improve my reading and study skills,REASON09.veryimportant,0.410943651,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON10,Reason Attend: To learn more about things that interest me,REASON10.notimportant,0.02129317,349,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON10,Reason Attend: To learn more about things that interest me,REASON10.somewhatimportant,0.201876288,349,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON10,Reason Attend: To learn more about things that interest me,REASON10.veryimportant,0.776830542,349,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON11,Reason Attend: To make me a more cultured person,REASON11.notimportant,0.137619453,349,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON11,Reason Attend: To make me a more cultured person,REASON11.somewhatimportant,0.425580173,349,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON11,Reason Attend: To make me a more cultured person,REASON11.veryimportant,0.436800374,349,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON12,Reason Attend: To prepare myself for graduate or professional school,REASON12.notimportant,0.131670028,337,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON12,Reason Attend: To prepare myself for graduate or professional school,REASON12.somewhatimportant,0.287460182,337,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON12,Reason Attend: To prepare myself for graduate or professional school,REASON12.veryimportant,0.580869791,337,TFS,The Freshman Survey,Very important,Reasons For Attending College
+REASON13,Reason Attend: Wanted to get away from home,REASON13.notimportant,0.344135517,351,TFS,The Freshman Survey,Not important,Reasons For Attending College
+REASON13,Reason Attend: Wanted to get away from home,REASON13.somewhatimportant,0.454720839,351,TFS,The Freshman Survey,Somewhat important,Reasons For Attending College
+REASON13,Reason Attend: Wanted to get away from home,REASON13.veryimportant,0.201143644,351,TFS,The Freshman Survey,Very important,Reasons For Attending College
+SCAREERA,Student's probable career aggregated,SCAREERA.business,0.156455798,351,TFS,The Freshman Survey,Business,Academic And Career Plans
+SELECTIVITY,Institutional Selectivity,SELECTIVITY.scale,1247.119695,347,TFS,The Freshman Survey,Scale,College Selectivity
+SEX,Your sex:,SEX.male,0.443114867,351,TFS,The Freshman Survey,Male,Family Background And Demographics
+SEX,Your sex:,SEX.female,0.556885133,351,TFS,The Freshman Survey,Female,Family Background And Demographics
+VIEW19,"View: Realistically, an individual can do little to bring about changes in our society",VIEW19.disagreestrongly,0.31357709,351,TFS,The Freshman Survey,Disagree strongly,Social And Political Views
+VIEW19,"View: Realistically, an individual can do little to bring about changes in our society",VIEW19.disagreesomewhat,0.42254999,351,TFS,The Freshman Survey,Disagree somewhat,Social And Political Views
+VIEW19,"View: Realistically, an individual can do little to bring about changes in our society",VIEW19.agreesomewhat,0.218204778,351,TFS,The Freshman Survey,Agree somewhat,Social And Political Views
+VIEW19,"View: Realistically, an individual can do little to bring about changes in our society",VIEW19.agreestrongly,0.045668141,351,TFS,The Freshman Survey,Agree strongly,Social And Political Views
+VIEW31,View: Wealthy people should pay a larger share of taxes than they do now,VIEW31.disagreestrongly,0.142702927,351,TFS,The Freshman Survey,Disagree strongly,Social And Political Views
+VIEW31,View: Wealthy people should pay a larger share of taxes than they do now,VIEW31.disagreesomewhat,0.292762534,351,TFS,The Freshman Survey,Disagree somewhat,Social And Political Views
+VIEW31,View: Wealthy people should pay a larger share of taxes than they do now,VIEW31.agreesomewhat,0.37664385,351,TFS,The Freshman Survey,Agree somewhat,Social And Political Views
+VIEW31,View: Wealthy people should pay a larger share of taxes than they do now,VIEW31.agreestrongly,0.187890689,351,TFS,The Freshman Survey,Agree strongly,Social And Political Views

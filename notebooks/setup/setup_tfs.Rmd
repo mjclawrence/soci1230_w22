@@ -306,7 +306,8 @@ tfs_means <- tfs_subset_master |>
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("FIRSTGEN"),
-                   list(yes_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("FUTACT"),
@@ -360,35 +361,43 @@ tfs_means <- tfs_subset_master |>
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE01"),
-                   list(amindian_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(amindian_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        amindian_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE10"),
-                   list(puerto_rican_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(puerto_rican_yes_mean = ~mean(.x==1, na.rm = TRUE),
+                        puerto_rican_no_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE11"),
-                   list(other_latino_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(other_latino_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        other_latino_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE12"),
-                   list(white_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(white_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        white_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE13"),
-                   list(other_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(other_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        other_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                     .names = "{.col}.{.fn}"),
             across(starts_with("RACE7102"),
-                   list(asian_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(asian_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        asian_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RACE8"),
-                   list(black_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(black_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        black_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
              across(starts_with("RACE9"),
-                   list(mexican_chicano_mean = ~mean(.x==2, na.rm = TRUE),
+                   list(mexican_chicano_no_mean = ~mean(.x==1, na.rm = TRUE),
+                        mexican_chicano_yes_mean = ~mean(.x==2, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
                    .names = "{.col}.{.fn}"),
             across(starts_with("RATE"),
@@ -456,7 +465,7 @@ tfs_means_mobility <- left_join(tfs_means, chetty_vars)
 ```
 
 ```{r}
-write.csv(tfs_means_mobility, "../../data/tfs_means_mobility.csv", row.names = FALSE)
+write.csv(tfs_means_mobility, "../../data/tfs_means_mobility_withno.csv", row.names = FALSE)
 ```
 
 ## Correlations
@@ -562,7 +571,7 @@ tfs_correlations <- tfs_means_mobility |>
                         cor_par_q5 = ~wtd.cor(.x, par_q5, 
                                               weight = n_responses)[1]),
                    .names = "{.col}_{.fn}") |> 
-  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:18288) |>
+  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:18672) |>
   filter(str_detect(Variable, "mean")) |> 
   separate(Variable, c("Variable", "Mobility"), sep = "_mean") |> 
   separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
@@ -586,7 +595,7 @@ tfs_correlations <- left_join(tfs_correlations, varnames) |>
 ```
 
 ```{r}
-write.csv(tfs_correlations, "../../data/tfs_correlations.csv", row.names = FALSE)
+write.csv(tfs_correlations, "../../data/tfs_correlations_withno.csv", row.names = FALSE)
 ```
 
 

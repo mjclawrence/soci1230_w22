@@ -1,16 +1,32 @@
 library(tidyverse)
 
-tfs <- read.csv("data/tfs_correlations.csv")
-css <- read.csv("data/css_correlations.csv")
+tfs <- read.csv("data/tfs_correlations_withno.csv")
+css <- read.csv("data/css_correlations_withno.csv")
 
-tfs_subset <- tfs |> 
-  select(1:5)
+tfs_withno <- tfs |> 
+  select(1:5) |> 
+  mutate(Survey = "TFS",
+         Survey_Name = "The Freshman Survey")
 
-css_subset <- css |> 
-  select(1:5)
+css_withno <- css |> 
+  select(1:5) |> 
+  mutate(Survey = "CSS",
+         Survey_Name = "College Senior Survey")
 
-write.csv(tfs_subset, "data/tfs_question_summary.csv", row.names = FALSE)
-write.csv(css_subset, "data/css_question_summary.csv", row.names = FALSE)
+write.csv(tfs_withno, "data/tfs_question_summary_withno.csv", row.names = FALSE)
+write.csv(css_withno, "data/css_question_summary_withno.csv", row.names = FALSE)
+
+tfs_withoutno <- read.csv("data/tfs_correlations.csv")
+css_withoutno <- read.csv("data/css_correlations.csv")
+
+tfs_withlabels <- read.csv("data/tfs_question_summary_labels.csv")
+css_withlabels <- read.csv("data/css_question_summary_labels.csv")
+
+tfs <- left_join(tfs_withno, tfs_withlabels)
+css <- left_join(css_withno, css_withlabels)
+
+write.csv(tfs, "data/tfs_question_summary_labels.csv", row.names = FALSE)
+write.csv(css, "data/css_question_summary_labels.csv", row.names = FALSE)
 
 ###
 
