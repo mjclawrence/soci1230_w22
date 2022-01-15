@@ -200,10 +200,10 @@ PLANLIVE.oncampus,On campus,Plans For College
 PLANLIVE.greekhouse,Greek house,Plans For College
 PLANLIVE.other,Other,Plans For College
 POLIVIEW.farright,Far right,Social And Political Views
-POLIVIEW.conservative,Conservative,Political Views
-POLIVIEW.middleoftheroad,Middle of the road,Political Views
-POLIVIEW.liberal,Liberal,Political Views
-POLIVIEW.farleft,Far left,Political Views
+POLIVIEW.conservative,Conservative,Social And Political Views
+POLIVIEW.middleoftheroad,Middle of the road,Social And Political Views
+POLIVIEW.liberal,Liberal,Social And Political Views
+POLIVIEW.farleft,Far left,Social And Political Views
 RACE10.puerto_rican,Puerto Rican,Family Background And Demographics
 RACE11.other_latino,Other Latino,Family Background And Demographics
 RACE12.white,White,Family Background And Demographics
