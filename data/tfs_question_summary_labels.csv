@@ -1,336 +1,336 @@
-Summary,Label,Group
-CHOICE.lessthanthird,Less than third choice,College Preference
-CHOICE.third,Third choice,College Preference
-CHOICE.second,Second choice,College Preference
-CHOICE.first,First choice,College Preference
-CHOOSE06.notimportant,Not important,College Choice Factors
-CHOOSE06.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE06.veryimportant,Very important,College Choice Factors
-CHOOSE12.notimportant,Not important,College Choice Factors
-CHOOSE12.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE12.veryimportant,Very important,College Choice Factors
-CHOOSE16.notimportant,Not important,College Choice Factors
-CHOOSE16.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE16.veryimportant,Very important,College Choice Factors
-CHOOSE21.notimportant,Not important,College Choice Factors
-CHOOSE21.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE21.veryimportant,Very important,College Choice Factors
-CHOOSE24.notimportant,Not important,College Choice Factors
-CHOOSE24.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE24.veryimportant,Very important,College Choice Factors
-CHOOSE25.notimportant,Not important,College Choice Factors
-CHOOSE25.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE25.veryimportant,Very important,College Choice Factors
-CHOOSE26.notimportant,Not important,College Choice Factors
-CHOOSE26.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE26.veryimportant,Very important,College Choice Factors
-CHOOSE28.notimportant,Not important,College Choice Factors
-CHOOSE28.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE28.veryimportant,Very important,College Choice Factors
-CHOOSE29.notimportant,Not important,College Choice Factors
-CHOOSE29.somewhatimportant,Somewhat important,College Choice Factors
-CHOOSE29.veryimportant,Very important,College Choice Factors
-DISTHOME.miles10less,Ten miles or less,Family Background And Demographics
-DISTHOME.miles11to50,Eleven to fifty miles,Family Background And Demographics
-DISTHOME.miles51to100,Fifty one to one hundred miles,Family Background And Demographics
-DISTHOME.miles101to500,One hundred one to five hundred miles,Family Background And Demographics
-DISTHOME.miles501plus,More than five hundred miles,Family Background And Demographics
-FINCON.none,None,Educational Expenses
-FINCON.some,Some,Educational Expenses
-FINCON.major,Major,Educational Expenses
-FIRSTGEN.yes,Yes,Family Background And Demographics
-FUTACT01.nochance,No chance,Plans For College
-FUTACT01.verylittlechance,Very little chance,Plans For College
-FUTACT01.somechance,Some chance,Plans For College
-FUTACT01.verygoodchance,Very good chance,Plans For College
-FUTACT02.nochance,No chance,Plans For College
-FUTACT02.verylittlechance,Very little chance,Plans For College
-FUTACT02.somechance,Some chance,Plans For College
-FUTACT02.verygoodchance,Very good chance,Plans For College
-FUTACT03.nochance,No chance,Plans For College
-FUTACT03.verylittlechance,Very little chance,Plans For College
-FUTACT03.somechance,Some chance,Plans For College
-FUTACT03.verygoodchance,Very good chance,Plans For College
-FUTACT04.nochance,No chance,Plans For College
-FUTACT04.verylittlechance,Very little chance,Plans For College
-FUTACT04.somechance,Some chance,Plans For College
-FUTACT04.verygoodchance,Very good chance,Plans For College
-FUTACT05.nochance,No chance,Plans For College
-FUTACT05.verylittlechance,Very little chance,Plans For College
-FUTACT05.somechance,Some chance,Plans For College
-FUTACT05.verygoodchance,Very good chance,Plans For College
-FUTACT11.nochance,No chance,Plans For College
-FUTACT11.verylittlechance,Very little chance,Plans For College
-FUTACT11.somechance,Some chance,Plans For College
-FUTACT11.verygoodchance,Very good chance,Plans For College
-FUTACT12.nochance,No chance,Plans For College
-FUTACT12.verylittlechance,Very little chance,Plans For College
-FUTACT12.somechance,Some chance,Plans For College
-FUTACT12.verygoodchance,Very good chance,Plans For College
-FUTACT15.nochance,No chance,Plans For College
-FUTACT15.verylittlechance,Very little chance,Plans For College
-FUTACT15.somechance,Some chance,Plans For College
-FUTACT15.verygoodchance,Very good chance,Plans For College
-FUTACT18.nochance,No chance,Plans For College
-FUTACT18.verylittlechance,Very little chance,Plans For College
-FUTACT18.somechance,Some chance,Plans For College
-FUTACT18.verygoodchance,Very good chance,Plans For College
-FUTACT19.nochance,No chance,Plans For College
-FUTACT19.verylittlechance,Very little chance,Plans For College
-FUTACT19.somechance,Some chance,Plans For College
-FUTACT19.verygoodchance,Very good chance,Plans For College
-FUTACT20.nochance,No chance,Plans For College
-FUTACT20.verylittlechance,Very little chance,Plans For College
-FUTACT20.somechance,Some chance,Plans For College
-FUTACT20.verygoodchance,Very good chance,Plans For College
-FUTACT24.nochance,No chance,Plans For College
-FUTACT24.verylittlechance,Very little chance,Plans For College
-FUTACT24.somechance,Some chance,Plans For College
-FUTACT24.verygoodchance,Very good chance,Plans For College
-FUTACT25.nochance,No chance,Plans For College
-FUTACT25.verylittlechance,Very little chance,Plans For College
-FUTACT25.somechance,Some chance,Plans For College
-FUTACT25.verygoodchance,Very good chance,Plans For College
-FUTACT28.nochance,No chance,Plans For College
-FUTACT28.verylittlechance,Very little chance,Plans For College
-FUTACT28.somechance,Some chance,Plans For College
-FUTACT28.verygoodchance,Very good chance,Plans For College
-FUTACT29.nochance,No chance,Plans For College
-FUTACT29.verylittlechance,Very little chance,Plans For College
-FUTACT29.somechance,Some chance,Plans For College
-FUTACT29.verygoodchance,Very good chance,Plans For College
-FUTACT33.nochance,No chance,Plans For College
-FUTACT33.verylittlechance,Very little chance,Plans For College
-FUTACT33.somechance,Some chance,Plans For College
-FUTACT33.verygoodchance,Very good chance,Plans For College
-GOAL02.notimportant,Not important,Importance Of Personal Goals
-GOAL02.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL02.veryimportant,Very important,Importance Of Personal Goals
-GOAL02.essential,Essential,Importance Of Personal Goals
-GOAL03.notimportant,Not important,Importance Of Personal Goals
-GOAL03.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL03.veryimportant,Very important,Importance Of Personal Goals
-GOAL03.essential,Essential,Importance Of Personal Goals
-GOAL04.notimportant,Not important,Importance Of Personal Goals
-GOAL04.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL04.veryimportant,Very important,Importance Of Personal Goals
-GOAL04.essential,Essential,Importance Of Personal Goals
-GOAL06.notimportant,Not important,Importance Of Personal Goals
-GOAL06.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL06.veryimportant,Very important,Importance Of Personal Goals
-GOAL06.essential,Essential,Importance Of Personal Goals
-GOAL07.notimportant,Not important,Importance Of Personal Goals
-GOAL07.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL07.veryimportant,Very important,Importance Of Personal Goals
-GOAL07.essential,Essential,Importance Of Personal Goals
-GOAL08.notimportant,Not important,Importance Of Personal Goals
-GOAL08.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL08.veryimportant,Very important,Importance Of Personal Goals
-GOAL08.essential,Essential,Importance Of Personal Goals
-GOAL09.notimportant,Not important,Importance Of Personal Goals
-GOAL09.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL09.veryimportant,Very important,Importance Of Personal Goals
-GOAL09.essential,Essential,Importance Of Personal Goals
-GOAL10.notimportant,Not important,Importance Of Personal Goals
-GOAL10.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL10.veryimportant,Very important,Importance Of Personal Goals
-GOAL10.essential,Essential,Importance Of Personal Goals
-GOAL11.notimportant,Not important,Importance Of Personal Goals
-GOAL11.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL11.veryimportant,Very important,Importance Of Personal Goals
-GOAL11.essential,Essential,Importance Of Personal Goals
-GOAL12.notimportant,Not important,Importance Of Personal Goals
-GOAL12.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL12.veryimportant,Very important,Importance Of Personal Goals
-GOAL12.essential,Essential,Importance Of Personal Goals
-GOAL13.notimportant,Not important,Importance Of Personal Goals
-GOAL13.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL13.veryimportant,Very important,Importance Of Personal Goals
-GOAL13.essential,Essential,Importance Of Personal Goals
-GOAL15.notimportant,Not important,Importance Of Personal Goals
-GOAL15.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL15.veryimportant,Very important,Importance Of Personal Goals
-GOAL15.essential,Essential,Importance Of Personal Goals
-GOAL16.notimportant,Not important,Importance Of Personal Goals
-GOAL16.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL16.veryimportant,Very important,Importance Of Personal Goals
-GOAL16.essential,Essential,Importance Of Personal Goals
-GOAL17.notimportant,Not important,Importance Of Personal Goals
-GOAL17.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL17.veryimportant,Very important,Importance Of Personal Goals
-GOAL17.essential,Essential,Importance Of Personal Goals
-GOAL18.notimportant,Not important,Importance Of Personal Goals
-GOAL18.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL18.veryimportant,Very important,Importance Of Personal Goals
-GOAL18.essential,Essential,Importance Of Personal Goals
-GOAL19.notimportant,Not important,Importance Of Personal Goals
-GOAL19.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL19.veryimportant,Very important,Importance Of Personal Goals
-GOAL19.essential,Essential,Importance Of Personal Goals
-GOAL20.notimportant,Not important,Importance Of Personal Goals
-GOAL20.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL20.veryimportant,Very important,Importance Of Personal Goals
-GOAL20.essential,Essential,Importance Of Personal Goals
-GOAL21.notimportant,Not important,Importance Of Personal Goals
-GOAL21.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL21.veryimportant,Very important,Importance Of Personal Goals
-GOAL21.essential,Essential,Importance Of Personal Goals
-GOAL23.notimportant,Not important,Importance Of Personal Goals
-GOAL23.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL23.veryimportant,Very important,Importance Of Personal Goals
-GOAL23.essential,Essential,Importance Of Personal Goals
-GOAL24.notimportant,Not important,Importance Of Personal Goals
-GOAL24.somewhatimportant,Somewhat important,Importance Of Personal Goals
-GOAL24.veryimportant,Very important,Importance Of Personal Goals
-GOAL24.essential,Essential,Importance Of Personal Goals
-HSGPA.d,D,High School GPA
-HSGPA.c,C,High School GPA
-HSGPA.b,B,High School GPA
-HSGPA.a,A,High School GPA
-INCOME.inclessthan50k,Less than 50k,Family Background And Demographics
-INCOME.inc50to75k,Between 50k and 75k,Family Background And Demographics
-INCOME.inc75to100k,Between 75k and 100k,Family Background And Demographics
-INCOME.inc100to150k,Between 100k and 150k,Family Background And Demographics
-INCOME.inc150to200k,Between 150k and 200k,Family Background And Demographics
-INCOME.inc200kplus,More than 200k,Family Background And Demographics
-MAJORA.business,Business,Academic And Career Plans
-PLANLIVE.family,With family,Plans For College
-PLANLIVE.offcampus,Off campus,Plans For College
-PLANLIVE.oncampus,On campus,Plans For College
-PLANLIVE.greekhouse,Greek house,Plans For College
-PLANLIVE.other,Other,Plans For College
-POLIVIEW.farright,Far right,Social And Political Views
-POLIVIEW.conservative,Conservative,Social And Political Views
-POLIVIEW.middleoftheroad,Middle of the road,Social And Political Views
-POLIVIEW.liberal,Liberal,Social And Political Views
-POLIVIEW.farleft,Far left,Social And Political Views
-RACE10.puerto_rican,Puerto Rican,Family Background And Demographics
-RACE11.other_latino,Other Latino,Family Background And Demographics
-RACE12.white,White,Family Background And Demographics
-RACE13.other,Other,Family Background And Demographics
-RACE7102_N.asian,Asian,Family Background And Demographics
-RACE8.black,Black,Family Background And Demographics
-RACE9.mexican_chicano,Mexican or Chicano,Family Background And Demographics
-RATE01.lowest10pct,Lowest ten percent,Self Ratings
-RATE01.belowaverage,Below average,Self Ratings
-RATE01.average,Average,Self Ratings
-RATE01.aboveaverage,Above average,Self Ratings
-RATE01.highest10pct,Highest ten percent,Self Ratings
-RATE04.lowest10pct,Lowest ten percent,Self Ratings
-RATE04.belowaverage,Below average,Self Ratings
-RATE04.average,Average,Self Ratings
-RATE04.aboveaverage,Above average,Self Ratings
-RATE04.highest10pct,Highest ten percent,Self Ratings
-RATE06.lowest10pct,Lowest ten percent,Self Ratings
-RATE06.belowaverage,Below average,Self Ratings
-RATE06.average,Average,Self Ratings
-RATE06.aboveaverage,Above average,Self Ratings
-RATE06.highest10pct,Highest ten percent,Self Ratings
-RATE07.lowest10pct,Lowest ten percent,Self Ratings
-RATE07.belowaverage,Below average,Self Ratings
-RATE07.average,Average,Self Ratings
-RATE07.aboveaverage,Above average,Self Ratings
-RATE07.highest10pct,Highest ten percent,Self Ratings
-RATE08.lowest10pct,Lowest ten percent,Self Ratings
-RATE08.belowaverage,Below average,Self Ratings
-RATE08.average,Average,Self Ratings
-RATE08.aboveaverage,Above average,Self Ratings
-RATE08.highest10pct,Highest ten percent,Self Ratings
-RATE09.lowest10pct,Lowest ten percent,Self Ratings
-RATE09.belowaverage,Below average,Self Ratings
-RATE09.average,Average,Self Ratings
-RATE09.aboveaverage,Above average,Self Ratings
-RATE09.highest10pct,Highest ten percent,Self Ratings
-RATE10.lowest10pct,Lowest ten percent,Self Ratings
-RATE10.belowaverage,Below average,Self Ratings
-RATE10.average,Average,Self Ratings
-RATE10.aboveaverage,Above average,Self Ratings
-RATE10.highest10pct,Highest ten percent,Self Ratings
-RATE11.lowest10pct,Lowest ten percent,Self Ratings
-RATE11.belowaverage,Below average,Self Ratings
-RATE11.average,Average,Self Ratings
-RATE11.aboveaverage,Above average,Self Ratings
-RATE11.highest10pct,Highest ten percent,Self Ratings
-RATE13.lowest10pct,Lowest ten percent,Self Ratings
-RATE13.belowaverage,Below average,Self Ratings
-RATE13.average,Average,Self Ratings
-RATE13.aboveaverage,Above average,Self Ratings
-RATE13.highest10pct,Highest ten percent,Self Ratings
-RATE14.lowest10pct,Lowest ten percent,Self Ratings
-RATE14.belowaverage,Below average,Self Ratings
-RATE14.average,Average,Self Ratings
-RATE14.aboveaverage,Above average,Self Ratings
-RATE14.highest10pct,Highest ten percent,Self Ratings
-RATE15.lowest10pct,Lowest ten percent,Self Ratings
-RATE15.belowaverage,Below average,Self Ratings
-RATE15.average,Average,Self Ratings
-RATE15.aboveaverage,Above average,Self Ratings
-RATE15.highest10pct,Highest ten percent,Self Ratings
-RATE16.lowest10pct,Lowest ten percent,Self Ratings
-RATE16.belowaverage,Below average,Self Ratings
-RATE16.average,Average,Self Ratings
-RATE16.aboveaverage,Above average,Self Ratings
-RATE16.highest10pct,Highest ten percent,Self Ratings
-RATE17.lowest10pct,Lowest ten percent,Self Ratings
-RATE17.belowaverage,Below average,Self Ratings
-RATE17.average,Average,Self Ratings
-RATE17.aboveaverage,Above average,Self Ratings
-RATE17.highest10pct,Highest ten percent,Self Ratings
-RATE19.lowest10pct,Lowest ten percent,Self Ratings
-RATE19.belowaverage,Below average,Self Ratings
-RATE19.average,Average,Self Ratings
-RATE19.aboveaverage,Above average,Self Ratings
-RATE19.highest10pct,Highest ten percent,Self Ratings
-RATE20.lowest10pct,Lowest ten percent,Self Ratings
-RATE20.belowaverage,Below average,Self Ratings
-RATE20.average,Average,Self Ratings
-RATE20.aboveaverage,Above average,Self Ratings
-RATE20.highest10pct,Highest ten percent,Self Ratings
-REASON01.notimportant,Not important,Reasons For Attending College
-REASON01.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON01.veryimportant,Very important,Reasons For Attending College
-REASON02.notimportant,Not important,Reasons For Attending College
-REASON02.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON02.veryimportant,Very important,Reasons For Attending College
-REASON03.notimportant,Not important,Reasons For Attending College
-REASON03.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON03.veryimportant,Very important,Reasons For Attending College
-REASON04.notimportant,Not important,Reasons For Attending College
-REASON04.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON04.veryimportant,Very important,Reasons For Attending College
-REASON05.notimportant,Not important,Reasons For Attending College
-REASON05.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON05.veryimportant,Very important,Reasons For Attending College
-REASON06.notimportant,Not important,Reasons For Attending College
-REASON06.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON06.veryimportant,Very important,Reasons For Attending College
-REASON08.notimportant,Not important,Reasons For Attending College
-REASON08.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON08.veryimportant,Very important,Reasons For Attending College
-REASON09.notimportant,Not important,Reasons For Attending College
-REASON09.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON09.veryimportant,Very important,Reasons For Attending College
-REASON10.notimportant,Not important,Reasons For Attending College
-REASON10.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON10.veryimportant,Very important,Reasons For Attending College
-REASON11.notimportant,Not important,Reasons For Attending College
-REASON11.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON11.veryimportant,Very important,Reasons For Attending College
-REASON12.notimportant,Not important,Reasons For Attending College
-REASON12.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON12.veryimportant,Very important,Reasons For Attending College
-REASON13.notimportant,Not important,Reasons For Attending College
-REASON13.somewhatimportant,Somewhat important,Reasons For Attending College
-REASON13.veryimportant,Very important,Reasons For Attending College
-SCAREERA.business,Business,Academic And Career Plans
-SELECTIVITY.scale,Scale,College Selectivity
-SEX.male,Male,Family Background And Demographics
-SEX.female,Female,Family Background And Demographics
-VIEW19.disagreestrongly,Disagree strongly,Social And Political Views
-VIEW19.disagreesomewhat,Disagree somewhat,Social And Political Views
-VIEW19.agreesomewhat,Agree somewhat,Social And Political Views
-VIEW19.agreestrongly,Agree strongly,Social And Political Views
-VIEW31.disagreestrongly,Disagree strongly,Social And Political Views
-VIEW31.disagreesomewhat,Disagree somewhat,Social And Political Views
-VIEW31.agreesomewhat,Agree somewhat,Social And Political Views
-VIEW31.agreestrongly,Agree strongly,Social And Political Views
+Summary,Label,Group,Survey,Survey_Name
+CHOICE.lessthanthird,Less than third choice,College Preference,TFS,The Freshman Survey
+CHOICE.third,Third choice,College Preference,TFS,The Freshman Survey
+CHOICE.second,Second choice,College Preference,TFS,The Freshman Survey
+CHOICE.first,First choice,College Preference,TFS,The Freshman Survey
+CHOOSE06.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE06.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE06.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE12.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE12.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE12.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE16.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE16.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE16.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE21.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE21.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE21.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE24.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE24.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE24.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE25.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE25.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE25.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE26.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE26.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE26.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE28.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE28.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE28.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE29.notimportant,Not important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE29.somewhatimportant,Somewhat important,College Choice Factors,TFS,The Freshman Survey
+CHOOSE29.veryimportant,Very important,College Choice Factors,TFS,The Freshman Survey
+DISTHOME.miles10less,Ten miles or less,Family Background And Demographics,TFS,The Freshman Survey
+DISTHOME.miles11to50,Eleven to fifty miles,Family Background And Demographics,TFS,The Freshman Survey
+DISTHOME.miles51to100,Fifty one to one hundred miles,Family Background And Demographics,TFS,The Freshman Survey
+DISTHOME.miles101to500,One hundred one to five hundred miles,Family Background And Demographics,TFS,The Freshman Survey
+DISTHOME.miles501plus,More than five hundred miles,Family Background And Demographics,TFS,The Freshman Survey
+FINCON.none,None,Educational Expenses,TFS,The Freshman Survey
+FINCON.some,Some,Educational Expenses,TFS,The Freshman Survey
+FINCON.major,Major,Educational Expenses,TFS,The Freshman Survey
+FIRSTGEN.yes,Yes,Family Background And Demographics,TFS,The Freshman Survey
+FUTACT01.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT01.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT01.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT01.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT02.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT02.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT02.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT02.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT03.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT03.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT03.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT03.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT04.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT04.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT04.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT04.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT05.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT05.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT05.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT05.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT11.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT11.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT11.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT11.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT12.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT12.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT12.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT12.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT15.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT15.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT15.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT15.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT18.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT18.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT18.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT18.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT19.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT19.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT19.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT19.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT20.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT20.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT20.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT20.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT24.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT24.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT24.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT24.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT25.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT25.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT25.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT25.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT28.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT28.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT28.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT28.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT29.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT29.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT29.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT29.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+FUTACT33.nochance,No chance,Plans For College,TFS,The Freshman Survey
+FUTACT33.verylittlechance,Very little chance,Plans For College,TFS,The Freshman Survey
+FUTACT33.somechance,Some chance,Plans For College,TFS,The Freshman Survey
+FUTACT33.verygoodchance,Very good chance,Plans For College,TFS,The Freshman Survey
+GOAL02.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL02.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL02.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL02.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL03.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL03.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL03.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL03.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL04.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL04.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL04.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL04.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL06.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL06.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL06.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL06.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL07.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL07.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL07.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL07.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL08.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL08.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL08.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL08.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL09.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL09.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL09.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL09.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL10.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL10.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL10.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL10.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL11.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL11.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL11.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL11.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL12.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL12.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL12.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL12.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL13.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL13.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL13.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL13.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL15.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL15.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL15.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL15.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL16.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL16.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL16.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL16.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL17.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL17.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL17.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL17.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL18.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL18.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL18.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL18.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL19.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL19.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL19.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL19.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL20.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL20.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL20.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL20.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL21.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL21.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL21.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL21.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL23.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL23.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL23.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL23.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL24.notimportant,Not important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL24.somewhatimportant,Somewhat important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL24.veryimportant,Very important,Importance Of Personal Goals,TFS,The Freshman Survey
+GOAL24.essential,Essential,Importance Of Personal Goals,TFS,The Freshman Survey
+HSGPA.d,D,High School GPA,TFS,The Freshman Survey
+HSGPA.c,C,High School GPA,TFS,The Freshman Survey
+HSGPA.b,B,High School GPA,TFS,The Freshman Survey
+HSGPA.a,A,High School GPA,TFS,The Freshman Survey
+INCOME.inclessthan50k,Less than 50k,Family Background And Demographics,TFS,The Freshman Survey
+INCOME.inc50to75k,Between 50k and 75k,Family Background And Demographics,TFS,The Freshman Survey
+INCOME.inc75to100k,Between 75k and 100k,Family Background And Demographics,TFS,The Freshman Survey
+INCOME.inc100to150k,Between 100k and 150k,Family Background And Demographics,TFS,The Freshman Survey
+INCOME.inc150to200k,Between 150k and 200k,Family Background And Demographics,TFS,The Freshman Survey
+INCOME.inc200kplus,More than 200k,Family Background And Demographics,TFS,The Freshman Survey
+MAJORA.business,Business,Academic And Career Plans,TFS,The Freshman Survey
+PLANLIVE.family,With family,Plans For College,TFS,The Freshman Survey
+PLANLIVE.offcampus,Off campus,Plans For College,TFS,The Freshman Survey
+PLANLIVE.oncampus,On campus,Plans For College,TFS,The Freshman Survey
+PLANLIVE.greekhouse,Greek house,Plans For College,TFS,The Freshman Survey
+PLANLIVE.other,Other,Plans For College,TFS,The Freshman Survey
+POLIVIEW.farright,Far right,Social And Political Views,TFS,The Freshman Survey
+POLIVIEW.conservative,Conservative,Social And Political Views,TFS,The Freshman Survey
+POLIVIEW.middleoftheroad,Middle of the road,Social And Political Views,TFS,The Freshman Survey
+POLIVIEW.liberal,Liberal,Social And Political Views,TFS,The Freshman Survey
+POLIVIEW.farleft,Far left,Social And Political Views,TFS,The Freshman Survey
+RACE10.puerto_rican,Puerto Rican,Family Background And Demographics,TFS,The Freshman Survey
+RACE11.other_latino,Other Latino,Family Background And Demographics,TFS,The Freshman Survey
+RACE12.white,White,Family Background And Demographics,TFS,The Freshman Survey
+RACE13.other,Other,Family Background And Demographics,TFS,The Freshman Survey
+RACE7102_N.asian,Asian,Family Background And Demographics,TFS,The Freshman Survey
+RACE8.black,Black,Family Background And Demographics,TFS,The Freshman Survey
+RACE9.mexican_chicano,Mexican or Chicano,Family Background And Demographics,TFS,The Freshman Survey
+RATE01.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE01.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE01.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE01.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE01.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE04.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE04.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE04.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE04.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE04.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE06.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE06.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE06.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE06.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE06.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE07.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE07.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE07.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE07.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE07.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE08.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE08.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE08.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE08.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE08.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE09.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE09.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE09.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE09.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE09.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE10.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE10.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE10.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE10.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE10.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE11.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE11.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE11.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE11.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE11.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE13.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE13.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE13.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE13.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE13.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE14.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE14.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE14.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE14.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE14.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE15.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE15.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE15.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE15.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE15.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE16.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE16.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE16.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE16.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE16.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE17.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE17.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE17.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE17.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE17.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE19.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE19.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE19.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE19.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE19.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE20.lowest10pct,Lowest ten percent,Self Ratings,TFS,The Freshman Survey
+RATE20.belowaverage,Below average,Self Ratings,TFS,The Freshman Survey
+RATE20.average,Average,Self Ratings,TFS,The Freshman Survey
+RATE20.aboveaverage,Above average,Self Ratings,TFS,The Freshman Survey
+RATE20.highest10pct,Highest ten percent,Self Ratings,TFS,The Freshman Survey
+REASON01.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON01.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON01.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON02.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON02.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON02.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON03.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON03.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON03.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON04.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON04.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON04.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON05.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON05.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON05.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON06.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON06.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON06.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON08.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON08.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON08.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON09.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON09.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON09.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON10.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON10.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON10.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON11.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON11.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON11.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON12.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON12.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON12.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+REASON13.notimportant,Not important,Reasons For Attending College,TFS,The Freshman Survey
+REASON13.somewhatimportant,Somewhat important,Reasons For Attending College,TFS,The Freshman Survey
+REASON13.veryimportant,Very important,Reasons For Attending College,TFS,The Freshman Survey
+SCAREERA.business,Business,Academic And Career Plans,TFS,The Freshman Survey
+SELECTIVITY.scale,Scale,College Selectivity,TFS,The Freshman Survey
+SEX.male,Male,Family Background And Demographics,TFS,The Freshman Survey
+SEX.female,Female,Family Background And Demographics,TFS,The Freshman Survey
+VIEW19.disagreestrongly,Disagree strongly,Social And Political Views,TFS,The Freshman Survey
+VIEW19.disagreesomewhat,Disagree somewhat,Social And Political Views,TFS,The Freshman Survey
+VIEW19.agreesomewhat,Agree somewhat,Social And Political Views,TFS,The Freshman Survey
+VIEW19.agreestrongly,Agree strongly,Social And Political Views,TFS,The Freshman Survey
+VIEW31.disagreestrongly,Disagree strongly,Social And Political Views,TFS,The Freshman Survey
+VIEW31.disagreesomewhat,Disagree somewhat,Social And Political Views,TFS,The Freshman Survey
+VIEW31.agreesomewhat,Agree somewhat,Social And Political Views,TFS,The Freshman Survey
+VIEW31.agreestrongly,Agree strongly,Social And Political Views,TFS,The Freshman Survey
