@@ -811,30 +811,30 @@ SUCCSES6,Success: Understanding what your professors expect of you academically,
 SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.not,0.064181846,183,CSS,College Senior Survey,Not successful,Success
 SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.somewhat,0.596350676,183,CSS,College Senior Survey,Somewhat successful,Success
 SUCCSES7,Success: Utilizing campus services available to students,SUCCSES7.very,0.339467478,183,CSS,College Senior Survey,Very successful,Success
-VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.disagreestronger,0.13818953,279,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.disagreesomewhat,0.352412927,279,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.Disagreestronger,0.13818953,279,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.Disagreesomewhat,0.352412927,279,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.agreesomewhat,0.316219085,279,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.agreestronger,0.193178458,279,CSS,College Senior Survey,Agree stronger,Social And Political Views
-VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.disagreestronger,0.312019423,318,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.disagreesomewhat,0.435537956,318,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW04,View: Affirmative action in college admissions should be abolished,VIEW04.agreestronger,0.193178458,279,CSS,College Senior Survey,Agree strongly,Social And Political Views
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.Disagreestronger,0.312019423,318,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.Disagreesomewhat,0.435537956,318,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.agreesomewhat,0.21442943,318,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.agreestronger,0.038013191,318,CSS,College Senior Survey,Agree stronger,Social And Political Views
-VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.disagreestronger,0.297172866,94,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.disagreesomewhat,0.396689757,94,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW25,"View: Realistically, an individual can do little to bring about changes in our society",VIEW25.agreestronger,0.038013191,318,CSS,College Senior Survey,Agree strongly,Social And Political Views
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.Disagreestronger,0.297172866,94,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.Disagreesomewhat,0.396689757,94,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.agreesomewhat,0.266111825,94,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.agreestronger,0.040025552,94,CSS,College Senior Survey,Agree stronger,Social And Political Views
-VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.disagreestronger,0.237318858,196,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.disagreesomewhat,0.311677118,196,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW28,View: Students from disadvantaged social backgrounds should be given preferential treatment in college admissions,VIEW28.agreestronger,0.040025552,94,CSS,College Senior Survey,Agree strongly,Social And Political Views
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.Disagreestronger,0.237318858,196,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.Disagreesomewhat,0.311677118,196,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.agreesomewhat,0.363189765,196,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.agreestronger,0.087814258,196,CSS,College Senior Survey,Agree stronger,Social And Political Views
-VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.disagreestronger,0.254732871,259,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.disagreesomewhat,0.477268414,259,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW31,View: The chief benefit of a college education is that it increases one's earning power,VIEW31.agreestronger,0.087814258,196,CSS,College Senior Survey,Agree strongly,Social And Political Views
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.Disagreestronger,0.254732871,259,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.Disagreesomewhat,0.477268414,259,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.agreesomewhat,0.235591998,259,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.agreestronger,0.032406717,259,CSS,College Senior Survey,Agree stronger,Social And Political Views
-VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.disagreestronger,0.133373102,318,CSS,College Senior Survey,Disagree stronger,Social And Political Views
-VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.disagreesomewhat,0.280628435,318,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
+VIEW38,View: The federal government should raise taxes to reduce the deficit,VIEW38.agreestronger,0.032406717,259,CSS,College Senior Survey,Agree strongly,Social And Political Views
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.Disagreestronger,0.133373102,318,CSS,College Senior Survey,Disagree strongly,Social And Political Views
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.Disagreesomewhat,0.280628435,318,CSS,College Senior Survey,Disagree somewhat,Social And Political Views
 VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.agreesomewhat,0.382747259,318,CSS,College Senior Survey,Agree somewhat,Social And Political Views
-VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.agreestronger,0.203251204,318,CSS,College Senior Survey,Agree stronger,Social And Political Views
+VIEW42,View: Wealthy people should pay a larger share of taxes than they do now,VIEW42.agreestronger,0.203251204,318,CSS,College Senior Survey,Agree strongly,Social And Political Views
 ACADEMIC_SELFCONCEPT,Scale: Academic Self Concept,ACADEMIC_SELFCONCEPT.scale,49.72830542,318,CSS,College Senior Survey,Scale,Constructed Scales
 SOCIAL_SELFCONCEPT,Scale: Social Self Concept,SOCIAL_SELFCONCEPT.scale,51.92186122,318,CSS,College Senior Survey,Scale,Constructed Scales
 SOCIAL_AGENCY,Scale: Social Agency,SOCIAL_AGENCY.scale,50.71545067,318,CSS,College Senior Survey,Scale,Constructed Scales
