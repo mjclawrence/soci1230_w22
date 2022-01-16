@@ -473,129 +473,140 @@ write.csv(tfs_means_mobility, "../../data/tfs_means_mobility_withno.csv", row.na
 Calculate correlations between all college means and all mobility variables
 
 ```{r}
-tfs_correlations <- tfs_means_mobility |> 
-  select(-c(campus_id, iclevel, type, tier_name, state, region, ends_with("propna"))) |>
-  summarise_at(vars(-n_responses), 
-                   list(cor_n_colleges = ~sum(!is.na(.x)),
-                        cor_wtdprop = ~wtd.mean(.x, weights = n_responses, na.rm = TRUE),
-                        cor_mr_kq5_pq1 = ~wtd.cor(.x, mr_kq5_pq1, 
-                                                  weight = n_responses)[1],
-                        cor_mr_ktop1_pq1 = ~wtd.cor(.x, mr_ktop1_pq1, 
-                                                    weight = n_responses)[1],
-                        cor_k_rank = ~wtd.cor(.x, k_rank, 
-                                              weight = n_responses)[1],
-                        cor_k_q1 = ~wtd.cor(.x, k_q1, 
-                                            weight = n_responses)[1],
-                        cor_k_q2 = ~wtd.cor(.x, k_q2, 
-                                            weight = n_responses)[1],
-                        cor_k_q3 = ~wtd.cor(.x, k_q3, 
-                                            weight = n_responses)[1],
-                        cor_k_q4 = ~wtd.cor(.x, k_q4, 
-                                            weight = n_responses)[1],
-                        cor_k_q5 = ~wtd.cor(.x, k_q5, 
-                                            weight = n_responses)[1],
-                        cor_k_top10pc = ~wtd.cor(.x, k_top10pc, 
-                                                 weight = n_responses)[1],
-                        cor_k_top5pc = ~wtd.cor(.x, k_top5pc, 
-                                                weight = n_responses)[1],
-                        cor_k_top1pc = ~wtd.cor(.x, k_top1pc, 
-                                                weight = n_responses)[1],
-                        cor_k_rank_cond_parq1 = ~wtd.cor(.x, k_rank_cond_parq1, 
-                                                         weight = n_responses)[1],
-                        cor_k_rank_cond_parq2 = ~wtd.cor(.x, k_rank_cond_parq2, 
-                                                         weight = n_responses)[1],
-                        cor_k_rank_cond_parq3 = ~wtd.cor(.x, k_rank_cond_parq3, 
-                                                         weight = n_responses)[1],
-                        cor_k_rank_cond_parq4 = ~wtd.cor(.x, k_rank_cond_parq4, 
-                                                         weight = n_responses)[1],
-                        cor_k_rank_cond_parq5 = ~wtd.cor(.x, k_rank_cond_parq5, 
-                                                         weight = n_responses)[1],
-                        cor_kq1_cond_parq1 = ~wtd.cor(.x, kq1_cond_parq1, 
-                                                      weight = n_responses)[1],
-                        cor_kq2_cond_parq1 = ~wtd.cor(.x, kq2_cond_parq1, 
-                                                      weight = n_responses)[1],
-                        cor_kq3_cond_parq1 = ~wtd.cor(.x, kq3_cond_parq1, 
-                                                      weight = n_responses)[1],
-                        cor_kq4_cond_parq1 = ~wtd.cor(.x, kq4_cond_parq1, 
-                                                      weight = n_responses)[1],
-                        cor_kq5_cond_parq1 = ~wtd.cor(.x, kq5_cond_parq1, 
-                                                      weight = n_responses)[1],
-                        cor_kq1_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
-                                                      weight = n_responses)[1],
-                        cor_kq2_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
-                                                     weight = n_responses)[1],
-                        cor_kq3_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
-                                                      weight = n_responses)[1],
-                        cor_kq4_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
-                                                      weight = n_responses)[1],
-                        cor_kq5_cond_parq2 = ~wtd.cor(.x, kq1_cond_parq2, 
-                                                      weight = n_responses)[1],
-                        cor_kq1_cond_parq3 = ~wtd.cor(.x, kq1_cond_parq3, 
-                                                      weight = n_responses)[1],
-                        cor_kq2_cond_parq3 = ~wtd.cor(.x, kq2_cond_parq3, 
-                                                      weight = n_responses)[1],
-                        cor_kq3_cond_parq3 = ~wtd.cor(.x, kq3_cond_parq3, 
-                                                      weight = n_responses)[1],
-                        cor_kq4_cond_parq3 = ~wtd.cor(.x, kq4_cond_parq3, 
-                                                      weight = n_responses)[1],
-                        cor_kq5_cond_parq3 = ~wtd.cor(.x, kq5_cond_parq3, 
-                                                      weight = n_responses)[1],
-                        cor_kq1_cond_parq4 = ~wtd.cor(.x, kq1_cond_parq4, 
-                                                      weight = n_responses)[1],
-                        cor_kq2_cond_parq4 = ~wtd.cor(.x, kq2_cond_parq4, 
-                                                      weight = n_responses)[1],
-                        cor_kq3_cond_parq4 = ~wtd.cor(.x, kq3_cond_parq4, 
-                                                      weight = n_responses)[1],
-                        cor_kq4_cond_parq4 = ~wtd.cor(.x, kq4_cond_parq4, 
-                                                      weight = n_responses)[1],
-                        cor_kq5_cond_parq4 = ~wtd.cor(.x, kq5_cond_parq4, 
-                                                      weight = n_responses)[1],
-                        cor_kq1_cond_parq5 = ~wtd.cor(.x, kq1_cond_parq5, 
-                                                      weight = n_responses)[1],
-                        cor_kq2_cond_parq5 = ~wtd.cor(.x, kq2_cond_parq5, 
-                                                      weight = n_responses)[1],
-                        cor_kq3_cond_parq5 = ~wtd.cor(.x, kq3_cond_parq5, 
-                                                      weight = n_responses)[1],
-                        cor_kq4_cond_parq5 = ~wtd.cor(.x, kq4_cond_parq5, 
-                                                      weight = n_responses)[1],
-                        cor_kq5_cond_parq5 = ~wtd.cor(.x, kq5_cond_parq5, 
-                                                      weight = n_responses)[1],
-                        cor_par_q1 = ~wtd.cor(.x, par_q1, 
-                                              weight = n_responses)[1],
-                        cor_par_q2 = ~wtd.cor(.x, par_q2, 
-                                              weight = n_responses)[1],
-                        cor_par_q3 = ~wtd.cor(.x, par_q3, 
-                                              weight = n_responses)[1],
-                        cor_par_q4 = ~wtd.cor(.x, par_q4, 
-                                              weight = n_responses)[1],
-                        cor_par_q5 = ~wtd.cor(.x, par_q5, 
-                                              weight = n_responses)[1]),
-                   .names = "{.col}_{.fn}") |> 
-  pivot_longer(names_to = "Variable", values_to = "Correlation", 1:18672) |>
-  filter(str_detect(Variable, "mean")) |> 
-  separate(Variable, c("Variable", "Mobility"), sep = "_mean") |> 
-  separate(Mobility, c("Drop", "Mobility"), sep = "or_") |> 
-  select(-Drop) |>
-  pivot_wider(names_from = "Mobility", values_from = "Correlation") 
+tfs_correlations2 <- tfs_means_mobility |> 
+  pivot_longer(names_to = "Summary",
+               values_to = "prop",
+               3:438) |> 
+  mutate(Summary = str_remove(Summary, "_mean")) |> 
+  separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right") |> 
+  mutate(response = ifelse(response == "no_maen", "no_mean", response)) |> 
+  group_by(campus_id, Name) |> 
+  mutate(propna = prop[str_detect(response, "propna")],
+         n_responses_nona = n_responses * (1 - propna)) |> 
+  ungroup() |> 
+  filter(!str_detect(response, "propna")) |> 
+  group_by(Summary) |> 
+  summarise(wtdprop = weighted.mean(prop, w = n_responses_nona),
+            n_colleges = sum(!is.na(prop)),
+            mr_kq5_pq1 = wtd.cor(prop, mr_kq5_pq1, 
+                                 weight = n_responses_nona)[1],
+            mr_ktop1_pq1 = wtd.cor(prop, mr_ktop1_pq1, 
+                                   weight = n_responses_nona)[1],
+            k_rank = wtd.cor(prop, k_rank, 
+                             weight = n_responses_nona)[1],
+            k_q1 = wtd.cor(prop, k_q1, 
+                           weight = n_responses_nona)[1],
+            k_q2 = wtd.cor(prop, k_q2, 
+                           weight = n_responses_nona)[1],
+            k_q3 = wtd.cor(prop, k_q3, 
+                           weight = n_responses_nona)[1],
+            k_q4 = wtd.cor(prop, k_q4, 
+                           weight = n_responses_nona)[1],
+            k_q5 = wtd.cor(prop, k_q5, 
+                           weight = n_responses_nona)[1],
+            k_top10pc = wtd.cor(prop, k_top10pc, 
+                                weight = n_responses_nona)[1],
+            k_top5pc = wtd.cor(prop, k_top5pc, 
+                               weight = n_responses_nona)[1],
+            k_top1pc = wtd.cor(prop, k_top1pc, 
+                               weight = n_responses_nona)[1],
+            k_rank_cond_parq1 = wtd.cor(prop, k_rank_cond_parq1, 
+                                        weight = n_responses_nona)[1],
+            k_rank_cond_parq2 = wtd.cor(prop, k_rank_cond_parq2, 
+                                        weight = n_responses_nona)[1],
+            k_rank_cond_parq3 = wtd.cor(prop, k_rank_cond_parq3, 
+                                        weight = n_responses_nona)[1],
+            k_rank_cond_parq4 = wtd.cor(prop, k_rank_cond_parq4, 
+                                        weight = n_responses_nona)[1],
+            k_rank_cond_parq5 = wtd.cor(prop, k_rank_cond_parq5, 
+                                        weight = n_responses_nona)[1],
+            kq1_cond_parq1 = wtd.cor(prop, kq1_cond_parq1, 
+                                     weight = n_responses_nona)[1],
+            kq2_cond_parq1 = wtd.cor(prop, kq2_cond_parq1, 
+                                     weight = n_responses_nona)[1],
+            kq3_cond_parq1 = wtd.cor(prop, kq3_cond_parq1, 
+                                     weight = n_responses_nona)[1],
+            kq4_cond_parq1 = wtd.cor(prop, kq4_cond_parq1, 
+                                     weight = n_responses_nona)[1],
+            kq5_cond_parq1 = wtd.cor(prop, kq5_cond_parq1, 
+                                     weight = n_responses_nona)[1],
+            kq1_cond_parq2 = wtd.cor(prop, kq1_cond_parq2, 
+                                     weight = n_responses_nona)[1],
+            kq2_cond_parq2 = wtd.cor(prop, kq2_cond_parq2, 
+                                     weight = n_responses_nona)[1],
+            kq3_cond_parq2 = wtd.cor(prop, kq3_cond_parq2, 
+                                     weight = n_responses_nona)[1],
+            kq4_cond_parq2 = wtd.cor(prop, kq4_cond_parq2, 
+                                     weight = n_responses_nona)[1],
+            kq5_cond_parq2 = wtd.cor(prop, kq5_cond_parq2, 
+                                     weight = n_responses_nona)[1],
+            kq1_cond_parq3 = wtd.cor(prop, kq1_cond_parq3, 
+                                     weight = n_responses_nona)[1],
+            kq2_cond_parq3 = wtd.cor(prop, kq2_cond_parq3, 
+                                     weight = n_responses_nona)[1],
+            kq3_cond_parq3 = wtd.cor(prop, kq3_cond_parq3, 
+                                     weight = n_responses_nona)[1],
+            kq4_cond_parq3 = wtd.cor(prop, kq4_cond_parq3, 
+                                     weight = n_responses_nona)[1],
+            kq5_cond_parq3 = wtd.cor(prop, kq5_cond_parq3, 
+                                     weight = n_responses_nona)[1],
+            kq1_cond_parq4 = wtd.cor(prop, kq1_cond_parq4, 
+                                     weight = n_responses_nona)[1],
+            kq2_cond_parq4 = wtd.cor(prop, kq2_cond_parq4, 
+                                     weight = n_responses_nona)[1],
+            kq3_cond_parq4 = wtd.cor(prop, kq3_cond_parq4, 
+                                     weight = n_responses_nona)[1],
+            kq4_cond_parq4 = wtd.cor(prop, kq4_cond_parq4, 
+                                     weight = n_responses_nona)[1],
+            kq5_cond_parq4 = wtd.cor(prop, kq5_cond_parq4, 
+                                     weight = n_responses_nona)[1],
+            kq1_cond_parq5 = wtd.cor(prop, kq1_cond_parq5, 
+                                     weight = n_responses_nona)[1],
+            kq2_cond_parq5 = wtd.cor(prop, kq2_cond_parq5, 
+                                     weight = n_responses_nona)[1],
+            kq3_cond_parq5 = wtd.cor(prop, kq3_cond_parq5, 
+                                     weight = n_responses_nona)[1],
+            kq4_cond_parq5 = wtd.cor(prop, kq4_cond_parq5, 
+                                     weight = n_responses_nona)[1],
+            kq5_cond_parq5 = wtd.cor(prop, kq5_cond_parq5, 
+                                     weight = n_responses_nona)[1],
+            par_q1 = wtd.cor(prop, par_q1, 
+                             weight = n_responses_nona)[1],
+            par_q2 = wtd.cor(prop, par_q2, 
+                             weight = n_responses_nona)[1],
+            par_q3 = wtd.cor(prop, par_q3, 
+                             weight = n_responses_nona)[1],
+            par_q4 = wtd.cor(prop, par_q4, 
+                             weight = n_responses_nona)[1],
+            par_q5 = wtd.cor(prop, par_q5, 
+                             weight = n_responses_nona)[1]) |> 
+  mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
+  mutate(across(everything(), ~na_if(.,"NaN")))
 
-tfs_correlations <- tfs_correlations |> 
-  separate(Variable, c("Name", "Summary"), sep = '[.]') 
-
-
-#  mutate(Name = gsub("(.+?)(\\..*)", "\\1", Variable))
-
-tfs_correlations <- left_join(tfs_correlations, varnames) |> 
-  select(-c("n_asked", "usable_m")) |> 
-  filter(Name != "campus_id") |> 
-  filter(Name != "n_responses") |> 
-  distinct() |> 
-  mutate(Summary = paste0(Name,".",Summary)) |> 
-  relocate(Description, .before = Summary) |> 
-  relocate(n_colleges, .after = wtdprop)
 ```
 
 ```{r}
-write.csv(tfs_correlations, "../../data/tfs_correlations_withno.csv", row.names = FALSE)
+tfs_correlations2 <- tfs_correlations2 |> 
+        separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right")
+
+tfs_correlations2 <- left_join(tfs_correlations2, varnames) |> 
+  select(-c("n_asked", "usable_m", "response")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses") |> 
+  distinct() |> 
+  relocate(Description, .before = Summary) |> 
+  relocate(Name)
+```
+
+
+```{r}
+write.csv(tfs_correlations2, "../../data/tfs_correlations_withno.csv", row.names = FALSE)
 ```
 
 
