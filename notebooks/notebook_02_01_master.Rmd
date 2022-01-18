@@ -325,9 +325,11 @@ The first row of the dataframe has some things to fix. As a starter, can you use
 
 ```{r}
 css_summary <- css_summary |> 
-  mutate(Description = str_replace(Description, # where to find the string
+  mutate(Description = ifelse(Name == "ACT05", # [If this is true do str_replace]
+                              str_replace(Description, # where to find the string
                                    "professors", # what string to find
-                                   "professor's")) # how to replace match
+                                   "professor's"), # how to replace match
+                              Description)) # [If not true do this]
 ```
 
 What else can we do with the `Description` variable? It could be good to get rid of the text before the colon. Any ideas for how to do that?
