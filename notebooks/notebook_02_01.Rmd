@@ -1,10 +1,3 @@
----
-title: "Week Two, Class One"
-author: "ML"
-date: "1/18/2022"
-output: pdf_document
----
-
 ## Morning Recap
 
 (Note: Need a space between the hashtags and the text for headers to knit properly)
@@ -13,7 +6,7 @@ Load the packages you might have used to complete Assignment OneLoad the data an
 
 ```{r}
 library(tidyverse)
-profiles <- read_csv("/Volumes/GoogleDrive/.shortcut-targets-by-id/13FuGzlObJQd3GyLHDpIC9n0IIVVGrPWk/SOCI 1230A: DataScience Across Disciplines - Winter 2022/Morning Activities/profiles.csv")
+profiles <- read_csv("") # use your path here
 ```
 
 Any simpler ways to find proportions for each combination of soccer and body type?
@@ -190,30 +183,10 @@ Exercise: How could you have one figure with multiple questions? Try ACT05, ACT1
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-act05_plot_stack_multiple <- css_summary |>  
-  filter(Name %in% c("ACT05", "ACT11", "ACT12")) |> # Filter for all the questions 
-  mutate(Label = factor(Label,
-                          levels = c("Not at all",
-                                     "Occasionally",
-                                     "Frequently"))) |> 
-  ggplot(aes(x = Description, y = wtdprop, fill = Label)) + # Use Description as the x variable
-  geom_col(position = "stack") +
-  geom_text(aes(label = round(wtdprop, 2)),
-            position = position_stack(vjust = .5),
-            color = "white") +
-  labs(x = "", y = "Proportion", fill = "",
-       title = "How often did you do the following activities?",
-       subtitle = css_summary$Survey_Name) +
-  theme_hc() +
-  theme(axis.ticks.x = element_blank(),
-        #axis.text.x = element_blank(), # You need the x axis text to identify the separate plots
-        legend.position = "bottom") + # Should include a legend on this plot
-  scale_fill_brewer(palette = "Set1") +
-  scale_x_discrete(labels = label_wrap(10))
 
-act05_plot_stack_multiple
-```
+
+
+
 
 That looks good. One possible change to consider would be using horizontal columns rather than vertical columns. You can switch them with the `coord_flip()` function.
 
@@ -246,12 +219,13 @@ act05_plot_stack_multiple_horizontal
 What about combining plots that don't share the same X axis? Or that come from different datasets? The `patchwork` package is helpful for that.
 
 ```{r, include = FALSE, warning = FALSE, error = FALSE, message = FALSE}
-#install.packages("patchwork") # hashtag this line after installation
+install.packages("patchwork") # hashtag this line after installation
 library(patchwork)
 ```
 
-Let's make another plot for this example. We'll compare the responses to the `GOAL07` question in the TFS and the CSS.
+Let's make two new plots for this example. We'll compare the responses to the `GOAL07` question in the TFS and the CSS.
 
+Here's the CSS...
 ```{r}
 goal07_css_plot_dodge <- css_summary |>  
   filter(Name == "GOAL07") |> 
@@ -275,6 +249,7 @@ goal07_css_plot_dodge <- css_summary |>
   ylim(0,.4) # Force common y axis scales to be safe
 ```
 
+And here's the TFS...
 ```{r}
 goal07_tfs_plot_dodge <- tfs_summary |>  
   filter(Name == "GOAL07") |> 
@@ -303,6 +278,7 @@ To position plots side by side, separate their saved object names with a plus
 ```{r}
 goal07_tfs_plot_dodge + goal07_css_plot_dodge
 ```
+
 To place them on top of each other, use a / instead of a +. And you can add common titles and subtitles across patchwork figures with the `plot_annotation()` function.
 
 ```{r}
@@ -341,7 +317,7 @@ weighted_mean_summary
 When you are working in your notebook, this is fine. But when you knit (for a paper report, or presentation), it can be good to make the tables nicer. The `kable` package is helpful for that. 
 
 ```{r}
-#install.packages("kableExtra") # hashtag this line after installing
+install.packages("kableExtra") # hashtag this line after installing
 library(kableExtra)
 ```
 
@@ -402,18 +378,9 @@ The first row of the dataframe has some things to fix. As a starter, can you use
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-css_summary <- css_summary |> 
-  mutate(Description = ifelse(Name == "ACT05", # [If this is true do str_replace]
-                              str_replace(Description, # where to find the string
-                                   "professors", # what string to find
-                                   "professor's"), # how to replace match
-                              Description)) # [If not true do this]
-```
+
 
 What else can we do with the `Description` variable? It could be good to get rid of the text before the colon. Any ideas for how to do that?
-
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 Does every question have a colon? Use `str_count` to check.
 
@@ -433,18 +400,7 @@ Check a table of the `find_colon` variable to see how bad the problem is.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-table(css_summary2$find_colon)
-```
-
 So we have 36 rows that require additional care. What are our options?
-
-
-
-
-
-
-
 
 
 One possibility is to break the `Description` values into two pieces: a string before a colon and a string after (if there is a colon). Then we can use those two pieces to repair the existing values. We can do that with the `separate()` function:
@@ -505,41 +461,16 @@ Make a new dataframe called `race_variables` (based on `css_summary2`) with only
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-race_variables <- css_summary2 |> 
-  filter(str_detect(Name, "RACE"),
-         str_detect(Summary, "yes"))
-```
-
 The `RACEGROUP` row is unnecessary. Exclude it by using `str_detect()`.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-```{r}
-race_variables <- race_variables |> 
-  filter(!str_detect(Name, "GROUP"))
-```
 
 The `Description` variable has info that we want to use as the values of the `Label` variable. How can we make that happen? And change the value of the `Name` variable to `RACE_ETHNICITY` so it better fits the values.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-race_variables <- race_variables |> 
-  mutate(Label = Description) |> 
-  mutate(Name = "RACE_ETHNICITY")
-```
-
 Almost done. Remove all the rows with `RACE` in the `Name` column from `css_summary2`.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
-```{r}
-css_summary2 <- css_summary2 |> 
-  filter(!str_detect(Name, "RACE"))
-```
-
 Then use `bind_rows()` to add the `race_variables` dataframe to the end of `css_summary2`.
-
-```{r}
-css_summary2 <- bind_rows(css_summary2, race_variables)
-```

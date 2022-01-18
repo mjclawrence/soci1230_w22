@@ -201,3 +201,133 @@ flights |>
   summarise(mean_dep_delay = mean(dep_delay, na.rm = TRUE)) |> 
   ggplot(aes(x = carrier, y = mean_dep_delay, fill = carrier)) +
   geom_col() + facet_wrap(~month)
+
+# Week Two
+
+## Tuesday, January 18
+
+library(tidyverse)
+profiles <- read_csv("/Volumes/GoogleDrive/.shortcut-targets-by-id/13FuGzlObJQd3GyLHDpIC9n0IIVVGrPWk/SOCI 1230A: DataScience Across Disciplines - Winter 2022/Morning Activities/profiles.csv")
+
+profiles |> 
+  ggplot() +
+  geom_boxplot(aes(x = height))
+
+profiles |> 
+  ggplot() +
+  geom_boxplot(aes(x = height)) +
+  xlim(48, 96)
+
+profiles |> 
+  ggplot() +
+  geom_boxplot(aes(x = height, y = sex)) +
+  xlim(48, 96)
+
+profiles |> 
+  ggplot() +
+  geom_histogram(aes(x = height, fill = sex)) 
+
+profiles |> 
+  ggplot() +
+  geom_bar(aes(x = height, fill = sex)) 
+
+### The f heights are *stacked* on top when there are overlaps
+
+profiles |> 
+  ggplot() +
+  geom_bar(aes(x = height, fill = sex)) 
+
+profiles |> 
+  count(body_type) |> 
+  filter(!is.na(body_type)) |> 
+  mutate(prop = n / sum(n)) |> 
+  arrange(-prop)
+
+profiles |> 
+  count(body_type) |> 
+  filter(!is.na(body_type)) |> 
+  mutate(prop = n / sum(n)) |> 
+  arrange(-prop) |> 
+  ggplot(aes(x = reorder(body_type, n), y = n)) +
+  geom_col()
+
+## Do those who like soccer have different body types
+## than those who don't mention soccer at all?
+
+## Toy example
+
+toy.vector <- c("Alex", "Becky", "Charlie")
+
+### Introducing str_detect() - detects if a string is present
+
+str_detect(toy.vector, "a")
+
+#### How to include A and a:
+str_detect(toy.vector, regex("a", ignore_case = TRUE))
+
+### Can replace values 
+str_replace(toy.vector, regex("a", ignore_case = TRUE), ":)")
+
+## Let's make a new variable for soccer likers
+
+soccer.data <- profiles |> 
+  mutate(soccer = str_detect(essay0, "soccer"))
+
+soccer.data |> 
+  count(soccer, body_type) |> 
+  na.omit() |> 
+  ggplot(aes(x = body_type, y = n)) +
+  geom_col()
+
+### Let's look at this proportionally
+
+soccer.data |> 
+  count(soccer, body_type) |> 
+  na.omit() |> 
+  group_by(soccer) |> 
+  mutate(prop = n/sum(n)) |> 
+  ggplot(aes(x = body_type, y = prop)) +
+  geom_col() + facet_wrap(~soccer)
+
+library(scales)
+
+soccer.data |> 
+  count(soccer, body_type) %>% 
+  na.omit() %>%
+  group_by(soccer) %>% 
+  mutate(prop = n/sum(n)) %>% 
+  #filter(body_type == "athletic") %>%
+  ggplot(aes(x = soccer, y = prop,
+             fill = body_type)) +
+  geom_col() +
+ facet_wrap(~body_type) +
+  theme(legend.position = "none")
+
+soccer.data |> 
+  group_by(soccer) |> 
+  summarize(prop = mean(body_type=="athletic", na.rm = TRUE))
+
+
+soccer.data |> 
+  pivot_longer(names_to = "essay",
+               values_to = "content",
+               essay0:essay9) |> 
+  mutate(any_soccer = str_detect(content, "soccer")) |> 
+  group_by(essay) |> 
+  count(any_soccer) |> 
+  na.omit() |> 
+  arrange(-n) |> 
+  pivot_wider(names_from = "essay",
+              values_from = "content") |> 
+  count(any_soccer)
+
+
+profiles |> 
+  mutate(internet = str_detect(essay5, regex("internet", ignore_case = TRUE))) |> 
+  filter(str_detect(job, regex("computer", ignore_case = TRUE))) |> 
+  ggplot() +
+  geom_bar(aes(x = internet))
+
+profiles |> 
+  mutate(teacher = str_detect(essay1, "teacher")) |> 
+  ggplot()
