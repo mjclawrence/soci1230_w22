@@ -7,6 +7,8 @@ output: pdf_document
 
 ## Set up
 
+(Note: Need a space between the hashtags and the text for headers to knit properly)
+
 Load the packages you might have used to complete Assignment One
 
 ```{r, warning = FALSE, error = FALSE, message = FALSE}
@@ -16,7 +18,7 @@ library(RColorBrewer)
 library(ggthemes)
 ```
 
-Note the additional options added to the first line of the code chunk above. They suppress any warnings, errors, and messages accompanying whatever code is run. (Loading the tidyverse packages creates a lot of output, for example.) You'll still that output in this noteboook but it won't be in the knitted file.
+Note the additional options added to the first line of the code chunk above. They suppress any warnings, errors, and messages accompanying whatever code is run. (Loading the tidyverse packages creates a lot of output, for example.) You'll still that output in this notebook but it won't be in the knitted file.
 
 There are other options to suppress or modify how chunks knit:
 
@@ -221,13 +223,16 @@ act05_plot_dodge + goal07_plot_dodge
 Watch scales. Can position above and below by replacing the plus sign with a slash.
 
 ```{r}
-(act05_plot_dodge + ylim(c(0,.7))) / (goal07_plot_dodge + ylim(c(0,.7)))
+act05_plot_dodge <- act05_plot_dodge + ylim(c(0,.7))
+goal_07_plot_dodge <- goal07_plot_dodge + ylim(c(0,.7))
+
+act05_plot_dodge / goal07_plot_dodge
 ```
 
 Can get complicated quickly. The takeaway is to think about what you want *before* you create your plots so patching them together goes smoothly.
 
 ```{r}
-((goal07_plot_dodge + ylim(c(0,.5))) + act05_plot_stack_multiple) +
+(goal_07_plot_dodge + act05_plot_stack_multiple) +
   plot_annotation(
   title = "Can include a common title",
   subtitle = "And a common subtitle"
@@ -254,7 +259,7 @@ weighted_mean_summary <- tfs_by_college |>
 weighted_mean_summary
 ```
 
-When you are working in your notebook, this is fine But when you knit (for a paper report, or presentation), it can be good to make the tables nicer. The `kable` package is helpful for that. 
+When you are working in your notebook, this is fine. But when you knit (for a paper report, or presentation), it can be good to make the tables nicer. The `kable` package is helpful for that. 
 
 ```{r}
 #install.packages("kableExtra") # hashtag this line after installing
@@ -267,10 +272,42 @@ weighted_mean_summary |>
       align = "lccc", # To align each column
       col.names = c("Institution Type", "50 miles or less", "51 to 100 miles",
                     "More than 100 miles"),
-      caption = "Proportion Of Students Traveling Each Distance From Home To Campus, By College Type") |>  # This becomes the title; use it to automatically number tables
-  kable_styling("hover") # works with html for html output
-  # kable_styling(latex_options = "striped") # add latex_options for pdf output
+      caption = "Proportion Of Students Traveling Each Distance From Home To Campus, By College Type")
 ```
+
+An example with a few more options...
+
+```{r}
+weighted_mean_summary_tier <- tfs_by_college |> 
+  group_by(type, tier_name) |> # Grouping by multiple variables
+  summarise(lessthan51 = weighted.mean(DISTHOME.miles10less_mean +
+                                          DISTHOME.miles11to50_mean,
+                                       w = n_responses),
+            miles51to100 = weighted.mean(DISTHOME.miles51to100_mean,
+                                         w = n_responses),
+            morethan100 = weighted.mean(DISTHOME.miles101to500_mean +
+                                      DISTHOME.miles501plus_mean, 
+                                    w = n_responses)) |> 
+  mutate(across(where(is.numeric), round, 3)) |> 
+  mutate(tier_name = ifelse(str_detect(tier_name, "Other"), # full name was too long for table
+                            "Other elite schools",
+                            tier_name)) |> 
+  kbl(booktabs = TRUE, # Adds default styling
+      align = "llccc", # To align each column
+      col.names = c("Institution Type", 
+                    "Institution Tier", 
+                    "50 miles or less",
+                    "51 to 100 miles",
+                    "More than 100 miles"),
+      caption = "Proportion Of Students Traveling Each Distance From Home To Campus, By College Type And Tier") |>  # This becomes the title; use it to automatically number tables
+  pack_rows("Private non-profit", 1, 4) |>  # To group rows with a label
+  pack_rows("Public", 5, 7) |> # Avoids `type` values repeating in each row
+  column_spec(1, color = "white") |>  # `type` column still exists; change font so values don't appear
+  add_header_above(c(" " = 2, "Distance From Home To Campus" = 3)) # Header for column groups
+
+weighted_mean_summary_tier
+```
+
 
 The online documentation for Kable has many more details:
 
