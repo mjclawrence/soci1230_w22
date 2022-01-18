@@ -171,9 +171,13 @@ act05_plot_stack <- css_summary |>
                                      "Frequently"))) |> 
   ggplot(aes(x = Name, y = wtdprop, fill = Label)) +
   geom_col(position = "stack") +
-  geom_text(aes(label = round(wtdprop, 2)),
-            position = position_stack(vjust = .5),
-            color = "white") + # An example of how to change the color of the geom_text label
+  geom_text(data = subset(css_summary, Name == "ACT05" & wtdprop>.5),
+            aes(label = round(wtdprop, 2)),
+            position = position_stack(vjust = .75),
+            color = "white") +
+#  geom_text(aes(label = round(wtdprop, 2)),
+#            position = position_stack(vjust = .5),
+#            color = "white") + # An example of how to change the color of the geom_text label
   labs(x = "", y = "Proportion", fill = "",
        title = "CSS ACT05", # I like the survey and variable names in the title
        subtitle = "Challenged a professor's ideas in class") + # And the description in the subtitle 
