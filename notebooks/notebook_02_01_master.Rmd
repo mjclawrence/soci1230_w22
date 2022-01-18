@@ -174,7 +174,7 @@ act05_plot_stack <- css_summary |>
   geom_text(data = subset(css_summary, Name == "ACT05" & wtdprop>.5),
             aes(label = round(wtdprop, 2)),
             position = position_stack(vjust = .75),
-            color = "white") +
+            color = "white", size = 15) +
 #  geom_text(aes(label = round(wtdprop, 2)),
 #            position = position_stack(vjust = .5),
 #            color = "white") + # An example of how to change the color of the geom_text label
