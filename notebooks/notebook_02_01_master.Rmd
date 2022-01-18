@@ -9,7 +9,7 @@ output: pdf_document
 
 (Note: Need a space between the hashtags and the text for headers to knit properly)
 
-Load the packages you might have used to complete Assignment OneLoad the data and tidyverse
+Load the tidyverse and the profiles data
 
 ```{r}
 library(tidyverse)
