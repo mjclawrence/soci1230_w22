@@ -21,7 +21,7 @@ Make a new dataframe called `race_variables` (based on `css_summary`) with only 
 
 ```{r}
 race_variables <- css_summary |> 
-  filter(str_detect(Name, "RACE"),
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), # to ignore case
          str_detect(Summary, "yes"))
 ```
 
@@ -65,9 +65,8 @@ What else could you do with the new Race/Ethnicity question?
 Example with conditional formatting
 
 ```{r}
-# 
 mydata <- css_summary2 |> 
-  filter(str_detect(Name, "RACE"), !str_detect(Description, "White"))
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), !str_detect(Description, "White"))
 
 mydata |> 
   ggplot(aes(x = reorder(Description, wtdprop), y = wtdprop)) +
@@ -130,7 +129,6 @@ Let's start with a figure. Make a scatterplot with `scorecard_rej_rate_2013` on 
 
 ```{r}
 mrc |> 
-  filter(iclevel==1) |> 
   ggplot(aes(x = scorecard_rej_rate_2013, y = mr_ktop1_pq1,
              size = count)) +
   geom_point() +
@@ -171,7 +169,7 @@ library(weights)
 The weighted correlation function is `wtd.cor(, w =)`. We'll use the `count` variable again for the weight with the Opportunity Insights data.
 
 ```{r}
-wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)
+mycor <- wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)
 ```
 
 We get more than just the correlation coefficient here. Did we see anything this morning to help us only keep the correlation coefficient?
@@ -179,7 +177,9 @@ We get more than just the correlation coefficient here. Did we see anything this
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 ```{r}
-wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)[1]
+wtd.cor(mrc$scorecard_rej_rate_2013, 
+        mrc$mr_ktop1_pq1, 
+        w = mrc$count)[1]
 ```
 
 ## Correlations With CSS Variables
@@ -233,7 +233,8 @@ Now we'll create the new weight, called `n_responses_nona`.
 
 ```{r}
 cor_df <- cor_df |> 
-  mutate(n_responses_nona = n_responses * (1-ACADEMIC_SELFCONCEPT.propna))
+  mutate(n_responses_nona = n_responses *
+           (1-ACADEMIC_SELFCONCEPT.propna))
 ```
 
 We're finally ready to calculate the weighted correlation.
