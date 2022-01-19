@@ -1,0 +1,250 @@
+---
+title: "Wrapping Up Descriptives"
+author: "Matt Lawrence"
+date: "October 11, 2021"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+Today we will continue using data from Chetty et al's 2014 paper "Where Is The Land Of Opportunity?". The `commuting_zones.csv` file on Canvas comes from the Opportunity Insights website which can be accessed [`here`](http://www.opportunityinsights.org).
+
+Load the data as a data frame called `cz` and load tidyverse.
+
+```{r, warning = FALSE, error = FALSE, message = FALSE}
+library(tidyverse)
+
+cz <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385_f21/main/data/commuting_zones.csv")
+```
+
+We'll look at a small subset of the data to start so let's pull the following variables into a new data frame called `cz_subset`: 
+
+- `mobility` = measure of absolute upward mobility
+- `gini` = Gini coefficient of income inequality; higher gini values indicate more inequality
+- `urban` = binary variable for urban (1) or rural (0) commuting zone
+- `hh_income` = median household family income in commuting zone
+- `racial_seg` = measure of racial segregation
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r create subset}
+cz_subset <- cz |>
+     select(mobility, gini, urban, hh_income, racial_seg)
+```
+
+
+# Correlation Matrix
+
+One way to save some time when looking at multiple correlations is to create a matrix with all the possible correlations in your dataframe. 
+
+```{r create matrix}
+matrix <- round(cor(cz_subset, use = "complete.obs"),3) 
+```
+
+Let's review the matrix!
+
+```{r review matrix}
+matrix
+```
+
+To only see some of the matrix, use indexing. We have indexed by value in the past, but we can also index by row and cell location in the dataframe. In this example, we want to pull the first three rows (1:3) and the first four columns (1:4). The row variable is the first in the index and the column variable is the second in the index (just like with table proportions).
+
+```{r matrix with indexing}
+matrix[1:3, 1:4]
+matrix[1,2]
+```
+
+Other options exist for visualizing correlation matrices. The heatmaps in the GGally package are particularly effective.
+
+```{r}
+#install.packages("GGally")
+library(GGally)
+
+ggcorr(cz_subset, method = "complete",
+       label = TRUE, label_round = 3)
+```
+
+
+# Introducing Multivariate Relationships - See Slides
+
+Last week we identified individual points on a scatterplot to dig deeper into how two variables are associated. Another analytical tool is to examine whether the association differs at specific values of another variable.
+
+Consider the correlation between racial segregation and income. Would you expect this correlation to be positive or negative? Strong or weak?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r cor racial segregation and income}
+cor(cz_subset$hh_income, cz_subset$racial_seg, 
+    use = "complete")
+```
+
+Would this association be the same in urban and rural commuting zones?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+cz_urban <- cz_subset |>
+  filter(urban==1)
+
+cor(cz_urban$hh_income, cz_urban$racial_seg, use = "complete")
+```
+
+```{r}
+cz_rural <- cz_subset |> 
+  filter(urban==0)
+
+cor(cz_rural$hh_income, cz_rural$racial_seg, use = "complete")
+```
+
+```{r cor racial segregation and income by urban}
+cor(cz_subset$racial_seg[cz_subset$urban==0], 
+    cz_subset$hh_income[cz_subset$urban==0], 
+    use = "complete")
+
+cor(cz_subset$racial_seg[cz_subset$urban==1], 
+    cz_subset$hh_income[cz_subset$urban==1], 
+    use = "complete")
+```
+
+```{r example with group by}
+
+urban_rural_correlations <- cz_subset |> 
+     group_by(urban) |> 
+     summarize(racialseg_income_correlation =
+                    cor(
+          racial_seg, hh_income, 
+          use ="complete"))
+
+urban_rural_correlations
+```
+
+
+We can visualize the different associations by geographic type if we use different colored points for urban and rural commuting zones. Before we get there, let's make sure the `urban` variable is recognized as a factor variable, and change the labels from "0" and "1" to "Rural" and "Urban".
+
+```{r make urban a factor variable}
+cz_subset <- cz_subset |> 
+     mutate(urban = factor(urban, 
+                           levels=c("0", "1"), 
+                           labels=c("Rural", "Urban")))
+```
+ 
+Now let's make the plot. We want urban and rural commuting zones to be in different colors and we want their points to have different shapes.
+
+```{r urban rural plot}
+urban_rural_plot <- ggplot(cz_subset, aes(x = hh_income, 
+                                          y = racial_seg,
+                                          color = urban,
+                                          shape = urban))
+
+urban_rural_plot + geom_point()
+```
+
+Extra Fancy: Remember we can use `facet_grid()` to display two plots in one figure. 
+
+```{r urban rural facets}
+urban_rural_facets <- ggplot(cz_subset, aes(x = hh_income, y = racial_seg))
+
+urban_rural_facets + geom_point(aes(color = urban)) + 
+     geom_smooth(method = lm, color = "black") + 
+     facet_grid(.~urban) + 
+     scale_color_manual(values = c("Red", "Blue")) + guides(color = "none") +
+     labs(x = "Median Household Income", y = "Racial Segregation",
+          title = "Rural-Urban Differences in Association Between \nMedian Household Income and Racial Segregation", 
+          subtitle = "Data from Opportunity Insights")
+```
+
+Finally, let's create a three-way table showing how the mean of the racial segregation index varies at each quintile of median income between urban and rural commuting zones. Any thoughts on how to do this? What do we need?
+
+### REPLACE THIS LINE WITH YOUR CODE 
+
+```{r start by creating the quintiles, message = FALSE, warning = FALSE, error = FALSE}
+cz_quintiles <- cz_subset |> 
+     mutate(quintile = ntile(hh_income, 5)) |> # Nice trick to get quintiles!
+     group_by(quintile, urban) |> # Grouping by multiple variables
+     summarize(mean_racial_seg = round(mean(racial_seg),3)) # Round here
+
+cz_quintiles
+```
+
+In the table above we have long data but might prefer wide data. This would be a good time to use `pivot_wider()`. In the `pivot_wider()` line in the next chunk, we are saying we want to create a separate column named for each level of the `urban` variable, and we want the values of those variables to be the values of `mean_racial_seg` for each quintile-urban combination.
+
+```{r spread example}
+
+cz_wide <- cz_quintiles |>
+  pivot_wider(names_from = "urban",
+              values_from = "mean_racial_seg")
+
+cz_wide
+```
+
+The opposite of `pivot_wider()` is `pivot_longer()` which you use when you want to transform wide data into long data. In the example below, we want to collapse columns 2 and 3 into two new columns. The first new column will be named "urban" and its levels will be the names of the existing columns we are collapsing. The second new column will be called "mean_racial_seg" and will take the values associated with the collapsed columns. 
+
+```{r}
+cz_quintiles <- cz_wide |>
+  pivot_longer(names_to = "urban",
+               values_to = "mean_racial_seg",
+               2:3)
+```
+
+Take a look...
+
+```{r}
+cz_quintiles
+```
+
+# If there's time...
+
+How could we visualize these three way relationships? Note that we'll want to use the long data for this rather than the wide data. Why?
+
+One option for a plot is to use side by side *plots*...
+
+
+```{r columns with facets}
+quintile_plot2 <- ggplot(cz_quintiles, aes(x = quintile, y = mean_racial_seg,
+                                           fill = urban))
+
+quintile_plot2 + geom_col() + 
+     geom_text(aes(label = mean_racial_seg, vjust = -.25)) + 
+     facet_grid(.~urban) + guides(fill = FALSE)
+```
+
+Another option is to change the "position" of the columns so they are next to each other on one plot...
+
+```{r columns with dodge}
+quintile_plot1 <- ggplot(cz_quintiles, aes(x = quintile, y = mean_racial_seg,
+                                          fill = urban, 
+                                          label = mean_racial_seg))
+
+quintile_plot1 + geom_col(position = "dodge") + # For side by side columns
+     geom_text(position = position_dodge(1), vjust = -.25)
+```
+
+# Some Thoughts About Color
+
+One popular package to use for adjusting color is the R Color Brewer package. You can install it and load it here:
+
+```{r}
+#install.packages("RColorBrewer")
+library(RColorBrewer)
+```
+
+There's good information on Brewer's color options at [this site](http://colorbrewer2.org/#type=diverging&scheme=RdYlGn&n=3).
+
+The site previews options for sequential (or continuous) variables and divergent (or factor/categorical/discrete) variables. Once you find a color scheme you like, input the palette name into the `scale_fill_brewer()` function.
+
+```{r}
+quintile_plot1 + geom_col(position = "dodge") + # For side by side columns
+     geom_text(position = position_dodge(1), vjust = -.25) +
+  scale_fill_brewer(palette = "Spectral") # Palette Name
+```
+
+Want other colors? I like the [`viridis color palettes`](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) which we saw in Datawrapper last week.
+
+```{r facet plot with viridis palette}
+quintile_plot2 + geom_col() + 
+     geom_text(aes(label = mean_racial_seg, vjust = -.25)) +
+     facet_grid(.~urban) + guides(fill = FALSE) +
+     scale_fill_viridis_d(option = "viridis") # The d is for a discrete variable
+```
+
+

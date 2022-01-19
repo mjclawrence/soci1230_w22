@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SOCI 1230: DSAD</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2022-01-19" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="metropolis.css" type="text/css" />
+    <link rel="stylesheet" href="monofont.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: middle, title-slide
+
+# SOCI 1230: DSAD
+## Introducing Association and Correlation
+### January 19, 2022
+
+---
+
+
+
+
+# Some Foundations
+
+### A hypothesis is a suggestion (ideally supported by theory) about how variables *tend to move together*
+
+--
+
+- How close or tight are the values? How well do they resemble a straight line?
+
+--
+
+- The spread they tend to share = covariance
+
+--
+
+- The change they tend to share = correlation
+
+---
+
+# Interpreting Correlations
+
+### Easier to interpret correlations than covariances
+
+--
+
+- Always bounded by -1, 1
+
+--
+
+- Association is linear (for now)
+
+--
+
+- Positive correlation &gt; 0
+
+--
+
+     - When X is larger than its mean, likely that Y is larger than its mean
+
+--
+
+- Negative correlation &lt; 0
+
+--
+
+     - When X is larger than its mean, unlikely that Y is larger than its mean
+
+---
+
+# Interpreting Correlations 
+
+### Correlation of X, Y = Correlation of Y, X
+
+--
+
+- But still think of axes
+
+--
+
+### Not affected by changes in scale
+
+--
+
+- Can multiply all the values by a constant and the correlation is still the same
+- Temperature degrees, currencies, etc. 
+
+--
+
+### But can be affected by outliers
+
+---
+
+# Association Has Sign And Strength
+
+### Positive correlation coefficients look like proportions but they are not
+
+--
+
+### Strong association: knowing a value of one variable helps predict a value of the other variable
+
+--
+
+### Weak association: too much variability to use the value of one variable to make a good guess about the value of the other variable 
+
+--
+
+### Remember: Not causal!
+
+--
+
+### Keep in mind: *strong* is not always *better*
+
+---
+
+# Strength of Associations
+
+### No association = 0 to .19 or 0 to -.19
+
+### Weak association = .20 to .29 or -.20 to -.29
+
+### Moderate association = .30 to .49 or -.30 to -.49
+
+### Strong association = .50 to .69 or -.50 to -.69
+
+### Very strong association = greater than .70 or less than -.70
+
+---
+class: middle, center
+
+# Scatterplots
+
+
+![](../1230_figures/scatter_pos2.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_pos4.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_pos6.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_pos8.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_pos9.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_neg9.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_neg8.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_neg6.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_neg4.png)
+
+---
+class: middle, center
+
+# Scatterplots
+
+![](../1230_figures/scatter_neg2.png)
+
+---
+
+# Chetty et al's Correlations
+
+![:scale 90%](../1230_figures/mrc_correlations_top20.png)
+
+---
+
+# Chetty et al's Correlations
+
+![:scale 90%](../1230_figures/mrc_correlations_top1.png)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": true,
+"highlightStyle": "zenburn",
+"highlightSpans": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -25,6 +25,46 @@ The `college_mobility` file has chetty variables and css variables and tfs match
 college_mobility <- read_csv("../../data/college_mobility.csv")
 ```
 
+```{r}
+goaltest <- college_mobility |>
+  filter(YEAR_TFS > 1995) |> 
+  select(campus_id, starts_with("GOAL07"))
+
+goaltest <- college_mobility |> 
+  filter(YEAR_TFS > 1995) |> 
+  select(
+    where(
+      ~sum(!is.na(.x)) > 0
+    )
+  )
+
+in_both <- names(goaltest)
+write.csv(in_both, "/users/lawrence/desktop/in_both.csv")
+
+prop.table(table(goaltest$GOAL07_TFS,
+                 goaltest$GOAL07, exclude = NULL),1)
+
+library(ggthemes)
+
+goaltest |> 
+  filter(!is.na(GOAL07_TFS), !is.na(GOAL07)) |> 
+  group_by(GOAL07_TFS) |> 
+  count(GOAL07) |> 
+  na.omit() |> 
+  mutate(prop = n/sum(n)) |> 
+  ungroup() |> 
+  ggplot(aes(x = GOAL07_TFS, y = n, fill = factor(GOAL07))) +
+  geom_col() +
+  theme_tufte() +
+  theme(legend.position = "bottom") +
+  geom_text(aes(label = round(prop,2)),
+            position = position_stack(vjust = .5))
+```
+
+  ggplot(x = GOAL07_TFS, fill = GOAL07) + geom_bar()
+```
+
+
 The `chetty_table2.csv` file has all the mobility variables
 
 ```{r}

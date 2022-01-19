@@ -1,0 +1,301 @@
+---
+title: "Association and Correlation"
+author: "Matt Lawrence"
+date: "January 19, 2022"
+---
+
+# Revisiting String Functions 
+
+```{r}
+library(tidyverse)
+css_summary <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
+```
+
+### Redoing the RACE variables
+
+The survey has a different question for each race/ethnicity value (`RACE1` to `RACE9`). It would be helpful to combine all the possible values into one variable to be able to make the kinds of plots we saw earlier. There are various ways to do that. Here's one.
+
+Make a new dataframe called `race_variables` (based on `css_summary`) with only the rows that include "RACE" in the `Name` variable and "yes" in the `Summary` variable.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+race_variables <- css_summary |> 
+  filter(str_detect(Name, "RACE"),
+         str_detect(Summary, "yes"))
+```
+
+The `RACEGROUP` row is unnecessary. Exclude it by using `str_detect()`.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+race_variables <- race_variables |> 
+  filter(!str_detect(Name, "GROUP"))
+```
+
+The `Description` variable has info that we want to use as the values of the `Label` variable. How can we make that happen? And change the value of the `Name` variable to `RACE_ETHNICITY` so it better fits the values.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+race_variables <- race_variables |> 
+  mutate(Label = Description) |> 
+  mutate(Name = "RACE_ETHNICITY")
+```
+
+Almost done. Remove all the rows with `RACE` in the `Name` column from `css_summary`.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+css_summary <- css_summary |> 
+  filter(!str_detect(Name, "RACE"))
+```
+
+Then use `bind_rows()` to add the `race_variables` dataframe to the end of `css_summary`. We'll make a new dataframe here called `css_summary2`.
+
+```{r}
+css_summary2 <- bind_rows(css_summary, race_variables)
+```
+
+What else could you do with the new Race/Ethnicity question?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+Example with conditional formatting
+
+```{r}
+mysubset <- css_summary2 |> 
+  filter(str_detect(Name, "RACE"), !str_detect(Description, "White"))
+
+mysubset |> 
+  ggplot(aes(x = reorder(Description, wtdprop), y = wtdprop)) +
+  geom_col() + 
+  geom_text(data = subset(mysubset, 
+                          str_detect(Description,
+                                     "Puerto|Latina|Mexican")),
+            aes(label = round(wtdprop,2)),
+            position = position_dodge(width = .9),
+            vjust = .25,
+            hjust = 1.25,
+            color = "white") +
+  coord_flip()
+```
+
+
+# Introducing Correlations and Associations
+
+(We'll come back to R in a few minutes...)
+
+Let's see how Opportunity Insights gets their correlations.
+
+```{r}
+mrc2 <- read_csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv")
+
+mrc10 <- read_csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table10.csv")
+```
+
+We need to combine these datasets. The `bind_rows()` function doesn't do what we want. A `join()` function will. 
+
+```{r}
+mrc <- left_join(mrc10, mrc2)
+```
+
+Let's start with a figure. Make a scatterplot with `scorecard_rej_rate_2013` on the x axis and `mr_ktop1_pq1` on the y-axis.
+
+The easiest thing to do is to use the `cor()` function.
+
+```{r}
+cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1)
+```
+
+But that alone is rarely enough. Often there will be NAs in one of those variables so you'll need to add the `use = "complete"` option.
+
+```{r}
+cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, use = "complete")
+```
+
+Does that look like what Opportunity Insights reports?
+
+Just like with the means functions we have seen, we need to get weighted correlations rather than regular old correlations. We'll need the `weights` package for that.
+
+```{r}
+#install.packages("weights")
+library(weights)
+```
+
+The weighted correlation function is `wtd.cor(, w =)`. We'll use the `count` variable again for the weight with the Opportunity Insights data.
+
+```{r}
+wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)
+```
+
+We get more than just the correlation coefficient here. How do we only keep the coefficient?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)[1]
+```
+
+Make a scatterplot of `scorecard_rej_rate_2013` and `mr_ktop1_pq1` to see if it looks consistent with the weighted correlation.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+mrc |> 
+  filter(iclevel==1) |> 
+  ggplot(aes(x = scorecard_rej_rate_2013, y = mr_ktop1_pq1,
+             size = count)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_size(breaks = c(1000, 2500, 5000, 10000))
+```
+
+
+```{r}
+summary(lm(stdz(k_rank, weight = count) ~ stdz(scorecard_rej_rate_2013, weight = count),
+            data = mrc))
+```
+
+
+## Using CSS Variables
+
+```{r}
+css_means <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_means_mobility_withno.csv")
+```
+
+Make a scatterplot showing the relationship between ACADEMIC_SELFCONCEPT.scale_mean and k_rank. Don't worry about the size of the points right now.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+css_means |> 
+ # filter(ACADEMIC_SELFCONCEPT.scale_mean <56) |> 
+  ggplot(aes(x = ACADEMIC_SELFCONCEPT.scale_mean,
+             y = k_rank)) +
+  geom_point() + geom_smooth(method = "lm")
+```
+
+Before we move on: any way to use other string functions to remove "_mean" from all the variable names that have it?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+css_means <- css_means |> 
+  pivot_longer(names_to = "variable",
+               values_to = "value",
+               ends_with("_mean")) |> # A string-like function
+  mutate(variable = str_remove(variable, "_mean")) |> 
+  pivot_wider(names_from = "variable",
+              values_from = "value")
+```
+
+Back to the correlations. The weights are tricky here. Each *college* has a value for `n_responses` and each *question per college* has a different proportion NA. We want to only use the number of valid responses for our weight variable. How do we do that?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+Let's start by pulling all the variables we need in a new dataframe called `cor_df`.
+
+```{r}
+cor_df <- css_means |> 
+  select(campus_id, 
+         n_responses, 
+         k_rank,
+         starts_with("ACADEMIC_SELFCONCEPT")) # A stringr-like function for columns
+```
+
+Now we'll create the new weight, called `n_responses_nona`. 
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+cor_df <- cor_df |> 
+  mutate(n_responses_nona = n_responses * (1-ACADEMIC_SELFCONCEPT.propna))
+```
+
+We're finally ready to calculate the weighted correlation.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+cor_df |> 
+  summarise(wtd.cor = wtd.cor(ACADEMIC_SELFCONCEPT.scale,
+                              k_rank,
+                              w = n_responses_nona)[1])
+```
+
+Now how can we make a weighted scatterplot?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+cor_df |> 
+  #filter(ACADEMIC_SELFCONCEPT.scale < 56) |> 
+  ggplot(aes(x = ACADEMIC_SELFCONCEPT.scale,
+             y = k_rank,
+             size = n_responses_nona)) +
+  geom_point() + geom_smooth(method = "lm")
+```
+
+Let's think about the possible association between `HPW10.hours0` (zero hours spent partying per week) and `k_rank_cond_parq5` (average rank for kids who grow up in the top quintile). What would you expect?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+cor_df <- css_means |> 
+  select(campus_id, 
+         n_responses, 
+         k_rank_cond_parq5,
+         starts_with("HPW10")) |> 
+  mutate(n_responses_nona = n_responses * (1-HPW10.propna))
+
+cor_df |> 
+  summarise(wtd.cor = wtd.cor(HPW10.hours0,
+                              k_rank_cond_parq5,
+                              w = n_responses_nona)[1])
+```
+
+```{r}
+cor_df |> 
+  ggplot(aes(x = HPW10.hours0,
+             y = k_rank_cond_parq5,
+             size = n_responses_nona)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+
+Bonus: Any way to easily work with multiple responses to a question?
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+cor_df <- css_means |> 
+  select(campus_id, 
+         n_responses, 
+         k_rank_cond_parq5,
+         starts_with("HPW10")) |> 
+  mutate(n_responses_nona = n_responses * (1-HPW10.propna)) |> 
+  pivot_longer(names_to = "response_level",
+               values_to = "prop",
+               contains("hours"))
+
+cor_df |> 
+  group_by(response_level) |> 
+  summarise(wtd.cor = wtd.cor(prop,
+                              k_rank_cond_parq5,
+                              w = n_responses_nona)[1])
+```
+
+```{r}
+cor_df |> 
+  ggplot(aes(x = prop, y = k_rank_cond_parq5, size = n_responses_nona)) +
+  geom_point() + facet_wrap(~response_level) + 
+  theme(legend.position = "bottom")
+```
+
+
+# Exercise With Other Variables
+
+Take a few minutes to explore how other CSS questions are associated with mobility variables. What is a relationship where you would expect a negative association? What is a relationship where you would expect a positive association? What is a relationship where you would expect no association?

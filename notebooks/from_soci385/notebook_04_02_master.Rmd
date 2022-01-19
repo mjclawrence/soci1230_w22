@@ -1,0 +1,183 @@
+---
+title: "More Association and Correlation"
+author: "Matt Lawrence"
+date: "10/6/2021"
+output: pdf_document
+---
+
+Today we will continue using data from Chetty et al's 2014 paper "Where Is The Land Of Opportunity?". The `commuting_zones.csv` file on Canvas comes from the Opportunity Insights website which can be accessed [`here`](http://www.opportunityinsights.org).
+
+Load the data as a data frame called `cz` and load tidyverse.
+
+```{r load data and packages, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+
+cz <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385_f21/main/data/commuting_zones.csv")
+```
+
+# Recap
+
+On Monday we began thinking about how two variables are associated by finding whether they are positively or negatively correlated and how weak or strong the correlation is. We looked at the variables measuring the proportion of workers in a commuting zone commuting 15 minutes or less, income, racial segregation, labor force participation, and a measure of upward mobility.
+
+When we finished last class, we were looking at the correlation between `commute15min` and `mobility`. How would you describe the correlation between these two variables?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r commute mobility correlation}
+cor(cz$commute15min, cz$mobility, use = "complete")
+```
+
+And how can you make a scatterplot showing the correlation between these two variables?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r mobility commute scatter, warning=FALSE}
+mobility_commute_scatter <- ggplot(cz, aes(x = commute15min,
+                                           y = mobility))
+
+mobility_commute_scatter + geom_point()
+```
+
+# Introducing Lines of Best Fit
+
+Scatterplots often include lines to help visualize the direction and strength of correlations. We will do more with these lines at the end of the semester. But for now, it could be good to know how to include them. To do so, add another layer to the plot with the `geom_smooth(method = lm)` function. The smooth function finds a pattern across all the points, and the `method = lm` option says we want the pattern to be based on the "linear model" used in basic regression models.
+
+```{r mobility commute scatter with line of best fit, warning=FALSE}
+mobility_commute_scatter <- ggplot(cz, aes(x = commute15min, y = mobility))
+
+mobility_commute_scatter + geom_point() + geom_smooth(method = lm)
+```
+
+
+# Exercise With Other Variables
+
+Let's spend some time exploring a few of the other associations in our data using the following variables: 
+
+- `cz_name` = commuting zone name
+- `state` = commuting zone state
+- `cz_state` = commuting zone name and state
+- `mobility` = measure of absolute upward mobility
+- `gini` = Gini coefficient of income inequality; higher gini values indicate more inequality
+- `social_capital_index` = Social capital index
+- `frac_foreign_born` = Proportion of residents born in other countries
+- `frac_children_single_mothers` = Proportion of children living in single-parent households
+- `school_expenditures_per_student` = Average expenditures per student in public schools
+- `hs_dropout_rate_adj` = High school dropout rate adjusted for family income; positive values indicate that the hs dropout rate is larger than expected given a commuting zone's median family income, and negative values indicate that the hs dropout rate is smaller than expected given a commuting zone's median family income
+- `urban` = binary variable for urban (1) or rural (0) commuting zone
+- `hh_income` = median household family income in commuting zone
+- `racial_seg` = measure of racial segregation
+
+
+Take a few minutes to explore how some of the variables in the `cz` data frame are associated with each other What is a relationship where you would expect a negative association? What is a relationship where you would expect a positive association? What is a relationship where you would expect no association?
+
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+### Positive = Social Capital (0.641)
+```{r positive association}
+cor(cz$social_capital_index, cz$mobility, 
+    use = "complete")
+```
+
+### Negative = Gini (-0.578)
+```{r negative association}
+ggplot(cz, aes(x = gini, y = mobility)) + geom_point() 
+```
+
+### None = Foreign Born (-0.027)
+```{r no association}
+cor(cz$frac_foreign_born, cz$mobility, 
+    use = "complete")
+```
+
+
+
+# Plots With Labeled Points
+
+The plots we have been making so far show points for every commuting zone (for which data are available). It is often helpful to identify specific points that are important for the analysis. For example, you might want to isolate the point for a specific commuting zone. There are several ways to do this.
+
+On Monday, we saw how to use `plotly` to make interactive plots with custom tooltips and hover text boxes. That works great for exploring data in this window or if you use html output. Today we'll learn how to identify specific points for PDF or static output.
+
+We'll do so by taking advantage of the factthat a ggplot is just a collection of layers. The idea with this approach is that on top of our existing plot we will add another layer that only has the point we want to identify. To do so, we need to create another data frame that only has that observation. We know how to do that using the `filter()` function in dplyr.
+
+As an example, let's highlight the point for Burlington, VT's commuting zone in blue. Before we begin, what are the values of the `commute15min` and `mobility` variables for Burlington?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+cz$commute15min[cz$cz_state=="Burlington, VT"]
+cz$mobility[cz$cz_state=="Burlington, VT"]
+```
+
+```{r}
+mobility_commute_scatter + geom_point() + geom_smooth(method = lm)
+```
+
+First, create the Burlington data frame.
+
+```{r dtata frame with just burlington}
+burlington <- filter(cz, cz_state == "Burlington, VT")
+# There are three commuting zones named Burlington, so we should use the variable that adds the state.
+```
+
+Now add another `geom_point()` layer for this new data frame to our existing plot. We'll have to give the name of the data frame and the aesthetic map again:
+
+```{r add layer to plot 1, warning = FALSE}
+mobility_commute_scatter + geom_point() +
+     geom_point(data = burlington, aes(x = commute15min, 
+                                       y = mobility), 
+                color = "Blue")
+```
+
+The blue point for Burlington is there, but it is hard to see. We can improve the plot by changing the color of all the points in the original plot to light gray, doubling the size of the Burlington point, and adding a blue label to identify it:
+
+```{r add layer to plot 2, warning = FALSE}
+mobility_commute_scatter + geom_point(color = "Light Gray") +
+     geom_point(data = burlington, aes(x = commute15min, y = mobility),
+                color = "Blue", size = 2) + 
+     geom_text(data = burlington, aes(label = cz_state) , 
+               color = "Blue")
+```
+
+We can use `vjust` and `hjust` to nudge the label. Let's nudge it slightly to the left.
+
+```{r add layer to plot 3, warning = FALSE}
+mobility_commute_scatter + geom_point(color = "Light Gray") +
+     geom_point(data = burlington, aes(x = commute15min, y = mobility),
+                color = "Blue", size = 2) + 
+     geom_text(data = burlington, aes(label = cz_state) , 
+               color = "Blue", hjust = 1.1)
+```
+
+
+A second (much easier) option uses the `gghighlight` package. Install and load the package.
+
+```{r install and load gghighlight}
+#install.packages("gghighlight")
+library(gghighlight)
+```
+
+Now we simply add the `gghighlight()` function and include the same conditions by which we filtered in the previous example. Note that we will add the color option to the geom_point() function; all non-highlighted points will be turned gray by default:
+
+```{r gghighlight example, warning = FALSE}
+mobility_commute_scatter + geom_point(color = "Blue") +
+     gghighlight(cz_state=="Burlington, VT")
+```
+
+We can add a label by using the `label_key = ` option to reference a variable. The text label will be the values of that variable for the highlighted point. 
+
+```{r gghighlight example with label, warning = FALSE}
+mobility_commute_scatter + geom_point(color = "Blue") +
+     gghighlight(cz_state=="Chicago, IL",
+                 label_key = cz_state)
+```
+
+You can highlight points that fall within ranges of values as well. For example, try highlighting the commuting zones where more than 80% of residents commute 15 minutes or less, and label them by commuting zone and state.
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r gghighlight exercise with label, warning = FALSE}
+mobility_commute_scatter + geom_point(color = "Blue") +
+     gghighlight(commute15min > .80,
+                 label_key = cz_state)
+```
+

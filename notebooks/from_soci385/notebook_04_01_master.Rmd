@@ -1,0 +1,203 @@
+---
+title: "Association and Correlation"
+author: "Matt Lawrence"
+date: "October 4, 2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+always_allow_html: yes
+---
+
+# Getting Started
+
+Today we will be using data from Chetty et al's 2014 paper "Where Is The Land Of Opportunity?". The `commuting_zones.csv` dataset comes from the Opportunity Insights Project's website which can be accessed [here](http://www.opportunityinsights.org). (Note how to include links in Markdown: the link title should be in brackets followed by the link destination in parentheses. Only the link title will appear in the knitted file, but it will be clickable.)
+
+Load the data as a data frame called `cz` and load tidyverse.
+
+```{r load data and packages, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+
+cz <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385_f21/main/data/commuting_zones.csv")
+```
+
+
+# Finding Correlation Coefficients
+
+Let's start with the correlation between income segregation and the proportion of workers who commute 15 minutes or less. What is a hypothesis for how these two variables could be related? Would you expect a positive or negative correlation?
+
+The correlation coefficient is calculated as the covariance of x and y divided by the product of the standard deviations of x and y. In mathematical notation, we write:
+
+$\Large{cor_{x,y}=\frac{cov_{x,y}}{s_x s_y}}$
+
+(If you hover over the equation above, you should see it converted to a more readable format. We won't learn how to write Tex equations in this class, but it could be good to know that R Markdown can handle them.)
+
+We already know how to find the standard deviation using the `sd()` function. To find the covariance we use the `cov()` function and separate the two variables by a comma (just like a cross-tabulation). Let's plug all these values into the equation using `commute15min` as our X variable and `income_seg` as our Y variable.
+
+```{r correlation manual calculation}
+cov(cz$commute15min, cz$income_seg) / 
+     (sd(cz$commute15min) * sd(cz$income_seg))
+```
+
+How would you interpret this correlation?
+
+Fortunately, R can calculate the correlation for us using the `cor()` function. Just like `cov()` or cross-tabulations, we separate both variables with a comma.
+
+```{r correlation built in function}
+cor(cz$commute15min, cz$income_seg)
+```
+
+You should get the same value as we calculated earlier.
+
+# Visualizing Correlations With Scatterplots
+
+We can also create a scatterplot showing how the distributions of both variables tend to move together. Set up everything in ggplot using the regular x and y aesthetics. For a scatterplot, the plot type is `geom_point()`.
+
+```{r commute income scatterplot}
+commute_incomeseg_scatter <- ggplot(cz, 
+                            aes(x = commute15min, 
+                                y = income_seg))
+
+commute_incomeseg_scatter + geom_point()
+```
+
+What would your hypothesis be for how commuting zones' median incomes and employment rates are associated? Find the correlation for median household income (`hh_income`) and `labor_force_participation_rate` using the `cor()` function, and create a scatterplot showing how the two variables are associated.
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r income labor force correlation}
+cor(cz$hh_income, cz$labor_force_participation_rate)
+```
+
+```{r income labor force scatter}
+income_laborforce_scatter <- ggplot(cz, aes(
+     x = labor_force_participation_rate,
+     y = hh_income))
+
+income_laborforce_scatter + geom_point()
+```
+
+Here's a nice little trick using the `scales` package to change all the median income values on the y axis to dollar amounts:
+
+```{r scales example}
+#install.packages("scales") # install the scales package
+
+income_laborforce_scatter <- ggplot(cz, aes(
+     x = labor_force_participation_rate,
+     y = hh_income))
+
+income_laborforce_scatter + geom_point() +
+  scale_y_continuous(labels = scales::label_dollar()) # To set y axis values to dollars
+```
+
+Need to define other currencies before using them
+
+```{r other currencies}
+pound <- scales::label_dollar(
+  prefix = "",
+  suffix = "\u00a3", # use "\u20ac" for euro
+  big.mark = ".",
+  decimal.mark = ","
+)
+
+income_laborforce_scatter + geom_point() +
+  scale_y_continuous(labels = pound) # To set y axis values to pounds
+```
+
+
+Let's look at one more association. What is your hypothesis for how `commute15min` and `mobility` would be related? Find the correlation coefficient for these two variables using the `cor()` function.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r mobility commute correlation}
+cor(cz$commute15min, cz$mobility)
+```
+
+Uh oh. It looks like there is an error somewhere. To investigate, get a summary of all the variables in the dataframe using `summary()` and the data frame name:
+
+```{r summary of full data frame}
+summary(cz)
+```
+
+# Dealing With Missing Values
+
+There are 32 observations where the value for `mobility` is "NA". That is R's way of telling us the values are missing, or "not available". Most datasets will have some missing values, so we need ways to deal with them. For correlations, the way to tell R we only want to use cases without any missing values is to add the `use=complete` option:
+
+```{r correlation with na}
+cor(cz$commute15min, cz$mobility, use="complete")
+```
+
+For many other functions, use `na.rm = TRUE` to remove all values with an NA. For example:
+
+```{r other functions with na}
+mean(cz$mobility, na.rm = TRUE)
+```
+
+Fortunately, ggplot2 knows to only use complete cases so we do not have to adjust our code to get a scatterplot:
+
+```{r mobility commute scatterplot}
+mobility_commute_scatter <- ggplot(cz, 
+                                   aes(x = commute15min, y = mobility))
+
+mobility_commute_scatter + geom_point()
+```
+
+You can see that there is a warning message alerting us to the fact that there are 32 missing values. To get rid of that, add `warning=FALSE` to the code chunk header:
+
+```{r mobility commute scatterplot without warnings, warning=FALSE}
+mobility_commute_scatter <- ggplot(cz, 
+                                   aes(x = commute15min, y = mobility))
+
+mobility_commute_scatter + geom_point()
+```
+
+If for some reason you have a column with only NA values, you can drop the column:
+
+```{r}
+cz <- cz |> 
+  select(-drop_this_column) # Use - with select to drop
+```
+
+# Plots With Labeled Points
+
+The plots we have been making so far show points for every commuting zone (for which data are available). It is often helpful to identify specific points that are important for the analysis. Let's start by making our figure interactive using the `plotly()` package.
+
+```{r}
+#install.packages("plotly")
+library(plotly)
+```
+
+This package makes it very easy to get some info about each point when you hover over it. All you have to do is save the plot as an object and then wrap that object in `ggplotly()`.
+
+```{r}
+plotly_test <- ggplot(cz, aes(x = commute15min, y = mobility)) + geom_point()
+
+ggplotly(plotly_test)
+                      
+```        
+
+For exploring your own data, the above chunk is probably sufficient. For sharing the data, you might prefer to customize the text in the hover tooltips using the text option in the aesthetics map.
+
+```{r}
+plotly_test <- ggplot(cz, aes(x = commute15min, y = mobility,
+                              text = paste("CZ:", cz_state, "<br>",
+                                           "Commute < 15 Mins:", commute15min, "<br>",
+                                           "Mobilty rate:", mobility))) + 
+  geom_point()
+
+ggplotly(plotly_test, tooltip = "text") # Add tooltip option for custom hover
+
+```
+
+# Exercise With Other Variables
+
+Take a few minutes to explore how other variables in this dataset are associated with mobility. What is a relationship where you would expect a negative association? What is a relationship where you would expect a positive association? What is a relationship where you would expect no association?
+ 
+Here are the other four of the "big five" variables correlated with mobility:
+
+- `gini` = Gini coefficient of income inequality; higher gini values indicate more inequality
+
+- `social_capital` = Social capital index
+
+- `frac_children_single_mothers` = Proportion of children living in single-parent households
+
+- `hs_dropout_rate_adj` = High school dropout rate adjusted for family income; positive values indicate that the hs dropout rate is larger than expected given a commuting zone's median family income, and negative values indicate that the hs dropout rate is smaller than expected given a commuting zone's median family income
