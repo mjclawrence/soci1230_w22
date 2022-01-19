@@ -331,3 +331,73 @@ profiles |>
 profiles |> 
   mutate(teacher = str_detect(essay1, "teacher")) |> 
   ggplot()
+
+## Week Two, Class Two
+
+install.packages("tidytext")
+library(tidytext)
+
+### Introducing tokenizing
+
+profiles <- read_csv("/Volumes/GoogleDrive/.shortcut-targets-by-id/13FuGzlObJQd3GyLHDpIC9n0IIVVGrPWk/SOCI 1230A: DataScience Across Disciplines - Winter 2022/Morning Activities/profiles.csv")
+
+essay2.tokens <- profiles |> 
+  unnest_tokens(input = "essay2",
+                output = "word") # needs to be `word` for anti_join to work
+
+essay2.tokens |> 
+  count(word) |> 
+  arrange(-n) |>
+  top_n(10)
+
+# Let's filter out stop words
+
+top.words <- essay2.tokens |> 
+  count(word) |> 
+  arrange(-n) |>
+  filter(!(word %in% stop_words$word)) |> 
+  #anti_join(stop_words) |> # more efficient way to filter out words in stop_words
+  top_n(20)
+
+# Intro to web scraping
+
+library(rvest)
+
+url <- "https://en.wikipedia.org/wiki/Joe_Biden"
+
+biden.text <- url |> 
+  read_html() |> 
+  html_elements("p") |> 
+  html_text()
+
+biden.text[10]
+
+biden.data <- tibble(text = biden.text)
+
+biden.data |> 
+  unnest_tokens(input = "text",
+                output = "word") |> 
+  count(word) |> 
+  anti_join(stop_words) |> 
+  arrange(-n)
+
+
+url <- "https://en.wikipedia.org/wiki/Tom_Brady"
+
+brady.table <- url |> 
+  read_html() |> 
+  html_element(xpath = '//*[@id="mw-content-text"]/div[1]/table[5]') |> 
+  html_table()
+
+### Replace column names with values in first row
+
+colnames(brady.table) <- paste(colnames(brady.table),
+                               brady.table[1, ])
+
+brady.table2 <- brady.table[-c(1, 24),]
+
+brady.table2 |> 
+  mutate(yds_numeric = as.numeric(str_remove_all(`Passing Yds`, "[:punct:]"))) |> 
+  ggplot() +
+  geom_line(aes(x = as.numeric(`Year Year`),
+             y = yds_numeric))
