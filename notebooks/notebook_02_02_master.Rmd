@@ -303,6 +303,7 @@ Take a few minutes to explore how other CSS questions are associated with mobili
 cor_df <- css_means |> 
   select(campus_id, 
          n_responses, 
+         #k_rank_cond_parq5,
          k_rank_cond_parq5,
          starts_with("HPW10")) |> 
   mutate(n_responses_nona = n_responses * (1-HPW10.propna)) |> 
@@ -321,14 +322,15 @@ cor_df <- css_means |>
 
 cor_df |> 
   group_by(response_level) |> 
-  summarise(wtd.cor = wtd.cor(prop,
+  summarise(wtd_cor_krankpq5 = wtd.cor(prop,
                               k_rank_cond_parq5,
-                              w = n_responses_nona)[1])
+                              w = n_responses_nona)[1]
+  )
 ```
 
 ```{r}
-cor_df |> 
+cor_df |>
   ggplot(aes(x = prop, y = k_rank_cond_parq5, size = n_responses_nona)) +
   geom_point() + facet_wrap(~response_level) + 
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") + geom_smooth(method = "lm")
 ```

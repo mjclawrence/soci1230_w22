@@ -1,0 +1,52 @@
+---
+title: "Untitled"
+author: "ML"
+date: "1/19/2022"
+output: pdf_document
+---
+
+```{r}
+css_means <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_means_mobility_withno.csv")
+tfs_means <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_means_mobility_withno.csv")
+```
+
+```{r}
+cor_df <- css_means |> 
+  select(campus_id, 
+         n_responses, 
+         #k_rank_cond_parq5,
+         starts_with("k_rank_cond_parq"),
+         starts_with("HPW10")) |> 
+  mutate(n_responses_nona = n_responses * (1-HPW10.propna)) |> 
+  pivot_longer(names_to = "response_level",
+               values_to = "prop",
+               contains("hours")) |> 
+  mutate(response_level = factor(response_level,
+                                 levels = c("HPW10.hours0",
+                                            "HPW10.hours0to1",
+                                            "HPW10.hours1to2",
+                                            "HPW10.hours3to5",
+                                            "HPW10.hours6to10",
+                                            "HPW10.hours11to15",
+                                            "HPW10.hours16to20",
+                                            "HPW10.hours21plus")))
+
+cor_df |> 
+  group_by(response_level) |> 
+  summarise(wtd_cor_krankpq5 = wtd.cor(prop,
+                              k_rank_cond_parq5,
+                              w = n_responses_nona)[1],
+            wtd_cor_krankpq4 = wtd.cor(prop,
+                                       k_rank_cond_parq4,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq3 = wtd.cor(prop,
+                                       k_rank_cond_parq3,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq2 = wtd.cor(prop,
+                                       k_rank_cond_parq2,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq1 = wtd.cor(prop,
+                                       k_rank_cond_parq1,
+                                       w = n_responses_nona)[1]
+  )
+```

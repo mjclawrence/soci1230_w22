@@ -30,16 +30,10 @@ goaltest <- college_mobility |>
   filter(YEAR_TFS > 1995) |> 
   select(campus_id, starts_with("GOAL07"))
 
-goaltest <- college_mobility |> 
-  filter(YEAR_TFS > 1995) |> 
-  select(
-    where(
-      ~sum(!is.na(.x)) > 0
-    )
-  )
+write.csv(goaltest, "../../data/matched_goal07.csv", row.names = FALSE)
 
 in_both <- names(goaltest)
-write.csv(in_both, "/users/lawrence/desktop/in_both.csv")
+#write.csv(in_both, "/users/lawrence/desktop/in_both.csv")
 
 prop.table(table(goaltest$GOAL07_TFS,
                  goaltest$GOAL07, exclude = NULL),1)
