@@ -10,7 +10,7 @@ library(scales)
 
 # Quick Morning Check-in
 
-Consults codebooks or data documentation files : https://www.gapminder.org/data/
+Consult codebooks or data documentation files : https://www.gapminder.org/data/
 
 Thinking about when and why to use logs of income
 
