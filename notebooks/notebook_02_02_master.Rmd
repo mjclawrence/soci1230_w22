@@ -114,7 +114,15 @@ middlebury_admissions_table <- url |>
   html_element(xpath = '//*[@id="divctl00_cphCollegeNavBody_ucInstitutionMain_ctl04"]/div/table[2]') |> 
   html_table()
 
-middlebury_admissions_table
+colnames(middlebury_admissions_table) <- c("Description",
+                                           "Total",
+                                           "Male",
+                                           "Female")
+
+mytable <- as_tibble(middlebury_admissions_table) |> 
+  mutate(Total = as.numeric(str_remove_all(Total, "[:punct:]")),
+         Male = as.numeric(str_remove_all(Male, "[:punct:]")),
+         Female = as.numeric(str_remove_all(Female, "[:punct:]")))
 ```
 
 Fortunately Chetty's team already assembled all the data for us. But we still need to combine their Table 2 and Table 10 datasets. The `bind_rows()` function doesn't do what we want. Another `join()` function will. 
@@ -133,7 +141,7 @@ mrc |>
              size = count)) +
   geom_point() +
   geom_smooth(method = "lm") +
-  scale_size(breaks = c(1000, 2500, 5000, 10000))
+  scale_size(breaks = c(1000, 2500, 5000, 10000)) # example of manual breaks
 ```
 
 To calculate correlation coefficients, the easiest thing to do is to use the `cor()` function.
@@ -169,7 +177,7 @@ library(weights)
 The weighted correlation function is `wtd.cor(, w =)`. We'll use the `count` variable again for the weight with the Opportunity Insights data.
 
 ```{r}
-mycor <- wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)
+wtd.cor(mrc$scorecard_rej_rate_2013, mrc$mr_ktop1_pq1, w = mrc$count)
 ```
 
 We get more than just the correlation coefficient here. Did we see anything this morning to help us only keep the correlation coefficient?

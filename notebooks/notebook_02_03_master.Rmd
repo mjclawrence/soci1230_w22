@@ -1,3 +1,10 @@
+---
+title: "Untitled"
+author: "ML"
+date: "1/19/2022"
+output: pdf_document
+---
+
 # Getting Started 
 
 Load the packages and data
@@ -15,7 +22,7 @@ Consults codebooks or data documentation files : https://www.gapminder.org/data/
 Thinking about when and why to use logs of income
 
 ```{r}
-install.packages("gapminder") # hashtag this line after installing
+#install.packages("gapminder") # hashtag this line after installing
 library(gapminder)
 
 # example without logs
@@ -115,17 +122,40 @@ tfs_means <- tfs_means |>
 
 We ended class yesterday with a task: find the association between the CSS variable `HPW10.hours0` (zero hours spent partying per week) and `k_rank_cond_parq5` (average adult income rank for kids who grow up in the top quintile). What did you expect? What did you find?
 
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
 It's a good idea to break this into pieces so you can use parts in later analyses. First save the "final" data frame you will need for any summaries or plots. Get the question variables and create the weights.
 
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+cor_df <- css_means |> 
+  select(campus_id, 
+         n_responses, 
+         k_rank_cond_parq5,
+         starts_with("HPW10")) |> 
+  mutate(n_responses_nona = n_responses * (1-HPW10.propna))
+```
 
 Then you can use that dataframe to summarise the correlation.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+cor_df |> 
+  summarise(wtd.cor = wtd.cor(HPW10.hours0,
+                              k_rank_cond_parq5,
+                              w = n_responses_nona)[1])
+```
 
 And use the same dataframe to create the scatterplots.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r, warning = FALSE, error = FALSE, message = FALSE}
+cor_df |> 
+  ggplot(aes(x = HPW10.hours0,
+             y = k_rank_cond_parq5,
+             size = n_responses_nona)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
 
 Any other variables and specific responses you want to look at?
 
@@ -166,17 +196,124 @@ cor_df <- css_means |>
 The new part is that we want to use `group_by()` to get a separate correlation for each response level. Try it.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+cor_df |> 
+  group_by(response_level) |> 
+  summarise(wtd_cor_krank = wtd.cor(prop,
+                              k_rank,
+                              w = n_responses_nona)[1])
+```
 
 Can we get this by type of college?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
+```{r}
+cor_df |> 
+  group_by(response_level, type) |> 
+  summarise(wtd_cor_krank = wtd.cor(prop,
+                              k_rank,
+                              w = n_responses_nona)[1])
+```
+
 Might be easier to understand what's going on if we only have two rows (the types) with the response levels in columns and the weighted correlations in the cells. How do we do that?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
+```{r}
+cor_df |> 
+  group_by(response_level, type) |> 
+  summarise(wtd_cor_krank = wtd.cor(prop,
+                              k_rank,
+                              w = n_responses_nona)[1])|> 
+  pivot_wider(names_from = "response_level",
+              values_from = "wtd_cor_krank") |> 
+  mutate(across(where(is.numeric),round,3))
+```
 
 How could we get scatterplots for all the response levels to this question?
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+cor_df |> 
+  group_by(response_level) |> # we haven't used this with ggplot before
+  ggplot(aes(x = prop, y = k_rank, 
+             color = type)) +
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme(legend.position = "bottom") + guides(size = "none") +
+  facet_wrap(~response_level) # need this if we have a group_by
+```
+
+## Extra stuff
+
+```{r}
+css_means |> 
+   select(campus_id, 
+          n_responses, 
+          starts_with("k_rank_cond_parq"),
+          starts_with("SLFCHG30")) |> 
+   mutate(n_responses_nona = n_responses * (1-SLFCHG30.propna)) |> 
+   pivot_longer(names_to = "response_level",
+                values_to = "prop",
+                (starts_with("SLFCHG30") & !contains("propna"))) |> 
+   mutate(response_level = factor(response_level,
+                                  levels = c("SLFCHG30.muchweaker",
+                                             "SLFCHG30.weaker",
+                                             "SLFCHG30.nochange",
+                                             "SLFCHG30.stronger",
+                                             "SLFCHG30.muchstronger"))) |>  
+  group_by(response_level) |> 
+  summarise(wtd_cor_krankpq5 = wtd.cor(prop,
+                              k_rank_cond_parq5,
+                              w = n_responses_nona)[1],
+            wtd_cor_krankpq4 = wtd.cor(prop,
+                                       k_rank_cond_parq4,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq3 = wtd.cor(prop,
+                                       k_rank_cond_parq3,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq2 = wtd.cor(prop,
+                                       k_rank_cond_parq2,
+                                       w = n_responses_nona)[1],
+            wtd_cor_krankpq1 = wtd.cor(prop,
+                                       k_rank_cond_parq1,
+                                       w = n_responses_nona)[1]
+  ) |> 
+  mutate(across(where(is.numeric), round, 3))
+```
+
+```{r}
+css_means |> 
+  select(campus_id, 
+         n_responses, 
+         starts_with("k_rank_cond_parq"),
+         starts_with("SLFCHG30")) |> 
+  mutate(n_responses_nona = n_responses * (1-SLFCHG30.propna)) |> 
+  pivot_longer(names_to = "response_level",
+               values_to = "prop",
+               (starts_with("SLFCHG30") & !contains("propna"))) |> 
+  pivot_longer(names_to = "k_rank",
+               values_to = "value",
+               k_rank_cond_parq1:k_rank_cond_parq5) |> 
+  mutate(k_rank = str_remove_all(k_rank, "[_]")) |> 
+  mutate(k_rank = str_remove_all(k_rank, "[:alpha:]")) |>
+  mutate(k_rank = paste("PQ",k_rank)) |> 
+  mutate(response_level = str_remove_all(response_level, "SLFCHG30.")) |>
+  mutate(response_level = factor(response_level,
+                                 levels = c("muchweaker",
+                                            "weaker",
+                                            "nochange",
+                                            "stronger",
+                                            "muchstronger"))) |>  
+  group_by(response_level, k_rank) |> 
+  ggplot(aes(x = prop, y = value, size = n_responses_nona)) +
+  geom_point() + geom_smooth(method = "lm") +
+  facet_grid(k_rank ~ response_level) +
+  theme(legend.position = "none") +
+  labs(x = "Proportion Perceiving Change", y = "Kid Rank Conditional on Parent Quintile",
+       title = "Perceived Change In Religious Beliefs And Average Kid Rank")
+
+cor_df_extra
+```
 

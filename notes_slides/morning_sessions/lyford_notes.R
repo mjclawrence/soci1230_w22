@@ -401,3 +401,56 @@ brady.table2 |>
   ggplot() +
   geom_line(aes(x = as.numeric(`Year Year`),
              y = yds_numeric))
+
+
+## Today
+
+library(tidyverse)
+
+life <- read_csv("notes_slides/morning_sessions/data/life_expectancy_years.csv")
+
+### Graph of life expectancy for two different countries
+### China, Brazil
+
+life.long <- life |> 
+  pivot_longer(names_to = "year",
+               values_to = "life_exp",
+               -country) |> 
+  mutate(year = as.numeric(year))
+
+filter(country %in% c("China", "Brazil")) |> 
+  ggplot(aes(x = as.numeric(year), y = life_exp, 
+             color = country)) +
+  geom_line(size = 2) +
+  theme(legend.position = "bottom")
+life.long
+
+income <- read_csv("notes_slides/morning_sessions/data/income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+
+income.long <- income |> 
+  mutate(across(.cols = -country, 
+                ~str_replace_all(.x, "k", "e3"))) |> 
+  pivot_longer(names_to = "year",
+               values_to = "income",
+               -country) |> 
+  mutate(year = as.numeric(year)) |> 
+  filter(year < 2022)
+
+
+filter(country %in% c("China", "Brazil")) |> 
+  ggplot(aes(x = year, y = as.numeric(income),
+         color = country)) +
+  geom_line(size = 2) +
+  theme(legend.position = "bottom") 
+income.long
+
+joined.data <- left_join(income.long, 
+                         life.long)
+
+joined.data |> 
+  filter(year == 2000) |> 
+  ggplot() +
+  geom_point(aes(x = log(as.numeric(income)), 
+                 y = life_exp,
+                 size = ))
+  
