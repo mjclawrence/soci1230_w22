@@ -254,10 +254,10 @@ What about combining plots that don't share the same X axis? Or that come from d
 library(patchwork)
 ```
 
-Let's make another plot for this example. We'll compare the responses to the `GOAL07` question in the TFS and the CSS.
+Let's make another plot for this example. We'll compare the responses to the `GOAL07` question in the CSS and the `GOAL08` question in the TFS. Both of the questions are about the importance of being well off financially.
 
 ```{r}
-goal07_css_plot_dodge <- css_summary |>  
+goal_css_plot_dodge <- css_summary |>  
   filter(Name == "GOAL07") |> 
   mutate(Label = factor(Label, # use the Label variable here
                           levels = c("Not important",
@@ -280,8 +280,8 @@ goal07_css_plot_dodge <- css_summary |>
 ```
 
 ```{r}
-goal07_tfs_plot_dodge <- tfs_summary |>  
-  filter(Name == "GOAL07") |> 
+goal_tfs_plot_dodge <- tfs_summary |>  
+  filter(Name == "GOAL08") |> 
   mutate(Label = factor(Label, # use the Label variable here
                           levels = c("Not important",
                                      "Somewhat important",
@@ -305,12 +305,12 @@ goal07_tfs_plot_dodge <- tfs_summary |>
 To position plots side by side, separate their saved object names with a plus
 
 ```{r}
-goal07_tfs_plot_dodge + goal07_css_plot_dodge
+goal_tfs_plot_dodge + goal_css_plot_dodge
 ```
 To place them on top of each other, use a / instead of a +. And you can add common titles and subtitles across patchwork figures with the `plot_annotation()` function.
 
 ```{r}
-goal07_tfs_plot_dodge / goal07_css_plot_dodge +  
+goal_tfs_plot_dodge / goal_css_plot_dodge +  
   plot_annotation(
   title = "How important to you personally is being very well off financially?"
 )
@@ -319,7 +319,7 @@ goal07_tfs_plot_dodge / goal07_css_plot_dodge +
 In complicated layouts, use a | to position groups of plots side by side. This can get complicated quickly! The takeaway is to think about what you want *before* you create your plots so patching them together goes smoothly.
 
 ```{r}
-act05_plot_stack | (goal07_tfs_plot_dodge / goal07_css_plot_dodge)
+act05_plot_stack | (goal_tfs_plot_dodge / goal_css_plot_dodge)
 ```
 
 ### Part Two - Grouped Summaries

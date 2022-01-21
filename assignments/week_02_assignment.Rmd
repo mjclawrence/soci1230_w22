@@ -192,24 +192,24 @@ tfs_css_correlations
 
 ### Bonus (if you make good progress on the above parts during Thursday's class and want more practice)
 
-The matched CSS-TFS file links surveys across years by student. Take individuals' responses to the GOAL07 questions in both surveys and make a figure showing how the distribution of responses changed over time. The values are: 1 = "Not important", 2 = "Somewhat important", 3 = "Very important", 4 = "Essential". Write a few sentences explaining why you made your visualization decisions.
+The matched CSS-TFS file links surveys across years by student. Take individuals' responses to the GOAL questions referring to the importance of being well off financially in both surveys. Make a figure showing how the distribution of responses changed over time. The values are: 1 = "Not important", 2 = "Somewhat important", 3 = "Very important", 4 = "Essential". Write a few sentences explaining why you made your visualization decisions.
 
 ```{r, include = FALSE, warning = FALSE, error = FALSE, message = FALSE}
 # Maybe something like this?
 
 matched_df <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/matched_goal07.csv")
 
-prop.table(table(matched_df$GOAL07_TFS,
-                 matched_df$GOAL07_CSS, exclude = NULL),1)
+prop.table(table(matched_df$GOAL_TFS,
+                 matched_df$GOAL_CSS, exclude = NULL),1)
 
 matched_df |> 
-  filter(!is.na(GOAL07_TFS), !is.na(GOAL07_CSS)) |> 
-  group_by(GOAL07_TFS) |> 
-  count(GOAL07_CSS) |> 
+  filter(!is.na(GOAL_TFS), !is.na(GOAL_CSS)) |> 
+  group_by(GOAL_TFS) |> 
+  count(GOAL_CSS) |> 
   na.omit() |> 
   mutate(prop = n/sum(n)) |> 
   ungroup() |> 
-  ggplot(aes(x = GOAL07_TFS, y = n, fill = factor(GOAL07_CSS))) +
+  ggplot(aes(x = GOAL_TFS, y = n, fill = factor(GOAL_CSS))) +
   geom_col() +
   theme_tufte() +
   theme(legend.position = "bottom") +
