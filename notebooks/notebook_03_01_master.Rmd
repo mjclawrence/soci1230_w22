@@ -1,0 +1,59 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(scales)
+library(ggthemes)
+
+css_means <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_means_mobility_withno.csv")
+css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
+```
+
+```{r}
+mobility_variable_quantiles <- wtd.quantile(css_means$k_rank,
+                                            weights = css_means$n_responses,
+                                            probs = c(.25, .75))
+
+css_variable_labels <- css_labels |>
+  mutate(response_level = str_extract(Summary, "[^.]*$")) |> 
+  filter(Name == "FACPRV08")
+
+variable_levels <- css_variable_labels$response_level
+variable_labels <- css_variable_labels$Label
+variable_description <- css_variable_labels$Description[1]
+
+mytest <- css_means |> 
+  select(campus_id, n_responses, starts_with("FACPRV08"), k_rank) |> 
+  rename_with(~paste0("propna"), .cols = ends_with("propna")) |>  
+  mutate(n_responses_nona = n_responses * (1-propna),
+         qtle = ifelse(k_rank < mobility_variable_quantiles[1], 1,
+                       ifelse(k_rank > mobility_variable_quantiles[2], 3, 
+                              2))) |> 
+  pivot_longer(names_to = "response_level",
+               values_to = "proportion",
+               starts_with("FACPRV08")) |> 
+  mutate(response_level = str_remove(response_level, "_mean"),
+         response_level = str_extract(response_level, "[^.]*$")) |> 
+  mutate(response_level = factor(response_level,
+                                 levels = variable_levels,
+                                 labels = variable_labels)) |> 
+  group_by(qtle, response_level) |> 
+  summarise(wtd.mean = wtd.mean(proportion, 
+                                weights = n_responses_nona, 
+                                na.rm = TRUE)) |> 
+  ggplot(aes(x = response_level, y = wtd.mean, fill = response_level)) +
+  geom_col() +
+  labs(title = variable_description,
+       fill = "") +
+  theme_tufte() +
+  theme(legend.position = "none") + facet_grid(qtle~.) +
+  scale_x_discrete(labels = label_wrap(10)) +
+  geom_text(aes(label = round(wtd.mean, 3)),
+            position = position_dodge(width = .9),
+            vjust = 0)
+
+ggplotly(mytest)
+```
