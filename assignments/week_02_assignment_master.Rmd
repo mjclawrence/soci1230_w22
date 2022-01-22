@@ -79,7 +79,7 @@ tfs_cor_summary <- tfs_cor_df |>
                               k_rank,
                               w = n_responses_nona)[1]) |>
   mutate(across(where(is.numeric),round,3))
-
+```
 kable_tfs_cor_summary <- tfs_cor_summary |> 
   pivot_wider(names_from = "response_level",
               values_from = "wtd_cor_krank") |> 
