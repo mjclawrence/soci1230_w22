@@ -19,7 +19,7 @@ mobility_variable_quantiles <- wtd.quantile(css_means$k_rank,
 
 css_variable_labels <- css_labels |>
   mutate(response_level = str_extract(Summary, "[^.]*$")) |> 
-  filter(Name == "FACPRV08")
+  filter(Name == "")
 
 variable_levels <- css_variable_labels$response_level
 variable_labels <- css_variable_labels$Label
