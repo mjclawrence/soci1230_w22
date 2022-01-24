@@ -405,52 +405,144 @@ brady.table2 |>
 
 ## Today
 
-library(tidyverse)
-
 life <- read_csv("notes_slides/morning_sessions/data/life_expectancy_years.csv")
 
-### Graph of life expectancy for two different countries
-### China, Brazil
+#Let's start by making a basic graph of life expectancy for two different countries
+#China, Brazil
 
-life.long <- life |> 
-  pivot_longer(names_to = "year",
-               values_to = "life_exp",
-               -country) |> 
-  mutate(year = as.numeric(year))
+#First, let's reshape our data from wide format to long format
+#using pivot_longer()
+life.long <- life %>%
+  pivot_longer(-country,
+               names_to = "Year",
+               values_to = "LifeExpectancy") %>%
+  mutate(Year = as.numeric(Year)) %>%
+  filter(Year < 2022)
 
-filter(country %in% c("China", "Brazil")) |> 
-  ggplot(aes(x = as.numeric(year), y = life_exp, 
-             color = country)) +
-  geom_line(size = 2) +
-  theme(legend.position = "bottom")
-life.long
 
+life.long %>%
+  filter(country %in% c("China", "Brazil")) %>%
+  ggplot() +
+  geom_line(aes(x = Year, y = LifeExpectancy, color = country),
+            size = 2)
+
+#Let's repeat the above process with income
 income <- read_csv("notes_slides/morning_sessions/data/income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
 
-income.long <- income |> 
-  mutate(across(.cols = -country, 
-                ~str_replace_all(.x, "k", "e3"))) |> 
-  pivot_longer(names_to = "year",
-               values_to = "income",
-               -country) |> 
-  mutate(year = as.numeric(year)) |> 
-  filter(year < 2022)
+#Repeat with income
+income.long <- income %>%
+  mutate(across(.cols = -country,
+                .fns = ~as.numeric(str_replace(.x, "k", "e3")))) %>% #replaces k with e3
+  pivot_longer(-country,
+               names_to = "Year",
+               values_to = "income") %>%
+  mutate(Year = as.numeric(Year)) %>%
+  filter(Year < 2022)
 
 
-filter(country %in% c("China", "Brazil")) |> 
-  ggplot(aes(x = year, y = as.numeric(income),
-         color = country)) +
-  geom_line(size = 2) +
-  theme(legend.position = "bottom") 
-income.long
-
-joined.data <- left_join(income.long, 
-                         life.long)
-
-joined.data |> 
-  filter(year == 2000) |> 
+income.long %>%
+  filter(country %in% c("China", "Brazil")) %>%
   ggplot() +
-  geom_point(aes(x = log(as.numeric(income)), 
-                 y = life_exp,
-                 size = ))
-  
+  geom_line(aes(x = Year, y = income, color = country),
+            size = 2)
+
+#Let's join our income data and our life expectancy data
+joined.data <- income.long %>%
+  inner_join(life.long, by = c("country", "Year"))
+
+#Let's make one frame of our animation
+#The year 2000
+
+#Only start using scientific notation above this number
+options(scipen = 100000)
+
+joined.data %>%
+  filter(Year == 2000) %>%
+  ggplot() +
+  geom_point(aes(x = income, y = LifeExpectancy)) +
+  scale_x_log10()
+
+#Scrape in region data (for use in coloring)
+library(rvest)
+
+url <- "https://meta.wikimedia.org/wiki/List_of_countries_by_regional_classification"
+
+region.data <- url %>%
+  read_html() %>%
+  html_element("table") %>%
+  html_table()
+
+#How do I join my "joined.data" and "region.data"?
+joined.region.data <- joined.data %>%
+  inner_join(region.data, by = c("country" = "Country"))
+
+#Make our graph with region colors
+joined.region.data %>%
+  filter(Year == 2000) %>%
+  ggplot() +
+  geom_point(aes(x = income, y = LifeExpectancy, color = Region)) +
+  scale_x_log10()
+
+#How can I figure out which countries are being "deleted"
+#with my inner_join? (Which countries don't have matching region data?)
+joined.data %>%
+  anti_join(region.data, by = c("country" = "Country")) %>%
+  filter(Year == 2000)
+
+population <- read_csv("notes_slides/morning_sessions/data/population_total.csv")
+
+pop.long <- population %>%
+  mutate(across(.cols = -country,
+                .fns = ~str_replace(.x, "k", "e3"))) %>% #replaces k with e3
+  mutate(across(.cols = -country,
+                .fns = ~str_replace(.x, "M", "e6"))) %>% #replaces k with e3
+  mutate(across(.cols = -country,
+                .fns = ~as.numeric(str_replace(.x, "B", "e9")))) %>% #replaces k with e3
+  pivot_longer(-country,
+               names_to = "Year",
+               values_to = "pop") %>%
+  mutate(Year = as.numeric(Year)) %>%
+  filter(Year < 2022)
+
+final.joined.data <- joined.region.data |> 
+  inner_join(pop.long)
+
+## Ready to animate
+
+### Step 1 is to build a single frame taht looks perfect
+
+library(gganimate)
+
+graph1 <- final.joined.data |> 
+  #filter(Year == 2000) |> 
+  ggplot() +
+  geom_point(aes(x = income, y = LifeExpectancy, color = Region, size = pop)) +
+  scale_x_log10() + theme_bw() +
+  transition_time(Year) +
+  labs(title = 'Year: {frame_time}')
+
+animation1 <- animate(graph1,
+        nframes = 223)
+
+final.joined.data |> 
+  filter(country %in% c("Canada", "China", "Angola")) |> 
+  ggplot() +
+  geom_line(aes(x = Year, y = income, color = country),
+             size = 2) +
+  theme_bw() +
+  transition_reveal(Year) # to keep previous year lines
+
+
+diamonds |> 
+  ggplot() + 
+  geom_point(aes(x = carat, y = price, color = color)) +
+  transition_states(color, state_length = 1,
+                    transition_length = 1) +
+  enter_fade() +
+  exit_fade()
+
+library(fivethirtyeight)
+
+bechdel
+
+

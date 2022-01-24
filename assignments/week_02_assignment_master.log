@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.12)  20 JAN 2022 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.12)  23 JAN 2022 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -572,145 +572,129 @@ Package xcolor Warning: Incompatible color definition on input line 197.
 Package xcolor Warning: Incompatible color definition on input line 199.
 
 
-Package xcolor Warning: Incompatible color definition on input line 217.
+Package xcolor Warning: Incompatible color definition on input line 208.
 
 
-Package xcolor Warning: Incompatible color definition on input line 217.
+Package xcolor Warning: Incompatible color definition on input line 208.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 210.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
 
 
 Package xcolor Warning: Incompatible color definition on input line 223.
 
 
-Package xcolor Warning: Incompatible color definition on input line 223.
+Package xcolor Warning: Incompatible color definition on input line 227.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 229.
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 229.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 229.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 229.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 229.
+(Font)              <12> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 229.
+(Font)              <8> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 229.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 229.
+(Font)              <6> on input line 233.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 229.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 233.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.282 \end{Shaded}
+l.286 \end{Shaded}
                   ]
 
-Package xcolor Warning: Incompatible color definition on input line 282.
+Package xcolor Warning: Incompatible color definition on input line 286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 282.
+Package xcolor Warning: Incompatible color definition on input line 286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 284.
+Package xcolor Warning: Incompatible color definition on input line 288.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 287.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 291.
 (/Users/lawrence/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-Package xcolor Warning: Incompatible color definition on input line 295.
+Package xcolor Warning: Incompatible color definition on input line 299.
 
 
-Package xcolor Warning: Incompatible color definition on input line 295.
+Package xcolor Warning: Incompatible color definition on input line 299.
 
-<week_02_assignment_master_files/figure-latex/unnamed-chunk-6-1.pdf, id=55, 459.7175pt x 310.15875pt>
-File: week_02_assignment_master_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use week_02_assignment_master_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-6-1.pdf  used on input line 297.
-(pdftex.def)             Requested size: 459.71637pt x 310.15799pt.
-[3]
-<week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf, id=62, 437.635pt x 301.125pt>
+<week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf, id=55, 459.7175pt x 310.15875pt>
 File: week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 307.
-(pdftex.def)             Requested size: 437.6406pt x 301.12885pt.
-
-Package xcolor Warning: Incompatible color definition on input line 309.
-
-[4 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-6-1.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 325.
-
-
-Package xcolor Warning: Incompatible color definition on input line 325.
-
-<week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf, id=78, 459.7175pt x 310.15875pt>
+Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 301.
+(pdftex.def)             Requested size: 459.71637pt x 310.15799pt.
+[3]
+<week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf, id=62, 471.7625pt x 325.215pt>
 File: week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 327.
-(pdftex.def)             Requested size: 459.71637pt x 310.15799pt.
-[5 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf>]
+Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 311.
+(pdftex.def)             Requested size: 469.76015pt x 323.83466pt.
 
-Package xcolor Warning: Incompatible color definition on input line 341.
+Package xcolor Warning: Incompatible color definition on input line 313.
 
+[4 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-7-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 350.
-
-
-Package xcolor Warning: Incompatible color definition on input line 350.
-
-[6 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 362.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 378.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
-
-Package xcolor Warning: Incompatible color definition on input line 378.
-
-<week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf, id=103, 438.63875pt x 298.11375pt>
+<week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf, id=78, 459.7175pt x 310.15875pt>
 File: week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf>
-Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf  used on input line 380.
-(pdftex.def)             Requested size: 438.64435pt x 298.11757pt.
-[7 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf>] (./week_02_assignment_master.aux)
+Package pdftex.def Info: week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf  used on input line 331.
+(pdftex.def)             Requested size: 459.71637pt x 310.15799pt.
+[5 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-8-1.pdf>] [6 <./week_02_assignment_master_files/figure-latex/unnamed-chunk-9-1.pdf>] (./week_02_assignment_master.aux)
 Package rerunfilecheck Info: File `week_02_assignment_master.out' has not changed.
 (rerunfilecheck)             Checksum: F7450CBF42DDD22B8313AC6D803C2597;1367.
  ) 
 Here is how much of TeX's memory you used:
- 12854 strings out of 480313
- 206207 string characters out of 5896367
- 503188 words of memory out of 5000000
- 30453 multiletter control sequences out of 15000+600000
+ 12846 strings out of 480313
+ 205729 string characters out of 5896367
+ 504188 words of memory out of 5000000
+ 30447 multiletter control sequences out of 15000+600000
  433621 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,9n,63p,664b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,63p,664b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/lawrence/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/lawrence/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></Users/lawrence/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on week_02_assignment_master.pdf (7 pages, 249930 bytes).
+Output written on week_02_assignment_master.pdf (6 pages, 241980 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

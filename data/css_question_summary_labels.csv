@@ -1,5 +1,5 @@
 Name,Description,Summary,wtdprop,n_colleges,Survey,Survey_Name,Label,Group
-ACT05,Act: Challenged a professors ideas in class,ACT05.notatall,0.26792595,295,CSS,College Senior Survey,Not at all,Frequency of College Experiences
+ACT05,Act: Challenged a professors ideas in class,ACT05.notatall,0.26792595,295,CSS,College Senior Survey,Not at all,Frequency Of Experiences
 ACT05,Act: Challenged a professors ideas in class,ACT05.occasionally,0.590410268,295,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
 ACT05,Act: Challenged a professors ideas in class,ACT05.frequently,0.141663782,295,CSS,College Senior Survey,Frequently,Frequency Of Experiences
 ACT11,Act: Did extra (unassigned) work for a course,ACT11.notatall,0.278775241,260,CSS,College Senior Survey,Not at all,Frequency Of Experiences
@@ -163,33 +163,33 @@ FACPRV18,Faculty Provide: Negative Feedback about your Academic Work,FACPRV18.fr
 FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.notatall,0.04624548,311,CSS,College Senior Survey,Not at all,Faculty Interactions
 FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.occasionally,0.374232787,311,CSS,College Senior Survey,Occasionally,Faculty Interactions
 FACPRV19,Faculty Provide: Respect (treated you like a colleague/peer),FACPRV19.frequently,0.579521734,311,CSS,College Senior Survey,Frequently,Faculty Interactions
-GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.notatall,0.412655246,246,CSS,College Senior Survey,Not at all,Faculty Interactions
-GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.occasionally,0.528854824,246,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT04,Act in Part Year: Been lonely or homesick,GENACT04.frequently,0.05848993,246,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT04,Act in Past Year: Been lonely or homesick,GENACT04.notatall,0.412655246,246,CSS,College Senior Survey,Not at all,Faculty Interactions
+GENACT04,Act in Past Year: Been lonely or homesick,GENACT04.occasionally,0.528854824,246,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT04,Act in Past Year: Been lonely or homesick,GENACT04.frequently,0.05848993,246,CSS,College Senior Survey,Frequently,Frequency Of Experiences
 GENACT07,Act in Past Year: Discussed politics,GENACT07.notatall,0.250345144,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
 GENACT07,Act in Past Year: Discussed politics,GENACT07.occasionally,0.565312735,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
 GENACT07,Act in Past Year: Discussed politics,GENACT07.frequently,0.184342121,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT15,Act in Part Year: Felt depressed,GENACT15.notatall,0.357564555,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT15,Act in Part Year: Felt depressed,GENACT15.occasionally,0.565477155,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT15,Act in Part Year: Felt depressed,GENACT15.frequently,0.07695829,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT15,Act in Past Year: Felt depressed,GENACT15.notatall,0.357564555,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT15,Act in Past Year: Felt depressed,GENACT15.occasionally,0.565477155,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT15,Act in Past Year: Felt depressed,GENACT15.frequently,0.07695829,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
 GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.notatall,0.444990162,258,CSS,College Senior Survey,Not at all,Frequency Of Experiences
 GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.occasionally,0.497201897,258,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
 GENACT18,Act in Past Year: Felt lonely or homesick,GENACT18.frequently,0.057807941,258,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.notatall,0.076401278,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.occasionally,0.579880003,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT19,Act in Part Year: Felt overwhelmed by all I had to do,GENACT19.frequently,0.34371872,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.notatall,0.80397138,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.occasionally,0.173246974,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT22,Act in Part Year: Participated in organized demonstrations,GENACT22.frequently,0.022781646,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT26,Act in Part Year: Performed volunteer work,GENACT26.notatall,0.270566699,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT26,Act in Part Year: Performed volunteer work,GENACT26.occasionally,0.557110293,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT26,Act in Part Year: Performed volunteer work,GENACT26.frequently,0.172323008,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.notatall,0.430565936,56,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.occasionally,0.499362565,56,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT28,Act in Part Year: Received career/vocational counseling,GENACT28.frequently,0.0700715,56,CSS,College Senior Survey,Frequently,Frequency Of Experiences
-GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.notatall,0.046604359,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
-GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.occasionally,0.485020494,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
-GENACT30,Act in Part Year: Socialized with someone of another racial/ethnic group,GENACT30.frequently,0.468375147,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT19,Act in Past Year: Felt overwhelmed by all I had to do,GENACT19.notatall,0.076401278,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT19,Act in Past Year: Felt overwhelmed by all I had to do,GENACT19.occasionally,0.579880003,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT19,Act in Past Year: Felt overwhelmed by all I had to do,GENACT19.frequently,0.34371872,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT22,Act in Past Year: Participated in organized demonstrations,GENACT22.notatall,0.80397138,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT22,Act in Past Year: Participated in organized demonstrations,GENACT22.occasionally,0.173246974,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT22,Act in Past Year: Participated in organized demonstrations,GENACT22.frequently,0.022781646,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT26,Act in Past Year: Performed volunteer work,GENACT26.notatall,0.270566699,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT26,Act in Past Year: Performed volunteer work,GENACT26.occasionally,0.557110293,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT26,Act in Past Year: Performed volunteer work,GENACT26.frequently,0.172323008,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT28,Act in Past Year: Received career/vocational counseling,GENACT28.notatall,0.430565936,56,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT28,Act in Past Year: Received career/vocational counseling,GENACT28.occasionally,0.499362565,56,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT28,Act in Past Year: Received career/vocational counseling,GENACT28.frequently,0.0700715,56,CSS,College Senior Survey,Frequently,Frequency Of Experiences
+GENACT30,Act in Past Year: Socialized with someone of another racial/ethnic group,GENACT30.notatall,0.046604359,318,CSS,College Senior Survey,Not at all,Frequency Of Experiences
+GENACT30,Act in Past Year: Socialized with someone of another racial/ethnic group,GENACT30.occasionally,0.485020494,318,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
+GENACT30,Act in Past Year: Socialized with someone of another racial/ethnic group,GENACT30.frequently,0.468375147,318,CSS,College Senior Survey,Frequently,Frequency Of Experiences
 GENACT31,Act in Past Year: Sought personal counseling,GENACT31.notatall,0.800023635,258,CSS,College Senior Survey,Not at all,Frequency Of Experiences
 GENACT31,Act in Past Year: Sought personal counseling,GENACT31.occasionally,0.167431045,258,CSS,College Senior Survey,Occasionally,Frequency Of Experiences
 GENACT31,Act in Past Year: Sought personal counseling,GENACT31.frequently,0.032545319,258,CSS,College Senior Survey,Frequently,Frequency Of Experiences

@@ -80,12 +80,14 @@ tfs_cor_summary <- tfs_cor_df |>
                               w = n_responses_nona)[1]) |>
   mutate(across(where(is.numeric),round,3))
 ```
+
+```{r}
 kable_tfs_cor_summary <- tfs_cor_summary |> 
   pivot_wider(names_from = "response_level",
               values_from = "wtd_cor_krank") |> 
   rename("Institution Type" = type) |> 
   kbl(booktabs = TRUE,
-       align = "lccccc",
+       align = "lccc",
       caption = "Still Need A Title") |> 
     add_header_above(c(" " = 1, "Importance" = 3))
 ```
@@ -95,7 +97,7 @@ kable_tfs_cor_summary
 ```
 
 
-The `HPW15` question in the CSS captures responses to the question of how often the respondent socialized with friends in person. Combine the responses into these categories: 2 hours or less, 3 hours - 10 hours, 11 hours - 20 hours, 21 hours or more. Find the correlations between each of the re-categorized responses to this question and `k_rank` for each type of college. Make one figure that includes the five scatterplots. 
+The `HPW15` question in the CSS captures responses to the question of how often the respondent socialized with friends in person. Combine the responses into these categories: 2 hours or less, 3 hours - 10 hours, 11 hours - 20 hours, 21 hours or more. Find the correlations between each of the re-categorized responses to this question and `k_rank` for each type of college. Make one figure that includes the ***FOUR*** scatterplots. 
 
 ```{r, warning = FALSE, error = FALSE, message = FALSE}
 css_cor_df <- css_means |> 
@@ -157,7 +159,7 @@ tfs_plot <- tfs_cor_summary |>
        x = "",
        title = "TFS: Attended College To Learn More About Things That Interest Me") +
   theme_tufte() +
-    theme(legend.position = "none",
+    theme(legend.position = "bottom",
         title = element_text(size = 8))
 
 css_plot <- css_cor_summary |> 
@@ -173,9 +175,12 @@ css_plot <- css_cor_summary |>
   theme_tufte() +
     theme(legend.position = "bottom",
         title = element_text(size = 8))
+```
 
+```{r}
 tfs_plot / css_plot + 
-  plot_annotation(title = "Correlations With Average Income Rank In Early Adulthood")
+  plot_annotation(title = "Correlations With Average Income Rank In Early Adulthood") +
+  plot_layout(guides = "collect") # To use a common legend across patchwork plots
 ```
 
 ```{r}

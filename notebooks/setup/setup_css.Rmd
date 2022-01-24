@@ -295,7 +295,7 @@ css_means <- college_mobility.filtered |>
             across(starts_with("FAC_INTERACTION"),
                    list(scale_mean = ~mean(.x, na.rm = TRUE),
                         propna = ~sum(is.na(.)) / n()),
-                   .names = "{.col}.scale_{.fn}"),
+                   .names = "{.col}.{.fn}"),
             n_responses = n()
   ) |> 
   relocate(campus_id, n_responses) |> 
