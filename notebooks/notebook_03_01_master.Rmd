@@ -220,7 +220,7 @@ css_cor_summary <- css_cor_df |>
 ```
 
 ### Set up plot
-```{r, warning = FALSE, error = FALSE, message = FALSE}
+```{r, warning = FALSE, error = FALSE, message = FALSE, fig.cap = "Figure Title"}
 css_cor_df |> 
   group_by(response_level) |>
   ggplot(aes(x = prop, y = k_rank, 
@@ -242,18 +242,21 @@ Take all the correlations with `k_rank` that you found in Part One. Make one fig
 tfs_plot <- tfs_cor_summary |> 
   ggplot(aes(x = response_level,
              y = wtd_cor_krank,
-             color = type)) +
+             color = type,
+             size = 3)) +
   geom_point(size = 3) + ylim(-1, 1) +
   coord_flip() + geom_hline(yintercept = 0, linetype = "dashed") +
   theme_tufte() +
     theme(legend.position = "bottom",
-        title = element_text(size = 8))
+        title = element_text(size = 8)) +
+  guides(size = "none") + # to get rid of size legend
+  labs(color = "New Title")  # to change title of color legend
 
 css_plot <- css_cor_summary |> 
   ggplot(aes(x = response_level,
              y = wtd_cor_krank,
              color = type)) +
-  geom_point(size = 3) + ylim(-1, 1) +
+  geom_point(size = 8) + ylim(-1, 1) +
   coord_flip() + geom_hline(yintercept = 0, linetype = "dashed") +
   theme_tufte() +
     theme(legend.position = "bottom",
