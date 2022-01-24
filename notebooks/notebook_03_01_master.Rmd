@@ -387,7 +387,7 @@ Now let's create our categories. We'll still use the `FACPRV08` variable.
 
 quantile_df <- css_means |> 
   select(campus_id, n_responses, starts_with("FACPRV08"), k_rank) |> 
-  rename_with(~paste0("propna"), .cols = ends_with("propna")) |>  
+  rename_with(~paste("propna"), .cols = ends_with("propna")) |>  
   mutate(n_responses_nona = n_responses * (1-propna)) |> 
   mutate(qtle = ifelse(k_rank < mobility_variable_quantiles$wtd[1], 1,
                        ifelse(k_rank > mobility_variable_quantiles$wtd[2], 3, 
