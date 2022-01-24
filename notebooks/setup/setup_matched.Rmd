@@ -185,3 +185,15 @@ rate_join <- rate_join |>
 ```
 
 
+```{r}
+matched_variables <- bind_rows(goal_join,
+                               rate_join,
+                               view_join)
+
+matched_variables <- matched_variables |> 
+  relocate(name_tfs)
+
+write.csv(matched_variables, "../../data/matched_variables.csv",
+          row.names = FALSE)
+```
+
