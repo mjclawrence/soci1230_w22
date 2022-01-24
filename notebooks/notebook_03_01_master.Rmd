@@ -284,6 +284,7 @@ tfs_css_correlations <- bind_rows(tfs_cor_summary,
 tfs_css_correlations
 ```
 
+Possible extensions for app?
 
 ## Bonus (if you make good progress on the above parts during Thursday's class and want more practice)
 
@@ -316,13 +317,21 @@ kbl(booktabs = TRUE,
   add_header_above(c(" " = 1, "Senior Year Importance" = 4))
 ```
 
+For a crosswalk of matched variable names in the TFS and CSS, use this file:
+
+https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/matched_variables.csv
+
 
 # Summarizing Associations
 
+Need a way to see the distribution of a survey question (we'll use `FACPRV08` from the CSS) at points of a continuous mobility variable (we'll use `k_rank`). What are our options?
 
-Need a way to see the distribution of a survey question (we'll use `FACPRV08` from the CSS) at points of a continuous mobility variable. What are our options?
+```{r}
+summary(css_means$k_rank)
+```
 
-Let's try finding quantiles with the `quantile()` function.
+
+Let's try finding quantiles of the mobility variable using the `quantile()` function.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 ```{r}

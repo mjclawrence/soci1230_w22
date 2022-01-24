@@ -266,9 +266,13 @@ kbl(booktabs = TRUE,
 
 # Summarizing Associations
 
-Need a way to see the distribution of a survey question (we'll use `FACPRV08` from the CSS) at points of a continuous mobility variable. What are our options?
+Need a way to see the distribution of a survey question (we'll use `FACPRV08` from the CSS) at points of a continuous mobility variable (we'll use `k_rank`). What are our options?
 
-Let's try finding quantiles with the `quantile()` function.
+```{r}
+summary(css_means$k_rank)
+```
+
+Let's try finding quantiles of the mobility variable using the `quantile()` function.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
