@@ -1,20 +1,25 @@
 library(tidyverse)
 
+css_correlations <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_correlations_all.csv")
+
 ## Strongest negative correlations
-css_correlations_all |> 
+css_correlations |> 
   slice_min(k_rank, n = 10) |> 
   select(Description, Summary, k_rank)
 
 ## Strongest positive correlations
-css_correlations_all |> 
+css_correlations |> 
   slice_max(k_rank, n = 10) |> 
   select(Description, Summary, k_rank)
 
 ## Biggest differences in correlations between public and private institutions
-css_correlations_all |> 
+css_correlations |> 
   filter(corr_type != "Pooled") |>
+  mutate(corr_type = ifelse(str_detect(corr_type, "Private"), "Private", 
+  corr_type)) |> 
   select(corr_type, Description, Summary, k_rank) |> 
   pivot_wider(names_from = corr_type,
               values_from = k_rank) |> 
-  mutate(corr_diff = abs(Public - `Private non-profit`)) |> 
+  mutate(corr_diff = abs(Public - Private)) |> 
   slice_max(corr_diff, n = 10)
+
