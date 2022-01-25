@@ -19,14 +19,24 @@ write.csv(css_withno, "data/css_question_summary_withno.csv", row.names = FALSE)
 tfs_withoutno <- read.csv("data/tfs_correlations.csv")
 css_withoutno <- read.csv("data/css_correlations.csv")
 
-tfs_withlabels <- read.csv("data/tfs_question_summary_labels.csv")
-css_withlabels <- read.csv("data/css_question_summary_labels.csv")
+#tfs_withlabels <- read.csv("data/tfs_question_summary_labels.csv")
+#css_withlabels <- read.csv("data/css_question_summary_labels.csv")
 
-tfs <- left_join(tfs_withno, tfs_withlabels)
-css <- left_join(css_withno, css_withlabels)
+
+original_tfs_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels.csv")
+original_tfs_labels <- original_tfs_labels |> 
+  select(Summary, Label, Group)
+
+original_css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
+original_css_labels <- original_css_labels |> 
+  select(Summary, Label, Group)
+
+tfs <- left_join(tfs_withno, original_tfs_labels)
+css <- left_join(css_withno, original_css_labels)
 
 write.csv(tfs, "data/tfs_question_summary_labels.csv", row.names = FALSE)
 write.csv(css, "data/css_question_summary_labels.csv", row.names = FALSE)
+
 
 ###
 

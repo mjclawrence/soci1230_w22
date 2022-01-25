@@ -1,0 +1,20 @@
+library(tidyverse)
+
+## Strongest negative correlations
+css_correlations_all |> 
+  slice_min(k_rank, n = 10) |> 
+  select(Description, Summary, k_rank)
+
+## Strongest positive correlations
+css_correlations_all |> 
+  slice_max(k_rank, n = 10) |> 
+  select(Description, Summary, k_rank)
+
+## Biggest differences in correlations between public and private institutions
+css_correlations_all |> 
+  filter(corr_type != "Pooled") |>
+  select(corr_type, Description, Summary, k_rank) |> 
+  pivot_wider(names_from = corr_type,
+              values_from = k_rank) |> 
+  mutate(corr_diff = abs(Public - `Private non-profit`)) |> 
+  slice_max(corr_diff, n = 10)
