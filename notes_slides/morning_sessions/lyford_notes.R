@@ -546,3 +546,73 @@ library(fivethirtyeight)
 bechdel
 
 
+### 1/25/22
+library(tidyverse)
+#install.packages("rnaturalearth")
+library(rnaturalearth)
+
+world <- ne_countries(returnclass = "sf")
+
+world |> 
+  ggplot() + 
+  geom_sf(mapping = aes(fill = income_grp)) +
+  theme_bw()
+
+### Label Vienna Austria
+
+vienna_data <- tibble(y = 48.2082,
+                      x = 16.3738)
+
+world |> 
+  ggplot() + 
+  geom_sf(mapping = aes(fill = income_grp)) +
+  geom_point(data = vienna_data, 
+             aes(x = latitude, y = longitude,
+                 size = 8, color = "red")) +
+  theme_bw()
+
+
+### Alcohol consumption by state
+
+library(usmap)
+
+plot_usmap(regions = "states")
+
+url <- ("https://worldpopulationreview.com/state-rankings/alcohol-consumption-by-state")
+alcohol_data <- read_csv("/Users/lawrence/Documents/GitHub/soci1230_w22/notes_slides/morning_sessions/data/csvData.csv")
+
+alcohol_data <- alcohol_data |> 
+  rename(state = State,
+         alcohol = alcoholConsumptionGallons)
+
+plot_usmap(data = alcohol_data,
+           values = "alcohol") + 
+  theme(legend.position = "bottom") +
+  scale_fill_viridis_c(option = "cividis") +
+  guides(fill = "none")
+
+library(leaflet) 
+
+vienna_data |> 
+leaflet() |> 
+  addTiles() |> 
+  addMarkers(lat = ~y,
+             lng = ~x)
+
+# Plot taco bell locations
+
+tacobell <- read_csv("/Users/lawrence/Downloads/archive/FastFoodRestaurants.csv")
+
+tacobell_vt <- tacobell |> 
+  filter(province %in% c("CT", "MA", "ME", "NH", "RI", "VT")) |> 
+  filter(province == "VT")
+
+tacobell_vt
+
+write.csv(tacobell_vt, "notes_slides/morning_sessions/data/tacobell_vt.csv", 
+          row.names = TRUE)
+
+tacobell_ny <- tacobell |> filter(city == "New York")
+
+write.csv(tacobell_ny, "notes_slides/morning_sessions/data/tacobell_ny.csv", 
+          row.names = TRUE)

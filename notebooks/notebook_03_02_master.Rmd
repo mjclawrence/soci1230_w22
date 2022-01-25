@@ -1,3 +1,10 @@
+---
+title: "Week Three, Class Two"
+author: "ML"
+date: "1/25/2022"
+output: html_document
+---
+
 # Load the usual packages
 ```{r}
 library(gganimate)
@@ -33,3 +40,38 @@ css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w
 # Today's workshop...
 
 Use what you have learned about visualizations and tables to come up with some ways to summarize the correlations.
+
+
+## For example...
+
+### 10 strongest negative correlations
+
+```{r}
+css_correlations |> 
+  slice_min(k_rank, n = 10) |> 
+  select(Description, Summary, k_rank)
+```
+
+### 10 strongest positive correlations
+```{r}
+css_correlations |> 
+  slice_max(k_rank, n = 10) |> 
+  select(Description, Summary, k_rank)
+```
+
+### Biggest differences in correlations between public and private institutions
+
+```{r}
+css_correlations |> 
+  filter(corr_type != "Pooled") |> # Filter out the pooled (overall) correlations
+  mutate(corr_type = ifelse(str_detect(corr_type, # The "Private, not for profit" label is long. Shorten it.
+                                       "Private"), 
+                            "Private", corr_type)) |> 
+  select(corr_type, Description, Summary, k_rank) |> 
+  pivot_wider(names_from = corr_type, # Pivot wider to put correlations in columns
+              values_from = k_rank) |> 
+  mutate(corr_diff = abs(Public - Private)) |> # New variable to find absolute difference
+  slice_max(corr_diff, n = 10)
+```
+
+
