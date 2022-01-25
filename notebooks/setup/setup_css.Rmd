@@ -460,109 +460,169 @@ css_correlations2 <- left_join(css_correlations2, varnames) |>
   distinct() |> 
   relocate(Description, .before = Summary) |> 
   relocate(Name)
+
+css_correlations2 <- css_correlations2 |> 
+  mutate(corr_type = "Pooled") |> 
+  relocate(corr_type)
 ```
 
 ```{r}
 write.csv(css_correlations2, "../../data/css_correlations_withno.csv", row.names = FALSE)
 ```
 
-# CLEANUP TFS
-
-library(haven)
-#css <- read_spss("/Users/lawrence/Documents/heri_data/css/CSS.TRENDS.94.08.ARCHIVED DATA.SAV")
 
 
-# heri_choice = 14235467
-# restrict years = 4213528
-# restrict css college = 1937983
+## Correlations by type of institution
 
-## Demographics
-heri_demographics <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/1 DEMOGRAPHICS.SAV")
-heri_demographics <- heri_demographics |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
+```{r}
+css_correlations2_type <- css_means_mobility |> 
+  pivot_longer(names_to = "Summary",
+               values_to = "prop",
+               3:1059) |> 
+  mutate(Summary = str_remove(Summary, "_mean")) |> 
+  separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right") |> 
+  mutate(response = ifelse(response == "no_maen", "no_mean", response)) |> 
+  group_by(campus_id, Name) |> 
+  mutate(propna = prop[str_detect(response, "propna")],
+         n_responses_nona = n_responses * (1 - propna)) |> 
+  ungroup() |> 
+  filter(!str_detect(response, "propna")) |> 
+  group_by(Summary, type) |> 
+  summarise(wtdprop = weighted.mean(prop, w = n_responses_nona),
+            n_colleges = sum(!is.na(prop)),
+            mr_kq5_pq1 = wtd.cor(prop, mr_kq5_pq1, 
+                                      weight = n_responses_nona)[1],
+            mr_ktop1_pq1 = wtd.cor(prop, mr_ktop1_pq1, 
+                                        weight = n_responses_nona)[1],
+            k_rank = wtd.cor(prop, k_rank, 
+                                  weight = n_responses_nona)[1],
+            k_q1 = wtd.cor(prop, k_q1, 
+                                weight = n_responses_nona)[1],
+            k_q2 = wtd.cor(prop, k_q2, 
+                                weight = n_responses_nona)[1],
+            k_q3 = wtd.cor(prop, k_q3, 
+                                weight = n_responses_nona)[1],
+            k_q4 = wtd.cor(prop, k_q4, 
+                                weight = n_responses_nona)[1],
+            k_q5 = wtd.cor(prop, k_q5, 
+                                weight = n_responses_nona)[1],
+            k_top10pc = wtd.cor(prop, k_top10pc, 
+                                     weight = n_responses_nona)[1],
+            k_top5pc = wtd.cor(prop, k_top5pc, 
+                                    weight = n_responses_nona)[1],
+            k_top1pc = wtd.cor(prop, k_top1pc, 
+                                    weight = n_responses_nona)[1],
+            k_rank_cond_parq1 = wtd.cor(prop, k_rank_cond_parq1, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq2 = wtd.cor(prop, k_rank_cond_parq2, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq3 = wtd.cor(prop, k_rank_cond_parq3, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq4 = wtd.cor(prop, k_rank_cond_parq4, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq5 = wtd.cor(prop, k_rank_cond_parq5, 
+                                             weight = n_responses_nona)[1],
+            kq1_cond_parq1 = wtd.cor(prop, kq1_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq1 = wtd.cor(prop, kq2_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq1 = wtd.cor(prop, kq3_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq1 = wtd.cor(prop, kq4_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq1 = wtd.cor(prop, kq5_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq2 = wtd.cor(prop, kq1_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq2 = wtd.cor(prop, kq2_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq2 = wtd.cor(prop, kq3_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq2 = wtd.cor(prop, kq4_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq2 = wtd.cor(prop, kq5_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq3 = wtd.cor(prop, kq1_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq3 = wtd.cor(prop, kq2_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq3 = wtd.cor(prop, kq3_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq3 = wtd.cor(prop, kq4_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq3 = wtd.cor(prop, kq5_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq4 = wtd.cor(prop, kq1_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq4 = wtd.cor(prop, kq2_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq4 = wtd.cor(prop, kq3_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq4 = wtd.cor(prop, kq4_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq4 = wtd.cor(prop, kq5_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq5 = wtd.cor(prop, kq1_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq5 = wtd.cor(prop, kq2_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq5 = wtd.cor(prop, kq3_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq5 = wtd.cor(prop, kq4_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq5 = wtd.cor(prop, kq5_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            par_q1 = wtd.cor(prop, par_q1, 
+                                  weight = n_responses_nona)[1],
+            par_q2 = wtd.cor(prop, par_q2, 
+                                  weight = n_responses_nona)[1],
+            par_q3 = wtd.cor(prop, par_q3, 
+                                  weight = n_responses_nona)[1],
+            par_q4 = wtd.cor(prop, par_q4, 
+                                  weight = n_responses_nona)[1],
+            par_q5 = wtd.cor(prop, par_q5, 
+                                  weight = n_responses_nona)[1]) |> 
+  mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
+  mutate(across(everything(), ~na_if(.,"NaN"))) |> 
+  select(-starts_with("RACEGRP"))
+```
 
-gc()
+```{r}
+css_correlations2_type <- css_correlations2_type |> 
+        separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right")
 
-## High school
-heri_hs <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/2 HIGH SCHOOL.SAV")
-heri_hs <- heri_hs |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
+css_correlations2_type <- left_join(css_correlations2_type, varnames) |> 
+  select(-c("n_asked", "usable_m", "response")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses") |> 
+  distinct() |> 
+  relocate(Description, .before = Summary) |> 
+  relocate(Name)
 
-gc()
+css_correlations2_type <- css_correlations2_type |> 
+  mutate(corr_type = type) |> 
+  select(-type) |> 
+  relocate(corr_type)
+```
 
+```{r}
+write.csv(css_correlations2_type, "../../data/css_correlations_withno_type.csv", row.names = FALSE)
+```
 
-## Choice
-heri_choice <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/3 CHOICE.SAV")
-heri_choice <- heri_choice |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
+```{r}
+css_correlations_all <- bind_rows(css_correlations2,
+                                  css_correlations2_type)
 
-gc()
+css_correlations_all <- css_correlations_all |> 
+  relocate(corr_type)
 
-
-## Plans
-heri_plans <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/4 PLANS.SAV")
-heri_plans <- heri_plans |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
-
-gc()
-
-
-## View
-heri_view <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/5 VIEW.SAV")
-heri_view <- heri_view |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
-
-gc()
+write.csv(css_correlations_all, "../../data/css_correlations_all.csv")
+```
 
 
-## Funds
-heri_funds <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/6 FUNDS.SAV")
-heri_funds <- heri_funds |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
-
-gc()
-
-
-## Disagg
-heri_disagg <- read_sav("/Users/lawrence/Documents/heri_data/tfs/master/7 DISAGG.SAV")
-heri_disagg <- heri_disagg |> 
-  filter(YEAR %in% 1995:2005) |> 
-  filter(ACERECODE %in% acerecodes)
-
-gc()
-
-
-
-fwrite(heri_choice, "/users/lawrence/desktop/heri/tfs/choice.csv",
-       row.names = FALSE)
-
-fwrite(heri_demographics, "/users/lawrence/desktop/heri/tfs/demographics.csv",
-       row.names = FALSE)
-
-fwrite(heri_hs, "/users/lawrence/desktop/heri/tfs/hs.csv",
-       row.names = FALSE)
-
-fwrite(heri_plans, "/users/lawrence/desktop/heri/tfs/plans.csv",
-       row.names = FALSE)
-
-fwrite(heri_view, "/users/lawrence/desktop/heri/tfs/view.csv",
-       row.names = FALSE)
-
-fwrite(heri_funds, "/users/lawrence/desktop/heri/tfs/funds.csv",
-       row.names = FALSE)
-
-fwrite(heri_disagg, "/users/lawrence/desktop/heri/tfs/disagg.csv",
-       row.names = FALSE)
-
-
-## Constructs
-FAC_INTERACTION
-ACADEMIC_SELFCONCEPT
-SOCIAL_SELFCONCEPT
-SOCIAL_AGENCY
