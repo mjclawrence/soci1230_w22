@@ -1,5 +1,5 @@
 library(shiny)
-
+library(tidyverse)
 # using the okCupid profiles data set
 # Allow the user to enter a word or phrase
 # and display two things:

@@ -61,7 +61,7 @@ tfs_join <- left_join(tfs_correlations, tfs_labels)
 
 We'll set up an example using the CSS correlations.
 
-As a refresher, start by finding the 10 strongest positive correlations. Use the pooled correlations.
+As a refresher, start by finding the 10 strongest positive correlations with k_rank. Use the pooled correlations.
 
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
@@ -82,7 +82,7 @@ css_join |>
   mutate(corr_sign = "Positive") |> 
   select(Group, Description, Summary, k_rank, Label) |> 
   arrange(-k_rank) |> 
-ggplot(aes(x = reorder(Summary, k_rank),
+  ggplot(aes(x = reorder(Summary, k_rank),
              y = k_rank)) +
   geom_point() + coord_flip()
 ```
@@ -264,7 +264,7 @@ Edit the Google sheet directly. Make changes to the `Group_rev` column (for TFS 
 # Working with Google Sheets in R
 
 ```{r}
-install.packages("googlesheets4") 
+#install.packages("googlesheets4") 
 library(googlesheets4)
 gs4_deauth() # changes permissions so you don't need to authenticate to read public file
 ```
