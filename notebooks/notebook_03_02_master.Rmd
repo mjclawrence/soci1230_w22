@@ -139,7 +139,7 @@ group_levels <- css_correlations_sign |>
 css_corr_summary_plot <- css_correlations_sign |> 
   mutate(Group = factor(Group,
                         levels = group_levels)) |> 
-  ggplot(aes(x = Group, y = abs_k_rank, 
+  ggplot(aes(x = Group, y = k_rank, 
              color = corr_sign,
              text = paste("Group: ", Group, "\n", # text for custom tooltip
                           "Question: ", Description,"\n",

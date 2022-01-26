@@ -616,3 +616,20 @@ tacobell_ny <- tacobell |> filter(city == "New York")
 
 write.csv(tacobell_ny, "notes_slides/morning_sessions/data/tacobell_ny.csv", 
           row.names = TRUE)
+
+
+## 1/26/21
+
+
+
+profiles <- read_csv("/Volumes/GoogleDrive/.shortcut-targets-by-id/13FuGzlObJQd3GyLHDpIC9n0IIVVGrPWk/SOCI 1230A: DataScience Across Disciplines - Winter 2022/Morning Activities/profiles.csv")
+
+myword <- "baseball"
+
+profiles |> 
+  pivot_longer(names_to = "essay",
+               values_to = "text",
+               essay0:essay9) |> 
+  filter(str_detect(text, myword)) |> 
+  group_by(essay) |> 
+  summarise(n = n())
