@@ -41,15 +41,14 @@ css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w
 
 Use what you have learned about visualizations and tables to come up with some ways to summarize the correlations.
 
-
 ## For example...
 
 ### 10 strongest negative correlations
 
 ```{r}
-css_correlations |> 
+tfs_correlations |> 
   slice_min(k_rank, n = 10) |> 
-  select(Description, Summary, k_rank)
+  select(Description, Summary, k_rank) 
 ```
 
 ### 10 strongest positive correlations
@@ -62,7 +61,7 @@ css_correlations |>
 ### Biggest differences in correlations between public and private institutions
 
 ```{r}
-css_correlations |> 
+corr_diff <- tfs_correlations |> 
   filter(corr_type != "Pooled") |> # Filter out the pooled (overall) correlations
   mutate(corr_type = ifelse(str_detect(corr_type, # The "Private, not for profit" label is long. Shorten it.
                                        "Private"), 
@@ -74,4 +73,112 @@ css_correlations |>
   slice_max(corr_diff, n = 10)
 ```
 
+```{r}
+corr_diff |> 
+  pivot_longer(names_to = "corr_type",
+               values_to = "k_rank",
+               Private:Public) |> 
+  ggplot(aes(x = reorder(Summary, corr_diff),
+             y = k_rank,
+             color = corr_type)) +
+  geom_point() + coord_flip()
+```
+
+
+
+# Follow up after class
+
+# Still trying to get a summary plot that works. What if we use plotly?
+
+```{r}
+# css_labels only has pooled wtdprop. Drop the wtdprop before joining so all rows get labels
+css_labels <- css_labels |> 
+  select(-wtdprop)
+
+css_join <- left_join(css_correlations, css_labels)
+```
+
+## Set up strongest positive and negative correlations by question group
+
+```{r}
+css_positive <- css_join |> 
+  filter(corr_type == "Pooled",
+         Group!="Constructed Scales",
+         !str_detect(Summary, "cant")) |> 
+  group_by(Group) |> 
+  slice_max(k_rank, n = 1) |> # This pulls top 2; could drop to 1 
+  select(Group, Description, Summary, k_rank, Label) |> 
+  arrange(-k_rank) |> 
+  mutate(corr_sign = "Positive",
+         abs_k_rank = abs(k_rank))
+
+css_negative <- css_join |> 
+  filter(corr_type == "Pooled",
+         Group!="Constructed Scales",
+         !str_detect(Summary, "cant")) |> 
+  group_by(Group) |> 
+  slice_min(k_rank, n = 1) |> # This pulls top 2; could drop to 1
+  select(Group, Description, Summary, k_rank, Label) |> 
+  arrange(-k_rank) |> 
+  mutate(corr_sign = "Negative",
+         abs_k_rank = abs(k_rank))
+
+css_correlations_sign <- bind_rows(css_positive,
+                                   css_negative)
+
+group_levels <- css_correlations_sign |> 
+  filter(corr_sign=="Positive") |> 
+  arrange(k_rank) |> 
+  pull(Group)
+  
+```
+
+## Make plot combining positive and negative correlations (using absolute value)
+
+```{r}
+css_corr_summary_plot <- css_correlations_sign |> 
+  mutate(Group = factor(Group,
+                        levels = group_levels)) |> 
+  ggplot(aes(x = Group, y = abs_k_rank, 
+             color = corr_sign,
+             text = paste("Group: ", Group, "\n", # text for custom tooltip
+                          "Question: ", Description,"\n",
+                          "Response: ", Label, "\n",
+                          "Correlation: ", round(k_rank,3)))) + 
+  geom_point(size = 3) + coord_flip() +
+  scale_x_discrete(labels = label_wrap(25)) +
+  theme_economist() + 
+  guides(color = "none") +
+  theme(axis.text.y = element_text(size = 10)) +
+  labs(title = "Strongest Positive And Negative Correlations \nIn Each Question Group")
+
+css_corr_summary_plot
+```
+
+## Make it interactive with plotly, using tooltips to include question description, level, and corr
+
+See here for setting up font size: https://plotly-r.com/controlling-tooltips.html#styling
+```{r}
+font <- list(
+  family = "Arial",
+  size = 14,
+  color = "white"
+)
+label <- list(
+  bgcolor = "#232F34",
+  bordercolor = "transparent",
+  font = font
+)
+
+```
+
+
+```{r}
+library(plotly)
+
+ggplotly(css_corr_summary_plot, tooltip = "text") |> 
+  layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
+  style(hoverlabel = label) |> 
+  layout(font = font)
+```
 
