@@ -2,10 +2,11 @@ library(tidyverse)
 library(tidycensus)
 library(leaflet)
 
-#acs_vars <- load_variables(2019, "acs5")
+acs_vars <- load_variables(2019, "acs5")
 
 state_population <- get_acs(
   geography = "state",
+  #state = "VT",
   variables = "B01001_001",
   year = 2019,
   geometry = TRUE
