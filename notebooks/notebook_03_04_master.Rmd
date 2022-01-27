@@ -66,23 +66,10 @@ css_groups <- read_sheet(css_gsheet)
 css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
 
 css_question_summary2 <- left_join(css_labels, css_groups)
-
-write.csv(css_question_summary2, "/Users/lawrence/Desktop/shiny_example/css_question_summary_labels.csv", row.names = FALSE)
 ```
 
-Join new labels to pooled correlations file
-
 ```{r}
-# Drop wtdprop from question summary
-
-css_question_summary2 <- css_question_summary2 |> 
-  select(-wtdprop)
-
-css_correlations2 <- left_join(css_question_summary2,
-                               css_correlations)
-
-write.csv(css_correlations2, "/Users/lawrence/Desktop/shiny_example/css_correlations2.csv",
-          row.names = FALSE)
+addmargins(table(css_question_summary2$Group, css_question_summary2$Group_rev, exclude = NULL))
 ```
 
 
@@ -96,7 +83,41 @@ tfs_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w
 
 tfs_question_summary2 <- left_join(tfs_labels, tfs_groups)
 tfs_question_summary2 <- tfs_question_summary2 |> 
-  select(-namethis) |> 
+  select(-namethis)
+```
+
+```{r}
+addmargins(table(tfs_question_summary2$Group, tfs_question_summary2$Group_rev, exclude = NULL))
+```
+
+## Save files to local paths when we are done
+
+### CSS
+
+```{r}
+write.csv(css_question_summary2, "/Users/lawrence/Desktop/shiny_example/css_question_summary_labels.csv", row.names = FALSE)
+```
+
+Join new labels to pooled correlations file
+
+```{r}
+# Drop wtdprop from question summary before saving correlations. We want to keep that column in the summary labels though.
+
+css_question_summary2 <- css_question_summary2 |> 
+  select(-wtdprop)
+
+css_correlations_join <- left_join(css_question_summary2,
+                               css_correlations)
+
+write.csv(css_correlations_join, "/Users/lawrence/Desktop/shiny_example/css_correlations_join.csv",
+          row.names = FALSE)
+```
+
+
+### TFS
+
+```{r}
+tfs_question_summary2 <- tfs_question_summary2 |>
   filter(!str_detect(Group_rev, "Z")) 
 
 write.csv(tfs_question_summary2, "/Users/lawrence/Desktop/shiny_example/tfs_question_summary_labels.csv", row.names = FALSE)
@@ -105,21 +126,23 @@ write.csv(tfs_question_summary2, "/Users/lawrence/Desktop/shiny_example/tfs_ques
 ## TFS with new groups
 
 ```{r}
-# Drop wtdprop from question summary
+# Drop wtdprop from question summary before saving correlations. We want to keep that column in the summary labels though.
 
 tfs_question_summary2 <- tfs_question_summary2 |> 
   select(-wtdprop)
 
-tfs_correlations2 <- left_join(tfs_question_summary2,
+tfs_correlations_join <- left_join(tfs_question_summary2,
                                tfs_correlations)
 
-write.csv(tfs_correlations2, "/Users/lawrence/Desktop/shiny_example/tfs_correlations2.csv",
+write.csv(tfs_correlations_join, "/Users/lawrence/Desktop/shiny_example/tfs_correlations_join.csv",
           row.names = FALSE)
 ```
 
 
+# Interactive Summary Plot With TFS
+
 ```{r}
-positive <- tfs_correlations2 |> 
+positive <- tfs_correlations_join |> 
   filter(corr_type == "Pooled", 
          !str_detect(Summary, "cant")) |> 
   select(k_rank, Group, Group_rev, 
@@ -128,8 +151,10 @@ positive <- tfs_correlations2 |>
   slice_max(k_rank, n = 1) |>
   mutate(corr_sign = "Positive") |> 
   arrange(-k_rank)
+```
 
-negative <- tfs_correlations2 |> 
+```{r}
+negative <- tfs_correlations_join |> 
   filter(corr_type == "Pooled", 
          !str_detect(Summary, "cant")) |> 
   select(k_rank, Group, Group_rev, 
@@ -138,7 +163,9 @@ negative <- tfs_correlations2 |>
   slice_min(k_rank, n = 1) |> 
   mutate(corr_sign = "Negative") |> 
   arrange(-k_rank)
+```
 
+```{r}
 correlations_sign <- bind_rows(positive, negative)
 ```
 
