@@ -1,0 +1,210 @@
+---
+title: "Week Three, Class Four"
+author: "ML"
+date: "1/27/2022"
+output: pdf_document
+---
+
+# Load the usual packages
+```{r}
+library(tidyverse)
+library(scales)
+library(ggthemes)
+library(weights)
+library(kableExtra)
+library(patchwork)
+library(DT)
+library(plotly)
+```
+
+# Load the data
+
+## These files have the weighted correlations between every survey question (by response level) and every mobility variable (pooled and by institution type, identified in the `corr_type` variable).
+
+```{r}
+tfs_correlations <-
+  read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_correlations_all.csv")
+
+css_correlations <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_correlations_all.csv")
+```
+
+## These files have more detailed labels by question and response level
+
+```{r}
+tfs_labels <-
+  read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels.csv")
+
+css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
+```
+
+# Collapsing the question groups
+
+Google sheets are here:
+
+- For TFS: https://docs.google.com/spreadsheets/d/1xaNCVmMfqfrk0MDWJEulUc0yLz35nOgbYgxuzRVPfuA/edit#gid=0
+
+- For CSS: https://docs.google.com/spreadsheets/d/1y2ywEeHoe6iLyUVzLaH3Wtxl61rDdzq9xN9DpwQd08M/edit?pli=1#gid=0
+
+- For Mobility: https://docs.google.com/spreadsheets/d/18YH5URpcThSj7QiEnVtLaXD1QDgHQBhIPVb-IzMDoWw/edit?usp=sharing
+
+Edit the Google sheet directly. Make changes to the `Group_rev` column (for TFS and CSS) or the `Description`, `Keep`, and `Group` columns (for mobility) then we'll load those changes into R when you are done.
+
+# Working with Google Sheets in R
+
+```{r}
+library(googlesheets4)
+gs4_deauth() # changes permissions so you don't need to authenticate to read public file
+```
+
+## CSS cleanup
+
+Join Google sheet with existing labels
+```{r}
+css_gsheet <- "https://docs.google.com/spreadsheets/d/1y2ywEeHoe6iLyUVzLaH3Wtxl61rDdzq9xN9DpwQd08M/edit?pli=1#gid=0"
+css_groups <- read_sheet(css_gsheet)
+
+css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
+
+css_question_summary2 <- left_join(css_labels, css_groups)
+```
+
+```{r}
+addmargins(table(css_question_summary2$Group, css_question_summary2$Group_rev, exclude = NULL))
+```
+
+
+# TFS
+
+```{r}
+tfs_gsheet <- "https://docs.google.com/spreadsheets/d/1xaNCVmMfqfrk0MDWJEulUc0yLz35nOgbYgxuzRVPfuA/edit#gid=0"
+tfs_groups <- read_sheet(tfs_gsheet)
+
+tfs_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels.csv")
+
+tfs_question_summary2 <- left_join(tfs_labels, tfs_groups)
+tfs_question_summary2 <- tfs_question_summary2 |> 
+  select(-namethis)
+```
+
+```{r}
+addmargins(table(tfs_question_summary2$Group, tfs_question_summary2$Group_rev, exclude = NULL))
+```
+
+## Save files to local paths when we are done
+
+### CSS
+
+```{r}
+write.csv(css_question_summary2, "/Users/lawrence/Desktop/shiny_example/css_question_summary_labels.csv", row.names = FALSE)
+```
+
+Join new labels to pooled correlations file
+
+```{r}
+# Drop wtdprop from question summary before saving correlations. We want to keep that column in the summary labels though.
+
+css_question_summary2 <- css_question_summary2 |> 
+  select(-wtdprop)
+
+css_correlations_join <- left_join(css_question_summary2,
+                               css_correlations)
+
+write.csv(css_correlations_join, "/Users/lawrence/Desktop/shiny_example/css_correlations_join.csv",
+          row.names = FALSE)
+```
+
+
+### TFS
+
+```{r}
+tfs_question_summary2 <- tfs_question_summary2 |>
+  filter(!str_detect(Group_rev, "Z")) 
+
+write.csv(tfs_question_summary2, "/Users/lawrence/Desktop/shiny_example/tfs_question_summary_labels.csv", row.names = FALSE)
+```
+
+## TFS with new groups
+
+```{r}
+# Drop wtdprop from question summary before saving correlations. We want to keep that column in the summary labels though.
+
+tfs_question_summary2 <- tfs_question_summary2 |> 
+  select(-wtdprop)
+
+tfs_correlations_join <- left_join(tfs_question_summary2,
+                               tfs_correlations)
+
+write.csv(tfs_correlations_join, "/Users/lawrence/Desktop/shiny_example/tfs_correlations_join.csv",
+          row.names = FALSE)
+```
+
+
+# Interactive Summary Plot With TFS
+
+```{r}
+positive <- tfs_correlations_join |> 
+  filter(corr_type == "Pooled", 
+         !str_detect(Summary, "cant")) |> 
+  select(k_rank, Group, Group_rev, 
+         Description, Summary, Label) |> 
+  group_by(Group_rev) |>
+  slice_max(k_rank, n = 1) |>
+  mutate(corr_sign = "Positive") |> 
+  arrange(-k_rank)
+```
+
+```{r}
+negative <- tfs_correlations_join |> 
+  filter(corr_type == "Pooled", 
+         !str_detect(Summary, "cant")) |> 
+  select(k_rank, Group, Group_rev, 
+         Description, Summary, Label) |> 
+  group_by(Group_rev) |> 
+  slice_min(k_rank, n = 1) |> 
+  mutate(corr_sign = "Negative") |> 
+  arrange(-k_rank)
+```
+
+```{r}
+correlations_sign <- bind_rows(positive, negative)
+```
+
+```{r}
+group_levels <- correlations_sign |> 
+  filter(corr_sign=="Positive") |> 
+  arrange(k_rank) |> 
+  pull(Group_rev) 
+
+font <- list(
+  family = "Arial",
+  size = 14,
+  color = "white"
+)
+label <- list(
+  #bgcolor = size,
+  bordercolor = "transparent",
+  font = font
+)
+```
+
+```{r}
+correlations_summary_plot <- correlations_sign |> 
+  mutate(Group_rev = factor(Group_rev,
+                            levels = group_levels)) |> 
+  ggplot(aes(x = Group_rev, y = k_rank, 
+             color = corr_sign,
+             text = paste("Group: ", Group_rev, "\n", # text for custom tooltip
+                          "Question: ", Description,"\n",
+                          "Response: ", Label, "\n",
+                          "Correlation: ", round(k_rank,3)))) +
+  geom_point(size = 3) + 
+  coord_flip() + theme(legend.position = "bottom") +
+  scale_color_manual(values = c("red", "forest green"))
+```
+
+```{r}
+ggplotly(correlations_summary_plot, tooltip = "text") |> 
+  layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
+  style(hoverlabel = label) |> 
+  layout(font = font)
+```
