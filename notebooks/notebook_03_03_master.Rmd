@@ -298,3 +298,70 @@ mobility_gsheet <- "https://docs.google.com/spreadsheets/d/18YH5URpcThSj7QiEnVtL
 mobility_groups <- read_sheet(mobility_gsheet)
 ```
 
+
+
+
+#
+
+```{r}
+tfs_correlations2 <- left_join(tfs_correlations, tfs_question_summary2)
+
+positive <- tfs_correlations2 |> 
+      filter(corr_type == "Pooled", 
+             !str_detect(Summary, "cant"),
+             !str_detect(Group_rev, "Z")) |> 
+      select(k_rank, Group, Group_rev, 
+             Description, Summary, Label) |> 
+      group_by(Group_rev) |>
+      slice_max(k_rank, n = 1) |>
+      mutate(corr_sign = "Positive") |> 
+      arrange(-k_rank)
+    
+    negative <- tfs_correlations2 |> 
+      filter(corr_type == "Pooled", 
+             !str_detect(Summary, "cant"),
+             !str_detect(Group_rev, "Z")) |> 
+      select(k_rank, Group, Group_rev, 
+             Description, Summary, Label) |> 
+      group_by(Group_rev) |> 
+      slice_min(k_rank, n = 1) |> 
+      mutate(corr_sign = "Negative") |> 
+      arrange(-k_rank)
+    
+    correlations_sign <- bind_rows(positive, negative)
+    
+    group_levels <- correlations_sign |> 
+      filter(corr_sign=="Positive") |> 
+      arrange(k_rank) |> 
+      pull(Group_rev) 
+    
+    font <- list(
+      family = "Arial",
+      size = 14,
+      color = "white"
+    )
+    label <- list(
+      #bgcolor = size,
+      bordercolor = "transparent",
+      font = font
+    )
+    
+    correlations_summary_plot <- correlations_sign |> 
+      mutate(Group_rev = factor(Group_rev,
+                            levels = group_levels)) |> 
+      ggplot(aes(x = Group_rev, y = k_rank, 
+                 color = corr_sign,
+                 text = paste("Group: ", Group_rev, "\n", # text for custom tooltip
+                              "Question: ", Description,"\n",
+                              "Response: ", Label, "\n",
+                              "Correlation: ", round(k_rank,3)))) +
+      geom_point(size = 3) + 
+      coord_flip() + theme(legend.position = "bottom") +
+      scale_color_manual(values = c("red", "forest green"))
+    
+    ggplotly(correlations_summary_plot, tooltip = "text") |> 
+      layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
+      style(hoverlabel = label) |> 
+      layout(font = font)
+```
+
