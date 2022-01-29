@@ -25,7 +25,7 @@ leaflet() |>
               color = "black",
               opacity = 1,
               fillColor = ~color(estimate),
-              fillOpacity = 1,
+              fillOpacity = .75,
               stroke = 1,
               weight = 1,
               label = ~paste(NAME,": ", estimate)) |> 

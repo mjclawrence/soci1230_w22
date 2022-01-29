@@ -462,10 +462,15 @@ Merge the variable means by college with the mobility variables
 
 ```{r}
 tfs_means_mobility <- left_join(tfs_means, chetty_vars)
+
+tfs_means_mobility <- tfs_means_mobility |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
+           k_rank_cond_parq3*par_q3)
 ```
 
 ```{r}
-write.csv(tfs_means_mobility, "../../data/tfs_means_mobility_withno.csv", row.names = FALSE)
+write.csv(tfs_means_mobility, "../../data/tfs_means_mobility_withno2.csv", row.names = FALSE)
 ```
 
 ## Correlations
@@ -582,7 +587,11 @@ tfs_correlations2 <- tfs_means_mobility |>
             par_q4 = wtd.cor(prop, par_q4, 
                              weight = n_responses_nona)[1],
             par_q5 = wtd.cor(prop, par_q5, 
-                             weight = n_responses_nona)[1]) |> 
+                             weight = n_responses_nona)[1],
+            kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
   mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
   mutate(across(everything(), ~na_if(.,"NaN")))
 
@@ -610,7 +619,7 @@ tfs_correlations2 <- tfs_correlations2 |>
 
 
 ```{r}
-write.csv(tfs_correlations2, "../../data/tfs_correlations_withno.csv", row.names = FALSE)
+write.csv(tfs_correlations2, "../../data/tfs_correlations_withno2.csv", row.names = FALSE)
 ```
 
 
@@ -728,7 +737,11 @@ tfs_correlations2_type <- tfs_means_mobility |>
             par_q4 = wtd.cor(prop, par_q4, 
                                   weight = n_responses_nona)[1],
             par_q5 = wtd.cor(prop, par_q5, 
-                                  weight = n_responses_nona)[1]) |> 
+                                  weight = n_responses_nona)[1],
+            kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
   mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
   mutate(across(everything(), ~na_if(.,"NaN"))) |> 
   select(-starts_with("RACEGRP"))
@@ -756,7 +769,7 @@ tfs_correlations2_type <- tfs_correlations2_type |>
 ```
 
 ```{r}
-write.csv(tfs_correlations2_type, "../../data/tfs_correlations_withno_type.csv", row.names = FALSE)
+write.csv(tfs_correlations2_type, "../../data/tfs_correlations_withno_type2.csv", row.names = FALSE)
 ```
 
 ```{r}
@@ -766,7 +779,7 @@ tfs_correlations_all <- bind_rows(tfs_correlations2,
 tfs_correlations_all <- tfs_correlations_all |> 
   relocate(corr_type)
 
-write.csv(tfs_correlations_all, "../../data/tfs_correlations_all.csv")
+write.csv(tfs_correlations_all, "../../data/tfs_correlations_all2.csv")
 ```
 
 # CLEANUP TFS

@@ -320,10 +320,15 @@ Merge the variable means by college with the mobility variables
 
 ```{r}
 css_means_mobility <- left_join(css_means, chetty_vars)
+
+css_means_mobility <- css_means_mobility |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
+           k_rank_cond_parq3*par_q3)
 ```
 
 ```{r}
-write.csv(css_means_mobility, "../../data/css_means_mobility_withno.csv", row.names = FALSE)
+write.csv(css_means_mobility, "../../data/css_means_mobility_withno2.csv", row.names = FALSE)
 ```
 
 ## Get weighted means and correlations for each question
@@ -439,7 +444,11 @@ css_correlations2 <- css_means_mobility |>
             par_q4 = wtd.cor(prop, par_q4, 
                                   weight = n_responses_nona)[1],
             par_q5 = wtd.cor(prop, par_q5, 
-                                  weight = n_responses_nona)[1]) |> 
+                                  weight = n_responses_nona)[1],
+            kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
   mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
   mutate(across(everything(), ~na_if(.,"NaN"))) |> 
   select(-starts_with("RACEGRP"))
@@ -467,7 +476,7 @@ css_correlations2 <- css_correlations2 |>
 ```
 
 ```{r}
-write.csv(css_correlations2, "../../data/css_correlations_withno.csv", row.names = FALSE)
+write.csv(css_correlations2, "../../data/css_correlations_withno2.csv", row.names = FALSE)
 ```
 
 
@@ -584,7 +593,11 @@ css_correlations2_type <- css_means_mobility |>
             par_q4 = wtd.cor(prop, par_q4, 
                                   weight = n_responses_nona)[1],
             par_q5 = wtd.cor(prop, par_q5, 
-                                  weight = n_responses_nona)[1]) |> 
+                                  weight = n_responses_nona)[1],
+                        kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
   mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
   mutate(across(everything(), ~na_if(.,"NaN"))) |> 
   select(-starts_with("RACEGRP"))
@@ -612,7 +625,7 @@ css_correlations2_type <- css_correlations2_type |>
 ```
 
 ```{r}
-write.csv(css_correlations2_type, "../../data/css_correlations_withno_type.csv", row.names = FALSE)
+write.csv(css_correlations2_type, "../../data/css_correlations_withno_type2.csv", row.names = FALSE)
 ```
 
 ```{r}
@@ -622,7 +635,7 @@ css_correlations_all <- bind_rows(css_correlations2,
 css_correlations_all <- css_correlations_all |> 
   relocate(corr_type)
 
-write.csv(css_correlations_all, "../../data/css_correlations_all.csv")
+write.csv(css_correlations_all, "../../data/css_correlations_all2.csv")
 ```
 
 
