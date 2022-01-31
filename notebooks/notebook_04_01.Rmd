@@ -82,6 +82,10 @@ tfs_df <- tfs_df |>
   filter(!str_detect(Name, "RACE"))
 
 tfs_df <- bind_rows(tfs_df, race_variables)
+
+tfs_df <- tfs_df |> 
+  mutate(Description = str_trim(Description, side = c("left")))
+
 ```
 
 # CSS Descriptions
@@ -97,6 +101,119 @@ css_df <- css_df |>
   filter(!str_detect(Group_rev, "Family|Scales"))
 ```
 
+## Group Suggestions:
+
+```{r}
+css_summary2 <- css_df |> 
+  mutate(Description = ifelse(Name == "ACT05", # [If this is true do str_replace]
+                              str_replace(Description, # where to find the string
+                                   "professors", # what string to find
+                                   "professor's"), # how to replace match
+                              Description))
+```
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  mutate(find_colon = str_count(Description, ":"))
+```
+
+The default is to put new variables after the last column. Use `relocate()` to move columns. The default location for `relocate()` is the first column, but you can adjust that with the `.before =` or `.after =` options.
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  relocate(find_colon, .after = Description)
+```
+
+Check a table of the `find_colon` variable to see how bad the problem is.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+table(css_summary2$find_colon)
+```
+
+
+So we have 36 rows that require additional care. What are our options?
+
+
+One possibility is to break the `Description` values into two pieces: a string before a colon and a string after (if there is a colon). Then we can use those two pieces to repair the existing values. We can do that with the `separate()` function:
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  separate(Description, # variable to separate
+           c("before_colon", "after_colon"), # the two new columns to create
+           sep = "[:]", # where to separate
+           remove = FALSE) # don't remove the variable you are separating
+```
+
+Our operations above left some whitespace at the start of the strings in the `after_colon` variable. Trim it.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  mutate(after_colon = str_trim(after_colon, side = c("left")))
+```
+
+Now try to change the existing Description values that have a colon to only take the text after the colon.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  mutate(Description = ifelse(find_colon==1, # if this is true...
+                              after_colon, # do this...
+                              Description)) # if not true do this
+```
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  mutate(Description = ifelse(Name == "ACT05", # [If this is true do str_replace]
+                              str_replace(Description, # where to find the string
+                                   "professors", # what string to find
+                                   "professor's"), # how to replace match
+                              Description)) # [If not true do this]
+```
+
+
+```{r}
+css_summary2 <- css_summary2 |>
+  mutate(before_colon = str_replace_all(before_colon, "Act in College", "Have you")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Act in Past Year", "In the past year, have you")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Act", "Have you")) |>
+  mutate(before_colon = str_replace_all(before_colon, "CSV Performed", "Have you done community/volunteer service")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Satisfaction", "How satisfied are you with the")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Faculty Provide", "Has the faculty provided")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Change", "How have you changed your")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Self Rating", "Rate your")) |>
+  mutate(before_colon = str_replace_all(before_colon, "View", "Do you agree/disagree that")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Success", "Are you")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Hours per Week", "How many hours per week did you spend")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Goal", "How important to you is")) |>
+  mutate(before_colon = str_replace_all(before_colon, "Plans", "Do you plan on"))
+
+```
+
+```{r}
+css_summary2 <- css_summary2 |>
+  mutate(after_colon = str_to_lower(after_colon))
+```
+
+```{r}
+css_summary2 <- css_summary2 |>
+  mutate(Qmark = "?") |>
+  mutate(Description2 = ifelse(find_colon == 0, 
+                               before_colon, 
+                               paste(before_colon, after_colon, sep = " "))) |>
+  mutate(Description2 = ifelse(find_colon == 0, 
+                               Description2, 
+                               paste(Description2, Qmark, sep = ""))) 
+```
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  mutate(Name = str_remove_all(Name, "_9406")) |>
+  mutate(Summary = str_remove_all(Summary, "_9406"))
+```
 
 # Write all these changes to csv files in your app folder
 
