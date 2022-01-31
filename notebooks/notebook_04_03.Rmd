@@ -1,10 +1,3 @@
----
-title: "Week Four, Class One"
-author: "ML"
-date: "1/31/2022"
-output: pdf_document
----
-
 # Load the usual packages
 ```{r}
 library(tidyverse)
@@ -19,93 +12,9 @@ library(plotly)
 
 # Load the data
 
-# CLEAN UP BEFORE CLASS!
-
-## These files add the weighted correlations with the two constructed mobility variables (k_rank_cond_parq123 and kq345_cond_parq1).
+## Before final cleanup, here are the files our app uses:
 
 ```{r}
-tfs_correlations <-
-  read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_correlations_all2.csv")
-
-css_correlations <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_correlations_all2.csv")
-```
-
-## These files have more detailed labels by question and response level
-
-```{r}
-tfs_labels <-
-  read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels.csv")
-
-css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
-```
-
-
-# Collapsing the question groups
-
-Google sheets are here:
-
-- For TFS: https://docs.google.com/spreadsheets/d/1xaNCVmMfqfrk0MDWJEulUc0yLz35nOgbYgxuzRVPfuA/edit#gid=0
-
-- For CSS: https://docs.google.com/spreadsheets/d/1y2ywEeHoe6iLyUVzLaH3Wtxl61rDdzq9xN9DpwQd08M/edit?pli=1#gid=0
-
-- For Mobility: https://docs.google.com/spreadsheets/d/18YH5URpcThSj7QiEnVtLaXD1QDgHQBhIPVb-IzMDoWw/edit?usp=sharing
-
-Edit the Google sheet directly. Make changes to the `Group_rev` column (for TFS and CSS) or the `Description`, `Keep`, and `Group` columns (for mobility) then we'll load those changes into R when you are done.
-
-# Working with Google Sheets in R
-
-```{r}
-library(googlesheets4)
-gs4_deauth() # changes permissions so you don't need to authenticate to read public file
-```
-
-## CSS cleanup
-
-Join Google sheet with existing labels
-```{r}
-css_gsheet <- "https://docs.google.com/spreadsheets/d/1y2ywEeHoe6iLyUVzLaH3Wtxl61rDdzq9xN9DpwQd08M/edit?pli=1#gid=0"
-css_groups <- read_sheet(css_gsheet)
-
-css_question_summary2 <- left_join(css_labels, css_groups)
-```
-
-
-# TFS
-
-```{r}
-tfs_gsheet <- "https://docs.google.com/spreadsheets/d/1xaNCVmMfqfrk0MDWJEulUc0yLz35nOgbYgxuzRVPfuA/edit#gid=0"
-tfs_groups <- read_sheet(tfs_gsheet)
-
-tfs_question_summary2 <- left_join(tfs_labels, tfs_groups)
-tfs_question_summary2 <- tfs_question_summary2 |> 
-  select(-namethis)
-```
-
-```{r}
-# These include the constructed mobility variables:
-# k_rank_cond_parq123 and kq345_cond_parq1
-
-tfs_mobility <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_means_mobility_withno2.csv")
-
-write.csv(tfs_mobility, "../data/tfs_means_mobility_withno_shiny.csv",
-          row.names = FALSE)
-
-css_mobility <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_means_mobility_withno2.csv")
-
-write.csv(css_mobility, "../data/css_means_mobility_withno_shiny.csv",
-          row.names = FALSE)
-
-# No changes here
-chetty_fouryr <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/chetty_fouryr.csv")
-
-write.csv(css_mobility, "../data/chetty_fouryr_shiny.csv",
-          row.names = FALSE)
-
-```
-# Before final cleanup, here are the files our app uses:
-
-```{r}
-
 # These include revised groups
 tfs_df <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels_shiny.csv")
 
@@ -177,9 +86,9 @@ tfs_df <- bind_rows(tfs_df, race_variables)
 
 # CSS Descriptions
 
-## Dilay, Evan, and Jaime suggested these changes:
+## Dilay, Evan, and Jaime: Any changes?
 
-## Anything else to fix?
+## What else to fix?
 
 ### Let's remove the "Family Background And Demographics" and "Scales" group:
 
