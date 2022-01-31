@@ -1,0 +1,207 @@
+---
+title: "Week One, Class Three"
+author: "ML"
+date: "1/11/2022"
+output: html_document
+---
+
+
+
+## Setup
+
+```{r load the mobility data}
+mobility <-  read.csv("https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv", stringsAsFactors = TRUE)
+```
+
+We can start by only keeping the observations from Four-year colleges and Two-year colleges. And let's put all of our work for this figure in a new data frame called `rank_tier_level` based on the existing mobility data frame. 
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+```{r}
+rank_tier_level <- mobility |> 
+  filter(iclevel <3 ) # Use the number values since that is how our dataset has them
+```
+
+This also works...
+```{r}
+rank_tier_level <- mobility |> 
+  filter(iclevel != 3) # This is still filter, but != means does not equal
+```
+
+That dropped 49 observations but there are only 46 colleges in iclevel 3. That's because 3 are NA for iclevel. It's okay to drop them too.
+
+We know we will need to combine some info from the tier_name variable and the iclevel variable. Let's create a new variable in the `rank_tier_level` dataframe called `tier_level` to do so. Recall that the `mutate()` function creates new variables. In this example we are combining it with the `ifelse()` function.
+
+```{r}
+rank_tier_level <- rank_tier_level |> 
+  mutate(tier_level = ifelse(tier_name %in% c("Ivy Plus", # if this is true...
+                                              "Other elite schools (public and private)"),  
+                             3, # ... tier_level will take the value of this
+                             iclevel)) # ... if the condition is not true, tier_level takes this
+```
+
+Make a table with the distribution of this new variable.
+
+### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+table(rank_tier_level$iclevel, rank_tier_level$tier_level)
+```
+
+We can also use the mutate function to assert that this new variable will be a factor variable and to assign labels.
+
+```{r}
+rank_tier_level <- rank_tier_level |> 
+  mutate(tier_level = factor(tier_level, # Use tier_level as a factor variable
+                             levels = c(3, 1, 2), # reorder so elite is first
+                             labels = c("Elite Colleges", # in the level order
+                                        "Other Four-Year Colleges",
+                                        "Two-Year Colleges")))
+```
+
+What is the weighted average `k_rank` in each of these categories?
+
+### REPLACE  THIS LINE WITH YOUR CODE CHUNK ###
+
+```{r}
+rank_tier_level |> 
+  group_by(tier_level) |> # the variable with your groups
+  summarise(wtd_mean_rank =  # what you want for each group
+              weighted.mean(k_rank, w = count)) # what you want for each group
+```
+
+That gives us the weighted average across *all* parent quintiles. But we want the weighted
+average for *each* parent quintile. Are there any other variables that might help us here? And let's save this summarized output in a new data frame called `mean_rank_tier_level` so we can use it later.
+
+```{r}
+mean_rank_tier_level <- rank_tier_level |> 
+  group_by(tier_level) |> 
+  summarise(pq1 = weighted.mean(k_rank_cond_parq1, 
+                                              w = count*par_q1),
+            pq2 = weighted.mean(k_rank_cond_parq2, 
+                                              w = count*par_q2),
+            pq3 = weighted.mean(k_rank_cond_parq3, 
+                                              w = count*par_q3),
+            pq4 = weighted.mean(k_rank_cond_parq4, 
+                                              w = count*par_q4),
+            pq5 = weighted.mean(k_rank_cond_parq5, 
+                                              w = count*par_q5))
+```
+
+We have *wide* data (one row for each tier_level) but need *long* data (one row for each tier_level and pq combination). The `pivot_longer` function takes existing variables and collapses them into two new columns: one with the names and one with the values. Then we can use these new columns as the x and y variables in a plot.
+
+```{r pivot_longer example}
+mean_rank_tier_level <- mean_rank_tier_level |> 
+  pivot_longer(names_to = "pq", # takes existing variable names and puts them in a new column
+               values_to = "k_rank", # takes existing values and puts them in a new column
+               pq1:pq5) |> # which existing columns to make long
+  mutate(k_rank = round(k_rank, 2), # round to two decimal places
+         tier_level_replicate = tier_level) # will make labeling easier later
+```
+
+```{r}
+mean_rank_tier_level <- mean_rank_tier_level |> 
+  mutate(pq = factor(pq,
+                     labels = c("Lowest Quintile",
+                                "Second Lowest Quintile",
+                                "Middle Quintile",
+                                "Second Highest Quintile",
+                                "Highest Quintile")))
+```
+
+Now we have variables we can feed into our aesthetic map.
+
+```{r plot example}
+rank_tier_plot <- ggplot(mean_rank_tier_level, aes(x = pq, y = k_rank, 
+                             color = tier_level, 
+                             group = tier_level_replicate)) + # which points to connect
+  geom_point() + 
+  geom_line() + # We haven't seen line plots yet
+  labs(x = "Parent Quintile", y = "Child Rank",
+          title = "Mean Child Rank at Age 34 vs Parent Income Quintile",
+       color = "") + # To leave the label of the legend blank
+  ylim(c(.3,.8)) # The limits of the y-axis that the figure we are replicating uses 
+
+rank_tier_plot
+```
+
+There are many more options for themes in the `ggthemes` package.
+
+```{r}
+#install.packages("ggthemes") # hashtag this line after installing
+library(ggthemes)
+```
+
+I like the simple Tufte theme...
+
+```{r}
+rank_tier_plot <- rank_tier_plot + theme_tufte()
+rank_tier_plot
+```
+
+We don't have annotations yet. But we'll get them later. We also don't have the "National" line. Let's get that by making a new data frame with the overall weighted mean rank by pq. We also want to assign this new variable to the "National" tier_level and make the wide data long again.
+
+```{r}
+natl_mean_rank_tier_level <- mobility |> # use mobility this time to include all observations
+  summarise(pq1 = weighted.mean(k_rank_cond_parq1, 
+                                              w = count*par_q1),
+            pq2 = weighted.mean(k_rank_cond_parq2, 
+                                              w = count*par_q2),
+            pq3 = weighted.mean(k_rank_cond_parq3, 
+                                              w = count*par_q3),
+            pq4 = weighted.mean(k_rank_cond_parq4, 
+                                              w = count*par_q4),
+            pq5 = weighted.mean(k_rank_cond_parq5, 
+                                              w = count*par_q5)) |> 
+  pivot_longer(names_to = "pq", # takes existing variable names and puts them in a new column
+               values_to = "k_rank", # takes existing values and puts them in a new column
+               pq1:pq5) |> # which existing columns to make long
+  mutate(k_rank = round(k_rank, 2), # round to two decimal places
+         tier_level = "National",
+         tier_level_replicate = tier_level) |>  # will make labeling easier later
+    mutate(pq = factor(pq,
+                     labels = c("Lowest Quintile",
+                                "Second Lowest Quintile",
+                                "Middle Quintile",
+                                "Second Highest Quintile",
+                                "Highest Quintile")))
+```
+
+Let's add the points for these averages to our existing plot.
+
+```{r}
+rank_tier_plot2 <- rank_tier_plot + #everything from our original plot
+  geom_point(data = natl_mean_rank_tier_level, # need to include data and aes for new df
+             aes(x = pq, y = k_rank, 
+                 color = tier_level)) +
+  geom_line(data = natl_mean_rank_tier_level, # need to include data and aes for new df
+            aes(x = pq, y = k_rank, 
+                color = tier_level),
+            linetype = "longdash") # so we can see the natl line differently
+
+rank_tier_plot2
+```
+
+Lots of annotations would make this messy. Let's finish by making this plot interactive instead. We'll use the `plotly` package for that. Click "No" if R asks you to update loaded packages.
+
+```{r install and load plotly}
+#install.packages("plotly") # hashtag this line after installation
+library(plotly)
+```
+
+All you have to do to make the plot interactive is wrap it in the `ggplotly()` function and add the tooltip() option (if you want to customize the tooltip).
+
+```{r plotly example}
+ggplotly(
+  rank_tier_plot2,
+  tooltip = c("pq","k_rank","tier_level")
+)
+```
+
+
+# EDITS FOR SHINY APP
+
+```{r}
+rank_tier_plot2 + theme(legend.position = "bottom")
+```
+
+

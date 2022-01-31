@@ -19,10 +19,9 @@ library(plotly)
 
 # Load the data
 
+# CLEAN UP BEFORE CLASS!
+
 ## These files add the weighted correlations with the two constructed mobility variables (k_rank_cond_parq123 and kq345_cond_parq1).
-
-
-# CLEAN UP BEFORE CLASS
 
 ```{r}
 tfs_correlations <-
@@ -103,7 +102,7 @@ write.csv(css_mobility, "../data/chetty_fouryr_shiny.csv",
           row.names = FALSE)
 
 ```
-Before final cleanup, here are the files our app uses:
+# Before final cleanup, here are the files our app uses:
 
 ```{r}
 
@@ -128,3 +127,86 @@ css_correlations_join <- read_csv("https://raw.githubusercontent.com/mjclawrence
 chetty_fouryr <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/chetty_fouryr_shiny.csv")
 ```
 
+Let's make some final changes before writing these files to the app folder
+
+# TFS Descriptions
+
+## Hanwen, Andy, and Sophia suggested these changes:
+
+```{r}
+tfs_df <- tfs_df |>
+  mutate(Description = str_remove(Description, "Choose to Attend:"))|>
+  mutate(Description = str_remove(Description, "Choice:"))|>
+  mutate(Description = str_remove(Description, "Goal:"))|>
+  mutate(Description = str_remove(Description, "Future Act:"))|>
+  mutate(Description = str_remove(Description, "Reason Attend:"))|>
+  mutate(Description = str_remove(Description, "Self Rating:"))|>
+  mutate(Description = str_remove(Description, "View:")) |> 
+  mutate(Description = str_remove(Description, "[:print:]+:\\s"))
+```
+
+## Anything else to fix?
+
+### Removing the colons above worked well. Let's also remove them in the "Your sex:" description
+
+```{r}
+tfs_df <- tfs_df |> 
+  mutate(Description = ifelse(str_detect(Description, "Your sex:"),
+                              "Sex Composition", Description))
+```
+
+### Let's add the RACE_ETH variable we created in notebook_02_02.
+
+```{r}
+race_variables <- tfs_df |> 
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), # to ignore case
+         str_detect(Summary, "yes"))
+
+race_variables <- race_variables |> 
+  filter(!str_detect(Name, "GROUP"))
+
+race_variables <- race_variables |> 
+  mutate(Label = Description) |> 
+  mutate(Name = "RACE_ETHNICITY")
+
+tfs_df <- tfs_df |> 
+  filter(!str_detect(Name, "RACE"))
+
+tfs_df <- bind_rows(tfs_df, race_variables)
+```
+
+# CSS Descriptions
+
+## Dilay, Evan, and Jaime suggested these changes:
+
+## Anything else to fix?
+
+### Let's remove the "Family Background And Demographics" and "Scales" group:
+
+```{r}
+css_df <- css_df |> 
+  filter(!str_detect(Group_rev, "Family|Scales"))
+```
+
+
+# Write all these changes to csv files in your app folder
+
+```{r}
+write.csv(tfs_df, "tfs_question_summary_labels.csv", row.names = FALSE)
+write.csv(css_df, "css_question_summary_labels.csv", row.names = FALSE)
+
+write.csv(tfs_mobility, "tfs_means_mobility_withno.csv", row.names = FALSE)
+
+write.csv(css_mobility, "css_means_mobility_withno.csv", row.names = FALSE)
+
+write.csv(tfs_correlations_join, "tfs_correlations_join.csv", row.names = FALSE) 
+write.csv(css_correlations_join, "css_correlations_join.csv", row.names = FALSE) 
+
+write.csv(chetty_fouryr, "chetty_fouryr.csv", row.names = FALSE)
+```
+
+# The App!
+
+The most up to date version is here:
+
+https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/final_project/app.R
