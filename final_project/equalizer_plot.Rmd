@@ -5,6 +5,9 @@ date: "1/11/2022"
 output: html_document
 ---
 
+```{r}
+library(tidyverse)
+```
 
 
 ## Setup
@@ -116,8 +119,8 @@ rank_tier_plot <- ggplot(mean_rank_tier_level, aes(x = pq, y = k_rank,
                              group = tier_level_replicate)) + # which points to connect
   geom_point() + 
   geom_line() + # We haven't seen line plots yet
-  labs(x = "Parent Quintile", y = "Child Rank",
-          title = "Mean Child Rank at Age 34 vs Parent Income Quintile",
+  labs(x = "Parent Income", y = "Young Adult Income Rank",
+          title = "Average Rank In Young Adult Income Distribution \nBy Parent Income Quintile And College Type",
        color = "") + # To leave the label of the legend blank
   ylim(c(.3,.8)) # The limits of the y-axis that the figure we are replicating uses 
 
@@ -181,27 +184,17 @@ rank_tier_plot2 <- rank_tier_plot + #everything from our original plot
 rank_tier_plot2
 ```
 
-Lots of annotations would make this messy. Let's finish by making this plot interactive instead. We'll use the `plotly` package for that. Click "No" if R asks you to update loaded packages.
-
-```{r install and load plotly}
-#install.packages("plotly") # hashtag this line after installation
-library(plotly)
-```
-
-All you have to do to make the plot interactive is wrap it in the `ggplotly()` function and add the tooltip() option (if you want to customize the tooltip).
-
-```{r plotly example}
-ggplotly(
-  rank_tier_plot2,
-  tooltip = c("pq","k_rank","tier_level")
-)
-```
-
-
 # EDITS FOR SHINY APP
 
 ```{r}
-rank_tier_plot2 + theme(legend.position = "bottom")
+rank_tier_plot2 + theme(legend.position = "bottom",
+                        axis.text = element_text(size = 14),
+                        axis.title = element_text(size = 16),
+                        legend.text = element_text(size = 13),
+                        plot.title = element_text(size = 16)) +
+  scale_color_discrete(limits = c("Elite Colleges", "Other Four-Year Colleges", 
+                                  "Two-Year Colleges", "National")) +
+  scale_x_discrete(labels = label_wrap(10))
 ```
 
 

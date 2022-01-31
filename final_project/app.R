@@ -8,9 +8,9 @@ library(scales)
 library(weights)
 library(RColorBrewer)
 library(plotly)
-library(shinythemes) # NEW
-library(DT) # NEW
-library(shinyfullscreen) # NEW
+library(shinythemes)
+library(DT) 
+library(shinyfullscreen) 
 
 # Load Data 
 ## For now the linked files are ok. 
@@ -19,8 +19,8 @@ library(shinyfullscreen) # NEW
 tfs_df <- read_csv("tfs_question_summary_labels.csv") 
 css_df <- read_csv("css_question_summary_labels.csv")
 
-tfs_mobility <- read_csv("tfs_means_mobility_withno.csv") # NEW
-css_mobility <- read_csv("css_means_mobility_withno.csv") # NEW
+tfs_mobility <- read_csv("tfs_means_mobility_withno.csv")
+css_mobility <- read_csv("css_means_mobility_withno.csv")
 
 tfs_correlations_labeled <- read_csv("tfs_correlations_join.csv") 
 css_correlations_labeled <- read_csv("css_correlations_join.csv") 
@@ -37,7 +37,7 @@ chetty_fouryr <- chetty_fouryr |>
 
 ## We need this to build the datatable of all questions
 
-all_questions <- bind_rows(tfs_df, css_df) |> # Move above UI
+all_questions <- bind_rows(tfs_df, css_df) |>
   select(Survey_Name, Group_rev, Description) |> 
   rename(Survey = Survey_Name,
          Group = Group_rev) |> 
@@ -59,7 +59,7 @@ if (interactive()) { # need this for shinyfullscreen
         }')
                   )), # End for sidebar background color
     titlePanel("SOCI 1230 App", # title for browser tab
-               title = "College Experiences and Income Mobility"), # Title in window
+               title = "How Does College Matter For Income Mobility?"), # Title in window
     sidebarPanel(# To set up the sidebar
       id="sidebar", # To id sidebar color code above
       conditionalPanel(  ### NEW
@@ -128,14 +128,21 @@ if (interactive()) { # need this for shinyfullscreen
     )))), # Close the sidebarPanel before moving on to the main panel...
     mainPanel( # Set up for mainPanel
       tabsetPanel( # We'll use tabs here to collect output
+        tags$head(tags$style(
+          type="text/css",
+          "#equalizer img {
+            width: 60%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }")),
         tabPanel("Introduction", value = 1, # Tab title, ### NEW VALUE INPUT
-                 htmlOutput("intro_box"),
+                 htmlOutput("text"),
                  imageOutput("equalizer"),
-                 htmlOutput("text")), # What output from the server side should populate
+                 htmlOutput("intro_box")),
         tabPanel("Correlations Summary Plot",value = 2,  ### New
                  fullscreen_this(plotlyOutput("corr_summary_plot")),
-                 textOutput("text1"),
-                 dataTableOutput("question_df")), ### NEW
+                 textOutput("text1")),
         tabPanel("Summary By Mobility", value = 3, ### NEW
                  fullscreen_this(plotOutput("quantiles"))),
         tabPanel("Mobility Correlations", value = 4, ### NEW
@@ -143,6 +150,8 @@ if (interactive()) { # need this for shinyfullscreen
                                     "Choose responses to your selected question (but leave at least one unchecked):",
                                     choices = NULL),
                  fullscreen_this(plotOutput("corr_plot"))),
+        tabPanel("Search All Questions", value = 5,
+                 dataTableOutput("question_df")),
         #tabPanel("Question Summary", value = 5, ### NEW
          #        plotOutput("summary_plot")), # Click for full screen of plotoutput
         id = "tabselected") # Close the tabsetPanel, ### NEW add id for conditionalpanels
@@ -158,19 +167,17 @@ if (interactive()) { # need this for shinyfullscreen
       showModal(modalDialog(
         title = "Welcome!",
         footer = actionButton("continue", "Continue"),
-        h2('To What Extent Does College Matter For Income Mobility?'),
-        p("A college education was once known as the great equalizer. Obtaining a degree used to guarantee social and economic mobility. 
-        But today, it is not so simple. In the face of a massive student debt crisis and an increasingly competitive job market, 
-        young Americans have begun questioning whether or not a college education truly lives up to its promise as the great equalizer."),
-        p("The Higher Education Research Institute at UCLA sought to answer this question by administering two surveys:
-        The Freshman Survey (for high school seniors about to enter college) and the College Senior Survey 
-        (for those about to graduate).  These surveys asked various questions regarding academic life, goals, 
-        lifestyle choices, as well as social and political views. We combine these survey results with data collected by the Opportunity Insights Lab to determine
-        the relationship between college student experiences and socioecomic mobility. Through these responses, we can observe 
-        how factors within and outside of academic achievement can influence success later in life. Additionally, the results 
-        provide insight into the socioeconomic impact of the college experience."),
-        p("Which elements do you think are most influential in shaping student outcomes? The answers might surprise you!"),
-        p(em('This app was created at Middlebury College for SOCI 1230 - Data Science Across The Disciplines - in Winter 2022.'))
+        h2("Obtaining a college degree used to guarantee social and economic mobility. But today, it is not so simple. In the face of a massive student debt crisis and an increasingly competitive job market, 
+        young Americans have begun questioning whether higher education lives up to its promise as the great equalizer."),
+        p("This app explores how college experiences matter for income mobility by combining `big data` with survey research.
+          We link data on outcomes after college (collected by Opportunity Insights) to surveys of students at the beginning and end of college.
+          These surveys, administered by the Higher Education Research Institute at UCLA, asked various questions regarding academic life, goals, 
+        lifestyle choices, as well as social and political views. By combining these survey results with data on outcomes after college, we can examine 
+        how college experiences influence success later in life.",
+        style = "font-size:16px"),
+        p(em("Which college experiences do you expect will be most influential in shaping student outcomes? The answers might surprise you!",
+          style = "font-size:16px")),
+        p('This app was created at Middlebury College for SOCI 1230 - Data Science Across The Disciplines - in Winter 2022.')
       ))
     })
     
@@ -198,13 +205,13 @@ if (interactive()) { # need this for shinyfullscreen
         filter(rowid == sample(1:nrow(quick_facts), 1))
       
       paste(
-        "<center><br> Here's a fast fact from student ",
+        "<center><br><big>Here are some of our favorite findings from this project.</big><br><br>",
         as.character(quick_facts$names_column), 
-        ": <br><br>", 
+        ": <br>", 
         "<b>", 
         as.character(quick_facts$facts_column), 
         "</b> <br><br>",
-        "<em>For more fast facts reload this page!</em><br><br><center/>"
+        "<em>For more fast facts reload this page.<br>When you are ready to make your own discoveries, click the next tab.</em><br><br><center/>"
       )
     })
     
@@ -217,9 +224,9 @@ if (interactive()) { # need this for shinyfullscreen
       )
     }, delete = FALSE)
     
-    output$text <- renderText(paste("<center> This figure represents the relationship between a parent's income and their child's
-            income based on the type of undergraduate institution the child chooses to attend. This app explores
-            how different aspects of college influence future success. <center/><br>"
+    output$text <- renderText(paste("<center><big><br><br>Calling higher education `the great equalizer` means that students who attend similar colleges have similar life outcomes regardless of their family origins. 
+                                    This figure, adapated from Opportunity Insights, confirms that average economic outcomes for young adults who attended the same types of college are very close even if they have different economic backgrounds. But why? 
+                                     This app explores how different aspects of college influence future success. </big><center/><br>"
     ))
     
     output$question_df <- renderDataTable({
@@ -395,19 +402,21 @@ if (interactive()) { # need this for shinyfullscreen
         labs(title = paste("Correlation between the response(s) and",
                            mobility_labels[input$mobility_variable_id], ": ",
                            round(mean(mobility_df3()$weighted_correlation),3)),
-             subtitle = paste("Each dot represents one institution. The correlation is",
+             subtitle = paste("The correlation is",
                               round(mean(correlations()$wtd_correlation[2]),3), "at public institutions and",
-                              round(mean(correlations()$wtd_correlation[1]),3), "at private institutions."),
+                              round(mean(correlations()$wtd_correlation[1]),3), "at private institutions.",
+                              "\nEach dot represents one institution scaled to the number of survey responses."),
              caption = paste("Data are available for this survey question from",
                              mobility_df3()$total_colleges,
                              "colleges representing",
                              mobility_df3()$total_responses,
                              "students"),
-             y = mobility_labels[input$mobility_variable_id],
+             y = str_wrap(mobility_labels[input$mobility_variable_id], 30),
              x = "Proportion of students",
              size = "Number of responses",
              color = "Institution type") +
-        theme_few(base_size = 15)
+        theme_few(base_size = 15) +
+        theme(legend.position = "bottom") + guides(size = "none")
       #scale_color_brewer(palette = "Spectral")
     })
     
@@ -451,7 +460,7 @@ if (interactive()) { # need this for shinyfullscreen
           propna = 4) |> 
         mutate(n_responses_nona = n_responses * (1-propna),
                qtle = ifelse(.data[[input$mobility_variable_id]] < as.numeric(quantiles()[1]), "Bottom Half",
-                             ifelse(.data[[input$mobility_variable_id]] > as.numeric(quantiles()[2]), "Fourth Quartile", 
+                             ifelse(.data[[input$mobility_variable_id]] > as.numeric(quantiles()[2]), "Top Quartile", 
                                     "Third Quartile"))) |> 
         pivot_longer(names_to = "response_level",
                      values_to = "proportion",
@@ -465,11 +474,15 @@ if (interactive()) { # need this for shinyfullscreen
         summarise(wtd.mean = wtd.mean(proportion, 
                                       weights = n_responses_nona, 
                                       na.rm = TRUE)) |> 
+        mutate(qtle = factor(qtle,
+                             levels = c("Bottom Half",
+                                        "Third Quartile",
+                                        "Top Quartile"))) |> 
         ggplot(aes(x = response_level, y = wtd.mean, fill = response_level)) +
         geom_col() +
         labs(x = "", y = "Weighted Mean",
              fill = "",
-             title = variable_description)+
+             title = paste(selected_question()$Group_rev, ": ", variable_description, sep = ""))+
         theme_economist_white() +
         theme(legend.position = "bottom",
               plot.background = element_rect(fill = "white"),
@@ -505,7 +518,7 @@ if (interactive()) { # need this for shinyfullscreen
                Description, Summary, Label) |> 
         group_by(Group_rev) |>
         slice_max(.data[[input$mobility_variable_id]], n = 1) |>
-        mutate(corr_sign = "Positive") |> 
+        mutate(corr_sign = "Positive Correlation") |> 
         arrange(-.data[[input$mobility_variable_id]])
       
       negative <- selected_correlations_all() |> 
@@ -515,13 +528,13 @@ if (interactive()) { # need this for shinyfullscreen
                Description, Summary, Label) |> 
         group_by(Group_rev) |> 
         slice_min(.data[[input$mobility_variable_id]], n = 1) |> 
-        mutate(corr_sign = "Negative") |> 
+        mutate(corr_sign = "Negative Correlation") |> 
         arrange(-.data[[input$mobility_variable_id]])
       
       correlations_sign <- bind_rows(positive, negative)
       
       group_levels <- correlations_sign |> 
-        filter(corr_sign=="Positive") |> 
+        filter(corr_sign=="Positive Correlation") |> 
         arrange(.data[[input$mobility_variable_id]]) |> 
         pull(Group_rev) 
       
@@ -547,8 +560,9 @@ if (interactive()) { # need this for shinyfullscreen
                                 "Correlation: ", round(.data[[input$mobility_variable_id]],3)))) +
         geom_point(size = 3) + 
         coord_flip() + theme(legend.position = "bottom") +
-        labs(x = "Question Group", y = "",
-             color = "Correlation Type") +
+        labs(x = "", y = "",
+             title = "Strongest Positive and Negative Correlations by Question Group",
+             color = "") +
         scale_color_manual(values = c("red", "forest green")) +
         theme_economist_white() +
         theme(legend.position = "bottom",
@@ -558,7 +572,8 @@ if (interactive()) { # need this for shinyfullscreen
               axis.line.x = element_blank(),
               axis.text.x = element_blank(),
               axis.text.y = element_text(margin = margin(0,0,0,10)),
-              plot.title = element_text(size = 16, face = "bold", margin=margin(0,0,30,0)))
+              plot.title = element_text(size = 16, face = "bold", margin=margin(0,0,30,0))) 
+      
       
       output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations between each group of survey questions and your mobility variable.
                                       Change the selected survey in the drop down menu and search the table below to see all questions in each survey and group."))
