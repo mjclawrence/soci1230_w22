@@ -225,7 +225,7 @@ if (interactive()) { # need this for shinyfullscreen
     }, delete = FALSE)
     
     output$text <- renderText(paste("<center><big><br><br>Calling higher education `the great equalizer` means that students who attend similar colleges have similar life outcomes regardless of their family origins. 
-                                    This figure, adapated from Opportunity Insights, confirms that average economic outcomes for young adults who attended the same types of college are very close even if they have different economic backgrounds. But why? 
+                                    This figure, adapted from Opportunity Insights, confirms that average economic outcomes for young adults who attended the same types of college are very close even if they have different economic backgrounds. But why? 
                                      This app explores how different aspects of college influence future success. </big><center/><br>"
     ))
     
@@ -576,7 +576,7 @@ if (interactive()) { # need this for shinyfullscreen
       
       
       output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations between each group of survey questions and your mobility variable.
-                                      Use the drop down menus to change the mobility variable and survey. The last tab includes a searchable table of all the survey questions."))
+                                      Change the selected survey in the drop down menu and search the table below to see all questions in each survey and group."))
       
       ggplotly(correlations_summary_plot, tooltip = "text") |> 
         layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
