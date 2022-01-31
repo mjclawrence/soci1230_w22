@@ -233,7 +233,7 @@ css_summary3 <- css_summary2 |>
 
 ```{r}
 write.csv(tfs_df, "../data/tfs_question_summary_labels_shiny.csv", row.names = FALSE)
-write.csv(css_df, "../data/css_question_summary_labels_shiny.csv", row.names = FALSE)
+write.csv(css_summary3, "../data/css_question_summary_labels_shiny.csv", row.names = FALSE)
 
 write.csv(tfs_mobility, "../data/tfs_means_mobility_withno_shiny.csv", row.names = FALSE)
 
