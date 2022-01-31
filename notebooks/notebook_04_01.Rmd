@@ -126,13 +126,12 @@ css_summary2 <- css_summary2 |>
 
 Check a table of the `find_colon` variable to see how bad the problem is.
 
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 ```{r}
 table(css_summary2$find_colon)
 ```
 
 
-So we have 36 rows that require additional care. What are our options?
+So we have 15 rows that require additional care. What are our options?
 
 
 One possibility is to break the `Description` values into two pieces: a string before a colon and a string after (if there is a colon). Then we can use those two pieces to repair the existing values. We can do that with the `separate()` function:
@@ -147,16 +146,12 @@ css_summary2 <- css_summary2 |>
 
 Our operations above left some whitespace at the start of the strings in the `after_colon` variable. Trim it.
 
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
-
 ```{r}
 css_summary2 <- css_summary2 |> 
   mutate(after_colon = str_trim(after_colon, side = c("left")))
 ```
 
 Now try to change the existing Description values that have a colon to only take the text after the colon.
-
-### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 ```{r}
 css_summary2 <- css_summary2 |> 
@@ -214,6 +209,25 @@ css_summary2 <- css_summary2 |>
   mutate(Name = str_remove_all(Name, "_9406")) |>
   mutate(Summary = str_remove_all(Summary, "_9406"))
 ```
+
+
+```{r}
+css_summary2 <- css_summary2 |> 
+  select(Name, Description2, Summary, 
+         Label_rank, wtdprop, Survey, Survey_Name,
+         Label, Group, Group_rev) |> 
+  rename(Description = Description2)
+```
+
+Remove question mark if rate is in the description.
+
+```{r}
+css_summary3 <- css_summary2 |> 
+  mutate(Description = ifelse(str_detect(Description, "Rate"),
+                              str_remove(Description, "[?]"), Description))
+```
+
+
 
 # Write all these changes to csv files in your app folder
 
