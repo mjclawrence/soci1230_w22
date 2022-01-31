@@ -576,7 +576,7 @@ if (interactive()) { # need this for shinyfullscreen
       
       
       output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations between each group of survey questions and your mobility variable.
-                                      Change the selected survey in the drop down menu and search the table below to see all questions in each survey and group."))
+                                      Use the drop down menus to change the mobility variable and survey. The last tab includes a searchable table of all the survey questions."))
       
       ggplotly(correlations_summary_plot, tooltip = "text") |> 
         layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
