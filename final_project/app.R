@@ -328,7 +328,7 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
         filter(rowid == sample(1:nrow(fast_facts), 1))
       
       paste(
-        "<center><br><big>Here are some of our favorite findings from this project.</big><br>",
+        "<center><br><br><br><big>Here are some of our favorite findings from this project.</big><br>",
         as.character(fast_facts$Name), 
         ": <br>", 
         "<b>", 
