@@ -205,9 +205,9 @@ css_summary2 <- css_summary2 |>
 ```
 
 ```{r}
-css_summary2 <- css_summary2 |> 
-  mutate(Name = str_remove_all(Name, "_9406")) |>
-  mutate(Summary = str_remove_all(Summary, "_9406"))
+#css_summary2 <- css_summary2 |> 
+  #mutate(Name = str_remove_all(Name, "_9406")) |>
+  #mutate(Summary = str_remove_all(Summary, "_9406"))
 ```
 
 

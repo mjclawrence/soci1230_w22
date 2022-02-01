@@ -76,7 +76,7 @@ if (interactive()) { # need this for shinyfullscreen
                       "Average rank if grew up in bottom 60%" = "k_rank_cond_parq123",
                       "Average rank if grew up in bottom quintile" = "k_rank_cond_parq1",
                       "Average rank if grew up in second lowest quintile" = "k_rank_cond_parq2",
-                      "Average rank if grew up in middle quintile" =" k_rank_cond_parq3",
+                      "Average rank if grew up in middle quintile" = "k_rank_cond_parq3",
                       "Average rank if grew up in second highest quintile" = "k_rank_cond_parq4",
                       "Average rank if grew up in highest quintile" = "k_rank_cond_parq5"
                     ),
@@ -570,7 +570,7 @@ if (interactive()) { # need this for shinyfullscreen
               legend.background = element_rect(fill = "white"),
               axis.ticks.x = element_blank(),
               axis.line.x = element_blank(),
-              axis.text.x = element_blank(),
+              #axis.text.x = element_blank(),
               axis.text.y = element_text(margin = margin(0,0,0,10)),
               plot.title = element_text(size = 16, face = "bold", margin=margin(0,0,30,0))) 
       
