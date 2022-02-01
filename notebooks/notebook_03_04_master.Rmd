@@ -95,7 +95,7 @@ addmargins(table(tfs_question_summary2$Group, tfs_question_summary2$Group_rev, e
 ### CSS
 
 ```{r}
-write.csv(css_question_summary2, "/Users/lawrence/Desktop/shiny_example/css_question_summary_labels.csv", row.names = FALSE)
+write.csv(css_question_summary2, "../data/css_question_summary_labels.csv", row.names = FALSE)
 ```
 
 Join new labels to pooled correlations file
@@ -109,7 +109,7 @@ css_question_summary2 <- css_question_summary2 |>
 css_correlations_join <- left_join(css_question_summary2,
                                css_correlations)
 
-write.csv(css_correlations_join, "/Users/lawrence/Desktop/shiny_example/css_correlations_join.csv",
+write.csv(css_correlations_join, "../data/css_correlations_join.csv",
           row.names = FALSE)
 ```
 

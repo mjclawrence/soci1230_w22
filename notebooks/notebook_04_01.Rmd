@@ -18,7 +18,7 @@ library(plotly)
 # These include revised groups
 tfs_df <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels_shiny.csv")
 
-css_df <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels_shiny.csv")
+css_df <- read_csv("../data/css_question_summary_labels.csv")
 
 # These include the constructed mobility variables:
 # k_rank_cond_parq123 and kq345_cond_parq1

@@ -11,10 +11,10 @@ library(plotly)
 library(shinythemes)
 library(DT) 
 library(shinyfullscreen) 
+library(googlesheets4) # Need for fast facts
 
-# Load Data 
-## For now the linked files are ok. 
-## To publish the app, local files are better.
+
+# Load Data (use local files)
 
 tfs_df <- read_csv("tfs_question_summary_labels.csv") 
 css_df <- read_csv("css_question_summary_labels.csv")
@@ -27,6 +27,7 @@ css_correlations_labeled <- read_csv("css_correlations_join.csv")
 
 chetty_fouryr <- read_csv("chetty_fouryr.csv")
 
+## Add constructed mobility measures to chetty_fouryr
 chetty_fouryr <- chetty_fouryr |> 
   mutate(kq345_cond_parq1 = kq3_cond_parq1 + 
            kq4_cond_parq1 + 
@@ -35,21 +36,134 @@ chetty_fouryr <- chetty_fouryr |>
            k_rank_cond_parq2*par_q1 + 
            k_rank_cond_parq3*par_q3)
 
-## We need this to build the datatable of all questions
+## The RACE_ETHNICITY variable in tfs_df is not in tfs_mobility or tfs_correlations_labeled. 
+## Fix it.
+
+### Editing race in tfs_df
+
+race_variables <- tfs_df |> 
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), # to ignore case
+         str_detect(Summary, "yes"))
+
+race_variables <- race_variables |> 
+  mutate(Name = "RACE_ETHNICITY",
+         Description = "Racial and ethnic composition") |> 
+  separate(Summary, c("race", "level"), sep = "[.]") |> 
+  mutate(race = "RACE_ETHNICITY") |> 
+  unite("Summary", race:level, sep = ".")
+
+tfs_df <- tfs_df |> 
+  filter(!str_detect(Name, "RACE"))
+
+tfs_df <- bind_rows(tfs_df, race_variables)
+
+tfs_df <- tfs_df |> 
+  mutate(Description = str_trim(Description, side = c("left")))
+
+### Editing race in tfs_mobility
+
+tfs_mobility <- tfs_mobility |> 
+  pivot_longer(starts_with("RACE") & !contains("propna")) |> 
+  filter(!str_detect(name, "_no_")) |> 
+  separate(name, c("race", "level"), sep = "[.]") |> 
+  mutate(race = "RACE_ETHNICITY") |> 
+  unite("race", race:level, sep = ".") |> 
+  pivot_wider(names_from = race, 
+              values_from = value) |> 
+  pivot_longer(starts_with("RACE") & contains("propna")) |> 
+  separate(name, c("race", "propna"), sep = "[.]") |> 
+  mutate(race = "RACE_ETHNICITY") |> 
+  unite("race", race:propna, sep = ".") |> 
+  distinct() |> 
+  pivot_wider(names_from = race,
+              values_from = value) |> 
+  relocate(starts_with("RACE_ETHNICITY"), .before = type)
+
+race_variables <- tfs_correlations_labeled |> 
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), # to ignore case
+         str_detect(Summary, "yes"))
+
+race_variables <- race_variables |> 
+  mutate(Name = "RACE_ETHNICITY",
+         Description = "Racial and ethnic composition") |> 
+  separate(Summary, c("race", "level"), sep = "[.]") |> 
+  mutate(race = "RACE_ETHNICITY") |> 
+  unite("Summary", race:level, sep = ".")
+
+
+### Editing race in tfs_correlations_labeled
+race_variables <- tfs_correlations_labeled |> 
+  filter(str_detect(Name, regex("race", ignore_case = TRUE)), # to ignore case
+         str_detect(Summary, "yes"))
+
+race_variables <- race_variables |> 
+  mutate(Name = "RACE_ETHNICITY",
+         Description = "Racial and ethnic composition") |> 
+  separate(Summary, c("race", "level"), sep = "[.]") |> 
+  mutate(race = "RACE_ETHNICITY") |> 
+  unite("Summary", race:level, sep = ".")
+
+tfs_correlations_labeled <- tfs_correlations_labeled |> 
+  filter(!str_detect(Name, "RACE"))
+
+tfs_correlations_labeled <- bind_rows(tfs_correlations_labeled, race_variables)
+
+tfs_correlations_labeled <- tfs_correlations_labeled |> 
+  mutate(Description = str_trim(Description, side = c("left")))
+
+### The Puerto Rican numbers do not look right. Drop them from all the dfs for now.
+tfs_df <- tfs_df |> 
+  filter(!str_detect(Summary, regex("Puerto", ignore_case = TRUE)))
+
+tfs_correlations_labeled <- tfs_correlations_labeled |> 
+  filter(!str_detect(Summary, regex("Puerto", ignore_case = TRUE)))
+
+tfs_mobility <- tfs_mobility |> 
+  select(-contains(regex("Puerto", ignore_case = TRUE)))
+  
+
+## Build data frame for searchable data table
 
 all_questions <- bind_rows(tfs_df, css_df) |>
   select(Survey_Name, Group_rev, Description) |> 
   rename(Survey = Survey_Name,
-         Group = Group_rev) |> 
+         `Question Group` = Group_rev,
+         Question = Description) |> 
   distinct()
+
+
+## Fast Facts
+
+gs4_deauth()
+fastfacts_gs <- "https://docs.google.com/spreadsheets/d/1KstDLAg_B3SdZpJDsABlr_UxunAjQ_UBUQ3EG6akQy4/edit#gid=0"
+fast_facts <- read_sheet(fastfacts_gs)
+
+fast_facts <- fast_facts |> 
+  filter(Name != "Example") |> 
+  mutate(rowid = row_number())
+
+
+## Need this for popup window to close in Chrome
+modalActionButton <- function(inputId, label, icon = NULL, width = NULL, ...) {
+  
+  value <- restoreInput(id = inputId, default = NULL)
+  tags$button(id = inputId, type = "button", style = if (!is.null(width)) 
+    paste0("width: ", validateCssUnit(width), ";"), type = "button", 
+    class = "btn btn-default action-button", `data-dismiss` = "modal", `data-val` = value, 
+    list(shiny:::validateIcon(icon), label), ...)
+  
+}
+
 
 # Set Up User Interface (UI)
 
-if (interactive()) { # need this for shinyfullscreen 
-  ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
-                  theme = shinytheme("united"), ### New to use chosen theme
-                  tags$head(tags$style(  ### New for sidebar background color
-                    HTML('
+#if (interactive()) { # need this for shinyfullscreen 
+ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
+  theme = shinytheme("united"), ### New to use chosen theme
+  titlePanel("SOCI 1230 App", # title for browser tab
+             title = "How Does College Matter For Income Mobility?"), # Title in window
+  tags$head(tags$style(  ### New for sidebar background color
+    HTML('
          #sidebar {
             background-color: #fff;
         }
@@ -57,9 +171,7 @@ if (interactive()) { # need this for shinyfullscreen
         body, label, input, button, select { 
           font-family: "Arial";
         }')
-                  )), # End for sidebar background color
-    titlePanel("SOCI 1230 App", # title for browser tab
-               title = "How Does College Matter For Income Mobility?"), # Title in window
+  )), # End for sidebar background color
     sidebarPanel(# To set up the sidebar
       id="sidebar", # To id sidebar color code above
       conditionalPanel(  ### NEW
@@ -67,7 +179,7 @@ if (interactive()) { # need this for shinyfullscreen
       selectInput("mobility_variable_id",
                   "Choose a mobility variable",
                   selected = NULL,
-                  # In the next few lines we group choices with muted headings
+                  # The next lines we group choices with muted headings
                   # Note we can also change how the variable names appear
                   list(
                     
@@ -113,43 +225,48 @@ if (interactive()) { # need this for shinyfullscreen
                   "Choose a survey:", # What the user sees
                   choices = c("The Freshman Survey", # Choices in list
                               "College Senior Survey"),
-                  selected = NULL # Default
-      ), # Each input is separated by a comma
+                  #selected = NULL # Default
+      )), # Each input is separated by a comma
       conditionalPanel(
       condition="input.tabselected>=3",
       selectInput("group_id",
                   "Choose a question group:",
-                  choices = NULL,
-                  selected = NULL),
+                  choices = NULL)),
+                  #selected = NULL),
+      conditionalPanel(
+        condition="input.tabselected>=3",
       selectInput("question_id",
                   "Choose a question:",
-                  choices = NULL,
-                  selected = NULL,
-    )))), # Close the sidebarPanel before moving on to the main panel...
-    mainPanel( # Set up for mainPanel
-      tabsetPanel( # We'll use tabs here to collect output
-        tags$head(tags$style(
-          type="text/css",
-          "#equalizer img {
-            width: 60%;
+                  choices = NULL))
+                  #selected = NULL,
+    ), # Close the sidebarPanel before moving on to the main panel...
+  mainPanel( # Set up for mainPanel
+    tabsetPanel( # We'll use tabs here to collect output
+      
+      tags$head(tags$style( # This centers the equalizer image in its tab
+        type="text/css",
+        "#equalizer img {
+            width: 65%;
             display: block;
             margin-left: auto;
             margin-right: auto;
-        }")),
-        tabPanel("Introduction", value = 1, # Tab title, ### NEW VALUE INPUT
-                 htmlOutput("text"),
-                 imageOutput("equalizer"),
-                 htmlOutput("intro_box")),
-        tabPanel("Correlations Summary Plot",value = 2,  ### New
+        }")
+        
+        ),
+      tabPanel("Introduction", value = 1, # Tab title, 
+               htmlOutput("text"),
+               imageOutput("equalizer"),
+               htmlOutput("intro_box")),
+        tabPanel("Correlations Summary Plot",value = 2,  
                  fullscreen_this(plotlyOutput("corr_summary_plot")),
                  textOutput("text1")),
-        tabPanel("Summary By Mobility", value = 3, ### NEW
+        tabPanel("Summary By Mobility", value = 3, 
                  fullscreen_this(plotOutput("quantiles"))),
-        tabPanel("Mobility Correlations", value = 4, ### NEW
+        tabPanel("Mobility Correlations", value = 4, 
                  checkboxGroupInput("response_id", # Checkboxes allowing multiple selections
                                     "Choose responses to your selected question (but leave at least one unchecked):",
-                                    choices = NULL),
-                 fullscreen_this(plotOutput("corr_plot"))),
+                                    choices = NULL), # Is this working in Chrome?
+                  fullscreen_this(plotOutput("corr_plot"))),
         tabPanel("Search All Questions", value = 5,
                  dataTableOutput("question_df")),
         #tabPanel("Question Summary", value = 5, ### NEW
@@ -164,9 +281,11 @@ if (interactive()) { # need this for shinyfullscreen
 
     observeEvent(once = TRUE,ignoreNULL = FALSE, ignoreInit = FALSE, eventExpr = summary_data, { 
       # event will be called when summary_data initial default is selected, which only happens once, when app is first launched
-      showModal(modalDialog(
+      showModal(div(id="ModalDiv", modalDialog( # Use this for Chrome to work
+        #showModal(modalDialog(
         title = "Welcome!",
-        footer = actionButton("continue", "Continue"),
+        footer = modalActionButton("continue", "Continue"),
+        easyclose = FALSE,
         h2("Obtaining a college degree used to guarantee social and economic mobility. But today, it is not so simple. In the face of a massive student debt crisis and an increasingly competitive job market, 
         young Americans have begun questioning whether higher education lives up to its promise as the great equalizer."),
         p("This app explores how college experiences matter for income mobility by combining `big data` with survey research.
@@ -176,51 +295,22 @@ if (interactive()) { # need this for shinyfullscreen
         how college experiences influence success later in life.",
         style = "font-size:16px"),
         p(em("Which college experiences do you expect will be most influential in shaping student outcomes? The answers might surprise you!",
-          style = "font-size:16px")),
+             style = "font-size:16px")),
         p('This app was created at Middlebury College for SOCI 1230 - Data Science Across The Disciplines - in Winter 2022.')
-      ))
+      )))
     })
     
-    observeEvent(input$continue, {
+    observeEvent(input$continue, {  # do something after user confirmation
       removeModal()
-      # do something after user confirmation
     })
     
-    
-    # Dummy df to test quick facts in introduction tab
-    
-    output$intro_box <- renderText({ # Creates the object that will output in the UI
-      names_column <- c("A", "B", "C", "D", "E")
-      facts_column <- c("I learned this...",
-                        "I discovered this...",
-                        "Did you know...",
-                        "Have you ever wondered...",
-                        "For more information...")
-      
-      quick_facts <- as.data.frame(cbind(names_column,
-                                         facts_column))
-      
-      quick_facts <- quick_facts |> 
-        mutate(rowid = row_number()) |> 
-        filter(rowid == sample(1:nrow(quick_facts), 1))
-      
-      paste(
-        "<center><br><big>Here are some of our favorite findings from this project.</big><br><br>",
-        as.character(quick_facts$names_column), 
-        ": <br>", 
-        "<b>", 
-        as.character(quick_facts$facts_column), 
-        "</b> <br><br>",
-        "<em>For more fast facts reload this page.<br>When you are ready to make your own discoveries, click the next tab.</em><br><br><center/>"
-      )
-    })
     
     output$equalizer <- renderImage({
       list(
         src = file.path("equalizer.png"),
-        contentType = "image/png",
-        width = 650,
-        height = 400
+        contentType = "image/png"
+        #width = 875,
+        #height = 540.5
       )
     }, delete = FALSE)
     
@@ -229,14 +319,25 @@ if (interactive()) { # need this for shinyfullscreen
                                      This app explores how different aspects of college influence future success. </big><center/><br>"
     ))
     
-    output$question_df <- renderDataTable({
-      
-      datatable(all_questions, 
-        filter = "top",
-        caption = "All Survey Questions",
-        rownames = FALSE)
-    })
     
+    # Dummy df to test quick facts in introduction tab
+    
+    output$intro_box <- renderText({ # Creates the object that will output in the UI
+      
+      fast_facts <- fast_facts |> 
+        filter(rowid == sample(1:nrow(fast_facts), 1))
+      
+      paste(
+        "<center><br><big>Here are some of our favorite findings from this project.</big><br>",
+        as.character(fast_facts$Name), 
+        ": <br>", 
+        "<b>", 
+        as.character(fast_facts$Fact), 
+        "</b> <br><br>",
+        "<em>For more fast facts reload this page.<br>When you are ready to make your own discoveries, click the next tab.</em><br><br><center/>"
+      )
+    })
+
     # Switch the summary data 
     summary_data <- reactive({ # Creates a function as an object we will use later. This one is reactive to the choice of df_id in the UI 
       switch(input$df_id,
@@ -286,6 +387,17 @@ if (interactive()) { # need this for shinyfullscreen
     selected_question <- reactive({
       filter(summary_data(), Description == input$question_id)
     })
+
+    
+    output$question_df <- renderDataTable({
+      
+      datatable(all_questions, 
+                filter = "top",
+                caption = "All Survey Questions",
+                rownames = FALSE)
+    })
+    
+    
     
     ## Make a summary plot of the selected question (dropped from final version)
     
@@ -313,10 +425,12 @@ if (interactive()) { # need this for shinyfullscreen
     # In correlations tab change the response levels based on which question is selected
     observeEvent(selected_question(), {
       choices <- unique(selected_question()$Label)
+      
+      req(input$question_id)
+      
       updateCheckboxGroupInput(inputId = "response_id", 
                                choices = choices,
-                               selected = choices[1]
-      )
+                               selected = choices[1])
     })
     
     # Filter the survey dataset to only include the selected response level(s)
@@ -386,22 +500,40 @@ if (interactive()) { # need this for shinyfullscreen
     #     scale_color_brewer(palette = "Dark2")
     # })
     
-    mobility_labels <- c("par_q1" = "Access Rate (Proportion of students from bottom 20%)",
-                         "kq5_cond_parq1" = "Success Rate (Proportion of students from bottom 20% who end up in top 20%)",
-                         "mr_kq5_pq1" = "Mobility Rate (Proportion of all students who come from bottom 20% and end up in top 20%)",
-                         "k_rank" = "Mean kid earnings rank",
-                         "k_rank_cond_parq5" = "Mean earnings rank of kids whose parents are in the top 20%",
-                         "k_rank_cond_parq123" = "Mean earnings rank of kids whose parents are in the bottom 60%",
-                         "kq345_cond_parq1" = "Probability of kids whose parents are in the bottom 20% to be in the top 60%")
+    mobility_labels <- tibble("Average rank" = "k_rank",
+                              "Average rank if grew up in bottom 60%" = "k_rank_cond_parq123",
+                              "Average rank if grew up in bottom quintile" = "k_rank_cond_parq1",
+                              "Average rank if grew up in second lowest quintile" = "k_rank_cond_parq2",
+                              "Average rank if grew up in middle quintile" = "k_rank_cond_parq3",
+                              "Average rank if grew up in second highest quintile" = "k_rank_cond_parq4",
+                              "Average rank if grew up in highest quintile" = "k_rank_cond_parq5",
+                              "'Great Working Class Colleges' success rate (bottom quintile of parent distribution and highest 60% of young adult distribution)" = "kq345_cond_parq1",
+                              "Opportunity Insights success rate (bottom quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq1",
+                              "Opportunity Insights mobility rate (Proportion of all students at an institution moving from bottom quintile of parent distribution to highest quintile of young adult distribution)" = "mr_kq5_pq1",
+                              "Opportunity Insights upper tail mobility rate (bottom quintile of parent distribution and top 1% of young adult distribution)" = "mr_ktop1_pq1",
+                              "Stickiness at the bottom (bottom quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq1",
+                              "Stickiness at the top (top quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq5",
+                              "Downward mobility from the top (top quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq5",
+                              "Proportion ending up in bottom quintile" = "k_q1",
+                              "Proportion ending up in second lowest quintile" = "k_q2",
+                              "Proportion ending up in middle quintile" = "k_q3",
+                              "Proportion ending up in second highest quintile" = "k_q4",
+                              "Proportion ending up in highest quintile" = "k_q5",
+                              "Proportion from bottom quintile (Opportunity Insights access rate)" = "par_q1",
+                              "Proportion from second lowest quintile" = "par_q2",
+                              "Proportion from middle quintile" = "par_q3",
+                              "Proportion from second highest quintile" = "par_q4",
+                              "Proportion from highest quintile" = "par_q5") |>
+      pivot_longer(cols = everything(), names_to = "Label", values_to = "Variable")
     
     output$corr_plot <- renderPlot({
       mobility_df3() |>
         ggplot(aes(x = propsum, y = .data[[input$mobility_variable_id]],
                    size = n_responses_nona, color = type)) +
         geom_point() +
-        labs(title = paste("Correlation between the response(s) and",
-                           mobility_labels[input$mobility_variable_id], ": ",
-                           round(mean(mobility_df3()$weighted_correlation),3)),
+        labs(title = str_wrap(paste("Correlation between the response(s) and",
+                           mobility_labels$Label[mobility_labels$Variable == input$mobility_variable_id], ": ",
+                           round(mean(mobility_df3()$weighted_correlation),3)), 80),
              subtitle = paste("The correlation is",
                               round(mean(correlations()$wtd_correlation[2]),3), "at public institutions and",
                               round(mean(correlations()$wtd_correlation[1]),3), "at private institutions.",
@@ -411,7 +543,7 @@ if (interactive()) { # need this for shinyfullscreen
                              "colleges representing",
                              mobility_df3()$total_responses,
                              "students"),
-             y = str_wrap(mobility_labels[input$mobility_variable_id], 30),
+             y = str_wrap(mobility_labels$Label[mobility_labels$Variable == input$mobility_variable_id], 30),
              x = "Proportion of students",
              size = "Number of responses",
              color = "Institution type") +
@@ -419,6 +551,7 @@ if (interactive()) { # need this for shinyfullscreen
         theme(legend.position = "bottom") + guides(size = "none")
       #scale_color_brewer(palette = "Spectral")
     })
+    
     
     # Set up quantiles for selected mobility variable
     quantiles <- reactive({
@@ -561,7 +694,7 @@ if (interactive()) { # need this for shinyfullscreen
         geom_point(size = 3) + 
         coord_flip() + theme(legend.position = "bottom") +
         labs(x = "", y = "",
-             title = "Strongest Positive and Negative Correlations by Question Group",
+             title = "Strongest Correlations by Question Group",
              color = "") +
         scale_color_manual(values = c("red", "forest green")) +
         theme_economist_white() +
@@ -572,11 +705,11 @@ if (interactive()) { # need this for shinyfullscreen
               axis.line.x = element_blank(),
               #axis.text.x = element_blank(),
               axis.text.y = element_text(margin = margin(0,0,0,10)),
-              plot.title = element_text(size = 16, face = "bold", margin=margin(0,0,30,0))) 
+              plot.title = element_text(size = 14, face = "bold")) 
       
       
-      output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations between each group of survey questions and your mobility variable.
-                                      Change the selected survey in the drop down menu and search the table below to see all questions in each survey and group."))
+      output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations in each group of survey questions and your mobility variable.
+                                      You can change the selected survey in the drop down menu. Search the table in the last tab to see all questions in each survey and group."))
       
       ggplotly(correlations_summary_plot, tooltip = "text") |> 
         layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
@@ -591,4 +724,4 @@ if (interactive()) { # need this for shinyfullscreen
   # Run The Application 
   shinyApp(ui = ui, server = server, 
            options = list(launch.browser = TRUE)) # needed for fullscreen
-} # closes if interactive
+#} # closes if interactive
