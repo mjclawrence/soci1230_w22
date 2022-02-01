@@ -1,4 +1,4 @@
-a---
+---
 title: "Week Four, Class One"
 author: "ML"
 date: "1/31/2022"
@@ -36,7 +36,7 @@ css_correlations <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci
 tfs_labels <-
   read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels.csv")
 
-css_labels <- read_csv("../data/css_question_summary_labels.csv")
+css_labels <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_question_summary_labels.csv")
 ```
 
 

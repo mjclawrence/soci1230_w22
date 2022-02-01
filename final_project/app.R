@@ -17,6 +17,7 @@ library(googlesheets4) # Need for fast facts
 # Load Data (use local files)
 
 tfs_df <- read_csv("tfs_question_summary_labels.csv") 
+
 css_df <- read_csv("css_question_summary_labels.csv")
 
 tfs_mobility <- read_csv("tfs_means_mobility_withno.csv")
@@ -24,6 +25,9 @@ css_mobility <- read_csv("css_means_mobility_withno.csv")
 
 tfs_correlations_labeled <- read_csv("tfs_correlations_join.csv") 
 css_correlations_labeled <- read_csv("css_correlations_join.csv") 
+
+css_correlations_labeled <- css_correlations_labeled |> 
+  filter(!str_detect(Group_rev, "Scales|Family"))
 
 chetty_fouryr <- read_csv("chetty_fouryr.csv")
 
@@ -250,9 +254,14 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
             display: block;
             margin-left: auto;
             margin-right: auto;
-        }")
+        }")),
+        
+        tags$style(type="text/css",
+                   ".shiny-output-error { visibility: hidden; }",
+                   ".shiny-output-error:before { visibility: hidden; }"
         
         ),
+        
       tabPanel("Introduction", value = 1, # Tab title, 
                htmlOutput("text"),
                imageOutput("equalizer"),
@@ -426,7 +435,8 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
     observeEvent(selected_question(), {
       choices <- unique(selected_question()$Label)
       
-      req(input$question_id)
+      req(input$mobility_variable_id, input$df_id, 
+          input$group_id, input$question_id)
       
       updateCheckboxGroupInput(inputId = "response_id", 
                                choices = choices,
@@ -527,6 +537,10 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
       pivot_longer(cols = everything(), names_to = "Label", values_to = "Variable")
     
     output$corr_plot <- renderPlot({
+      
+      req(input$mobility_variable_id, input$df_id, 
+          input$group_id, input$question_id)
+      
       mobility_df3() |>
         ggplot(aes(x = propsum, y = .data[[input$mobility_variable_id]],
                    size = n_responses_nona, color = type)) +
@@ -574,6 +588,9 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
     
     ## This is probably too long for one function
     mobility_df_test2 <- reactive({
+      
+      req(input$mobility_variable_id, input$df_id, 
+          input$group_id, input$question_id)
       
       variable_levels_df <- selected_question() |>
         mutate(response_level = str_extract(Summary, "[^.]*$"))
@@ -643,6 +660,8 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
     
     output$corr_summary_plot <- renderPlotly({
       
+      req(input$mobility_variable_id, input$df_id)
+      
       positive <- selected_correlations_all() |> 
         filter(corr_type == "Pooled", 
                #Group!="Constructed Scales", # Messy because of TFS
@@ -673,7 +692,7 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
       
       font <- list(
         family = "Arial",
-        size = 14,
+        size = 16,
         color = "white"
       )
       label <- list(
@@ -704,15 +723,15 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
               axis.ticks.x = element_blank(),
               axis.line.x = element_blank(),
               #axis.text.x = element_blank(),
-              axis.text.y = element_text(margin = margin(0,0,0,10)),
-              plot.title = element_text(size = 14, face = "bold")) 
+              axis.text.y = element_text(size = 14),
+              plot.title = element_text(size = 16, face = "bold")) 
       
       
       output$text1 <- renderText(paste("This figure displays the strongest positive and negative correlations in each group of survey questions and your mobility variable.
                                       You can change the selected survey in the drop down menu. Search the table in the last tab to see all questions in each survey and group."))
       
       ggplotly(correlations_summary_plot, tooltip = "text") |> 
-        layout(legend = list(orientation = "h", x = .25, y = -0.2)) |> 
+        layout(legend = list(orientation = "h", x = .25, y = -0.25)) |> 
         style(hoverlabel = label) |> 
         layout(font = font)
       

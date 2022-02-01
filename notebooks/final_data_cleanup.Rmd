@@ -1,49 +1,107 @@
-# Load the usual packages
+---
+title: "Untitled"
+author: "ML"
+date: "2/1/2022"
+output: pdf_document
+---
+
 ```{r}
 library(tidyverse)
-library(scales)
-library(ggthemes)
-library(weights)
-library(kableExtra)
-library(patchwork)
-library(DT)
-library(plotly)
 ```
 
-# Load the data
 
-## Before final cleanup, here are the files our app uses:
 
 ```{r}
-# These include revised groups
-tfs_df <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_question_summary_labels_shiny.csv")
+tfs_correlations <-
+  read_csv("../data/tfs_correlations_all2.csv")
 
-css_df <- read_csv("../data/css_question_summary_labels.csv")
+tfs_correlations <- tfs_correlations |> 
+  select(-1)
 
-# These include the constructed mobility variables:
-# k_rank_cond_parq123 and kq345_cond_parq1
+css_correlations <- read_csv("../data/css_correlations_all2.csv")
 
-tfs_mobility <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_means_mobility_withno_shiny.csv")
-
-css_mobility <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/css_means_mobility_withno_shiny.csv")
-
-# These include revised groups
-tfs_correlations_join <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/tfs_correlations_join_shiny.csv")
-
-css_correlations_join <- read_csv("../data/css_correlations_join_shiny.csv")
-
-# No changes here
-chetty_fouryr <- read_csv("https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/data/chetty_fouryr_shiny.csv")
+css_correlations <- css_correlations |> 
+  select(-1)
 ```
 
-Let's make some final changes before writing these files to the app folder
+
+```{r}
+tfs_mobility <- read_csv("../data/tfs_means_mobility_withno2.csv")
+
+css_mobility <- read_csv("../data/css_means_mobility_withno2.csv")
+```
+
+
+```{r}
+tfs_question_summary_labels <- tfs_correlations |> 
+  select(corr_type, Name, Description, Summary, wtdprop, n_colleges)
+
+css_question_summary_labels <- css_correlations |> 
+  select(corr_type, Name, Description, Summary, wtdprop, n_colleges)
+```
+
+
+# Working with Google Sheets in R
+
+```{r}
+library(googlesheets4)
+gs4_deauth() # changes permissions so you don't need to authenticate to read public file
+```
+
+
+Join Google sheet with existing labels
+```{r}
+css_gsheet <- "https://docs.google.com/spreadsheets/d/1y2ywEeHoe6iLyUVzLaH3Wtxl61rDdzq9xN9DpwQd08M/edit?pli=1#gid=0"
+css_groups <- read_sheet(css_gsheet)
+
+css_question_summary2 <- left_join(css_question_summary_labels, css_groups)
+
+css_question_summary_labels <- css_question_summary2
+```
+
+```{r}
+tfs_gsheet <- "https://docs.google.com/spreadsheets/d/1xaNCVmMfqfrk0MDWJEulUc0yLz35nOgbYgxuzRVPfuA/edit#gid=0"
+tfs_groups <- read_sheet(tfs_gsheet)
+
+tfs_question_summary2 <- left_join(tfs_question_summary_labels, tfs_groups)
+tfs_question_summary2 <- tfs_question_summary2 |> 
+  select(-namethis)
+
+tfs_question_summary_labels <- tfs_question_summary2
+
+tfs_question_summary_labels <- tfs_question_summary_labels |>
+  filter(!str_detect(Group_rev, "Z")) 
+```
+
+# Make joined files
+
+```{r}
+# Drop wtdprop from question summary before saving correlations. We want to keep that column in the summary labels though.
+
+css_question_summary_labels2 <- css_question_summary_labels |> 
+  select(-wtdprop)
+
+css_correlations_join <- left_join(css_question_summary_labels2,
+                               css_correlations)
+```
+
+```{r}
+tfs_question_summary_labels2 <- tfs_question_summary_labels |> 
+  select(-wtdprop)
+
+tfs_correlations_join <- left_join(tfs_question_summary_labels2,
+                               tfs_correlations)
+```
+
+
+## From Notebook 04 01
 
 # TFS Descriptions
 
 ## Hanwen, Andy, and Sophia suggested these changes:
 
 ```{r}
-tfs_df <- tfs_df |>
+tfs_df <- tfs_question_summary_labels |>
   mutate(Description = str_remove(Description, "Choose to Attend:"))|>
   mutate(Description = str_remove(Description, "Choice:"))|>
   mutate(Description = str_remove(Description, "Goal:"))|>
@@ -85,8 +143,12 @@ tfs_df <- bind_rows(tfs_df, race_variables)
 
 tfs_df <- tfs_df |> 
   mutate(Description = str_trim(Description, side = c("left")))
-
 ```
+
+```{r}
+tfs_question_summary_labels <- tfs_df
+```
+
 
 # CSS Descriptions
 
@@ -97,6 +159,8 @@ tfs_df <- tfs_df |>
 ### Let's remove the "Family Background And Demographics" and "Scales" group:
 
 ```{r}
+css_df <- css_question_summary_labels
+
 css_df <- css_df |> 
   filter(!str_detect(Group_rev, "Family|Scales"))
 ```
@@ -213,8 +277,8 @@ css_summary2 <- css_summary2 |>
 
 ```{r}
 css_summary2 <- css_summary2 |> 
-  select(Name, Description2, Summary, 
-         Label_rank, wtdprop, Survey, Survey_Name,
+  select(corr_type, Name, Description2, Summary, 
+         wtdprop, n_colleges, Label_rank, Survey, Survey_Name,
          Label, Group, Group_rev) |> 
   rename(Description = Description2)
 ```
@@ -228,32 +292,24 @@ css_summary3 <- css_summary2 |>
 ```
 
 
+```{r}
+css_question_summary_labels <- css_summary3
+```
 
-# Write all these changes to csv files in your app folder
+
+
+## Write all the files
 
 ```{r}
-write.csv(tfs_df, "../data/tfs_question_summary_labels_shiny.csv", row.names = FALSE)
-write.csv(css_summary3, "../data/css_question_summary_labels_shiny.csv", row.names = FALSE)
+write.csv(tfs_question_summary_labels, "../final_project/tfs_question_summary_labels.csv", row.names = FALSE)
 
-write.csv(tfs_mobility, "../data/tfs_means_mobility_withno_shiny.csv", row.names = FALSE)
+write.csv(css_question_summary_labels, "../final_project/css_question_summary_labels.csv", row.names = FALSE)
 
-write.csv(css_mobility, "../data/css_means_mobility_withno_shiny.csv", row.names = FALSE)
+write.csv(tfs_mobility, "../final_project/tfs_means_mobility_withno.csv", row.names = FALSE)
 
-write.csv(tfs_correlations_join, "../data/tfs_correlations_join_shiny.csv", row.names = FALSE) 
-write.csv(css_correlations_join, "../data/css_correlations_join_shiny.csv", row.names = FALSE) 
+write.csv(css_mobility, "../final_project/css_means_mobility_withno.csv", row.names = FALSE)
 
+write.csv(tfs_correlations_join, "../final_project/tfs_correlations_join.csv", row.names = FALSE) 
+write.csv(css_correlations_join, "../final_project/css_correlations_join.csv", row.names = FALSE) 
 write.csv(chetty_fouryr, "../data/chetty_fouryr_shiny.csv", row.names = FALSE)
 ```
-
-# The App!
-
-Install a couple more packages for everything to run properly:
-
-```{r}
-install.packages(c("shinyfullscreen", "shinythemes"))
-```
-
-
-The most up to date version is here:
-
-https://raw.githubusercontent.com/mjclawrence/soci1230_w22/main/final_project/app.R
