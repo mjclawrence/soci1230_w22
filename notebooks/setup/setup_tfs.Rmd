@@ -460,13 +460,21 @@ varnames <- varnames |>
 
 Merge the variable means by college with the mobility variables
 
+Merge the variable means by college with the mobility variables
+
+### 2.22.22 Fixes k_rank_cond_parq123
+
 ```{r}
 tfs_means_mobility <- left_join(tfs_means, chetty_vars)
 
 tfs_means_mobility <- tfs_means_mobility |> 
   mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
-         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
-           k_rank_cond_parq3*par_q3)
+         #k_rank_cond_parq123_old = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
+        #   k_rank_cond_parq3*par_q3,
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+           k_rank_cond_parq2*par_q2 +
+           k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
 ```
 
 ```{r}
@@ -781,6 +789,13 @@ tfs_correlations_all <- tfs_correlations_all |>
 
 write.csv(tfs_correlations_all, "../../data/tfs_correlations_all2.csv")
 ```
+
+```{r}
+corr_test <- tfs_correlations2 |> 
+  select(Name, Description, Summary, k_rank_cond_parq123)
+```
+
+
 
 # CLEANUP TFS
 

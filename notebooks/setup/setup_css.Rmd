@@ -318,13 +318,19 @@ varnames <- varnames |>
 
 Merge the variable means by college with the mobility variables
 
+### 2.22.22 Fixes k_rank_cond_parq123
+
 ```{r}
 css_means_mobility <- left_join(css_means, chetty_vars)
 
 css_means_mobility <- css_means_mobility |> 
   mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
-         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
-           k_rank_cond_parq3*par_q3)
+         #k_rank_cond_parq123_old = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
+        #   k_rank_cond_parq3*par_q3,
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+           k_rank_cond_parq2*par_q2 +
+           k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
 ```
 
 ```{r}
@@ -478,8 +484,6 @@ css_correlations2 <- css_correlations2 |>
 ```{r}
 write.csv(css_correlations2, "../../data/css_correlations_withno2.csv", row.names = FALSE)
 ```
-
-
 
 ## Correlations by type of institution
 
