@@ -24,7 +24,14 @@ tfs_mobility <- read_csv("tfs_means_mobility_withno.csv")
 css_mobility <- read_csv("css_means_mobility_withno.csv")
 
 tfs_correlations_labeled <- read_csv("tfs_correlations_join.csv") 
+
+tfs_correlations_labeled <- tfs_correlations_labeled |> 
+  filter(corr_type == "Pooled")
+
 css_correlations_labeled <- read_csv("css_correlations_join.csv") 
+
+css_correlations_labeled <- css_correlations_labeled |> 
+  filter(corr_type == "Pooled")
 
 css_correlations_labeled <- css_correlations_labeled |> 
   filter(!str_detect(Group_rev, "Scales|Family"))
@@ -36,9 +43,10 @@ chetty_fouryr <- chetty_fouryr |>
   mutate(kq345_cond_parq1 = kq3_cond_parq1 + 
            kq4_cond_parq1 + 
            kq5_cond_parq1,
-         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + 
-           k_rank_cond_parq2*par_q1 + 
-           k_rank_cond_parq3*par_q3)
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+                                  k_rank_cond_parq2*par_q2 +
+                                  k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
 
 ## The RACE_ETHNICITY variable in tfs_df is not in tfs_mobility or tfs_correlations_labeled. 
 ## Fix it.
@@ -145,6 +153,35 @@ fast_facts <- read_sheet(fastfacts_gs)
 fast_facts <- fast_facts |> 
   filter(Name != "Example") |> 
   mutate(rowid = row_number())
+
+# Mobility labels for correlation summary plot
+
+mobility_labels <- tibble("Average rank" = "k_rank",
+                          "Average rank if grew up in bottom 60%" = "k_rank_cond_parq123",
+                          "Average rank if grew up in bottom quintile" = "k_rank_cond_parq1",
+                          "Average rank if grew up in second lowest quintile" = "k_rank_cond_parq2",
+                          "Average rank if grew up in middle quintile" = "k_rank_cond_parq3",
+                          "Average rank if grew up in second highest quintile" = "k_rank_cond_parq4",
+                          "Average rank if grew up in highest quintile" = "k_rank_cond_parq5",
+                          "'Great Working Class Colleges' success rate (bottom quintile of parent distribution and highest 60% of young adult distribution)" = "kq345_cond_parq1",
+                          "Opportunity Insights success rate (bottom quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq1",
+                          "Opportunity Insights mobility rate (Proportion of all students at an institution moving from bottom quintile of parent distribution to highest quintile of young adult distribution)" = "mr_kq5_pq1",
+                          "Opportunity Insights upper tail mobility rate (bottom quintile of parent distribution and top 1% of young adult distribution)" = "mr_ktop1_pq1",
+                          "Stickiness at the bottom (bottom quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq1",
+                          "Stickiness at the top (top quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq5",
+                          "Downward mobility from the top (top quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq5",
+                          "Proportion ending up in bottom quintile" = "k_q1",
+                          "Proportion ending up in second lowest quintile" = "k_q2",
+                          "Proportion ending up in middle quintile" = "k_q3",
+                          "Proportion ending up in second highest quintile" = "k_q4",
+                          "Proportion ending up in highest quintile" = "k_q5",
+                          "Proportion from bottom quintile (Opportunity Insights access rate)" = "par_q1",
+                          "Proportion from second lowest quintile" = "par_q2",
+                          "Proportion from middle quintile" = "par_q3",
+                          "Proportion from second highest quintile" = "par_q4",
+                          "Proportion from highest quintile" = "par_q5") |>
+  pivot_longer(cols = everything(), names_to = "Label", values_to = "Variable")
+
 
 
 ## Need this for popup window to close in Chrome
@@ -337,7 +374,7 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
         filter(rowid == sample(1:nrow(fast_facts), 1))
       
       paste(
-        "<center><br><br><br><big>Here are some of our favorite findings from this project.</big><br>",
+        "<center><br><br><big>Here are some of our favorite findings from this project.</big><br>",
         as.character(fast_facts$Name), 
         ": <br>", 
         "<b>", 
@@ -509,32 +546,6 @@ ui <- fluidPage(#shinythemes::themeSelector(), ### New to test themes
     #                          "students")) +
     #     scale_color_brewer(palette = "Dark2")
     # })
-    
-    mobility_labels <- tibble("Average rank" = "k_rank",
-                              "Average rank if grew up in bottom 60%" = "k_rank_cond_parq123",
-                              "Average rank if grew up in bottom quintile" = "k_rank_cond_parq1",
-                              "Average rank if grew up in second lowest quintile" = "k_rank_cond_parq2",
-                              "Average rank if grew up in middle quintile" = "k_rank_cond_parq3",
-                              "Average rank if grew up in second highest quintile" = "k_rank_cond_parq4",
-                              "Average rank if grew up in highest quintile" = "k_rank_cond_parq5",
-                              "'Great Working Class Colleges' success rate (bottom quintile of parent distribution and highest 60% of young adult distribution)" = "kq345_cond_parq1",
-                              "Opportunity Insights success rate (bottom quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq1",
-                              "Opportunity Insights mobility rate (Proportion of all students at an institution moving from bottom quintile of parent distribution to highest quintile of young adult distribution)" = "mr_kq5_pq1",
-                              "Opportunity Insights upper tail mobility rate (bottom quintile of parent distribution and top 1% of young adult distribution)" = "mr_ktop1_pq1",
-                              "Stickiness at the bottom (bottom quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq1",
-                              "Stickiness at the top (top quintile of parent distribution and top quintile of young adult distribution)" = "kq5_cond_parq5",
-                              "Downward mobility from the top (top quintile of parent distribution and bottom quintile of young adult distribution)" = "kq1_cond_parq5",
-                              "Proportion ending up in bottom quintile" = "k_q1",
-                              "Proportion ending up in second lowest quintile" = "k_q2",
-                              "Proportion ending up in middle quintile" = "k_q3",
-                              "Proportion ending up in second highest quintile" = "k_q4",
-                              "Proportion ending up in highest quintile" = "k_q5",
-                              "Proportion from bottom quintile (Opportunity Insights access rate)" = "par_q1",
-                              "Proportion from second lowest quintile" = "par_q2",
-                              "Proportion from middle quintile" = "par_q3",
-                              "Proportion from second highest quintile" = "par_q4",
-                              "Proportion from highest quintile" = "par_q5") |>
-      pivot_longer(cols = everything(), names_to = "Label", values_to = "Variable")
     
     output$corr_plot <- renderPlot({
       
