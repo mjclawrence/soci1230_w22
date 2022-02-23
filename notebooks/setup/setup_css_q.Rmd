@@ -1,0 +1,749 @@
+---
+title: "setup_css"
+author: "ML"
+date: "2/23/2022"
+output: html_document
+---
+
+# Load packages
+```{r}
+library(tidyverse)
+library(weights)
+```
+
+# Load data
+
+The `collnames` file links campus_id, ACERECODE, and super_opeid.
+
+```{r}
+collnames <- read_csv("../../data/collnames.csv")
+```
+
+The `college_mobility` file has chetty variables and css variables and tfs matched variables
+
+```{r}
+college_mobility <- read_csv("../../data/college_mobility.csv")
+```
+
+```{r}
+college_mobility <-  college_mobility |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+           k_rank_cond_parq2*par_q2 +
+           k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
+```
+
+The `chetty_table2.csv` file has all the mobility variables
+
+```{r}
+chetty <- read_csv("../../data/chetty_table2.csv")
+chetty_vars <- chetty |> 
+  select(super_opeid, mr_kq5_pq1,
+         mr_ktop1_pq1,
+         k_rank, k_q1, k_q2, k_q3, k_q4, k_q5, k_top10pc,
+         k_top5pc, k_top1pc,
+         starts_with("k_rank_cond_parq"),
+         starts_with("kq1_cond_parq"),
+         starts_with("kq2_cond_parq"),
+         starts_with("kq3_cond_parq"),
+         starts_with("kq4_cond_parq"),
+         starts_with("kq5_cond_parq"),
+         par_q1, par_q2, par_q3, par_q4, par_q5)
+
+chetty_vars <- left_join(collnames, chetty_vars)
+
+chetty_vars <- chetty_vars |> 
+  select(-c(ACERECODE, name, super_opeid))
+```
+
+```{r}
+chetty_vars <-  chetty_vars |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+           k_rank_cond_parq2*par_q2 +
+           k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
+```
+
+
+The `css_questions_usable` file notes which questions are used in later analyses. It also has the question descriptions.
+
+```{r}
+css_names.labeled <- read_csv("../../data/css_questions_usable.csv")
+```
+
+Keep the questions we are using.
+
+```{r}
+css_names.labeled <- css_names.labeled %>% 
+  filter(usable_m == 1) |> 
+  select(Name, Description, n_asked, usable_m)
+```
+
+## Prepare data for analyses
+
+Arrange the variable names and descriptions alphabetically
+
+```{r}
+keep <- css_names.labeled %>% 
+  dplyr::select(1:3) %>%
+  arrange("Name")
+```
+
+Filter mobility data for column names we care about 
+
+```{r}
+usable_questions <- css_names.labeled$Name
+all_colnames <- colnames(college_mobility)
+intersection <- Reduce(intersect,list(usable_questions,all_colnames))
+#mobility columns here
+#mobility_cols <- colnames(college_mobility)[0:65]
+#add campus_id
+mobility_cols <- colnames(college_mobility)[1]
+all_filter_cols<- c(intersection,mobility_cols)
+#filter for desired columns
+#college_mobility.filtered <- college_mobility[, all_filter_cols]
+
+college_mobility.filtered <- college_mobility |> 
+  select(all_of(all_filter_cols), INCOME_TFS)
+```
+
+Check the NAs
+
+```{r}
+colSums(is.na(college_mobility.filtered))
+```
+
+Only keep colleges with more than 100 responses
+
+```{r}
+x <- college_mobility.filtered %>% 
+  count(campus_id)
+
+x <- x  %>% filter(n>100)
+college_mobility.filtered <- left_join(x, college_mobility.filtered, by = "campus_id")
+```
+
+Get a vector of campus_id values for colleges we are using
+
+```{r}
+campus_id <- c(unique(college_mobility.filtered[,"campus_id"]))
+```
+
+## Find proportion missing for each question by school
+
+```{r}
+set.seed(1)
+
+college_proportion_answered <- list()
+test <- list()
+
+#loop through every campusid
+for(i in unique(college_mobility.filtered$campus_id)){
+  #get the 
+  cm<-college_mobility.filtered %>% 
+    filter(campus_id == i) 
+  
+  na<-colSums(is.na(cm))
+  not.na<-colSums(!is.na(cm))
+  prop<- na/(na+not.na)
+  test[[i]]<- prop
+  
+}
+
+# Bind rows from each iteration
+big_data = do.call(rbind, test)
+
+# Make matrix a data frame
+big_data <- as.data.frame(big_data)
+
+# Drop prop missing campus_id
+big_data <- dplyr::select(big_data, -c("campus_id"))
+
+# Bind vector and data frame
+big_data <- cbind.data.frame(campus_id, big_data)
+```
+
+## Chetty Quantiles
+
+```{r}
+chetty_fouryr <- read_csv("../../data/chetty_fouryr.csv")
+
+chetty_fouryr <-  chetty_fouryr |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = (k_rank_cond_parq1*par_q1 +
+           k_rank_cond_parq2*par_q2 +
+           k_rank_cond_parq3*par_q3) /
+           (par_q1 + par_q2 + par_q3))
+```
+
+```{r}
+chetty_quantiles <- chetty_fouryr |> 
+  summarise(p50_mr_kq5_pq1 = wtd.quantile(mr_kq5_pq1, 
+                                          weights = count, probs = c(.5)),
+            p50_kq5_cond_parq1 = wtd.quantile(kq5_cond_parq1,
+                                              weights = count, probs = c(.5)),
+            p50_kq345_cond_parq1 = wtd.quantile(kq345_cond_parq1,
+                                                weights = count, probs = c(.5)),
+            p50_k_rank_cond_parq123 = wtd.quantile(k_rank_cond_parq123, 
+                                                   weights = count, probs = c(.5)),
+            p75_mr_kq5_pq1 = wtd.quantile(mr_kq5_pq1, 
+                                          weights = count, probs = c(.75)),
+            p75_kq5_cond_parq1 = wtd.quantile(kq5_cond_parq1,
+                                              weights = count, probs = c(.75)),
+            p75_kq345_cond_parq1 = wtd.quantile(kq345_cond_parq1,
+                                                weights = count, probs = c(.75)),
+            p75_k_rank_cond_parq123 = wtd.quantile(k_rank_cond_parq123, 
+                                                   weights = count, probs = c(.75))
+  )
+
+chetty_vars <- chetty_vars |> 
+  mutate(q_mr_kq5_pq1 = ifelse(mr_kq5_pq1 < chetty_quantiles$p50_mr_kq5_pq1, 1,
+                               ifelse(mr_kq5_pq1 > chetty_quantiles$p75_mr_kq5_pq1, 3, 2)),
+         q_kq5_cond_parq1 = ifelse(kq5_cond_parq1 < chetty_quantiles$p50_kq5_cond_parq1, 1,
+                                   ifelse(kq5_cond_parq1 > chetty_quantiles$p75_kq5_cond_parq1, 3, 2)),
+         q_kq345_cond_parq1 = ifelse(kq345_cond_parq1 < chetty_quantiles$p50_kq345_cond_parq1, 1,
+                                     ifelse(kq345_cond_parq1 > chetty_quantiles$p75_kq345_cond_parq1, 3, 2)),
+         q_k_rank_cond_parq123 = ifelse(k_rank_cond_parq123 < chetty_quantiles$p50_k_rank_cond_parq123, 1,
+                                        ifelse(k_rank_cond_parq123 > chetty_quantiles$p75_k_rank_cond_parq123, 3, 2)))
+
+college_mobility_q.filtered <- left_join(college_mobility.filtered, chetty_vars)
+```
+
+```{r}
+college_mobility_q.filtered <- college_mobility_q.filtered |> 
+  pivot_longer(names_to = "q_var", values_to = "q_cat", starts_with("q_")) 
+```
+
+
+```{r}
+css_means_q <- college_mobility_q.filtered |> 
+  group_by(q_var, q_cat) |>
+  summarise(
+            across(starts_with("ACT"),
+                   list(notatall_mean = ~mean(.x==1, na.rm = TRUE),
+                        occasionally_mean = ~mean(.x==2, na.rm = TRUE),
+                        frequently_mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()), 
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("COLACT"),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("CSV"),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("FACPRV"),
+                   list(notatall_mean = ~mean(.x==1, na.rm = TRUE),
+                        occasionally_mean = ~mean(.x==2, na.rm = TRUE),
+                        frequently_mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("GENACT"),
+                   list(notatall_mean = ~mean(.x==1, na.rm = TRUE),
+                        occasionally_mean = ~mean(.x==2, na.rm = TRUE),
+                        frequently_mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("GOAL"),
+                   list(notimportant_mean = ~mean(.x==1, na.rm = TRUE),
+                        somewhatimportant_mean = ~mean(.x==2, na.rm = TRUE),
+                        veryimportant_mean = ~mean(.x==3, na.rm = TRUE),
+                        essential_mean = ~mean(.x==4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("HPW"),
+                   list(hours0_mean = ~mean(.x==1, na.rm = TRUE),
+                        hours0to1_mean = ~mean(.x==2, na.rm = TRUE),
+                        hours1to2_mean = ~mean(.x==3, na.rm = TRUE),
+                        hours3to5_mean = ~mean(.x==4, na.rm = TRUE),
+                        hours6to10_mean = ~mean(.x==5, na.rm = TRUE),
+                        hours11to15_mean = ~mean(.x==6, na.rm = TRUE),
+                        hours16to20_mean = ~mean(.x==7, na.rm = TRUE),
+                        hours21plus_mean = ~mean(.x==8, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("MAJOR"),
+                   list(business_mean = ~mean(.x==3, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("NATENG"),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("PLANS"),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("POLIVIEW"),
+                   list(farright_mean = ~mean(.x==1, na.rm = TRUE),
+                        conservative_mean = ~mean(.x==2, na.rm = TRUE),
+                        middleoftheroad_mean = ~mean(.x==3, na.rm = TRUE),
+                        liberal_mean = ~mean(.x==4, na.rm = TRUE),
+                        farleft_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RACE"),
+                   list(no_mean = ~mean(.x==1, na.rm = TRUE),
+                        yes_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("RATE"),
+                   list(lowest10pct_mean = ~mean(.x==1, na.rm = TRUE),
+                        belowaverage_mean = ~mean(.x==2, na.rm = TRUE),
+                        average_mean = ~mean(.x==3, na.rm = TRUE),
+                        aboveaverage_mean = ~mean(.x==4, na.rm = TRUE),
+                        highest10pct_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("REENROLL"),
+                   list(defno_mean = ~mean(.x==1, na.rm = TRUE),
+                        probno_mean = ~mean(.x==2, na.rm = TRUE),
+                        dontknow_mean = ~mean(.x==3, na.rm = TRUE),
+                        probyes_mean = ~mean(.x==4, na.rm = TRUE),
+                        defyes_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            # across(starts_with("SREL"),
+            #        list(jewish_mean = ~mean(.x==6, na.rm = TRUE),
+            #             catholic_mean = ~mean(.x==12, na.rm = TRUE), 
+            #             propna = ~sum(is.na(.)) / n()),
+            #        .names = "{.col}.yes_{.fn}"),
+            across(starts_with("SATIS"),
+                   list(cantrate_mean = ~mean(.x==1, na.rm = TRUE),
+                        dissatisfied_mean = ~mean(.x==2, na.rm = TRUE),
+                        neutral_mean = ~mean(.x==3, na.rm = TRUE),
+                        satisfied_mean = ~mean(.x==4, na.rm = TRUE),
+                        verysatisfied_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SEX"),
+                   list(male_mean = ~mean(.x==1, na.rm = TRUE),
+                        female_mean = ~mean(.x==2, na.rm = TRUE), 
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SLFCH"),
+                   list(muchweaker_mean = ~mean(.x==1, na.rm = TRUE),
+                        weaker_mean = ~mean(.x==2, na.rm = TRUE),
+                        nochange_mean = ~mean(.x==3, na.rm = TRUE),
+                        stronger_mean = ~mean(.x==4, na.rm = TRUE),
+                        muchstronger_mean = ~mean(.x==5, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SUCC"),
+                   list(not_mean = ~mean(.x==1, na.rm = TRUE),
+                        somewhat_mean = ~mean(.x==2, na.rm = TRUE),
+                        very_mean = ~mean(.x==3, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("VIEW"),
+                   list(disagreestrongly_mean = ~mean(.x==1, na.rm = TRUE),
+                        disagreesomewhat_mean = ~mean(.x==2, na.rm = TRUE),
+                        agreesomewhat_mean = ~mean(.x==3, na.rm = TRUE),
+                        agreestrongly_mean = ~mean(.x==4, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("ACADEMIC_SELFCONCEPT"),
+                   list(scale_mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SOCIAL_SELFCONCEPT"),
+                   list(scale_mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("SOCIAL_AGENCY"),
+                   list(scale_mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            across(starts_with("FAC_INTERACTION"),
+                   list(scale_mean = ~mean(.x, na.rm = TRUE),
+                        propna = ~sum(is.na(.)) / n()),
+                   .names = "{.col}.{.fn}"),
+            n_responses = n()
+  ) |> 
+  relocate(n_responses) |> 
+  mutate(across(everything(), ~na_if(.,"NaN"))) |> 
+  select(-starts_with("RACEGRP"))
+```
+
+Keep only the variable names in a vector
+
+```{r}
+varnames_original <- gsub("(.+?)(\\..*)", "\\1", names(css_means_income))
+varnames_summarize <- names(css_means_income)
+varnames <- bind_cols(varnames_original, varnames_summarize)
+colnames(varnames) <- c("Name", "Summarized")
+varnames <- left_join(varnames, css_names.labeled)
+varnames <- varnames |> 
+  filter(!str_detect(Summarized, "propna")) |> 
+  select(-Summarized)
+```
+
+
+```{r}
+css_means_income_long <- css_means_income |> 
+  mutate(income_cat = factor(income_cat,
+                             levels = c(0,1),
+                             labels = c("income_cat_0", "income_cat_1"))) |> 
+  pivot_longer(names_to = "variable", values_to = "mean",
+               4:ncol(css_means_income)) |> 
+  select(-n_responses) |> 
+  pivot_wider(names_from = income_cat, values_from = mean)
+
+css_means_income_merge <- left_join(css_means_income_long, income_cat_summary)
+```
+
+
+```{r}
+css_means_income_wide <- css_means_income_merge |> 
+  pivot_longer(names_to = "income_category", values_to = "mean",
+               starts_with("income_cat")) |> 
+  pivot_wider(names_from = "variable", values_from = "mean")
+
+write.csv(css_means_income_wide, "../../data/css_means_income.csv", row.names = FALSE)
+```
+
+```{r}
+css_means_income_merge_wtd <- css_means_income_wide |> 
+  pivot_longer(names_to = "variable", values_to = "mean",
+               5:ncol(css_means_income_wide)) |> 
+  #select(-n_responses) |> 
+  pivot_wider(names_from = income_category, values_from = mean) |> 
+  group_by(variable) |> 
+  summarise(wtd_income_cat_0 = wtd.mean(income_cat_0, n_responses*mean_low_income),
+            wtd_income_cat_1 = wtd.mean(income_cat_1, n_responses*(1-mean_low_income)),
+            wtd_diff = wtd_income_cat_0 - wtd_income_cat_1)
+```
+
+
+### Nothing below has been changed in income setup
+
+Merge the variable means by college with the mobility variables
+
+```{r}
+css_means_mobility <- left_join(css_means, chetty_vars)
+
+css_means_mobility <- css_means_mobility |> 
+  mutate(kq345_cond_parq1 = kq3_cond_parq1 + kq4_cond_parq1 + kq5_cond_parq1,
+         k_rank_cond_parq123 = k_rank_cond_parq1*par_q1 + k_rank_cond_parq2*par_q1 + 
+           k_rank_cond_parq3*par_q3)
+```
+
+```{r}
+write.csv(css_means_mobility, "../../data/css_means_mobility_withno2.csv", row.names = FALSE)
+```
+
+## Get weighted means and correlations for each question
+### Weighted by n_responses with non missing responses as of 1.16.22)
+
+```{r}
+css_correlations2 <- css_means_mobility |> 
+  pivot_longer(names_to = "Summary",
+               values_to = "prop",
+               3:1059) |> 
+  mutate(Summary = str_remove(Summary, "_mean")) |> 
+  separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right") |> 
+  mutate(response = ifelse(response == "no_maen", "no_mean", response)) |> 
+  group_by(campus_id, Name) |> 
+  mutate(propna = prop[str_detect(response, "propna")],
+         n_responses_nona = n_responses * (1 - propna)) |> 
+  ungroup() |> 
+  filter(!str_detect(response, "propna")) |> 
+  group_by(Summary) |> 
+  summarise(wtdprop = weighted.mean(prop, w = n_responses_nona),
+            n_colleges = sum(!is.na(prop)),
+            mr_kq5_pq1 = wtd.cor(prop, mr_kq5_pq1, 
+                                      weight = n_responses_nona)[1],
+            mr_ktop1_pq1 = wtd.cor(prop, mr_ktop1_pq1, 
+                                        weight = n_responses_nona)[1],
+            k_rank = wtd.cor(prop, k_rank, 
+                                  weight = n_responses_nona)[1],
+            k_q1 = wtd.cor(prop, k_q1, 
+                                weight = n_responses_nona)[1],
+            k_q2 = wtd.cor(prop, k_q2, 
+                                weight = n_responses_nona)[1],
+            k_q3 = wtd.cor(prop, k_q3, 
+                                weight = n_responses_nona)[1],
+            k_q4 = wtd.cor(prop, k_q4, 
+                                weight = n_responses_nona)[1],
+            k_q5 = wtd.cor(prop, k_q5, 
+                                weight = n_responses_nona)[1],
+            k_top10pc = wtd.cor(prop, k_top10pc, 
+                                     weight = n_responses_nona)[1],
+            k_top5pc = wtd.cor(prop, k_top5pc, 
+                                    weight = n_responses_nona)[1],
+            k_top1pc = wtd.cor(prop, k_top1pc, 
+                                    weight = n_responses_nona)[1],
+            k_rank_cond_parq1 = wtd.cor(prop, k_rank_cond_parq1, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq2 = wtd.cor(prop, k_rank_cond_parq2, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq3 = wtd.cor(prop, k_rank_cond_parq3, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq4 = wtd.cor(prop, k_rank_cond_parq4, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq5 = wtd.cor(prop, k_rank_cond_parq5, 
+                                             weight = n_responses_nona)[1],
+            kq1_cond_parq1 = wtd.cor(prop, kq1_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq1 = wtd.cor(prop, kq2_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq1 = wtd.cor(prop, kq3_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq1 = wtd.cor(prop, kq4_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq1 = wtd.cor(prop, kq5_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq2 = wtd.cor(prop, kq1_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq2 = wtd.cor(prop, kq2_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq2 = wtd.cor(prop, kq3_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq2 = wtd.cor(prop, kq4_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq2 = wtd.cor(prop, kq5_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq3 = wtd.cor(prop, kq1_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq3 = wtd.cor(prop, kq2_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq3 = wtd.cor(prop, kq3_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq3 = wtd.cor(prop, kq4_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq3 = wtd.cor(prop, kq5_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq4 = wtd.cor(prop, kq1_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq4 = wtd.cor(prop, kq2_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq4 = wtd.cor(prop, kq3_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq4 = wtd.cor(prop, kq4_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq4 = wtd.cor(prop, kq5_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq5 = wtd.cor(prop, kq1_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq5 = wtd.cor(prop, kq2_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq5 = wtd.cor(prop, kq3_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq5 = wtd.cor(prop, kq4_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq5 = wtd.cor(prop, kq5_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            par_q1 = wtd.cor(prop, par_q1, 
+                                  weight = n_responses_nona)[1],
+            par_q2 = wtd.cor(prop, par_q2, 
+                                  weight = n_responses_nona)[1],
+            par_q3 = wtd.cor(prop, par_q3, 
+                                  weight = n_responses_nona)[1],
+            par_q4 = wtd.cor(prop, par_q4, 
+                                  weight = n_responses_nona)[1],
+            par_q5 = wtd.cor(prop, par_q5, 
+                                  weight = n_responses_nona)[1],
+            kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
+  mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
+  mutate(across(everything(), ~na_if(.,"NaN"))) |> 
+  select(-starts_with("RACEGRP"))
+```
+
+
+```{r}
+css_correlations2 <- css_correlations2 |> 
+        separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right")
+
+css_correlations2 <- left_join(css_correlations2, varnames) |> 
+  select(-c("n_asked", "usable_m", "response")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses") |> 
+  distinct() |> 
+  relocate(Description, .before = Summary) |> 
+  relocate(Name)
+
+css_correlations2 <- css_correlations2 |> 
+  mutate(corr_type = "Pooled") |> 
+  relocate(corr_type)
+```
+
+```{r}
+write.csv(css_correlations2, "../../data/css_correlations_withno2.csv", row.names = FALSE)
+```
+
+
+
+## Correlations by type of institution
+
+```{r}
+css_correlations2_type <- css_means_mobility |> 
+  pivot_longer(names_to = "Summary",
+               values_to = "prop",
+               3:1059) |> 
+  mutate(Summary = str_remove(Summary, "_mean")) |> 
+  separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right") |> 
+  mutate(response = ifelse(response == "no_maen", "no_mean", response)) |> 
+  group_by(campus_id, Name) |> 
+  mutate(propna = prop[str_detect(response, "propna")],
+         n_responses_nona = n_responses * (1 - propna)) |> 
+  ungroup() |> 
+  filter(!str_detect(response, "propna")) |> 
+  group_by(Summary, type) |> 
+  summarise(wtdprop = weighted.mean(prop, w = n_responses_nona),
+            n_colleges = sum(!is.na(prop)),
+            mr_kq5_pq1 = wtd.cor(prop, mr_kq5_pq1, 
+                                      weight = n_responses_nona)[1],
+            mr_ktop1_pq1 = wtd.cor(prop, mr_ktop1_pq1, 
+                                        weight = n_responses_nona)[1],
+            k_rank = wtd.cor(prop, k_rank, 
+                                  weight = n_responses_nona)[1],
+            k_q1 = wtd.cor(prop, k_q1, 
+                                weight = n_responses_nona)[1],
+            k_q2 = wtd.cor(prop, k_q2, 
+                                weight = n_responses_nona)[1],
+            k_q3 = wtd.cor(prop, k_q3, 
+                                weight = n_responses_nona)[1],
+            k_q4 = wtd.cor(prop, k_q4, 
+                                weight = n_responses_nona)[1],
+            k_q5 = wtd.cor(prop, k_q5, 
+                                weight = n_responses_nona)[1],
+            k_top10pc = wtd.cor(prop, k_top10pc, 
+                                     weight = n_responses_nona)[1],
+            k_top5pc = wtd.cor(prop, k_top5pc, 
+                                    weight = n_responses_nona)[1],
+            k_top1pc = wtd.cor(prop, k_top1pc, 
+                                    weight = n_responses_nona)[1],
+            k_rank_cond_parq1 = wtd.cor(prop, k_rank_cond_parq1, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq2 = wtd.cor(prop, k_rank_cond_parq2, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq3 = wtd.cor(prop, k_rank_cond_parq3, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq4 = wtd.cor(prop, k_rank_cond_parq4, 
+                                             weight = n_responses_nona)[1],
+            k_rank_cond_parq5 = wtd.cor(prop, k_rank_cond_parq5, 
+                                             weight = n_responses_nona)[1],
+            kq1_cond_parq1 = wtd.cor(prop, kq1_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq1 = wtd.cor(prop, kq2_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq1 = wtd.cor(prop, kq3_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq1 = wtd.cor(prop, kq4_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq1 = wtd.cor(prop, kq5_cond_parq1, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq2 = wtd.cor(prop, kq1_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq2 = wtd.cor(prop, kq2_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq2 = wtd.cor(prop, kq3_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq2 = wtd.cor(prop, kq4_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq2 = wtd.cor(prop, kq5_cond_parq2, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq3 = wtd.cor(prop, kq1_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq3 = wtd.cor(prop, kq2_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq3 = wtd.cor(prop, kq3_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq3 = wtd.cor(prop, kq4_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq3 = wtd.cor(prop, kq5_cond_parq3, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq4 = wtd.cor(prop, kq1_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq4 = wtd.cor(prop, kq2_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq4 = wtd.cor(prop, kq3_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq4 = wtd.cor(prop, kq4_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq4 = wtd.cor(prop, kq5_cond_parq4, 
+                                          weight = n_responses_nona)[1],
+            kq1_cond_parq5 = wtd.cor(prop, kq1_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq2_cond_parq5 = wtd.cor(prop, kq2_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq3_cond_parq5 = wtd.cor(prop, kq3_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq4_cond_parq5 = wtd.cor(prop, kq4_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            kq5_cond_parq5 = wtd.cor(prop, kq5_cond_parq5, 
+                                          weight = n_responses_nona)[1],
+            par_q1 = wtd.cor(prop, par_q1, 
+                                  weight = n_responses_nona)[1],
+            par_q2 = wtd.cor(prop, par_q2, 
+                                  weight = n_responses_nona)[1],
+            par_q3 = wtd.cor(prop, par_q3, 
+                                  weight = n_responses_nona)[1],
+            par_q4 = wtd.cor(prop, par_q4, 
+                                  weight = n_responses_nona)[1],
+            par_q5 = wtd.cor(prop, par_q5, 
+                                  weight = n_responses_nona)[1],
+                        kq345_cond_parq1 = wtd.cor(prop, kq345_cond_parq1,
+                                       weight = n_responses_nona)[1],
+            k_rank_cond_parq123 = wtd.cor(prop, k_rank_cond_parq123,
+                                          weight = n_responses_nona)[1]) |> 
+  mutate(Summary = ifelse(Summary == "NATENGSP.no_maen", "NATENGSP.no_mean", Summary)) |> 
+  mutate(across(everything(), ~na_if(.,"NaN"))) |> 
+  select(-starts_with("RACEGRP"))
+```
+
+```{r}
+css_correlations2_type <- css_correlations2_type |> 
+        separate(Summary, c("Name", "response"),
+           "[.]",
+           remove = FALSE,
+           extra = "merge", fill = "right")
+
+css_correlations2_type <- left_join(css_correlations2_type, varnames) |> 
+  select(-c("n_asked", "usable_m", "response")) |> 
+  filter(Name != "campus_id") |> 
+  filter(Name != "n_responses") |> 
+  distinct() |> 
+  relocate(Description, .before = Summary) |> 
+  relocate(Name)
+
+css_correlations2_type <- css_correlations2_type |> 
+  mutate(corr_type = type) |> 
+  select(-type) |> 
+  relocate(corr_type)
+```
+
+```{r}
+write.csv(css_correlations2_type, "../../data/css_correlations_withno_type2.csv", row.names = FALSE)
+```
+
+```{r}
+css_correlations_all <- bind_rows(css_correlations2,
+                                  css_correlations2_type)
+
+css_correlations_all <- css_correlations_all |> 
+  relocate(corr_type)
+
+write.csv(css_correlations_all, "../../data/css_correlations_all2.csv")
+```
+
+
