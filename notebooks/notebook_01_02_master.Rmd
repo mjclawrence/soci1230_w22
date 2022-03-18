@@ -192,7 +192,7 @@ Run this function the same way as the original function by adding a college's na
 ### REPLACE THIS LINE WITH YOUR CODE CHUNK ###
 
 ```{r run the weighted mobility function}
-mobility_table_2("City College Of New York - CUNY")
+mobility_table_2("La Sierra University")
 ```
 
 The top right cell of this table is what Chetty et al call the *mobility rate*: the proportion of all students at an institution from the bottom quintile of the parent's income distribution who end up in the top quintile of the kid's income distribution.
