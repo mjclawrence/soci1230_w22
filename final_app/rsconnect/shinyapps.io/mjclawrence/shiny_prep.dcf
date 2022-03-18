@@ -1,0 +1,14 @@
+name: shiny_prep
+title: shiny_prep
+username:
+account: mjclawrence
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5448728
+bundleId: 5506997
+url: https://mjclawrence.shinyapps.io/shiny_prep/
+when: 1643131502.54284
+lastSyncTime: 1643131502.54285
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app_nocomments.R
